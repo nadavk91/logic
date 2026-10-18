@@ -77,6 +77,8 @@ main { min-width: 0; }
 .t-head > div { flex: 1 1 auto; }
 .t-num { margin: 0; font-size: .85rem; font-weight: 700; color: var(--accent); letter-spacing: .04em; width: 100%; }
 .t-head h2 { font-family: var(--display); font-size: 2rem; line-height: 1.2; margin: 0; flex: 1 1 auto; }
+.draft-badge { margin-inline-start: .6rem; font-size: .75rem; font-weight: 700; color: var(--false); border: 1px solid currentColor; border-radius: 999px; padding: .05rem .55rem; letter-spacing: 0; }
+.draft-dot { margin-inline-start: .4rem; font-size: .7rem; color: var(--false); }
 .t-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
 .to-extra { font-size: .9rem; color: var(--bg); background: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: .25rem .9rem; text-decoration: none; }
 .to-extra:hover { opacity: .88; }
@@ -125,6 +127,12 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 .qed { float: left; margin-inline-start: 1rem; }
 .proof::after { content: ""; display: block; clear: both; }
 
+.tbl-wrap { overflow-x: auto; margin: 1rem 0 1.25rem; }
+.steps { border-collapse: collapse; width: 100%; font-size: .95rem; line-height: 1.6; }
+.steps th, .steps td { border: 1px solid var(--rule); padding: .55rem .75rem; vertical-align: top; text-align: right; }
+.steps th { background: var(--accent-soft); }
+.steps td:last-child { text-align: center; vertical-align: middle; }
+
 .exercise { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 1.1rem 1.25rem .4rem; margin: 1.5rem 0; }
 .exercise .ex-statement > strong:first-child { color: var(--accent); }
 .solution { margin: .25rem 0 1rem; }
@@ -158,7 +166,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
       </details>
     </aside>
     <main>
-<section class="tirgul" id="t1" data-toc="&lt;li&gt;&lt;a href=&quot;#t1-s1&quot;&gt;הקדמה ללימודי מדעי המחשב ולוגיקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s2&quot;&gt;הקדמה: שימוש ב-&lt;span lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;AI&lt;/span&gt; בלימודים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s3&quot;&gt;השפה המתמטית&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s4&quot;&gt;טענות בשפת המתמטיקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s5&quot;&gt;משתנים, השמות וכמתים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s6&quot;&gt;המילים הלוגיות: איך בונים טענות מורכבות?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s7&quot;&gt;טענות אטומיות ומורכבות: איך מפרקים טענה?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s8&quot;&gt;המשמעות של הקשרים: טבלאות אמת&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s9&quot;&gt;הצרנה: מעבר מעברית לשפה מתמטית&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s10&quot;&gt;שקילויות, קונטרפוזיציה ושלילה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s11&quot;&gt;לסיכום&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 1</p><h2>הקדמה – כניסה לעולם המתמטי, טענות וכמתים</h2><div class="t-actions"><a class="to-extra" href="#t1-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul1.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul1-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t1">הצגת כל הפתרונות</button></div></header><h3 id="t1-s1"><span class="sec-num">1</span>הקדמה ללימודי מדעי המחשב ולוגיקה</h3>
+<section class="tirgul" id="t1" data-toc="&lt;li&gt;&lt;a href=&quot;#t1-s1&quot;&gt;הקדמה ללימודי מדעי המחשב ולוגיקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s2&quot;&gt;השפה המתמטית&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s3&quot;&gt;טענות בשפת המתמטיקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s4&quot;&gt;משתנים, השמות וכמתים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s5&quot;&gt;המילים הלוגיות: איך בונים טענות מורכבות?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s6&quot;&gt;טענות אטומיות ומורכבות: איך מפרקים טענה?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s7&quot;&gt;המשמעות של הקשרים: טבלאות אמת&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s8&quot;&gt;הגדרות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s9&quot;&gt;ערך אמת שאנחנו לא יודעים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s10&quot;&gt;הצרנה: מעבר מעברית לשפה מתמטית&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s11&quot;&gt;שקילויות, קונטרפוזיציה ושלילה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s12&quot;&gt;לסיכום&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 1</p><h2>הקדמה – כניסה לעולם המתמטי, טענות וכמתים</h2><div class="t-actions"><a class="to-extra" href="#t1-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul1.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul1-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t1">הצגת כל הפתרונות</button></div></header><h3 id="t1-s1"><span class="sec-num">1</span>הקדמה ללימודי מדעי המחשב ולוגיקה</h3>
 <div class="p">ברוכים הבאים לקורס <strong>מבוא ללוגיקה ותורת הקבוצות</strong>.
 קורס זה הוא אחד מאבני הבסיס של לימודי מדעי המחשב:
 הוא מלמד אתכם לחשוב בצורה מדויקת, להגדיר מושגים בבהירות,
@@ -170,23 +178,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> <strong>תורת הקבוצות:</strong> קבוצות, יחסים ופונקציות.
   </li><li> <strong>נושאים נוספים:</strong> סדר חלקי, שקילות, עוצמות ואינדוקציה.
 </li></ul></div>
-<h3 id="t1-s2"><span class="sec-num">2</span>הקדמה: שימוש ב-<span lang="en" dir="ltr">AI</span> בלימודים</h3>
-<div class="p">כלי בינה מלאכותית (<span lang="en" dir="ltr">AI</span>) כגון <span lang="en" dir="ltr">ChatGPT</span>, <span lang="en" dir="ltr">Claude</span> ואחרים הפכו לחלק
-מהמציאות האקדמית. אנחנו מאמינים בשקיפות, ולכן נדון בנושא ישירות.</div>
-<h4>מה מותר?</h4>
-<div class="p"><ul><li> להשתמש ב-<span lang="en" dir="ltr">AI</span> להבנת חומר — לבקש הסברים, דוגמאות נוספות,
-        או פירוט של מושגים שלא הובנו.
-  </li><li> לנסח שאלות ולבדוק אם ההבנה שלכם נכונה.
-</li></ul></div>
-<h4>מה אסור?</h4>
-<div class="p"><ul><li> אין להגיש פתרונות שנכתבו על-ידי <span lang="en" dir="ltr">AI</span> כעבודה שלכם.
-  </li><li> אין להשתמש ב-<span lang="en" dir="ltr">AI</span> בבחינות.
-</li></ul></div>
-<h4>אזהרה חשובה</h4>
-<div class="p">כלי <span lang="en" dir="ltr">AI</span> טועים לעתים במתמטיקה ובלוגיקה פורמלית.
-הם יכולים לייצר פתרון שנראה משכנע אך מכיל שגיאה לוגית דקה.
-השתמשו בהם ככלי עזר, לא כמקור סמכות.</div>
-<h3 id="t1-s3"><span class="sec-num">3</span>השפה המתמטית</h3>
+<h3 id="t1-s2"><span class="sec-num">2</span>השפה המתמטית</h3>
 <h4>דוגמה: משפט פיתגורס</h4>
 <div class="p"><div class="dm">\[a^2+b^2=c^2\]</div></div>
 <div class="p">כרגע המשפט שכתוב על הלוח לא אומר כלום.</div>
@@ -200,10 +192,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="p">יש למשפט המון הוכחות, ולא נכנס להוכחה של המשפט.</div>
 <h4>אבני הבניין - הגדרות, טענות והוכחות</h4>
 <div class="p">לפני שנתחיל בחומר הפורמלי, נבהיר שלושה מושגי יסוד.</div>
-<div class="p"><strong>הגדרה</strong> היא קביעה מדויקת של משמעות מונח.
-הגדרה טובה צריכה להיות ברורה (לא משאירה מקום לפרשנויות),
-לא מעגלית (לא מגדירה מונח על-ידי עצמו),
-ומינימלית (לא מכילה תנאים מיותרים).</div>
+<div class="p"><strong>הגדרה</strong> היא קביעה מדויקת של משמעות מונח.</div>
 <div class="p"><strong>טענה</strong> (או <strong>פסוק</strong>)
 היא ביטוי בשפה המתמטית, לפעמים ניתן לקבוע את ערך האמת של הטענה, <span lang="en" dir="ltr">True</span> או <span lang="en" dir="ltr">False</span>, 
 ולפעמים הערך תלוי <strong>במשתנה</strong>
@@ -221,7 +210,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 להוכחה יש מבנה ברור, ויש דרך נכונה ללמוד איך לכתוב הוכחה, וזה מה שנלמד בקורס.</div>
 <div class="p">הוכחה שונה מהסבר: הסבר משכנע את האינטואיציה, אך הוכחה מראה
 שהטענה נכונה <em>בהכרח</em>, ללא יוצא מן הכלל.</div>
-<h3 id="t1-s4"><span class="sec-num">4</span>טענות בשפת המתמטיקה</h3>
+<h3 id="t1-s3"><span class="sec-num">3</span>טענות בשפת המתמטיקה</h3>
 <div class="p">שפת המתמטיקה היא שפה טכנית ומדויקת. בשלב הראשון נרצה ללמוד לקרוא טענות בשפה הזו ולהבין מה הן אומרות.</div>
 <div class="p">את הטענות שנפגוש אפשר לחלק, בשלב זה, לשני סוגים:
 <ol><li> טענות שיש להן <strong>ערך אמת</strong>: הן אמיתיות או שקריות.
@@ -233,6 +222,14 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> "\(n\) הוא מספר זוגי" — אין לטענה ערך אמת בפני עצמה; התשובה תלויה בערך שנציב במקום \(n\).
   </li><li> "\(n&gt;5\)" — גם כאן ערך האמת תלוי בערך של \(n\).
 </li></ul></div>
+<div class="p notes"><strong>הערה: למה דווקא מספרים?</strong>
+בתרגול הזה רוב הדוגמאות עוסקות במספרים — מספרים טבעיים, זוגיים, ראשוניים.
+הסיבה פשוטה: אלה מושגים שכולכם כבר מכירים, ולכן קל לנסח בעזרתם טענות
+ולהתמקד במה שחשוב לנו כרגע — <em>המבנה</em> של הטענות, ולא התוכן שלהן.
+אבל לא הקורס, ולא המתמטיקה בכלל, עוסקים רק במספרים.
+שפת המתמטיקה משמשת לדבר על כל סוג של אובייקטים,
+ובהמשך הקורס נכיר אובייקטים חדשים — קבוצות, יחסים ופונקציות —
+ונשתמש באותה שפה בדיוק כדי לנסח טענות עליהם ולהוכיח אותן.</div>
 <div class="p"><strong>ערך אמת</strong> של טענה הוא התשובה לשאלה האם הטענה אמיתית או שקרית.</div>
 <div class="p"><strong>השמה</strong> למשתנה היא בחירה של ערך מסוים עבור המשתנה.
 למשל, בהשמה \(n=4\) הטענה "\(n\) הוא מספר זוגי" אמיתית, ובהשמה \(n=5\) היא שקרית.</div>
@@ -245,22 +242,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> יש שלושה מספרים זוגיים בין \(1\) ל-\(10\).
 </li></ol></div>
 <div class="p notes"><strong>הערה.</strong> בטענה האחרונה, "יש שלושה" פירושו שיש <em>לפחות</em> שלושה. אילו היינו רוצים לומר שיש בדיוק שלושה, היינו צריכים לומר זאת במפורש.</div>
-<h4>הגדרות</h4>
-<div class="p"><strong>הגדרה</strong> קובעת במדויק למה אנחנו מתכוונים במושג מסוים.
-הגדרה אינה דבר שמוכיחים; היא קובעת את המשמעות של המילה שבה נשתמש בהמשך.</div>
-<div class="p">לדוגמה, אפשר להגדיר:
-<div class="center">
-מספר שלם \(n\) נקרא <strong>זוגי</strong> אם קיים מספר שלם \(k\) כך ש-\(n=2k\).
-</div></div>
-<div class="p">אחרי שהגדרנו את המושג "זוגי", אפשר לנסח טענות שמשתמשות בו, למשל:
-<div class="center">
-"\(n\) זוגי", &emsp;&emsp; "לכל \(n\), אם \(n\) זוגי אז \(n^2\) זוגי".
-</div></div>
-<div class="p">כלומר, בהבנת טענה מתמטית יש שני דברים שונים שצריך להכיר:
-<ul><li> את <strong>מבנה הטענה</strong> — מה היא אומרת על האובייקטים שבה;
-  </li><li> את <strong>ההגדרות</strong> של המושגים שבהם היא משתמשת.
-</li></ul></div>
-<h3 id="t1-s5"><span class="sec-num">5</span>משתנים, השמות וכמתים</h3>
+<h3 id="t1-s4"><span class="sec-num">4</span>משתנים, השמות וכמתים</h3>
 <h4>הכמתים ``לכל'' ו``קיים''</h4>
 <div class="p">הרבה טענות מתמטיות לא מדברות על מספר אחד מסוים, אלא על הרבה מספרים בבת אחת.
 לשם כך יש לנו שני <strong>כמתים</strong>:
@@ -285,9 +267,9 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <h4>משתנים חופשיים וקשורים</h4>
 <div class="p">נסמן ב-\(\operatorname{Even}(n)\) את הטענה "\(n\) הוא מספר זוגי".
 נשווה בין שלוש הטענות הבאות:
-<div class="dm">\[\operatorname{Even}(n),\]</div>
-<div class="dm">\[\forall n\;\operatorname{Even}(n),\]</div>
-<div class="dm">\[\exists n\;\operatorname{Even}(n).\]</div></div>
+<div class="dm">\[\operatorname{Even}(n),~ 
+  \forall n\;\operatorname{Even}(n), ~
+  \exists n\;\operatorname{Even}(n)\]</div></div>
 <div class="p">בטענה הראשונה אפשר לבצע השמה ל-\(n\): למשל להציב \(n=2\) או \(n=3\).
 בטענה השנייה והשלישית, לעומת זאת, הכמתים "לכל" ו"קיים" כבר קובעים כיצד המשתנה \(n\) מופיע בטענה, ולכן אין משמעות לבצע לו השמה מבחוץ.</div>
 <div class="p"><ul><li> משתנה שניתן לבצע לו השמה נקרא <strong>משתנה חופשי</strong>.
@@ -323,7 +305,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="p">בטענה (א), לכל \(x\) מותר לבחור \(y\) שיכול להיות תלוי בו. למשל, עבור \(x\) נתון אפשר לבחור \(y=5-x\), ולכן הטענה נכונה.</div>
 <div class="p">בטענה (ב), לעומת זאת, צריך לבחור \(y\) אחד שיעבוד עבור כל \(x\) בבת אחת. זה בלתי אפשרי: עבור \(x=0\) נדרש \(y=5\), ואילו עבור \(x=1\) נדרש \(y=4\).</div>
 <div class="p">כלומר, ב-\(\forall x\;\exists y\) המשתנה \(y\) יכול להיות תלוי ב-\(x\), ואילו ב-\(\exists y\;\forall x\) צריך לבחור את \(y\) לפני שיודעים מהו \(x\).</div>
-<h3 id="t1-s6"><span class="sec-num">6</span>המילים הלוגיות: איך בונים טענות מורכבות?</h3>
+<h3 id="t1-s5"><span class="sec-num">5</span>המילים הלוגיות: איך בונים טענות מורכבות?</h3>
 <div class="p">מטענות פשוטות אפשר לבנות טענות מורכבות יותר באמצעות מספר מילים לוגיות מרכזיות:
 <ul><li> "וגם" — \(\land\).
   </li><li> "או" — \(\lor\).
@@ -339,31 +321,42 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="p">לדוגמה, נסמן ב-\(P\) את הטענה "\(n\) זוגי", וב-\(Q\) את הטענה "\(n&gt;2\)".
 מהטענות \(P,Q\) אפשר לבנות את הטענות
 <div class="dm">\[P\land Q, \qquad P\lor Q, \qquad P\Rightarrow Q, \qquad \lnot P.\]</div></div>
-<h3 id="t1-s7"><span class="sec-num">7</span>טענות אטומיות ומורכבות: איך מפרקים טענה?</h3>
+<h3 id="t1-s6"><span class="sec-num">6</span>טענות אטומיות ומורכבות: איך מפרקים טענה?</h3>
 <div class="p">טענה שאינה בנויה מטענות פשוטות יותר נקראת <strong>טענה אטומית</strong>.
 לדוגמה:
 <div class="dm">\[\operatorname{Even}(n), \qquad n&gt;2, \qquad x=y.\]</div></div>
 <div class="p">לעומת זאת, טענה שנבנתה מטענות פשוטות יותר בעזרת המילים הלוגיות היא <strong>טענה מורכבת</strong>.</div>
-<div class="p">כדי להבין טענה מורכבת, נחפש קודם את <strong>המילה הראשית</strong> שלה: המילה הלוגית שנמצאת בשכבה החיצונית ביותר של הטענה.
+<h4>המילה הראשית</h4>
+<div class="p"><div class="thm"><strong>הגדרה (המילה הראשית).</strong> 
+<strong>המילה הראשית</strong> של טענה מורכבת היא המילה הלוגית שנמצאת בשכבה החיצונית ביותר של הטענה.
+</div></div>
+<div class="p">כדי להבין טענה מורכבת, נחפש קודם את המילה הראשית שלה.
 לאחר שמזהים אותה, אפשר לפרק את הטענה לתת-טענות ולהמשיך באותו אופן.</div>
 <div class="p notes"><strong>הערה.</strong> המושג "אטומית" מתייחס למבנה שבו אנחנו בוחרים לעבוד כרגע. למשל, נוכל להתייחס לטענה "\(n\) זוגי" כאטומית; אם נרצה, נוכל לפתוח את ההגדרה של "זוגי" ולכתוב אותה כ-\(\exists k\;(n=2k)\).</div>
 <h4>תרגיל 1: פירוק טענה</h4>
 <div class="p">נתבונן בטענה הבאה, הכתובה גם במילים וגם בסימון מתמטי:</div>
 <div class="p"><div class="center">
-"אם \(n\) זוגי וגם \(n&gt;2\), אז \(n^2&gt;4\)."
+"אם \(n\) זוגי וגם \(n&gt;2\), אז \(n\) ראשוני או ש-3 מחלק את \(n\)."
 </div></div>
-<div class="p">נסמן ב-\(\operatorname{Even}(n)\) את הטענה "\(n\) זוגי". הטענה נכתבת כך:
-<div class="dm">\[\big(\operatorname{Even}(n)\land n&gt;2\big) \Rightarrow n^2&gt;4.\]</div></div>
+<div class="p">נסמן ב-\(\operatorname{Even}(n)\) את הטענה "\(n\) זוגי", ב-\(\operatorname{Prime}(n)\) את הטענה "\(n\) ראשוני",
+וב-\(3\mid n\) את הטענה "3 מחלק את \(n\)". הטענה נכתבת כך:
+<div class="dm">\[\big(\operatorname{Even}(n)\land n&gt;2\big) \Rightarrow \big(\operatorname{Prime}(n)\lor 3\mid n\big).\]</div></div>
 <div class="p"><ol><li> מהי המילה הראשית של הטענה?
   </li><li> מהן שתי תת-הטענות שהיא מחברת?
-  </li><li> פרקו את תת-הטענה השמאלית פעם נוספת.
+  </li><li> פרקו כל אחת מתת-הטענות פעם נוספת.
   </li><li> אילו טענות אטומיות מתקבלות בסוף הפירוק?
 </li></ol></div>
 <div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol1">הצגת הפתרון</button><div class="sol-body" id="t1-sol1" hidden><div class="p">המילה הראשית היא "אם...אז".
-הצד השמאלי הוא \(\operatorname{Even}(n)\land n&gt;2\), והצד הימני הוא \(n^2&gt;4\).
+הצד השמאלי הוא \(\operatorname{Even}(n)\land n&gt;2\), והצד הימני הוא \(\operatorname{Prime}(n)\lor 3\mid n\).
 בצד השמאלי המילה הראשית היא "וגם", ולכן הוא מתפרק ל-\(\operatorname{Even}(n)\) ול-\(n&gt;2\).
-בסוף מתקבלות שלוש הטענות האטומיות
-<div class="dm">\[\operatorname{Even}(n), \qquad n&gt;2, \qquad n^2&gt;4.\]</div></div></div></div>
+בצד הימני המילה הראשית היא "או", ולכן הוא מתפרק ל-\(\operatorname{Prime}(n)\) ול-\(3\mid n\).
+בסוף מתקבלות ארבע הטענות האטומיות
+<div class="dm">\[\operatorname{Even}(n), \qquad n&gt;2, \qquad \operatorname{Prime}(n), \qquad 3\mid n.\]</div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> הטענה הזו לא נכונה תמיד: בהשמה \(n=4\) ההנחה מתקיימת (\(4\) זוגי וגדול מ-2),
+        אבל \(4\) אינו ראשוני ו-3 לא מחלק אותו, ולכן הטענה שקרית.
+  </li><li> זה לא מפריע לנו לפרק אותה. בחלק הזה של התרגול אנחנו לומדים <em>לקרוא</em> טענות ולהבין את המבנה שלהן,
+        ועוד לא שואלים אם הן נכונות. גם טענה שקרית היא טענה, ויש לה מבנה.
+</li></ul></div></div></div>
 <h4>תרגיל 2: פירוק טענה עם כמתים</h4>
 <div class="p">נתבונן בטענה:</div>
 <div class="p"><div class="center">
@@ -385,7 +378,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="dm">\[\exists y\;\big(y&gt;x\land \operatorname{Even}(y)\big),\]</div>
 ובתוכו נמצאת הטענה \(y&gt;x\land \operatorname{Even}(y)\), שמתפרקת ל-\(y&gt;x\) ול-\(\operatorname{Even}(y)\).
 שני המשתנים \(x,y\) קשורים, ואין בטענה משתנים חופשיים.</div></div></div>
-<h3 id="t1-s8"><span class="sec-num">8</span>המשמעות של הקשרים: טבלאות אמת</h3>
+<h3 id="t1-s7"><span class="sec-num">7</span>המשמעות של הקשרים: טבלאות אמת</h3>
 <div class="p">עד עכשיו ראינו איך הקשרים בונים טענות. עכשיו נגדיר במדויק מהי המשמעות שלהם מבחינת ערכי אמת.</div>
 <h4>``וגם'' ו``או''</h4>
 <div class="p">הטענה "\(P\) וגם \(Q\)" אמיתית רק כאשר שתי הטענות אמיתיות.
@@ -421,7 +414,45 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 הטענה "כל הג'ירפות שנמצאות בכיתה, קוראים להן שולה" היא אמיתית אם אין בכיתה ג'ירפות כלל.
 כדי להפריך אותה צריך למצוא ג'ירפה שנמצאת בכיתה ולא קוראים לה שולה.
 זהו אותו רעיון שמופיע בשורות של הגרירה שבהן ההנחה שקרית.</div>
-<h3 id="t1-s9"><span class="sec-num">9</span>הצרנה: מעבר מעברית לשפה מתמטית</h3>
+<h3 id="t1-s8"><span class="sec-num">8</span>הגדרות</h3>
+<div class="p"><strong>הגדרה</strong> קובעת במדויק למה אנחנו מתכוונים במושג מסוים.
+הגדרה אינה דבר שמוכיחים; היא קובעת את המשמעות של המילה שבה נשתמש בהמשך.</div>
+<div class="p">לדוגמה, אפשר להגדיר:
+<div class="center">
+מספר שלם \(n\) נקרא <strong>זוגי</strong> אם קיים מספר שלם \(k\) כך ש-\(n=2k\).
+</div></div>
+<div class="p">אחרי שהגדרנו את המושג "זוגי", אפשר לנסח טענות שמשתמשות בו, למשל:
+<div class="center">
+"\(n\) זוגי", &emsp;&emsp; "לכל \(n\), אם \(n\) זוגי אז \(n^2\) זוגי".
+</div></div>
+<div class="p">כלומר, בהבנת טענה מתמטית יש שני דברים שונים שצריך להכיר:
+<ul><li> את <strong>מבנה הטענה</strong> — מה היא אומרת על האובייקטים שבה;
+  </li><li> את <strong>ההגדרות</strong> של המושגים שבהם היא משתמשת.
+</li></ul></div>
+<h3 id="t1-s9"><span class="sec-num">9</span>ערך אמת שאנחנו לא יודעים</h3>
+<div class="p">ראינו שלטענה בלי משתנים חופשיים יש ערך אמת: היא אמיתית או שקרית.
+חשוב להבין ש"יש לה ערך אמת" <strong>לא</strong> אומר ש"אנחנו יודעים מהו".
+ערך האמת של טענה לא תלוי במה שאנחנו יודעים עליה. נראה כמה דוגמאות, מהקלה לקשה:
+<ul><li> "\(8\) הוא מספר ראשוני" 
+  — 
+  שקרית, ואפשר לבדוק את זה מיד.
+  </li><li> "\(2^{136279841}-1\) הוא מספר ראשוני" — אמיתית.
+        זהו המספר הראשוני הגדול ביותר שידוע היום. יש בו יותר מ-41 מיליון ספרות,
+        והוא התגלה באוקטובר 2024 אחרי חישוב ענק של מחשבים רבים.
+        ערך האמת של הטענה היה "אמת" גם לפני 2024 — רק שאף אחד לא ידע את זה.
+  </li><li> "כל מספר זוגי גדול מ-2 הוא סכום של שני מספרים ראשוניים" (השערת גולדבך, 1742).
+        בכתיב מתמטי:
+        \(\forall n\;\Big(\big(\operatorname{Even}(n)\land n&gt;2\big)\Rightarrow\exists p\;\exists q\;\big(\operatorname{Prime}(p)\land\operatorname{Prime}(q)\land n=p+q\big)\Big)\).
+        הטענה נבדקה במחשב עבור מספרים עצומים, אבל עד היום <strong>אף אחד לא יודע</strong> אם היא אמיתית.
+        ובכל זאת, יש לה ערך אמת: היא אמיתית או שקרית, גם אם אולי לעולם לא נדע מה.
+</li></ul></div>
+<div class="p">שימו לב להבדל בין שני מצבים שונים לגמרי:
+<ul><li> לטענה "\(n\) הוא מספר ראשוני" <strong>אין</strong> ערך אמת, כי \(n\) משתנה חופשי. השאלה "האם היא נכונה?" חסרת משמעות עד שבוחרים השמה.
+  </li><li> להשערת גולדבך <strong>יש</strong> ערך אמת, כי אין בה משתנים חופשיים. אנחנו פשוט לא יודעים אותו.
+</li></ul></div>
+<div class="p">הדרך למצוא את ערך האמת של טענה היא "הוכחה".
+כתיבת הוכחות יהיה הדבר המרכזי שנעשה בקורס, ונתחיל ללמוד אותו בשבוע הבא/ עוד שבועיים.</div>
+<h3 id="t1-s10"><span class="sec-num">10</span>הצרנה: מעבר מעברית לשפה מתמטית</h3>
 <div class="p">כעת נתרגל את הכיוון ההפוך: נקבל טענה בעברית ונכתוב אותה בעזרת כמתים וקשרים לוגיים.</div>
 <div class="p">עולם הייחוס הוא כל האנשים. נסמן ב-\(L(x,y)\) את הטענה "\(x\) אוהב את \(y\)".</div>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל.</strong> הצרינו את הטענות הבאות:
@@ -447,7 +478,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 ואילו הטענה השנייה היא
 <div class="dm">\[\exists y\;\forall x\;L(x,y).\]</div>
 בשתי הטענות מופיעים אותם כמתים, אבל בסדר שונה — ולכן משמעותן שונה לחלוטין.</div></div></div></article>
-<h3 id="t1-s10"><span class="sec-num">10</span>שקילויות, קונטרפוזיציה ושלילה</h3>
+<h3 id="t1-s11"><span class="sec-num">11</span>שקילויות, קונטרפוזיציה ושלילה</h3>
 <div class="p">שתי טענות נקראות <strong>שקולות</strong> אם בכל השמה הן מקבלות אותו ערך אמת.
 טבלאות אמת מאפשרות לנו לבדוק שקילות כזו ישירות.</div>
 <h4>קונטרפוזיציה</h4>
@@ -491,14 +522,14 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="dm">\[\lnot(\exists x\;P(x)) \quad\equiv\quad \forall x\;\lnot P(x).\]</div></div>
 <div class="p">לדוגמה, שלילת הטענה "\(n\) זוגי וגם \(n&gt;2\)" היא הטענה "\(n\) אינו זוגי או \(n\le 2\)".</div>
 <div class="p">הדרך השיטתית לטפל בשלילה של טענה ארוכה תהיה לזהות בכל שלב את המילה הראשית ולהכניס את השלילה שכבה אחת פנימה. נחזור לכך בהרחבה בתרגול הבא.</div>
-<h3 id="t1-s11"><span class="sec-num">11</span>לסיכום</h3>
+<h3 id="t1-s12"><span class="sec-num">12</span>לסיכום</h3>
 <div class="p">כשאנחנו קוראים טענה מתמטית, כדאי לשאול שלוש שאלות:
 <ol><li> האם יש לטענה ערך אמת בפני עצמה, או שערך האמת שלה תלוי בהשמה?
   </li><li> אילו משתנים חופשיים ואילו משתנים קשורים?
   </li><li> מהי המילה הראשית של הטענה, ומהן תת-הטענות שנמצאות בתוכה?
 </li></ol></div>
 <div class="p">בתרגול הבא נעמיק בשלילת טענות ונשתמש במבנה של הטענה כדי להתחיל לכתוב הוכחות.</div>
-<h3 id="t1-extra"><span class="sec-num">12</span>שאלות נוספות</h3>
+<h3 id="t1-extra"><span class="sec-num">13</span>שאלות נוספות</h3>
 <article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (השמות המספקות טענה).</strong>
 בכל הסעיפים המשתנה \(n\) יכול לקבל אחד מהערכים
 <div class="dm">\[0,1,\ldots,10.\]</div>
@@ -718,7 +749,10 @@ window.MathJax = {
 
   function targetFor(hash) {
     const h = hash.replace('#', '');
-    return tuts.find(t => h === t.id || h.startsWith(t.id + '-')) || tuts[tuts.length - 1];
+    // default: the latest published tutorial (drafts only open by link or from the menu)
+    const published = tuts.filter(t => !t.hasAttribute('data-draft'));
+    const fallback = published.length ? published[published.length - 1] : tuts[tuts.length - 1];
+    return tuts.find(t => h === t.id || h.startsWith(t.id + '-')) || fallback;
   }
 
   function show() {
