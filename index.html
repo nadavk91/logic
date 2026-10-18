@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%232A52BE' d='M14 22 L12 8 L23 15 Q32 11 41 15 L52 8 L50 22 Q56 30 54 42 Q51 58 32 59 Q13 58 10 42 Q8 30 14 22 Z'/><circle fill='white' cx='24' cy='28' r='8'/><circle fill='white' cx='40' cy='28' r='8'/><circle fill='%23172030' cx='25' cy='29' r='3.6'/><circle fill='%23172030' cx='41' cy='29' r='3.6'/><path fill='%23E9A23B' d='M29.5 34 L34.5 34 L32 38.5 Z'/></svg>">
 <meta charset="utf-8">
 <title>תרגולי לוגיקה ותורת הקבוצות</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,6 +49,20 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--bo
 .page { padding-inline: 16px; }
 
 .masthead { max-width: 1120px; margin-inline: auto; padding-block: 2.5rem 1.75rem; border-bottom: 1px solid var(--rule); }
+.mast-row { display: flex; align-items: center; gap: 1rem 1.25rem; }
+.mast-text { min-width: 0; }
+.logo { flex: none; width: clamp(58px, 10vw, 88px); height: auto; overflow: visible; transition: transform .25s ease; }
+.logo:hover { transform: rotate(-8deg); }
+.owl-body { fill: var(--accent); }
+.owl-belly { fill: var(--accent-soft); }
+.owl-mark { fill: var(--accent); font: 700 14px var(--display); }
+.owl-eye { fill: #FFFFFF; }
+.owl-pupil { fill: #172030; }
+.owl-beak { fill: #E9A23B; }
+.owl-feet { stroke: #E9A23B; stroke-width: 2; stroke-linecap: round; fill: none; }
+.owl-eyes { transform-origin: 32px 28px; animation: owl-blink 6s infinite; }
+@keyframes owl-blink { 0%, 95%, 100% { transform: scaleY(1); } 97% { transform: scaleY(.1); } }
+@media (prefers-reduced-motion: reduce) { .owl-eyes { animation: none; } .logo { transition: none; } }
 .eyebrow { margin: 0; color: var(--muted); font-size: .85rem; letter-spacing: .02em; }
 .masthead h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 4.5vw, 2.8rem); line-height: 1.15; margin: .35rem 0 .5rem; text-wrap: balance; }
 .staff { margin: 0; color: var(--muted); }
@@ -148,9 +163,29 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 
 <div class="page" dir="rtl" lang="he">
   <header class="masthead">
-    <p class="eyebrow">מדעי המחשב · אוניברסיטת בן-גוריון · סמסטר א' תשפ"ז</p>
-    <h1>מבוא ללוגיקה ותורת הקבוצות</h1>
-    <p class="staff">חומרי תרגול · מתרגל: נדב קלמה · <span class="mail" dir="ltr">kalmn@post.bgu.ac.il</span></p>
+    <div class="mast-row">
+      <!-- the course owl: a "for all" on its belly -->
+      <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="ינשוף הלוגיקה">
+        <path class="owl-body" d="M14 22 L12 8 L23 15 Q32 11 41 15 L52 8 L50 22 Q56 30 54 42 Q51 58 32 59 Q13 58 10 42 Q8 30 14 22 Z"/>
+        <ellipse class="owl-belly" cx="32" cy="45" rx="12.5" ry="12"/>
+        <text class="owl-mark" x="32" y="51.5" text-anchor="middle">∀</text>
+        <g class="owl-eyes">
+          <circle class="owl-eye" cx="24" cy="28" r="7.5"/>
+          <circle class="owl-eye" cx="40" cy="28" r="7.5"/>
+          <circle class="owl-pupil" cx="25" cy="29" r="3.4"/>
+          <circle class="owl-pupil" cx="41" cy="29" r="3.4"/>
+          <circle class="owl-eye" cx="26.2" cy="27.6" r="1.1"/>
+          <circle class="owl-eye" cx="42.2" cy="27.6" r="1.1"/>
+        </g>
+        <path class="owl-beak" d="M29.5 34 L34.5 34 L32 38.5 Z"/>
+        <path class="owl-feet" d="M26 58.5 v3 M29 58.5 v3 M35 58.5 v3 M38 58.5 v3"/>
+      </svg>
+      <div class="mast-text">
+        <p class="eyebrow">מדעי המחשב · אוניברסיטת בן-גוריון · סמסטר א' תשפ"ז</p>
+        <h1>מבוא ללוגיקה ותורת הקבוצות</h1>
+        <p class="staff">חומרי תרגול · מתרגל: נדב קלמה · <span class="mail" dir="ltr">kalmn@post.bgu.ac.il</span></p>
+      </div>
+    </div>
     <div class="glyphs" aria-hidden="true">∀ ∃ ¬ ∧ ∨ ⇒ ⇔ ∈ ⊆</div>
   </header>
 
