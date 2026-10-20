@@ -142,11 +142,18 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 .qed { float: left; margin-inline-start: 1rem; }
 .proof::after { content: ""; display: block; clear: both; }
 
+.figure { display: block; width: min(260px, 100%); height: auto; margin: 1rem auto; direction: ltr; }
+.fig-line { fill: none; stroke: var(--fg); stroke-width: 2; }
+.fig-accent { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; }
+.fig-label text { fill: var(--fg); font: italic 17px "Times New Roman", serif; text-anchor: middle; }
+.fig-accent-label text { fill: var(--accent); }
 .tbl-wrap { overflow-x: auto; margin: 1rem 0 1.25rem; }
 .steps { border-collapse: collapse; width: 100%; font-size: .95rem; line-height: 1.6; }
 .steps th, .steps td { border: 1px solid var(--rule); padding: .55rem .75rem; vertical-align: top; text-align: right; }
 .steps th { background: var(--accent-soft); }
 .steps td:last-child { text-align: center; vertical-align: middle; }
+.steps.simple { width: auto; margin-inline: auto; }
+.steps.simple th, .steps.simple td { text-align: center; vertical-align: middle; }
 
 .exercise { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 1.1rem 1.25rem .4rem; margin: 1.5rem 0; }
 .exercise .ex-statement > strong:first-child { color: var(--accent); }
@@ -181,7 +188,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
         <path class="owl-feet" d="M26 58.5 v3 M29 58.5 v3 M35 58.5 v3 M38 58.5 v3"/>
       </svg>
       <div class="mast-text">
-        <p class="eyebrow">מדעי המחשב · אוניברסיטת בן-גוריון · סמסטר א' תשפ"ז</p>
+        <p class="eyebrow">מדעי המחשב · אוניברסיטת בן-גוריון · סמסטר א׳ תשפ״ז</p>
         <h1>מבוא ללוגיקה ותורת הקבוצות</h1>
         <p class="staff">חומרי תרגול · מתרגל: נדב קלמה · <span class="mail" dir="ltr">kalmn@post.bgu.ac.il</span></p>
       </div>
@@ -193,7 +200,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
     <aside class="rail">
       <nav class="tut-nav" aria-label="תרגולים">
         <h2>תרגולים</h2>
-        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>הקדמה – כניסה לעולם המתמטי, טענות וכמתים</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li></ul>
+        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li></ul>
       </nav>
       <details class="toc" id="toc" open>
         <summary>בתרגול זה</summary>
@@ -201,370 +208,187 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
       </details>
     </aside>
     <main>
-<section class="tirgul" id="t1" data-toc="&lt;li&gt;&lt;a href=&quot;#t1-s1&quot;&gt;הקדמה ללימודי מדעי המחשב ולוגיקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s2&quot;&gt;השפה המתמטית&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s3&quot;&gt;טענות בשפת המתמטיקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s4&quot;&gt;משתנים, השמות וכמתים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s5&quot;&gt;המילים הלוגיות: איך בונים טענות מורכבות?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s6&quot;&gt;טענות אטומיות ומורכבות: איך מפרקים טענה?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s7&quot;&gt;המשמעות של הקשרים: טבלאות אמת&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s8&quot;&gt;הגדרות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s9&quot;&gt;ערך אמת שאנחנו לא יודעים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s10&quot;&gt;הצרנה: מעבר מעברית לשפה מתמטית&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s11&quot;&gt;שקילויות, קונטרפוזיציה ושלילה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s12&quot;&gt;לסיכום&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 1</p><h2>הקדמה – כניסה לעולם המתמטי, טענות וכמתים</h2><div class="t-actions"><a class="to-extra" href="#t1-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul1.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul1-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t1">הצגת כל הפתרונות</button></div></header><h3 id="t1-s1"><span class="sec-num">1</span>הקדמה ללימודי מדעי המחשב ולוגיקה</h3>
-<div class="p">ברוכים הבאים לקורס <strong>מבוא ללוגיקה ותורת הקבוצות</strong>.
-קורס זה הוא אחד מאבני הבסיס של לימודי מדעי המחשב:
-הוא מלמד אתכם לחשוב בצורה מדויקת, להגדיר מושגים בבהירות,
-ולנסח טענות באופן שאפשר לקרוא, לבדוק ולהשתמש בו.</div>
-<div class="p">אחת המטרות המרכזיות של הקורס היא להכיר את <strong>השפה המתמטית</strong>.
-בשפה זו ננסח טענות בצורה מדויקת, ובהמשך גם נלמד כיצד לשכנע שטענות מסוימות הן אמיתיות — כלומר, כיצד לכתוב הוכחות.</div>
-<h4>מה נלמד בקורס?</h4>
-<div class="p"><ul><li> <strong>לוגיקה:</strong> טענות, קשרים, כמתים ושיטות הוכחה.
-  </li><li> <strong>תורת הקבוצות:</strong> קבוצות, יחסים ופונקציות.
-  </li><li> <strong>נושאים נוספים:</strong> סדר חלקי, שקילות, עוצמות ואינדוקציה.
+<section class="tirgul" id="t1" data-toc="&lt;li&gt;&lt;a href=&quot;#t1-s1&quot;&gt;פתיחה: למה לומדים לוגיקה?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s2&quot;&gt;השפה המתמטית: הגדרות, טענות והוכחות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s3&quot;&gt;ערכי אמת ומשתנים חופשיים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s4&quot;&gt;כמתים: &quot;לכל&quot; ו&quot;קיים&quot;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s5&quot;&gt;מילים לוגיות וטענות מורכבות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s6&quot;&gt;המשמעות של הקשרים: טבלאות אמת&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s7&quot;&gt;הגדרות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s8&quot;&gt;ערך אמת שאיננו יודעים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-s9&quot;&gt;הצרנה: מעבר מעברית לשפה מתמטית&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t1-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 1</p><h2>כניסה לעולם המתמטי</h2><div class="t-actions"><a class="to-extra" href="#t1-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul1.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul1-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t1">הצגת כל הפתרונות</button></div></header><h3 id="t1-s1"><span class="sec-num">1</span>פתיחה: למה לומדים לוגיקה?</h3>
+<div class="p"><ul><li> למה ללמוד מתמטיקה? למה ללמוד לוגיקה ותורת הקבוצות? ואם יש <span lang="en" dir="ltr">AI</span>, למה צריך את כל זה?
+  </li><li> המטרה אינה רק <strong>לחשב</strong>, אלא גם <strong>לחשוב באופן מדויק</strong>: להגדיר, לנסח טענות, לזהות הנחות ולנמק מסקנות.
+  </li><li> בדרך נלמד <strong>שפה מתמטית</strong>: מושגים, טענות והוכחות. זו שפה שעומדת בבסיסם של תחומים רבים במדעי המחשב.
 </li></ul></div>
-<h3 id="t1-s2"><span class="sec-num">2</span>השפה המתמטית</h3>
+<h3 id="t1-s2"><span class="sec-num">2</span>השפה המתמטית: הגדרות, טענות והוכחות</h3>
 <h4>דוגמה: משפט פיתגורס</h4>
-<div class="p"><div class="dm">\[a^2+b^2=c^2\]</div></div>
-<div class="p">כרגע המשפט שכתוב על הלוח לא אומר כלום.</div>
-<div class="p"><div class="thm"><strong>משפט (פיתגורס).</strong> 
-<strong>בכל</strong> <em>משולש ישר-זווית</em>
-עם ניצבים \(a, b\) ויתר \(c\), מתקיים:
-<div class="dm">\[a^2 + b^2 = c^2.\]</div>
+<div class="p"><div class="dm">\[a^2+b^2=c^2\]</div>
+ללא הקשר, הנוסחה לבדה אינה אומרת לנו מה מסמנים המשתנים. כעת ננסח טענה מדויקת:</div>
+<div class="p"><strong>משפט פיתגורס.</strong> בכל משולש ישר-זווית עם ניצבים באורכים \(a,b\) ויתר באורך \(c\), מתקיים \(a^2+b^2=c^2\).</div>
+<div class="p"><strong>הוכחה גאומטרית קצרה (לפי שטחים).</strong> נבנה ריבוע שצלעו \(a+b\), המכיל ארבעה עותקים של המשולש וריבוע פנימי שצלעו \(c\):</div>
+<div class="p"><div class="center">
+<span class="gap"></span>
+<svg class="figure" viewBox="0 0 260 260" role="img" aria-label="ריבוע שצלעו a+b, ובתוכו ריבוע שצלעו c וארבעה משולשים ישרי זווית">
+  <!-- same geometry as the TikZ picture in tirgul1.tex: a=1.6, b=2.4, side 4; 50px per unit -->
+  <rect class="fig-line" x="30" y="30" width="200" height="200"/>
+  <polygon class="fig-accent" points="110,230 230,150 150,30 30,110"/>
+  <g class="fig-label">
+    <text x="70" y="250">a</text><text x="170" y="250">b</text>
+    <text x="246" y="194">a</text><text x="246" y="94">b</text>
+    <text x="90" y="20">b</text><text x="190" y="20">a</text>
+    <text x="14" y="174">b</text><text x="14" y="74">a</text>
+  </g>
+  <g class="fig-label fig-accent-label">
+    <text x="130" y="168">c</text><text x="163" y="133">c</text>
+  </g>
+</svg>
+
+<span class="gap"></span>
 </div></div>
-<div class="p">עכשיו יש לנו טענה מתמטית, אבל עדיין חסרים לנו דברים.
-<strong>ההגדרות:</strong> למשל למשולש ישר זווית, ניצב ויתר.</div>
-<div class="p">יש למשפט המון הוכחות, ולא נכנס להוכחה של המשפט.</div>
-<h4>אבני הבניין - הגדרות, טענות והוכחות</h4>
-<div class="p">לפני שנתחיל בחומר הפורמלי, נבהיר שלושה מושגי יסוד.</div>
-<div class="p"><strong>הגדרה</strong> היא קביעה מדויקת של משמעות מונח.</div>
-<div class="p"><strong>טענה</strong> (או <strong>פסוק</strong>)
-היא ביטוי בשפה המתמטית, לפעמים ניתן לקבוע את ערך האמת של הטענה, <span lang="en" dir="ltr">True</span> או <span lang="en" dir="ltr">False</span>, 
-ולפעמים הערך תלוי <strong>במשתנה</strong>
-לדוגמה:
-<ul><li> "יש שלושה מספרים זוגיים בין 1 ל-10".
-  </li><li> "\(4 &lt; 2\)".
-  </li><li> לכל מרחב וקטורי יש בסיס.
-  </li><li> לסדרה \((a_n)_{n=1}^\infty\) יש גבול יחיד.
-  </li><li> "כל הג'ירפות שנמצאות בכיתה, קוראים להן שולה".
-  טוב זו לא טענה בעולם המתמטי, אבל אפשר לדון האם הטענה הזו נכונה או לא, מה דעתכם?
-  נחזור לזה בהמשך.
+<div class="p">זוויות הריבוע הפנימי הן ישרות (הזוויות החדות במשולש משלימות זו את זו ל-\(90^\circ\)). לכן
+<div class="dm">\[(a+b)^2=4\cdot\frac{ab}{2}+c^2
+  \quad\Longrightarrow\quad a^2+2ab+b^2=2ab+c^2
+  \quad\Longrightarrow\quad \boxed{a^2+b^2=c^2}.\]</div></div>
+<h4>שלוש אבני בניין</h4>
+<div class="p"><ul><li> <strong>הגדרה</strong>: קביעה מדויקת של משמעות מונח (למשל: משולש ישר-זווית, ניצב, יתר).
+  </li><li> <strong>טענה</strong>: ביטוי מתמטי שאפשר לשאול על ערך האמת שלו; אם יש בו משתנים חופשיים, ערך האמת עשוי להיות תלוי בהשמה.
+  </li><li> <strong>הוכחה</strong>: רצף נימוקים שמראה מדוע טענה נובעת מהנחות, מהגדרות ומטענות שכבר הוכחו.
 </li></ul></div>
-<div class="p"><strong>הוכחה</strong> היא רצף של טענות, שכל אחת מהן נובעת
-מהנחות, מהגדרות, או מטענות קודמות בהוכחה. <br>
-להוכחה יש מבנה ברור, ויש דרך נכונה ללמוד איך לכתוב הוכחה, וזה מה שנלמד בקורס.</div>
-<div class="p">הוכחה שונה מהסבר: הסבר משכנע את האינטואיציה, אך הוכחה מראה
-שהטענה נכונה <em>בהכרח</em>, ללא יוצא מן הכלל.</div>
-<h3 id="t1-s3"><span class="sec-num">3</span>טענות בשפת המתמטיקה</h3>
-<div class="p">שפת המתמטיקה היא שפה טכנית ומדויקת. בשלב הראשון נרצה ללמוד לקרוא טענות בשפה הזו ולהבין מה הן אומרות.</div>
-<div class="p">את הטענות שנפגוש אפשר לחלק, בשלב זה, לשני סוגים:
-<ol><li> טענות שיש להן <strong>ערך אמת</strong>: הן אמיתיות או שקריות.
-  </li><li> טענות שאין להן ערך אמת בפני עצמן; ערך האמת שלהן תלוי בערכים שנציב במשתנים שמופיעים בהן.
-</li></ol></div>
-<div class="p">לדוגמה:
-<ul><li> "\(7\) הוא מספר זוגי" — לטענה יש ערך אמת: היא שקרית.
-  </li><li> "\(4&lt;2\)" — לטענה יש ערך אמת: היא שקרית.
-  </li><li> "\(n\) הוא מספר זוגי" — אין לטענה ערך אמת בפני עצמה; התשובה תלויה בערך שנציב במקום \(n\).
-  </li><li> "\(n&gt;5\)" — גם כאן ערך האמת תלוי בערך של \(n\).
-</li></ul></div>
-<div class="p notes"><strong>הערה: למה דווקא מספרים?</strong>
-בתרגול הזה רוב הדוגמאות עוסקות במספרים — מספרים טבעיים, זוגיים, ראשוניים.
-הסיבה פשוטה: אלה מושגים שכולכם כבר מכירים, ולכן קל לנסח בעזרתם טענות
-ולהתמקד במה שחשוב לנו כרגע — <em>המבנה</em> של הטענות, ולא התוכן שלהן.
-אבל לא הקורס, ולא המתמטיקה בכלל, עוסקים רק במספרים.
-שפת המתמטיקה משמשת לדבר על כל סוג של אובייקטים,
-ובהמשך הקורס נכיר אובייקטים חדשים — קבוצות, יחסים ופונקציות —
-ונשתמש באותה שפה בדיוק כדי לנסח טענות עליהם ולהוכיח אותן.</div>
-<div class="p"><strong>ערך אמת</strong> של טענה הוא התשובה לשאלה האם הטענה אמיתית או שקרית.</div>
-<div class="p"><strong>השמה</strong> למשתנה היא בחירה של ערך מסוים עבור המשתנה.
-למשל, בהשמה \(n=4\) הטענה "\(n\) הוא מספר זוגי" אמיתית, ובהשמה \(n=5\) היא שקרית.</div>
-<div class="p notes"><strong>הערה.</strong> כשאומרים שלטענה <strong>יש ערך אמת</strong>, אין הכוונה שהיא בהכרח אמיתית. גם לטענה שקרית יש ערך אמת — הערך שלה הוא שקר.</div>
-<h4>תרגיל קצר</h4>
-<div class="p">עבור כל אחת מהטענות הבאות, קבעו האם יש לה ערך אמת בפני עצמה. אם לא, תנו השמה אחת שבה היא אמיתית והשמה אחת שבה היא שקרית.
-<ol><li> \(17\) הוא מספר זוגי.
-  </li><li> \(n\) הוא מספר ראשוני.
-  </li><li> \(2n-1&lt;k\).
-  </li><li> יש שלושה מספרים זוגיים בין \(1\) ל-\(10\).
-</li></ol></div>
-<div class="p notes"><strong>הערה.</strong> בטענה האחרונה, "יש שלושה" פירושו שיש <em>לפחות</em> שלושה. אילו היינו רוצים לומר שיש בדיוק שלושה, היינו צריכים לומר זאת במפורש.</div>
-<h3 id="t1-s4"><span class="sec-num">4</span>משתנים, השמות וכמתים</h3>
-<h4>הכמתים ``לכל'' ו``קיים''</h4>
-<div class="p">הרבה טענות מתמטיות לא מדברות על מספר אחד מסוים, אלא על הרבה מספרים בבת אחת.
-לשם כך יש לנו שני <strong>כמתים</strong>:
-<ul><li> "לכל" — \(\forall\).
-        הטענה \(\forall x\;P(x)\) אומרת ש-\(P(x)\) מתקיימת <strong>עבור כל</strong> ערך אפשרי של \(x\).
-        מספיק ערך אחד שלא מקיים אותה כדי שהטענה תהיה שקרית.
-  </li><li> "קיים" — \(\exists\).
-        הטענה \(\exists x\;P(x)\) אומרת שיש <strong>לפחות ערך אחד</strong> של \(x\) שעבורו \(P(x)\) מתקיימת.
-        מספיקה דוגמה אחת כדי שהטענה תהיה אמיתית.
-</li></ul></div>
-<div class="p">לדוגמה, "כל הסטודנטים בכיתה הגישו את התרגיל" נכונה רק אם אף סטודנט לא שכח להגיש,
-ואילו "קיים סטודנט בכיתה שהגיש את התרגיל" נכונה אם הגיש אפילו סטודנט אחד.</div>
-<div class="p">ובמספרים טבעיים:
-<ul><li> \(\exists n\;(n^2=9)\) — אמיתית: למשל \(n=3\).
-  </li><li> \(\forall n\;(n^2\ge n)\) — אמיתית: הריבוע של מספר טבעי אף פעם לא קטן ממנו.
-  </li><li> \(\forall n\;(n&gt;5)\) — שקרית: למשל \(n=1\) אינו גדול מ-\(5\).
-</li></ul></div>
-<div class="p">שימו לב שערך האמת תלוי גם ב<strong>עולם</strong> שעליו רץ המשתנה:
-הטענה \(\exists n\;(n^2=2)\) שקרית במספרים הטבעיים, אבל אם \(n\) רץ על המספרים הממשיים היא אמיתית (\(n=\sqrt2\)).
-באופן דומה, הטענה \(\exists x\;(x^2=-1)\) שקרית במספרים הממשיים, כי ריבוע של מספר ממשי אף פעם אינו שלילי;
-אבל אם \(x\) רץ על המספרים המרוכבים היא אמיתית (\(x=i\)).</div>
-<h4>משתנים חופשיים וקשורים</h4>
-<div class="p">נסמן ב-\(\operatorname{Even}(n)\) את הטענה "\(n\) הוא מספר זוגי".
-נשווה בין שלוש הטענות הבאות:
-<div class="dm">\[\operatorname{Even}(n),~ 
-  \forall n\;\operatorname{Even}(n), ~
-  \exists n\;\operatorname{Even}(n)\]</div></div>
-<div class="p">בטענה הראשונה אפשר לבצע השמה ל-\(n\): למשל להציב \(n=2\) או \(n=3\).
-בטענה השנייה והשלישית, לעומת זאת, הכמתים "לכל" ו"קיים" כבר קובעים כיצד המשתנה \(n\) מופיע בטענה, ולכן אין משמעות לבצע לו השמה מבחוץ.</div>
-<div class="p"><ul><li> משתנה שניתן לבצע לו השמה נקרא <strong>משתנה חופשי</strong>.
-  </li><li> משתנה שעליו נאמר כמת, כמו "לכל" או "קיים", נקרא <strong>משתנה קשור</strong>.
-</li></ul></div>
+<div class="p"><strong>דוגמאות לביטויים מתמטיים:</strong>
+<div class="dm">\[a^2+b^2=c^2,\qquad 1+1=2,\qquad 2&gt;4.\]</div>
+וכן: "לכל מרחב וקטורי יש בסיס"; "לכל סדרה מתכנסת יש גבול יחיד".</div>
+<div class="p">שימו לב שטענות במתמטיקה לא עוסקות רק במספרים:
+הטענה על מרחבים וקטוריים היא טענה שתפגשו באלגברה לינארית, והטענה על סדרות היא טענה שתפגשו בחדו״א.
+בתרגול היום נדבר בעיקר על מספרים — לא כי זה כל מה שיש, אלא כי אלה מושגים שכולכם כבר מכירים,
+וכך נוכל להתמקד במבנה של הטענות ולא בתוכן שלהן.</div>
+<h3 id="t1-s3"><span class="sec-num">3</span>ערכי אמת ומשתנים חופשיים</h3>
+<div class="p"><strong>ערך אמת</strong> הוא אמת (<span lang="en" dir="ltr">True</span>) או שקר (<span lang="en" dir="ltr">False</span>). גם לטענה שקרית יש ערך אמת.</div>
+<div class="p"><strong>השמה</strong> היא בחירה של ערכים למשתנים החופשיים. למשל, נסמן
+<div class="dm">\[\Prime(n):\quad \text{“$n$ הוא מספר ראשוני”.}\]</div>
+אז \(\Prime(17)\) אמיתית, ואילו \(\Prime(62)\) שקרית. לביטוי \(\Prime(n)\) אין ערך אמת קבוע עד שנבחר \(n\).</div>
+<div class="p"><div class="thm"><strong>הגדרה (משתנה חופשי ומשתנה קשור).</strong> 
+<strong>משתנה חופשי</strong> הוא משתנה שטרם נקבע באמצעות כמת או השמה.
+<strong>משתנה קשור</strong> הוא משתנה שכמת קובע את טווח הופעותיו.
+</div></div>
 <div class="p"><div class="thm"><strong>מסקנה.</strong> 
-אם בטענה אין אף משתנה חופשי, יש לה ערך אמת בפני עצמה.
-אם יש בה לפחות משתנה חופשי אחד, ערך האמת שלה נקבע רק אחרי שבוחרים השמה למשתנים החופשיים.
+לטענה שאין בה משתנים חופשיים יש ערך אמת, גם אם איננו יודעים מהו.
 </div></div>
-<h4>תרגיל</h4>
-<div class="p">עבור כל אחת מהטענות הבאות, מצאו אילו משתנים חופשיים ואילו קשורים, וקבעו האם יש לטענה ערך אמת בפני עצמה.
+<h3 id="t1-s4"><span class="sec-num">4</span>כמתים: "לכל" ו"קיים"</h3>
+<div class="p">שני הכמתים הבסיסיים הם
+<div class="dm">\[\forall x\,P(x)\qquad\text{ו-}\qquad\exists x\,P(x).\]</div>
+<ul><li> \(\forall\) – <strong>לכל</strong>: הטענה נכונה אם \(P(x)\) מתקיימת לכל \(x\) בעולם הדיון. <strong>דוגמה נגדית אחת</strong> מספיקה להפרכתה.
+  </li><li> \(\exists\) – <strong>קיים</strong>: הטענה נכונה אם יש <strong>לפחות איבר אחד</strong> שעבורו \(P(x)\) מתקיימת. <strong>דוגמה אחת</strong> מספיקה להוכחתה.
+</li></ul></div>
+<div class="p"><strong>דוגמאות</strong> (המשתנים רצים על המספרים השלמים):
+<ul><li> <strong>טענת "לכל" אמיתית:</strong> \(\forall n\,\Even(2n)\) — "לכל מספר שלם \(n\), המספר \(2n\) זוגי".
+        אמיתית: לכל \(n\) מתקיים \(2n=2\cdot n\), וזו בדיוק ההגדרה של מספר זוגי.
+  </li><li> <strong>טענת "לכל" שקרית:</strong> \(\forall n\,\Even(n)\) — "כל מספר שלם הוא זוגי".
+        שקרית: דוגמה נגדית אחת מספיקה, למשל \(n=3\).
+  </li><li> <strong>טענת "קיים" אמיתית:</strong> \(\exists n\,\bigl(\Prime(n)\land\Even(n)\bigr)\) — "יש מספר ראשוני זוגי".
+        אמיתית: דוגמה אחת מספיקה, \(n=2\).
+  </li><li> <strong>טענות "קיים" שקריות:</strong>
+  <ul><li> \(\exists n\,\neg\Even(2n)\) — "יש מספר שלם \(n\) שעבורו \(2n\) אינו זוגי".
+          זו בדיוק ההפך מטענת ה"לכל" האמיתית שבסעיף הראשון, ולכן היא שקרית.
+    </li><li> \(\exists n\,\bigl(\Even(n)\land\Even(n+1)\bigr)\) — "יש שני מספרים שלמים עוקבים ששניהם זוגיים".
+          שקרית: מבין כל שני מספרים עוקבים, אחד זוגי והשני אי-זוגי.
+  </li></ul>
+</li></ul></div>
+<div class="p">שימו לב לאי-הסימטריה: כדי להראות שטענת "לכל" שקרית מספיקה דוגמה אחת,
+וכך גם כדי להראות שטענת "קיים" אמיתית. אבל כדי להראות שטענת "קיים" שקרית,
+צריך להסביר למה <em>אף</em> ערך לא מתאים — דוגמה אחת לא מספיקה.</div>
+<h4>תרגיל: משתנים חופשיים וקשורים</h4>
+<div class="p">לכל ביטוי קבעו אילו משתנים חופשיים ואילו קשורים, והאם יש לו ערך אמת ללא השמה.
 <ol><li> \(a\le b\).
-  </li><li> \(\forall b\;(a\le b)\).
-  </li><li> \(\exists a\;\forall b\;(a\le b)\).
-  </li><li> \(\forall a\;\exists b\;(a&lt;b)\).
+  </li><li> \(\forall b\,(a\le b)\).
+  </li><li> \(\exists a\,\forall b\,(a\le b)\).
+  </li><li> \(\forall a\,\exists b\,(a&lt;b)\).
 </li></ol></div>
+<div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol1">הצגת הפתרון</button><div class="sol-body" id="t1-sol1" hidden><div class="p">(1) \(a,b\) חופשיים; (2) \(a\) חופשי, \(b\) קשור; (3)–(4) כל המשתנים קשורים, ולכן לכל אחת משתי הטענות יש ערך אמת. ב-(1)–(2) צריך השמה למשתנים החופשיים.</div></div></div>
 <h4>חשיבות סדר הכמתים</h4>
-<div class="p">כאשר בטענה מופיעים כמה כמתים, הסדר שלהם יכול לשנות את משמעות הטענה לחלוטין.</div>
-<h5>דוגמה מחיי היום-יום</h5>
-<div class="p">נתבונן בשתי הטענות הבאות:
-<ol><li> לכל סטודנט יש מרצה שהוא מכיר.
-  </li><li> יש מרצה שכל הסטודנטים מכירים.
-</li></ol></div>
-<div class="p">זה אמור להיות מובן שזו לא אותה הטענה.</div>
-<h5>דוגמה מתמטית</h5>
-<div class="p">נתבונן כעת בשתי הטענות הבאות מעל המספרים הממשיים.</div>
-<div class="p"><strong>(א)</strong>
-"לכל מספר ממשי \(x\) קיים מספר ממשי \(y\) כך ש-\(x+y=5\)":
-<div class="dm">\[\forall x\in\mathbb{R}\;\exists y\in\mathbb{R}\;(x+y=5).\]</div></div>
-<div class="p"><strong>(ב)</strong>
-"קיים מספר ממשי \(y\) כך שלכל מספר ממשי \(x\) מתקיים \(x+y=5\)":
-<div class="dm">\[\exists y\in\mathbb{R}\;\forall x\in\mathbb{R}\;(x+y=5).\]</div></div>
-<div class="p">בטענה (א), לכל \(x\) מותר לבחור \(y\) שיכול להיות תלוי בו. למשל, עבור \(x\) נתון אפשר לבחור \(y=5-x\), ולכן הטענה נכונה.</div>
-<div class="p">בטענה (ב), לעומת זאת, צריך לבחור \(y\) אחד שיעבוד עבור כל \(x\) בבת אחת. זה בלתי אפשרי: עבור \(x=0\) נדרש \(y=5\), ואילו עבור \(x=1\) נדרש \(y=4\).</div>
-<div class="p">כלומר, ב-\(\forall x\;\exists y\) המשתנה \(y\) יכול להיות תלוי ב-\(x\), ואילו ב-\(\exists y\;\forall x\) צריך לבחור את \(y\) לפני שיודעים מהו \(x\).</div>
-<h3 id="t1-s5"><span class="sec-num">5</span>המילים הלוגיות: איך בונים טענות מורכבות?</h3>
-<div class="p">מטענות פשוטות אפשר לבנות טענות מורכבות יותר באמצעות מספר מילים לוגיות מרכזיות:
-<ul><li> "וגם" — \(\land\).
-  </li><li> "או" — \(\lor\).
-  </li><li> "אם... אז..." — \(\Rightarrow\).
-  </li><li> "אם ורק אם" — \(\Leftrightarrow\).
-  </li><li> "לא נכון ש..." — \(\lnot\).
-  </li><li> "לכל" — \(\forall\).
-  </li><li> "קיים" — \(\exists\).
-</li></ul></div>
-<div class="p">הקשרים "וגם", "או", "אם...אז" ו"אם ורק אם" מקבלים שתי טענות ובונים מהן טענה חדשה.
-קשר השלילה מקבל טענה אחת ובונה ממנה טענה חדשה.
-הכמתים "לכל" ו"קיים" קושרים משתנה בתוך טענה.</div>
-<div class="p">לדוגמה, נסמן ב-\(P\) את הטענה "\(n\) זוגי", וב-\(Q\) את הטענה "\(n&gt;2\)".
-מהטענות \(P,Q\) אפשר לבנות את הטענות
-<div class="dm">\[P\land Q, \qquad P\lor Q, \qquad P\Rightarrow Q, \qquad \lnot P.\]</div></div>
-<h3 id="t1-s6"><span class="sec-num">6</span>טענות אטומיות ומורכבות: איך מפרקים טענה?</h3>
-<div class="p">טענה שאינה בנויה מטענות פשוטות יותר נקראת <strong>טענה אטומית</strong>.
-לדוגמה:
-<div class="dm">\[\operatorname{Even}(n), \qquad n&gt;2, \qquad x=y.\]</div></div>
-<div class="p">לעומת זאת, טענה שנבנתה מטענות פשוטות יותר בעזרת המילים הלוגיות היא <strong>טענה מורכבת</strong>.</div>
-<h4>המילה הראשית</h4>
-<div class="p"><div class="thm"><strong>הגדרה (המילה הראשית).</strong> 
-<strong>המילה הראשית</strong> של טענה מורכבת היא המילה הלוגית שנמצאת בשכבה החיצונית ביותר של הטענה.
+<div class="p"><strong>בחיי היום-יום:</strong> "לכל סטודנט יש מרצה שהוא מכיר" לעומת "יש מרצה שכל הסטודנטים מכירים" – לא אותה טענה.</div>
+<div class="p"><strong>דוגמה מתמטית (מעל המספרים הממשיים):</strong>
+<div class="dm">\[\forall x\,\exists y\,(x+y=5)
+  \qquad\text{לעומת}\qquad
+  \exists y\,\forall x\,(x+y=5).\]</div></div>
+<div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol2">הצגת הפתרון</button><div class="sol-body" id="t1-sol2" hidden><div class="p">הראשונה <strong>אמיתית</strong>: לכל \(x\) אפשר לבחור \(y=5-x\). השנייה <strong>שקרית</strong>: אותו \(y\) אינו יכול לעבוד גם ל-\(x=0\) וגם ל-\(x=1\). סדר הכמתים קובע אם \(y\) יכול להיות תלוי ב-\(x\).</div></div></div>
+<h4>עולם הדיון קובע את ערך האמת</h4>
+<div class="p">ערך האמת של טענה עם כמתים תלוי גם ב<strong>עולם</strong> שממנו נלקחים הערכים של המשתנים.
+למשל, הטענה
+<div class="dm">\[\exists x\,(x^2=-1)\]</div>
+<strong>שקרית</strong> כאשר \(x\) רץ על המספרים הממשיים, כי ריבוע של מספר ממשי אף פעם אינו שלילי;
+אבל היא <strong>אמיתית</strong> כאשר \(x\) רץ על המספרים המרוכבים, כי \(i^2=-1\).
+לכן כשכותבים טענה עם כמתים, צריך תמיד לדעת על איזה עולם רצים המשתנים.</div>
+<h3 id="t1-s5"><span class="sec-num">5</span>מילים לוגיות וטענות מורכבות</h3>
+<div class="p"><div class="center">
+<div class="tbl-wrap"><table class="steps simple"><tr><th>סימון</th><th>משמעות</th><th>סימון</th><th>משמעות</th></tr><tr><td>\(\land\)</td><td>וגם</td><td>\(\lor\)</td><td>או</td></tr><tr><td>\(\Rightarrow\)</td><td>אם… אז</td><td>\(\Leftrightarrow\)</td><td>אם ורק אם</td></tr><tr><td>\(\neg\)</td><td>לא נכון ש-</td><td></td><td></td></tr><tr><td>\(\forall\)</td><td>לכל</td><td>\(\exists\)</td><td>קיים</td></tr></table></div>
 </div></div>
-<div class="p">כדי להבין טענה מורכבת, נחפש קודם את המילה הראשית שלה.
-לאחר שמזהים אותה, אפשר לפרק את הטענה לתת-טענות ולהמשיך באותו אופן.</div>
-<div class="p notes"><strong>הערה.</strong> המושג "אטומית" מתייחס למבנה שבו אנחנו בוחרים לעבוד כרגע. למשל, נוכל להתייחס לטענה "\(n\) זוגי" כאטומית; אם נרצה, נוכל לפתוח את ההגדרה של "זוגי" ולכתוב אותה כ-\(\exists k\;(n=2k)\).</div>
+<div class="p">נסמן \(P\): "\(n\) זוגי", \(Q\): "\(n&gt;2\)". אפשר לבנות למשל
+<div class="dm">\[P\land Q,\qquad P\lor Q,\qquad P\Rightarrow Q,\qquad \neg P.\]</div>
+<strong>טענה אטומית</strong> אינה מפורקת כרגע לטענות פשוטות יותר (למשל \(\Even(n)\), \(n&gt;2\), \(x=y\)). <strong>טענה מורכבת</strong> בנויה מטענות באמצעות קשרים לוגיים וכמתים.</div>
+<div class="p"><strong>המילה הראשית</strong> היא הקשר או הכמת <strong>החיצוני ביותר</strong> בטענה; כדי להבין את הטענה נפרק אותה לפי המילה הראשית, שכבה אחרי שכבה.</div>
 <h4>תרגיל 1: פירוק טענה</h4>
-<div class="p">נתבונן בטענה הבאה, הכתובה גם במילים וגם בסימון מתמטי:</div>
-<div class="p"><div class="center">
-"אם \(n\) זוגי וגם \(n&gt;2\), אז \(n\) ראשוני או ש-3 מחלק את \(n\)."
-</div></div>
-<div class="p">נסמן ב-\(\operatorname{Even}(n)\) את הטענה "\(n\) זוגי", ב-\(\operatorname{Prime}(n)\) את הטענה "\(n\) ראשוני",
-וב-\(3\mid n\) את הטענה "3 מחלק את \(n\)". הטענה נכתבת כך:
-<div class="dm">\[\big(\operatorname{Even}(n)\land n&gt;2\big) \Rightarrow \big(\operatorname{Prime}(n)\lor 3\mid n\big).\]</div></div>
-<div class="p"><ol><li> מהי המילה הראשית של הטענה?
-  </li><li> מהן שתי תת-הטענות שהיא מחברת?
-  </li><li> פרקו כל אחת מתת-הטענות פעם נוספת.
-  </li><li> אילו טענות אטומיות מתקבלות בסוף הפירוק?
-</li></ol></div>
-<div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol1">הצגת הפתרון</button><div class="sol-body" id="t1-sol1" hidden><div class="p">המילה הראשית היא "אם...אז".
-הצד השמאלי הוא \(\operatorname{Even}(n)\land n&gt;2\), והצד הימני הוא \(\operatorname{Prime}(n)\lor 3\mid n\).
-בצד השמאלי המילה הראשית היא "וגם", ולכן הוא מתפרק ל-\(\operatorname{Even}(n)\) ול-\(n&gt;2\).
-בצד הימני המילה הראשית היא "או", ולכן הוא מתפרק ל-\(\operatorname{Prime}(n)\) ול-\(3\mid n\).
-בסוף מתקבלות ארבע הטענות האטומיות
-<div class="dm">\[\operatorname{Even}(n), \qquad n&gt;2, \qquad \operatorname{Prime}(n), \qquad 3\mid n.\]</div></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> הטענה הזו לא נכונה תמיד: בהשמה \(n=4\) ההנחה מתקיימת (\(4\) זוגי וגדול מ-2),
-        אבל \(4\) אינו ראשוני ו-3 לא מחלק אותו, ולכן הטענה שקרית.
-  </li><li> זה לא מפריע לנו לפרק אותה. בחלק הזה של התרגול אנחנו לומדים <em>לקרוא</em> טענות ולהבין את המבנה שלהן,
-        ועוד לא שואלים אם הן נכונות. גם טענה שקרית היא טענה, ויש לה מבנה.
-</li></ul></div></div></div>
+<div class="p">נסמן \(\Even(n)\) – "\(n\) זוגי", \(\Prime(n)\) – "\(n\) ראשוני", ו-\(3\Div n\) – "\(3\) מחלק את \(n\)".</div>
+<div class="p"><strong>הטענה:</strong> "אם \(n\) זוגי וגם גדול מ-\(2\), אז \(n\) ראשוני או ש-\(3\) מחלק את \(n\)".
+<div class="dm">\[\underbrace{(\Even(n)\land n&gt;2)}_{\text{הנחה}}
+  \ \Rightarrow\
+  \underbrace{(\Prime(n)\lor 3\Div n)}_{\text{מסקנה}}.\]</div>
+<strong>משימה:</strong> זהו את המילה הראשית ופרקו את הטענה עד לטענות אטומיות.</div>
+<div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol3">הצגת הפתרון</button><div class="sol-body" id="t1-sol3" hidden><div class="p">המילה הראשית היא \(\Rightarrow\). משמאל \(\land\) ושתי האטומיות \(\Even(n),\,n&gt;2\); מימין \(\lor\) ושתי האטומיות \(\Prime(n),\,3\Div n\). לדוגמה, בהשמה \(n=4\) הטענה כולה שקרית.</div></div></div>
 <h4>תרגיל 2: פירוק טענה עם כמתים</h4>
-<div class="p">נתבונן בטענה:</div>
-<div class="p"><div class="center">
-"לכל \(x\), אם \(x\) זוגי וגם \(x&gt;2\), אז קיים \(y\) כך ש-\(y&gt;x\) וגם \(y\) זוגי."
-</div></div>
-<div class="p"><div class="dm">\[\forall x\;\Big(\big(\operatorname{Even}(x)\land x&gt;2\big)
-  \Rightarrow \exists y\;\big(y&gt;x\land \operatorname{Even}(y)\big)\Big).\]</div></div>
-<div class="p"><ol><li> מהי המילה הראשית של הטענה כולה?
-  </li><li> לאחר שמסירים את השכבה הראשונה, מהי המילה הראשית של הטענה שנשארת?
-  </li><li> פרקו את שני הצדדים של הגרירה עד לטענות אטומיות.
-  </li><li> אילו משתנים קשורים בטענה? האם יש משתנים חופשיים?
-</li></ol></div>
-<div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol2">הצגת הפתרון</button><div class="sol-body" id="t1-sol2" hidden><div class="p">המילה הראשית של הטענה כולה היא "לכל \(x\)".
-בתוך הכמת נמצאת גרירה, ולכן המילה הראשית בשכבה הבאה היא "אם...אז".
-הצד השמאלי של הגרירה הוא
-<div class="dm">\[\operatorname{Even}(x)\land x&gt;2,\]</div>
-והוא מתפרק בעזרת "וגם" ל-\(\operatorname{Even}(x)\) ול-\(x&gt;2\).
-הצד הימני הוא
-<div class="dm">\[\exists y\;\big(y&gt;x\land \operatorname{Even}(y)\big),\]</div>
-ובתוכו נמצאת הטענה \(y&gt;x\land \operatorname{Even}(y)\), שמתפרקת ל-\(y&gt;x\) ול-\(\operatorname{Even}(y)\).
-שני המשתנים \(x,y\) קשורים, ואין בטענה משתנים חופשיים.</div></div></div>
-<h3 id="t1-s7"><span class="sec-num">7</span>המשמעות של הקשרים: טבלאות אמת</h3>
-<div class="p">עד עכשיו ראינו איך הקשרים בונים טענות. עכשיו נגדיר במדויק מהי המשמעות שלהם מבחינת ערכי אמת.</div>
-<h4>``וגם'' ו``או''</h4>
-<div class="p">הטענה "\(P\) וגם \(Q\)" אמיתית רק כאשר שתי הטענות אמיתיות.
-לדוגמה, הטענה "\(6\) זוגי וגם \(6\) מתחלק ב-\(3\)" אמיתית, ואילו הטענה "\(4\) זוגי וגם \(4\) מתחלק ב-\(3\)" שקרית.</div>
-<div class="p">הטענה "\(P\) או \(Q\)" אמיתית כאשר <strong>לפחות אחת</strong> משתי הטענות אמיתית.
-חשוב: ה"או" הלוגי הוא <strong>או מכיל</strong> — הוא אמיתי גם כאשר שתי הטענות אמיתיות.
-למשל, הטענה "\(4\) זוגי או \(4\) מתחלק ב-\(3\)" אמיתית כי התנאי הראשון מתקיים; וגם הטענה "\(6\) זוגי או \(6\) מתחלק ב-\(3\)" אמיתית, אף ששני התנאים מתקיימים.</div>
-<h4>המשמעות של ``אם...אז'' (גרירה)</h4>
-<div class="p">נתבונן בטענה מהצורה
-<div class="dm">\[P\Rightarrow Q.\]</div>
-את הטענה הזו נקרא: "אם \(P\), אז \(Q\)".</div>
-<div class="p">מתי טענה כזו שקרית? בדיוק כאשר \(P\) אמיתית, אבל \(Q\) שקרית.</div>
-<div class="p"><strong>דוגמה: הבטחה.</strong>
-נניח שהבטחתי: "<strong>אם</strong> תקבל 100 במבחן, <strong>אז</strong> אקנה לך גלידה."
-מתי הפרתי את ההבטחה?
-<ul><li> קיבלת 100 וקניתי גלידה — עמדתי בהבטחה.
-  </li><li> קיבלת 100 ולא קניתי גלידה — <strong>הפרתי את ההבטחה</strong>.
-  </li><li> לא קיבלת 100 וקניתי לך גלידה בכל זאת — לא הפרתי את ההבטחה.
-  </li><li> לא קיבלת 100 ולא קניתי — גם כאן לא הפרתי את ההבטחה.
+<div class="p"><div class="dm">\[\forall x\,\Bigl((\Even(x)\land x&gt;2)\Rightarrow
+      \exists y\,(y&gt;x\land\Even(y))\Bigr).\]</div>
+פרקו לפי המילים הראשיות, וציינו אילו משתנים חופשיים ואילו קשורים.</div>
+<div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol4">הצגת הפתרון</button><div class="sol-body" id="t1-sol4" hidden><div class="p">המילה הראשית היא \(\forall x\), אחריה \(\Rightarrow\). בצד שמאל \(\land\) ובצד ימין \(\exists y\) ולאחריו \(\land\). האטומיות: \(\Even(x),\,x&gt;2,\,y&gt;x,\,\Even(y)\). שני המשתנים קשורים; אין משתנים חופשיים.</div></div></div>
+<h3 id="t1-s6"><span class="sec-num">6</span>המשמעות של הקשרים: טבלאות אמת</h3>
+<div class="p">נשתמש ב-\(\Truth\) לאמת וב-\(\False\) לשקר.</div>
+<div class="p"><ul><li> \(P\land Q\) – אמת רק אם <strong>שתי</strong> הטענות אמיתיות.
+  </li><li> \(P\lor Q\) – אמת אם <strong>לפחות אחת</strong> אמיתית (גם אם שתיהן אמיתיות).
+  </li><li> \(\neg P\) – החלפת ערך האמת של \(P\).
 </li></ul></div>
-<div class="p">כלומר, טענת "אם \(P\) אז \(Q\)" שקרית רק במקרה שבו \(P\) אמיתית ו-\(Q\) שקרית.
-כאשר \(P\) שקרית, הטענה אינה מופרכת, בלי קשר לערך האמת של \(Q\).</div>
-<div class="p">דוגמה נוספת: "אם יורד גשם, הכביש רטוב".
-אם הכביש רטוב בלי גשם, זה לא מפריך את הטענה.</div>
-<div class="p notes"><strong>הערת מינוח.</strong>
-בשלב הזה, הסימון \(P\Rightarrow Q\) מציין <strong>טענה מורכבת</strong> שקוראים "אם \(P\), אז \(Q\)".
-בהמשך הקורס נדבר גם על המושג <strong>נביעה</strong> בין טענות. אלה מושגים קשורים, אבל כרגע לא נבחין ביניהם לעומק.</div>
-<h4>טבלת האמת של הקשרים</h4>
-<div class="p">כעת אפשר לסכם את המשמעות המדויקת של הקשרים בטבלת אמת:</div>
-<div class="p"><div class="tt-wrap"><table class="tt"><thead><tr><th>\(P\)</th><th>\(Q\)</th><th>\(\lnot P\)</th><th>\(P \land Q\)</th><th>\(P \lor Q\)</th><th>\(P \Rightarrow Q\)</th><th>\(P \Leftrightarrow Q\)</th></tr></thead><tbody><tr><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-T">T</td></tr><tr><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td></tr></tbody></table></div></div>
-<div class="p">שימו לב במיוחד לעמודה של \(P\Rightarrow Q\): יש בה שורה שקרית אחת בלבד — כאשר \(P\) אמיתית ו-\(Q\) שקרית.</div>
-<div class="p"><strong>דוגמה: אמת באופן ריק.</strong>
-הטענה "כל הג'ירפות שנמצאות בכיתה, קוראים להן שולה" היא אמיתית אם אין בכיתה ג'ירפות כלל.
-כדי להפריך אותה צריך למצוא ג'ירפה שנמצאת בכיתה ולא קוראים לה שולה.
-זהו אותו רעיון שמופיע בשורות של הגרירה שבהן ההנחה שקרית.</div>
-<h3 id="t1-s8"><span class="sec-num">8</span>הגדרות</h3>
-<div class="p"><strong>הגדרה</strong> קובעת במדויק למה אנחנו מתכוונים במושג מסוים.
-הגדרה אינה דבר שמוכיחים; היא קובעת את המשמעות של המילה שבה נשתמש בהמשך.</div>
-<div class="p">לדוגמה, אפשר להגדיר:
+<div class="p"><strong>דוגמה:</strong> \(P=\Even(n)\) ו-\(Q=(3\Div n)\):
 <div class="center">
-מספר שלם \(n\) נקרא <strong>זוגי</strong> אם קיים מספר שלם \(k\) כך ש-\(n=2k\).
+<div class="tbl-wrap"><table class="steps simple"><tr><th>\(n\)</th><th>\(P\)</th><th>\(Q\)</th><th>\(P\land Q\)</th><th>\(P\lor Q\)</th></tr><tr><td>\(6\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td></tr><tr><td>\(8\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\Truth\)</td></tr><tr><td>\(9\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\Truth\)</td></tr><tr><td>\(11\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\False\)</td></tr></table></div>
 </div></div>
-<div class="p">אחרי שהגדרנו את המושג "זוגי", אפשר לנסח טענות שמשתמשות בו, למשל:
+<h4>גרירה ושקילות דו-כיוונית</h4>
+<div class="p"><strong>גרירה:</strong> \(P\Rightarrow Q\) פירושה "אם \(P\) אז \(Q\)". היא <strong>שקרית רק כאשר \(P\) אמת ו-\(Q\) שקר</strong>.</div>
+<div class="p"><strong>דוגמת ההבטחה:</strong> "אם תקבל \(100\) במבחן, אקנה לך גלידה". ההבטחה הופרה רק אם קיבלת \(100\) ולא קניתי גלידה. אם לא קיבלת \(100\), לא הפרתי את ההבטחה – בין אם קניתי גלידה ובין אם לא.</div>
+<div class="p"><strong>שקילות דו-כיוונית:</strong> \(P\Leftrightarrow Q\) אמיתית כאשר \(P,Q\) בעלי אותו ערך אמת. למעשה
+<div class="dm">\[(P\Rightarrow Q)\land(Q\Rightarrow P)\quad\equiv\quad P\Leftrightarrow Q.\]</div></div>
+<div class="p"><strong>טבלת האמת המלאה:</strong>
 <div class="center">
-"\(n\) זוגי", &emsp;&emsp; "לכל \(n\), אם \(n\) זוגי אז \(n^2\) זוגי".
+<span class="gap"></span>
+<div class="tbl-wrap"><table class="steps simple"><tr><th>\(P\)</th><th>\(Q\)</th><th>\(\neg P\)</th><th>\(P\land Q\)</th><th>\(P\lor Q\)</th><th>\(P\Rightarrow Q\)</th><th>\(P\Leftrightarrow Q\)</th></tr><tr><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td></tr><tr><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\False\)</td></tr><tr><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\False\)</td></tr><tr><td>\(\False\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td></tr></table></div>
 </div></div>
-<div class="p">כלומר, בהבנת טענה מתמטית יש שני דברים שונים שצריך להכיר:
-<ul><li> את <strong>מבנה הטענה</strong> — מה היא אומרת על האובייקטים שבה;
-  </li><li> את <strong>ההגדרות</strong> של המושגים שבהם היא משתמשת.
-</li></ul></div>
-<h3 id="t1-s9"><span class="sec-num">9</span>ערך אמת שאנחנו לא יודעים</h3>
-<div class="p">ראינו שלטענה בלי משתנים חופשיים יש ערך אמת: היא אמיתית או שקרית.
-חשוב להבין ש"יש לה ערך אמת" <strong>לא</strong> אומר ש"אנחנו יודעים מהו".
-ערך האמת של טענה לא תלוי במה שאנחנו יודעים עליה. נראה כמה דוגמאות, מהקלה לקשה:
-<ul><li> "\(8\) הוא מספר ראשוני" 
-  — 
-  שקרית, ואפשר לבדוק את זה מיד.
-  </li><li> "\(2^{136279841}-1\) הוא מספר ראשוני" — אמיתית.
-        זהו המספר הראשוני הגדול ביותר שידוע היום. יש בו יותר מ-41 מיליון ספרות,
-        והוא התגלה באוקטובר 2024 אחרי חישוב ענק של מחשבים רבים.
-        ערך האמת של הטענה היה "אמת" גם לפני 2024 — רק שאף אחד לא ידע את זה.
-  </li><li> "כל מספר זוגי גדול מ-2 הוא סכום של שני מספרים ראשוניים" (השערת גולדבך, 1742).
-        בכתיב מתמטי:
-        \(\forall n\;\Big(\big(\operatorname{Even}(n)\land n&gt;2\big)\Rightarrow\exists p\;\exists q\;\big(\operatorname{Prime}(p)\land\operatorname{Prime}(q)\land n=p+q\big)\Big)\).
-        הטענה נבדקה במחשב עבור מספרים עצומים, אבל עד היום <strong>אף אחד לא יודע</strong> אם היא אמיתית.
-        ובכל זאת, יש לה ערך אמת: היא אמיתית או שקרית, גם אם אולי לעולם לא נדע מה.
-</li></ul></div>
-<div class="p">שימו לב להבדל בין שני מצבים שונים לגמרי:
-<ul><li> לטענה "\(n\) הוא מספר ראשוני" <strong>אין</strong> ערך אמת, כי \(n\) משתנה חופשי. השאלה "האם היא נכונה?" חסרת משמעות עד שבוחרים השמה.
-  </li><li> להשערת גולדבך <strong>יש</strong> ערך אמת, כי אין בה משתנים חופשיים. אנחנו פשוט לא יודעים אותו.
-</li></ul></div>
-<div class="p">הדרך למצוא את ערך האמת של טענה היא "הוכחה".
-כתיבת הוכחות יהיה הדבר המרכזי שנעשה בקורס, ונתחיל ללמוד אותו בשבוע הבא/ עוד שבועיים.</div>
-<h3 id="t1-s10"><span class="sec-num">10</span>הצרנה: מעבר מעברית לשפה מתמטית</h3>
-<div class="p">כעת נתרגל את הכיוון ההפוך: נקבל טענה בעברית ונכתוב אותה בעזרת כמתים וקשרים לוגיים.</div>
-<div class="p">עולם הייחוס הוא כל האנשים. נסמן ב-\(L(x,y)\) את הטענה "\(x\) אוהב את \(y\)".</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל.</strong> הצרינו את הטענות הבאות:
+<div class="p notes"><strong>שימו לב.</strong> כאשר ההנחה בגרירה שקרית, הגרירה נחשבת אמיתית. זה קשור לרעיון של <strong>אמת באופן ריק</strong>: למשל, "כל המספרים הטבעיים שקטנים מ-\(0\) הם זוגיים" היא טענה אמיתית, משום שאין מספר טבעי כזה.</div>
+<h3 id="t1-s7"><span class="sec-num">7</span>הגדרות</h3>
+<div class="p"><strong>מספר זוגי:</strong> מספר שלם \(n\) נקרא זוגי אם קיים מספר שלם \(k\) כך ש-\(n=2k\).</div>
+<div class="p"><strong>מספר ראשוני:</strong> מספר טבעי \(n&gt;1\) נקרא ראשוני אם מחלקיו החיוביים היחידים הם \(1\) ו-\(n\). במילים לוגיות (כאשר המשתנים הם מספרים טבעיים):
+<div class="dm">\[\Prime(n)\ \Leftrightarrow\ (n&gt;1)\land\forall d\,\bigl(d\Div n\Rightarrow(d=1\lor d=n)\bigr).\]</div></div>
+<div class="p">הגדרה איננה טענה שצריך להוכיח; היא קובעת את משמעות המושג. אחרי שהגדרנו מושג אפשר לנסח ולהוכיח טענות שמשתמשות בו.</div>
+<h3 id="t1-s8"><span class="sec-num">8</span>ערך אמת שאיננו יודעים</h3>
+<div class="p">גם אם לטענה אין משתנים חופשיים, לא בהכרח ידוע לנו אם היא אמיתית:
+<ul><li> "\(17\) ראשוני" – אמת; "\(18\) ראשוני" – שקר.
+  </li><li> המספר \(2^{136279841}-1\) הוכח כראשוני בשנת \(2024\). ערך האמת של הטענה לא השתנה בעקבות הגילוי; רק הידיעה שלנו השתנתה.
+  </li><li> <strong>השערת גולדבך:</strong> "כל מספר זוגי גדול מ-\(2\) הוא סכום של שני מספרים ראשוניים". איננו יודעים אם הטענה נכונה, אבל יש לה ערך אמת.
+</li></ul>
+<div class="dm">\[\forall n\,\Bigl((\Even(n)\land n&gt;2)\Rightarrow
+  \exists p\,\exists q\,(\Prime(p)\land\Prime(q)\land n=p+q)\Bigr).\]</div></div>
+<div class="p notes"><strong>שימו לב.</strong> "\(n\) ראשוני" עדיין תלויה בהשמה ל-\(n\); השערת גולדבך אינה תלויה בהשמה חיצונית, משום שכל המשתנים בה קשורים.</div>
+<h3 id="t1-s9"><span class="sec-num">9</span>הצרנה: מעבר מעברית לשפה מתמטית</h3>
+<div class="p">עולם הדיון הוא כל האנשים. נסמן \(L(x,y)\): "\(x\) אוהב את \(y\)".</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל.</strong> הצרינו את הטענות:
 <ol><li> כולם אוהבים מישהו.
   </li><li> יש מישהו שכולם אוהבים.
   </li><li> כולם אוהבים את כולם.
   </li><li> יש מישהו שלא אוהב אף אחד.
   </li><li> לכל אדם יש מישהו שאוהב אותו.
-  </li><li> קיימים שני אנשים שונים שאוהבים זה את זה.
   </li><li> יש אדם שאוהב את כל מי שאוהב אותו.
   </li><li> קיים אדם שאוהב בדיוק אדם אחד.
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol3">הצגת הפתרון</button><div class="sol-body" id="t1-sol3" hidden><div class="p"><ol><li> \(\forall x\;\exists y\;L(x,y)\).
-  </li><li> \(\exists y\;\forall x\;L(x,y)\).
-  </li><li> \(\forall x\;\forall y\;L(x,y)\).
-  </li><li> \(\exists x\;\forall y\;\lnot L(x,y)\).
-  </li><li> \(\forall y\;\exists x\;L(x,y)\).
-  </li><li> \(\exists x\;\exists y\;\big(x\neq y\land L(x,y)\land L(y,x)\big)\).
-  </li><li> \(\exists x\;\forall y\;\big(L(y,x)\Rightarrow L(x,y)\big)\).
-  </li><li> \(\exists x\;\exists y\;\Big(L(x,y)\land \forall z\;\big(L(x,z)\Rightarrow z=y\big)\Big)\).
-</li></ol></div><div class="p notes"><strong>הערה.</strong> השוו בין שתי הטענות הראשונות:
-הטענה הראשונה היא
-<div class="dm">\[\forall x\;\exists y\;L(x,y),\]</div>
-ואילו הטענה השנייה היא
-<div class="dm">\[\exists y\;\forall x\;L(x,y).\]</div>
-בשתי הטענות מופיעים אותם כמתים, אבל בסדר שונה — ולכן משמעותן שונה לחלוטין.</div></div></div></article>
-<h3 id="t1-s11"><span class="sec-num">11</span>שקילויות, קונטרפוזיציה ושלילה</h3>
-<div class="p">שתי טענות נקראות <strong>שקולות</strong> אם בכל השמה הן מקבלות אותו ערך אמת.
-טבלאות אמת מאפשרות לנו לבדוק שקילות כזו ישירות.</div>
-<h4>קונטרפוזיציה</h4>
-<div class="p">אחת השקילויות החשובות ביותר היא בין הטענה
-<div class="dm">\[P\Rightarrow Q\]</div>
-לבין הקונטרפוזיציה שלה
-<div class="dm">\[\lnot Q\Rightarrow \lnot P.\]</div></div>
-<div class="p">אפשר לראות את השקילות בטבלת האמת:
-<div class="tt-wrap"><table class="tt"><thead><tr><th>\(P\)</th><th>\(Q\)</th><th class="hl-yellow">\(P\Rightarrow Q\)</th><th>\(\lnot P\)</th><th>\(\lnot Q\)</th><th class="hl-yellow">\(\lnot Q\Rightarrow\lnot P\)</th><th class="hl-green">\(\lnot P\lor Q\)</th></tr></thead><tbody><tr><td class="v-T">T</td><td class="v-T">T</td><td class="hl-yellow v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="hl-yellow v-T">T</td><td class="hl-green v-T">T</td></tr><tr><td class="v-T">T</td><td class="v-F">F</td><td class="hl-yellow v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="hl-yellow v-F">F</td><td class="hl-green v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-T">T</td><td class="hl-yellow v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="hl-yellow v-T">T</td><td class="hl-green v-T">T</td></tr><tr><td class="v-F">F</td><td class="v-F">F</td><td class="hl-yellow v-T">T</td><td class="v-T">T</td><td class="v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-green v-T">T</td></tr></tbody></table></div></div>
-<div class="p">העמודות המודגשות בצהוב זהות, ולכן בכל השמה שתי הטענות מקבלות אותו ערך אמת.</div>
-<div class="p">גם העמודה המודגשת בירוק זהה להן, וכך קיבלנו שקילות חשובה נוספת:
-<div class="dm">\[P\Rightarrow Q \quad\equiv\quad \lnot P\lor Q.\]</div>
-כלומר, "אם \(P\) אז \(Q\)" אומר בדיוק "\(P\) לא מתקיימת, או ש-\(Q\) מתקיימת".
-בדוגמת ההבטחה: "לא קיבלת 100, או שקניתי לך גלידה".</div>
-<h4>כללי דה מורגן</h4>
-<div class="p">שלילה של טענה מורכבת מתנהגת בצורה שלא תמיד אינטואיטיבית.
-הכלל המרכזי: שלילה של "וגם" הופכת ל"או" (עם שלילות), ושלילה של "או" הופכת ל"וגם".
-פורמלית:
-<div class="dm">\[\lnot(P \land Q) \quad\equiv\quad \lnot P \lor \lnot Q,\]</div>
-<div class="dm">\[\lnot(P \lor Q) \quad\equiv\quad \lnot P \land \lnot Q.\]</div></div>
-<div class="p"><strong>דוגמה לשלילה של "וגם".</strong>
-כדי להיכנס להופעה צריך <strong>כרטיס וגם תעודת זהות</strong>.
-מי לא יכול להיכנס? מי ש<strong>אין לו כרטיס או אין לו תעודת זהות</strong>
-— מספיק שחסר אחד מהם.</div>
-<div class="p">שימו לב לטעות הנפוצה: השלילה איננה "אין לו כרטיס <em>וגם</em> אין לו תעודת זהות".
-מי שיש לו כרטיס אבל שכח את תעודת הזהות גם לא ייכנס!</div>
-<div class="p"><strong>דוגמה לשלילה של "או".</strong>
-"השבת אלך לים <strong>או</strong> לבריכה."
-השלילה: "השבת <strong>לא</strong> אלך לים <strong>וגם לא</strong> לבריכה".
-לא מספיק לוותר על אחד מהם כדי להפריך את הטענה.</div>
-<div class="p">אפשר לראות את שתי השקילויות בטבלאות האמת:</div>
-<div class="p"><div class="tt-wrap"><table class="tt"><thead><tr><th>\(P\)</th><th>\(Q\)</th><th>\(\lnot P\)</th><th>\(\lnot Q\)</th><th>\(P \land Q\)</th><th class="hl-blue">\(\lnot(P \land Q)\)</th><th class="hl-blue">\(\lnot P \lor \lnot Q\)</th></tr></thead><tbody><tr><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="hl-blue v-F">F</td><td class="hl-blue v-F">F</td></tr><tr><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-F">F</td><td class="hl-blue v-T">T</td><td class="hl-blue v-T">T</td></tr><tr><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="hl-blue v-T">T</td><td class="hl-blue v-T">T</td></tr><tr><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="hl-blue v-T">T</td><td class="hl-blue v-T">T</td></tr></tbody></table></div></div>
-<div class="p"><div class="tt-wrap"><table class="tt"><thead><tr><th>\(P\)</th><th>\(Q\)</th><th>\(\lnot P\)</th><th>\(\lnot Q\)</th><th>\(P \lor Q\)</th><th class="hl-blue">\(\lnot(P \lor Q)\)</th><th class="hl-blue">\(\lnot P \land \lnot Q\)</th></tr></thead><tbody><tr><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="hl-blue v-F">F</td><td class="hl-blue v-F">F</td></tr><tr><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="hl-blue v-F">F</td><td class="hl-blue v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-T">T</td><td class="hl-blue v-F">F</td><td class="hl-blue v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="hl-blue v-T">T</td><td class="hl-blue v-T">T</td></tr></tbody></table></div></div>
-<div class="p">העמודות המודגשות זהות בכל טבלה, ולכן בכל השמה הטענות מקבלות אותו ערך אמת.</div>
-<h4>שלילה של טענות מורכבות</h4>
-<div class="p">גם לשלילה יש מבנה. כמה שקילויות שימושיות הן:
-<div class="dm">\[\lnot(P\land Q) \quad\equiv\quad \lnot P\lor\lnot Q,\]</div>
-<div class="dm">\[\lnot(P\lor Q) \quad\equiv\quad \lnot P\land\lnot Q,\]</div>
-<div class="dm">\[\lnot(P\Rightarrow Q) \quad\equiv\quad P\land\lnot Q,\]</div>
-<div class="dm">\[\lnot(\forall x\;P(x)) \quad\equiv\quad \exists x\;\lnot P(x),\]</div>
-<div class="dm">\[\lnot(\exists x\;P(x)) \quad\equiv\quad \forall x\;\lnot P(x).\]</div></div>
-<div class="p">לדוגמה, שלילת הטענה "\(n\) זוגי וגם \(n&gt;2\)" היא הטענה "\(n\) אינו זוגי או \(n\le 2\)".</div>
-<div class="p">הדרך השיטתית לטפל בשלילה של טענה ארוכה תהיה לזהות בכל שלב את המילה הראשית ולהכניס את השלילה שכבה אחת פנימה. נחזור לכך בהרחבה בתרגול הבא.</div>
-<h3 id="t1-s12"><span class="sec-num">12</span>לסיכום</h3>
-<div class="p">כשאנחנו קוראים טענה מתמטית, כדאי לשאול שלוש שאלות:
-<ol><li> האם יש לטענה ערך אמת בפני עצמה, או שערך האמת שלה תלוי בהשמה?
-  </li><li> אילו משתנים חופשיים ואילו משתנים קשורים?
-  </li><li> מהי המילה הראשית של הטענה, ומהן תת-הטענות שנמצאות בתוכה?
-</li></ol></div>
-<div class="p">בתרגול הבא נעמיק בשלילת טענות ונשתמש במבנה של הטענה כדי להתחיל לכתוב הוכחות.</div>
-<h3 id="t1-extra"><span class="sec-num">13</span>שאלות נוספות</h3>
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-sol5">הצגת הפתרון</button><div class="sol-body" id="t1-sol5" hidden><div class="p"><ol><li> \(\forall x\,\exists y\,L(x,y)\).
+  </li><li> \(\exists y\,\forall x\,L(x,y)\).
+  </li><li> \(\forall x\,\forall y\,L(x,y)\).
+  </li><li> \(\exists x\,\forall y\,\neg L(x,y)\).
+  </li><li> \(\forall y\,\exists x\,L(x,y)\).
+  </li><li> \(\exists x\,\forall y\,(L(y,x)\Rightarrow L(x,y))\).
+  </li><li> \(\exists x\,\exists y\,\bigl(L(x,y)\land \forall z\,(L(x,z)\Rightarrow z=y)\bigr)\).
+</li></ol></div><div class="p notes"><strong>הערה:</strong> ב-(7) מותר שהאדם יאהב את עצמו, כי לא נדרש אחרת. שתי הטענות הראשונות מדגימות שוב מדוע סדר הכמתים חשוב.</div></div></div></article>
+<div class="p"><div class="center">
+<strong>בתרגול הבא:</strong> שקילויות לוגיות, קונטרפוזיציה והכנסת שלילה פנימה.
+</div></div>
+<h3 id="t1-extra"><span class="sec-num">10</span>שאלות נוספות</h3>
 <article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (השמות המספקות טענה).</strong>
 בכל הסעיפים המשתנה \(n\) יכול לקבל אחד מהערכים
 <div class="dm">\[0,1,\ldots,10.\]</div>
@@ -769,7 +593,14 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 
 <script>
 window.MathJax = {
-  tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+  tex: {
+    inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']],
+    // same shortcuts as preamble.tex
+    macros: {
+      Even: '\\operatorname{Even}', Odd: '\\operatorname{Odd}', Prime: '\\operatorname{Prime}',
+      Truth: '\\mathrm{T}', False: '\\mathrm{F}', Div: '\\mathbin{\\mid}'
+    }
+  },
   svg: { fontCache: 'global', mtextInheritFont: true }
 };
 </script>
@@ -786,7 +617,7 @@ window.MathJax = {
     const h = hash.replace('#', '');
     // default: the latest published tutorial (drafts only open by link or from the menu)
     const published = tuts.filter(t => !t.hasAttribute('data-draft'));
-    const fallback = published.length ? published[published.length - 1] : tuts[tuts.length - 1];
+    const fallback = published.length ? published[published.length - 1] : tuts[0];
     return tuts.find(t => h === t.id || h.startsWith(t.id + '-')) || fallback;
   }
 
