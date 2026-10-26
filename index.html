@@ -66,6 +66,7 @@ body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--bo
 .eyebrow { margin: 0; color: var(--muted); font-size: .85rem; letter-spacing: .02em; }
 .masthead h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 4.5vw, 2.8rem); line-height: 1.15; margin: .35rem 0 .5rem; text-wrap: balance; }
 .staff { margin: 0; color: var(--muted); }
+.hours { font-size: .92rem; margin-top: .15rem; }
 .mail { font-family: var(--mono); font-size: .85em; user-select: all; }
 .glyphs { margin-top: 1rem; font-family: var(--display); font-size: 1.15rem; color: var(--accent); letter-spacing: .5em; direction: ltr; text-align: right; opacity: .75; }
 
@@ -191,6 +192,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
         <p class="eyebrow">מדעי המחשב · אוניברסיטת בן-גוריון · סמסטר א׳ תשפ״ז</p>
         <h1>מבוא ללוגיקה ותורת הקבוצות</h1>
         <p class="staff">חומרי תרגול · מתרגל: נדב קלמה · <span class="mail" dir="ltr">kalmn@post.bgu.ac.il</span></p>
+        <p class="staff hours">שעת קבלה: ימי שלישי, <span dir="ltr">10:00–12:00</span> · בניין 58, חדר <span dir="ltr">-126</span></p>
       </div>
     </div>
     <div class="glyphs" aria-hidden="true">∀ ∃ ¬ ∧ ∨ ⇒ ⇔ ∈ ⊆</div>
@@ -200,7 +202,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
     <aside class="rail">
       <nav class="tut-nav" aria-label="תרגולים">
         <h2>תרגולים</h2>
-        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>שלילה של טענות וכתיבת הוכחות</a></li></ul>
+        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>קשרים, שלילה וכתיבת הוכחות</a></li></ul>
       </nav>
       <details class="toc" id="toc" open>
         <summary>בתרגול זה</summary>
@@ -553,7 +555,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
         "כל הג'ירפות בכיתה קוראים להן שולה" נכונה כשאין בכיתה ג'ירפות, וכך גם "כל הג'ירפות בכיתה הן סגולות".
   </li><li> שימו לב להבדל בין סעיף 1 לסעיף 3: "לכל" על עולם ריק של מועמדים הוא אמת, ו"קיים" על עולם כזה הוא שקר.
 </li></ul></div></div></div></article></section>
-<section class="tirgul" id="t2" data-toc="&lt;li&gt;&lt;a href=&quot;#t2-s1&quot;&gt;המשמעות של הקשרים: טבלאות אמת&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s2&quot;&gt;שקילויות: קונטרפוזיציה ודה מורגן&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s3&quot;&gt;שלילה של טענות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s4&quot;&gt;תרגול: שלילה של טענות מורכבות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s5&quot;&gt;שקילויות שימושיות להוכחות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s6&quot;&gt;כתיבת הוכחות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 2</p><h2>שלילה של טענות וכתיבת הוכחות</h2><div class="t-actions"><a class="pdf-link" href="pdf/tirgul2.pdf" target="_blank" rel="noopener">PDF</a><button type="button" class="toggle-sol" id="toggle-t2">הצגת כל הפתרונות</button></div></header><h3 id="t2-s1"><span class="sec-num">1</span>המשמעות של הקשרים: טבלאות אמת</h3>
+<section class="tirgul" id="t2" data-toc="&lt;li&gt;&lt;a href=&quot;#t2-s1&quot;&gt;המשמעות של הקשרים: טבלאות אמת&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s2&quot;&gt;שקילויות: קונטרפוזיציה ודה מורגן&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s3&quot;&gt;שלילה של טענות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s4&quot;&gt;תרגול: שלילה של טענות מורכבות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s5&quot;&gt;שקילויות שימושיות להוכחות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s6&quot;&gt;כתיבת הוכחות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 2</p><h2>קשרים, שלילה וכתיבת הוכחות</h2><div class="t-actions"><a class="pdf-link" href="pdf/tirgul2.pdf" target="_blank" rel="noopener">PDF</a><button type="button" class="toggle-sol" id="toggle-t2">הצגת כל הפתרונות</button></div></header><h3 id="t2-s1"><span class="sec-num">1</span>המשמעות של הקשרים: טבלאות אמת</h3>
 <div class="p">נשתמש ב-\(\Truth\) לאמת וב-\(\False\) לשקר.</div>
 <div class="p"><ul><li> \(P\land Q\) – אמת רק אם <strong>שתי</strong> הטענות אמיתיות.
   </li><li> \(P\lor Q\) – אמת אם <strong>לפחות אחת</strong> אמיתית (גם אם שתיהן אמיתיות).
