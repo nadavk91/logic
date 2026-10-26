@@ -200,7 +200,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
     <aside class="rail">
       <nav class="tut-nav" aria-label="תרגולים">
         <h2>תרגולים</h2>
-        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li></ul>
+        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>שלילה של טענות וכתיבת הוכחות</a></li></ul>
       </nav>
       <details class="toc" id="toc" open>
         <summary>בתרגול זה</summary>
@@ -389,41 +389,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <strong>בתרגול הבא:</strong> שקילויות לוגיות, קונטרפוזיציה והכנסת שלילה פנימה.
 </div></div>
 <h3 id="t1-extra"><span class="sec-num">10</span>שאלות נוספות</h3>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (השמות המספקות טענה).</strong>
-בכל הסעיפים המשתנה \(n\) יכול לקבל אחד מהערכים
-<div class="dm">\[0,1,\ldots,10.\]</div>
-בכל סעיף, רשמו את כל הערכים של \(n\) שעבורם הטענה אמיתית.
-<ol><li> \(\operatorname{Even}(n)\).
-  </li><li> \(3\mid n\).
-  </li><li> \(\operatorname{Even}(n)\land 3\mid n\).
-  </li><li> \(\operatorname{Even}(n)\lor 3\mid n\).
-  </li><li> \(\operatorname{Even}(n)\Rightarrow 3\mid n\).
-  </li><li> \(4\mid n\).
-  </li><li> \(\operatorname{Even}(n)\Leftrightarrow \operatorname{Even}(n^2)\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol1">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol1" hidden><div class="p"><ol><li> הערכים המספקים את הטענה הם
-  <div class="dm">\[\{0,2,4,6,8,10\}.\]</div>
-<span class="gap"></span>
-  </li><li> הערכים המספקים את הטענה הם
-  <div class="dm">\[\{0,3,6,9\}.\]</div>
-<span class="gap"></span>
-  </li><li> צריך ששני התנאים יתקיימו יחד, ולכן נקבל
-  <div class="dm">\[\{0,6\}.\]</div>
-<span class="gap"></span>
-  </li><li> מספיק שלפחות אחד משני התנאים יתקיים, ולכן נקבל
-  <div class="dm">\[\{0,2,3,4,6,8,9,10\}.\]</div>
-<span class="gap"></span>
-  </li><li> גרירה שקרית רק כאשר ההנחה אמיתית והמסקנה שקרית. לכן היא שקרית עבור
-  <div class="dm">\[n\in\{2,4,8,10\},\]</div>
-  ואמיתית עבור
-  <div class="dm">\[\{0,1,3,5,6,7,9\}.\]</div>
-<span class="gap"></span>
-  </li><li> הערכים המספקים את הטענה הם
-  <div class="dm">\[\{0,4,8\}.\]</div>
-<span class="gap"></span>
-  </li><li> לכל אחד מהערכים הנתונים, \(n\) זוגי אם ורק אם \(n^2\) זוגי. לכן כל ההשמות מספקות את הטענה:
-  <div class="dm">\[\{0,1,2,3,4,5,6,7,8,9,10\}.\]</div>
-</li></ol></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 2 (ערך אמת, משתנים חופשיים ומשתנים קשורים).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (ערך אמת, משתנים חופשיים ומשתנים קשורים).</strong>
 עולם הייחוס הוא קבוצת המספרים הממשיים.</div><div class="p">לכל אחת מהטענות הבאות:
 <ol><li> מצאו אילו משתנים חופשיים ואילו משתנים קשורים.
   </li><li> קבעו האם יש לטענה ערך אמת בפני עצמה.
@@ -435,7 +401,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> \(\exists y\;(x&lt;y)\).
   </li><li> \(\forall x\;\exists y\;(x&lt;y)\).
   </li><li> \(\exists y\;\forall x\;(x&lt;y)\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol2">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol2" hidden><div class="p"><ol><li> \(x\) חופשי, ולכן אין לטענה ערך אמת בפני עצמה. ההשמות המספקות אותה הן בדיוק ההשמות שבהן \(x&lt;5\). למשל, \(x=0\) מספקת את הטענה ו-\(x=6\) אינה מספקת אותה.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol1">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol1" hidden><div class="p"><ol><li> \(x\) חופשי, ולכן אין לטענה ערך אמת בפני עצמה. ההשמות המספקות אותה הן בדיוק ההשמות שבהן \(x&lt;5\). למשל, \(x=0\) מספקת את הטענה ו-\(x=6\) אינה מספקת אותה.
 <span class="gap"></span>
   </li><li> \(x\) קשור על ידי הכמת \(\forall\), ולכן אין משתנים חופשיים ויש לטענה ערך אמת. הטענה שקרית, למשל משום שהמספר \(6\) אינו קטן מ-\(5\).
 <span class="gap"></span>
@@ -449,7 +415,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <span class="gap"></span>
   </li><li> שני המשתנים קשורים, ולכן יש לטענה ערך אמת. הטענה שקרית: אין מספר ממשי אחד שגדול מכל המספרים הממשיים.
 </li></ol></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 3 (אותה אות, שני תפקידים).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 2 (אותה אות, שני תפקידים).</strong>
 המשתנים רצים על \(\mathbb{Z}\). עבור כל אחת מהטענות הבאות:
 מצאו את המילה הראשית, קבעו אילו משתנים חופשיים ואילו קשורים,
 וקבעו האם יש לטענה ערך אמת בפני עצמה. אם יש, מהו?
@@ -457,7 +423,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> \(\exists x\;\exists y\;(x=2y)\).
   </li><li> \(\forall x\;\exists y\;(x=2y)\).
   </li><li> \((\forall x\;\, x&gt;0)\land x&lt;3\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol3">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol3" hidden><div class="p"><ol><li> המילה הראשית היא "קיים \(y\)". \(y\) קשור ו-\(x\) חופשי, ולכן אין לטענה ערך אמת בפני עצמה.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol2">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol2" hidden><div class="p"><ol><li> המילה הראשית היא "קיים \(y\)". \(y\) קשור ו-\(x\) חופשי, ולכן אין לטענה ערך אמת בפני עצמה.
         הטענה אומרת בדיוק "\(x\) זוגי": בהשמה \(x=4\) היא אמיתית, ובהשמה \(x=3\) היא שקרית.
   </li><li> המילה הראשית היא "קיים \(x\)". שני המשתנים קשורים, ולטענה יש ערך אמת: היא אמיתית,
         למשל עבור \(x=2,\ y=1\).
@@ -472,7 +438,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> עוד דבר מעניין בסעיף 4: הצד השמאלי, "כל מספר שלם חיובי", שקרי.
         לכן הטענה כולה שקרית בכל השמה ל-\(x\), למרות שיש בה משתנה חופשי.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 4 (פירוק טענות).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 3 (פירוק טענות).</strong>
 בכל אחת מהטענות הבאות:
 <ol><li> מצאו את המילה הלוגית הראשית.
   </li><li> פרקו את הטענה לתת-טענות, והמשיכו עד לטענות האטומיות.
@@ -482,7 +448,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> \(\forall n\;(\operatorname{Even}(n)\Rightarrow \operatorname{Even}(n^2))\).
   </li><li> \(\exists x\;(x&gt;0\land \forall y\;(y&gt;0\Rightarrow x+y&gt;0))\).
   </li><li> \(\forall x\;\exists y\;(x&lt;y\land \operatorname{Even}(y))\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol4">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol4" hidden><div class="p"><ol><li> המילה הראשית היא "או", כלומר \(\lor\). שתי תת-הטענות הן
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol3">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol3" hidden><div class="p"><ol><li> המילה הראשית היא "או", כלומר \(\lor\). שתי תת-הטענות הן
   <div class="dm">\[\operatorname{Even}(n), \qquad n&gt;10.\]</div>
   שתיהן אטומיות. המשתנה \(n\) חופשי.
 <span class="gap"></span>
@@ -506,13 +472,13 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   <div class="dm">\[x&lt;y\land \operatorname{Even}(y).\]</div>
   המילה הראשית של הטענה הפנימית היא "וגם", ושתי תת-הטענות \(x&lt;y\) ו-\(\operatorname{Even}(y)\) אטומיות. המשתנים \(x\) ו-\(y\) קשורים, ואין משתנים חופשיים.
 </li></ol></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 5 (אותה טענה בעולמות שונים).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 4 (אותה טענה בעולמות שונים).</strong>
 קבעו את ערך האמת של כל אחת מהטענות הבאות כאשר המשתנים רצים על \(\mathbb{N}\), על \(\mathbb{Z}\) ועל \(\mathbb{R}\),
 ונסחו במילים מה הטענה אומרת.
 <ol><li> \(\exists x\;\forall y\;(x\le y)\).
   </li><li> \(\forall x\;\exists y\;(y&lt;x)\).
   </li><li> \(\forall x\;\forall y\;\big(x&lt;y \Rightarrow \exists z\;(x&lt;z\land z&lt;y)\big)\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol5">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol5" hidden><div class="p"><ol><li> "יש מספר קטן ביותר".
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol4">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol4" hidden><div class="p"><ol><li> "יש מספר קטן ביותר".
         ב-\(\mathbb{N}\) הטענה אמיתית: נבחר את \(x\) להיות האיבר הקטן ביותר של \(\mathbb{N}\).
         ב-\(\mathbb{Z}\) וב-\(\mathbb{R}\) היא שקרית: לכל \(x\) שנבחר, המספר \(x-1\) קטן ממנו.
   </li><li> "לכל מספר יש מספר קטן ממנו".
@@ -526,14 +492,14 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
         לכן כשכותבים טענה עם כמתים, חייבים לדעת על איזה עולם רצים המשתנים.
   </li><li> שימו לב שבסעיף 1 ה-\(x\) נבחר <em>לפני</em> ה-\(y\), ובסעיף 2 ה-\(y\) נבחר <em>אחרי</em> ה-\(x\) ותלוי בו.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 6 (מתרגמים נוסחה לשפה טבעית).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 5 (מתרגמים נוסחה לשפה טבעית).</strong>
 בסעיפים 1–4 עולם הייחוס הוא קבוצת המספרים השלמים, ו-\(\operatorname{Even}(x)\) מציינת את הטענה ש-\(x\) זוגי.</div><div class="p">בסעיף 5 עולם הייחוס הוא קבוצת כל האנשים, ו-\(L(x,y)\) מציינת את הטענה "\(x\) אוהב את \(y\)".</div><div class="p">כתבו כל אחת מהטענות הבאות במילים. בסעיפים 1–4 קבעו גם האם הטענה אמיתית.
 <ol><li> \(\exists x\;\forall y\;(x\le y)\).
   </li><li> \(\forall x\;\exists y\;(x&lt;y)\).
   </li><li> \(\exists x\;(\operatorname{Even}(x)\land x&gt;10)\).
   </li><li> \(\forall x\;(\operatorname{Even}(x)\Rightarrow x^2&gt;0)\).
   </li><li> \(\exists x\;\forall y\;(L(y,x)\Rightarrow L(x,y))\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol6" hidden><div class="p"><ol><li> קיים מספר שלם שהוא קטן או שווה לכל מספר שלם.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol5">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol5" hidden><div class="p"><ol><li> קיים מספר שלם שהוא קטן או שווה לכל מספר שלם.
         הטענה שקרית: אין מספר שלם קטן ביותר, כי לכל \(x\) המספר \(x-1\) קטן ממנו.
 <span class="gap"></span>
   </li><li> לכל מספר שלם קיים מספר שלם גדול ממנו.
@@ -551,7 +517,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
         כדי שטענת "לכל" תהיה אמיתית, היא צריכה להתקיים עבור <em>כל</em> האיברים בעולם, כולל המקרים הקיצוניים.
   </li><li> בסעיף 5 אי אפשר לקבוע ערך אמת בלי לדעת מי אוהב את מי בעולם האמיתי.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 7 ("לכל" עם גרירה, "קיים" עם וגם).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 6 ("לכל" עם גרירה, "קיים" עם וגם).</strong>
 נסמן ב-\(\mathrm{Prime}(x)\) את הטענה "\(x\) ראשוני", ב-\(\mathrm{Even}(x)\) את הטענה "\(x\) זוגי"
 וב-\(\mathrm{Odd}(x)\) את הטענה "\(x\) אי-זוגי". המשתנים רצים על \(\mathbb{N}\).
 <ol><li> איזו מההצרנות הבאות מתאימה לטענה "יש מספר ראשוני זוגי"?
@@ -562,7 +528,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   <div class="dm">\[\text{(א)}\quad \forall x\;\big((\mathrm{Prime}(x)\land x&gt;2)\Rightarrow \mathrm{Odd}(x)\big)
     \qquad\qquad
     \text{(ב)}\quad \forall x\;\big(\mathrm{Prime}(x)\land x&gt;2\land \mathrm{Odd}(x)\big)\]</div>
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol7">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol7" hidden><div class="p"><ol><li> ההצרנה הנכונה היא (א): קיים \(x\) שהוא גם ראשוני וגם זוגי.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol6" hidden><div class="p"><ol><li> ההצרנה הנכונה היא (א): קיים \(x\) שהוא גם ראשוני וגם זוגי.
         הצרנה (ב) אומרת משהו אחר לגמרי: קיים \(x\) שאם הוא ראשוני אז הוא זוגי.
         היא אמיתית למשל עבור \(x=4\): \(4\) אינו ראשוני, ולכן הגרירה אמיתית.
         כלומר (ב) הייתה נכונה גם בעולם שאין בו אף ראשוני זוגי.
@@ -574,18 +540,413 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> "לכל" עם "וגם" דורש שכל האיברים בעולם יקיימו את כל התנאים.
         "קיים" עם גרירה מתקיים כמעט תמיד, כי מספיק למצוא איבר אחד שלא מקיים את ההנחה.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 8 (נכון באופן ריק).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 7 (נכון באופן ריק).</strong>
 המשתנים רצים על \(\mathbb{N}\). קבעו את ערך האמת של כל אחת מהטענות:
 <ol><li> \(\forall x\;\big(x&lt;0 \Rightarrow \mathrm{Prime}(x)\big)\).
   </li><li> \(\forall x\;\big(x&lt;0 \Rightarrow \mathrm{Odd}(x)\land\mathrm{Even}(x)\big)\).
   </li><li> \(\exists x\;\big(x&lt;0 \land \mathrm{Prime}(x)\big)\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol8">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol8" hidden><div class="p"><ol><li> אמיתית. אין מספר טבעי שקטן מ-0, ולכן לכל \(x\) ההנחה \(x&lt;0\) שקרית, והגרירה אמיתית.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t1-x-sol7">הצגת הפתרון</button><div class="sol-body" id="t1-x-sol7" hidden><div class="p"><ol><li> אמיתית. אין מספר טבעי שקטן מ-0, ולכן לכל \(x\) ההנחה \(x&lt;0\) שקרית, והגרירה אמיתית.
   </li><li> גם היא אמיתית, מאותה סיבה — למרות שאין מספר שהוא גם זוגי וגם אי-זוגי.
   </li><li> שקרית. כדי שהיא תהיה אמיתית צריך למצוא מספר טבעי שקטן מ-0, ואין כזה.
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
 <ul><li> סעיפים 1 ו-2 הם בדיוק טענת הג'ירפות מהתרגול:
         "כל הג'ירפות בכיתה קוראים להן שולה" נכונה כשאין בכיתה ג'ירפות, וכך גם "כל הג'ירפות בכיתה הן סגולות".
   </li><li> שימו לב להבדל בין סעיף 1 לסעיף 3: "לכל" על עולם ריק של מועמדים הוא אמת, ו"קיים" על עולם כזה הוא שקר.
+</li></ul></div></div></div></article></section>
+<section class="tirgul" id="t2" data-toc="&lt;li&gt;&lt;a href=&quot;#t2-s1&quot;&gt;המשמעות של הקשרים: טבלאות אמת&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s2&quot;&gt;שקילויות: קונטרפוזיציה ודה מורגן&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s3&quot;&gt;שלילה של טענות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s4&quot;&gt;תרגול: שלילה של טענות מורכבות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s5&quot;&gt;שקילויות שימושיות להוכחות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t2-s6&quot;&gt;כתיבת הוכחות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 2</p><h2>שלילה של טענות וכתיבת הוכחות</h2><div class="t-actions"><a class="pdf-link" href="pdf/tirgul2.pdf" target="_blank" rel="noopener">PDF</a><button type="button" class="toggle-sol" id="toggle-t2">הצגת כל הפתרונות</button></div></header><h3 id="t2-s1"><span class="sec-num">1</span>המשמעות של הקשרים: טבלאות אמת</h3>
+<div class="p">נשתמש ב-\(\Truth\) לאמת וב-\(\False\) לשקר.</div>
+<div class="p"><ul><li> \(P\land Q\) – אמת רק אם <strong>שתי</strong> הטענות אמיתיות.
+  </li><li> \(P\lor Q\) – אמת אם <strong>לפחות אחת</strong> אמיתית (גם אם שתיהן אמיתיות).
+  </li><li> \(\neg P\) – החלפת ערך האמת של \(P\).
+</li></ul></div>
+<div class="p"><strong>דוגמה:</strong> \(P=\Even(n)\) ו-\(Q=(3\Div n)\):
+<div class="center">
+<div class="tbl-wrap"><table class="steps simple"><tr><th>\(n\)</th><th>\(P\)</th><th>\(Q\)</th><th>\(P\land Q\)</th><th>\(P\lor Q\)</th></tr><tr><td>\(6\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td></tr><tr><td>\(8\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\Truth\)</td></tr><tr><td>\(9\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\Truth\)</td></tr><tr><td>\(11\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\False\)</td></tr></table></div>
+</div></div>
+<h4>גרירה ושקילות דו-כיוונית</h4>
+<div class="p"><strong>גרירה:</strong> \(P\Rightarrow Q\) פירושה "אם \(P\) אז \(Q\)". היא <strong>שקרית רק כאשר \(P\) אמת ו-\(Q\) שקר</strong>.</div>
+<div class="p"><strong>דוגמת ההבטחה:</strong> "אם תקבל \(100\) במבחן, אקנה לך גלידה". ההבטחה הופרה רק אם קיבלת \(100\) ולא קניתי גלידה. אם לא קיבלת \(100\), לא הפרתי את ההבטחה – בין אם קניתי גלידה ובין אם לא.</div>
+<div class="p"><strong>שקילות דו-כיוונית:</strong> \(P\Leftrightarrow Q\) אמיתית כאשר \(P,Q\) בעלי אותו ערך אמת. למעשה
+<div class="dm">\[(P\Rightarrow Q)\land(Q\Rightarrow P)\quad\equiv\quad P\Leftrightarrow Q.\]</div></div>
+<div class="p"><strong>טבלת האמת המלאה:</strong>
+<div class="center">
+<span class="gap"></span>
+<div class="tbl-wrap"><table class="steps simple"><tr><th>\(P\)</th><th>\(Q\)</th><th>\(\neg P\)</th><th>\(P\land Q\)</th><th>\(P\lor Q\)</th><th>\(P\Rightarrow Q\)</th><th>\(P\Leftrightarrow Q\)</th></tr><tr><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td></tr><tr><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\False\)</td></tr><tr><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td><td>\(\False\)</td></tr><tr><td>\(\False\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\False\)</td><td>\(\False\)</td><td>\(\Truth\)</td><td>\(\Truth\)</td></tr></table></div>
+</div></div>
+<div class="p notes"><strong>שימו לב.</strong> כאשר ההנחה בגרירה שקרית, הגרירה נחשבת אמיתית. זה קשור לרעיון של <strong>אמת באופן ריק</strong>: למשל, "כל המספרים הטבעיים שקטנים מ-\(0\) הם זוגיים" היא טענה אמיתית, משום שאין מספר טבעי כזה.</div>
+<h4>תזכורת: כמתים והמילה הראשית</h4>
+<div class="p"><ul><li> \(\forall x\;P(x)\) ("לכל") — אמיתית כאשר \(P(x)\) מתקיימת עבור <strong>כל</strong> ערך של \(x\).
+  </li><li> \(\exists x\;P(x)\) ("קיים") — אמיתית כאשר \(P(x)\) מתקיימת עבור <strong>לפחות ערך אחד</strong> של \(x\).
+</li></ul></div>
+<div class="p">כדי להבין טענה מורכבת, מחפשים את <strong>המילה הראשית</strong> שלה — המילה הלוגית בשכבה החיצונית ביותר —
+ומפרקים את הטענה שכבה אחר שכבה.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 1 (השמות שמספקות טענה).</strong>
+בתרגיל הזה המשתנה \(n\) יכול לקבל רק את הערכים \(0,1,\ldots,10\).
+לכל אחת מהטענות הבאות, רשמו את קבוצת ההשמות שמספקות אותה (כלומר, את כל הערכים של \(n\) שעבורם הטענה אמיתית).
+<ol><li> \(n\) זוגי.
+  </li><li> 3 מחלק את \(n\).
+  </li><li> \(n\) זוגי וגם 3 מחלק את \(n\).
+  </li><li> \(n\) זוגי או 3 מחלק את \(n\).
+  </li><li> אם \(n\) זוגי, אז 3 מחלק את \(n\).
+  </li><li> \(n^2\) זוגי.
+  </li><li> 4 מחלק את \(n\).
+  </li><li> אם 3 לא מחלק את \(n\), אז \(n\) אי-זוגי.
+  </li><li> \(10n^3+8\) זוגי.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol1">הצגת הפתרון</button><div class="sol-body" id="t2-sol1" hidden><div class="p"><ol><li> \(\{0,2,4,6,8,10\}\).
+  </li><li> \(\{0,3,6,9\}\).
+  </li><li> \(\{0,6\}\) — "וגם" דורש ששני התנאים יתקיימו, ולכן אלה ההשמות <em>המשותפות</em> לטענות 1 ו-2.
+  </li><li> \(\{0,2,3,4,6,8,9,10\}\) — "או" דורש שלפחות תנאי אחד יתקיים, ולכן אלה כל ההשמות שמופיעות בטענה 1 <em>או</em> בטענה 2.
+  </li><li> \(\{0,1,3,5,6,7,9\}\) — הגרירה שקרית רק כשההנחה אמיתית והמסקנה שקרית:
+        כש-\(n\) זוגי ו-3 לא מחלק אותו, כלומר עבור \(2,4,8,10\). בכל שאר ההשמות היא אמיתית.
+  </li><li> \(\{0,2,4,6,8,10\}\).
+  </li><li> \(\{0,4,8\}\).
+  </li><li> \(\{0,1,3,5,6,7,9\}\) — הגרירה שקרית רק כש-3 לא מחלק את \(n\) ו-\(n\) זוגי, כלומר שוב עבור \(2,4,8,10\).
+  </li><li> כל הערכים \(\{0,1,\ldots,10\}\), כי \(10n^3+8=2(5n^3+4)\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> שימו לב שבסעיף 5 גם \(n=1,3,5,7,9\) מספקים את הטענה: כשההנחה "\(n\) זוגי" שקרית, הגרירה אמיתית.
+  </li><li> שימו לב שלטענות 1 ו-6 יצאה אותה קבוצה, וגם לטענות 5 ו-8.
+</li></ul></div></div></div></article>
+<h3 id="t2-s2"><span class="sec-num">2</span>שקילויות: קונטרפוזיציה ודה מורגן</h3>
+<div class="p">שתי טענות נקראות <strong>שקולות</strong> אם בכל השמה הן מקבלות אותו ערך אמת.
+טבלאות אמת מאפשרות לנו לבדוק שקילות כזו ישירות.</div>
+<h4>קונטרפוזיציה</h4>
+<div class="p">אחת השקילויות החשובות ביותר היא בין הטענה
+<div class="dm">\[P\Rightarrow Q\]</div>
+לבין הקונטרפוזיציה שלה
+<div class="dm">\[\lnot Q\Rightarrow \lnot P.\]</div></div>
+<div class="p">אפשר לראות את השקילות בטבלת האמת:
+<div class="tt-wrap"><table class="tt"><thead><tr><th>\(P\)</th><th>\(Q\)</th><th class="hl-yellow">\(P\Rightarrow Q\)</th><th>\(\lnot P\)</th><th>\(\lnot Q\)</th><th class="hl-yellow">\(\lnot Q\Rightarrow\lnot P\)</th><th class="hl-green">\(\lnot P\lor Q\)</th></tr></thead><tbody><tr><td class="v-T">T</td><td class="v-T">T</td><td class="hl-yellow v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="hl-yellow v-T">T</td><td class="hl-green v-T">T</td></tr><tr><td class="v-T">T</td><td class="v-F">F</td><td class="hl-yellow v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="hl-yellow v-F">F</td><td class="hl-green v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-T">T</td><td class="hl-yellow v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="hl-yellow v-T">T</td><td class="hl-green v-T">T</td></tr><tr><td class="v-F">F</td><td class="v-F">F</td><td class="hl-yellow v-T">T</td><td class="v-T">T</td><td class="v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-green v-T">T</td></tr></tbody></table></div></div>
+<div class="p">העמודות המודגשות בצהוב זהות, ולכן בכל השמה שתי הטענות מקבלות אותו ערך אמת.</div>
+<div class="p">גם העמודה המודגשת בירוק זהה להן, וכך קיבלנו שקילות חשובה נוספת:
+<div class="dm">\[P\Rightarrow Q \quad\equiv\quad \lnot P\lor Q.\]</div>
+כלומר, "אם \(P\) אז \(Q\)" אומר בדיוק "\(P\) לא מתקיימת, או ש-\(Q\) מתקיימת".
+בדוגמת ההבטחה: "לא קיבלת 100, או שקניתי לך גלידה".</div>
+<h4>כללי דה מורגן</h4>
+<div class="p">שלילה של טענה מורכבת מתנהגת בצורה שלא תמיד אינטואיטיבית.
+הכלל המרכזי: שלילה של "וגם" הופכת ל"או" (עם שלילות), ושלילה של "או" הופכת ל"וגם".
+פורמלית:
+<div class="dm">\[\lnot(P \land Q) \quad\equiv\quad \lnot P \lor \lnot Q,\]</div>
+<div class="dm">\[\lnot(P \lor Q) \quad\equiv\quad \lnot P \land \lnot Q.\]</div></div>
+<div class="p"><strong>דוגמה לשלילה של "וגם".</strong>
+כדי להיכנס להופעה צריך <strong>כרטיס וגם תעודת זהות</strong>.
+מי לא יכול להיכנס? מי ש<strong>אין לו כרטיס או אין לו תעודת זהות</strong>
+— מספיק שחסר אחד מהם.</div>
+<div class="p">שימו לב לטעות הנפוצה: השלילה איננה "אין לו כרטיס <em>וגם</em> אין לו תעודת זהות".
+מי שיש לו כרטיס אבל שכח את תעודת הזהות גם לא ייכנס!</div>
+<div class="p"><strong>דוגמה לשלילה של "או".</strong>
+"השבת אלך לים <strong>או</strong> לבריכה."
+השלילה: "השבת <strong>לא</strong> אלך לים <strong>וגם לא</strong> לבריכה".
+לא מספיק לוותר על אחד מהם כדי להפריך את הטענה.</div>
+<div class="p">אפשר לראות את שתי השקילויות בטבלאות האמת:</div>
+<div class="p"><div class="tt-wrap"><table class="tt"><thead><tr><th>\(P\)</th><th>\(Q\)</th><th>\(\lnot P\)</th><th>\(\lnot Q\)</th><th>\(P \land Q\)</th><th class="hl-blue">\(\lnot(P \land Q)\)</th><th class="hl-blue">\(\lnot P \lor \lnot Q\)</th></tr></thead><tbody><tr><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="hl-blue v-F">F</td><td class="hl-blue v-F">F</td></tr><tr><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-F">F</td><td class="hl-blue v-T">T</td><td class="hl-blue v-T">T</td></tr><tr><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="hl-blue v-T">T</td><td class="hl-blue v-T">T</td></tr><tr><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="hl-blue v-T">T</td><td class="hl-blue v-T">T</td></tr></tbody></table></div></div>
+<div class="p"><div class="tt-wrap"><table class="tt"><thead><tr><th>\(P\)</th><th>\(Q\)</th><th>\(\lnot P\)</th><th>\(\lnot Q\)</th><th>\(P \lor Q\)</th><th class="hl-blue">\(\lnot(P \lor Q)\)</th><th class="hl-blue">\(\lnot P \land \lnot Q\)</th></tr></thead><tbody><tr><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="hl-blue v-F">F</td><td class="hl-blue v-F">F</td></tr><tr><td class="v-T">T</td><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="hl-blue v-F">F</td><td class="hl-blue v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="v-T">T</td><td class="hl-blue v-F">F</td><td class="hl-blue v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-F">F</td><td class="v-T">T</td><td class="v-T">T</td><td class="v-F">F</td><td class="hl-blue v-T">T</td><td class="hl-blue v-T">T</td></tr></tbody></table></div></div>
+<div class="p">העמודות המודגשות זהות בכל טבלה, ולכן בכל השמה הטענות מקבלות אותו ערך אמת.</div>
+<h3 id="t2-s3"><span class="sec-num">3</span>שלילה של טענות</h3>
+<h4>טבלת השלילה</h4>
+<div class="p">כדי לשלול טענה, מזהים את המילה הראשית שלה ו"מכניסים את השלילה פנימה" לפי הטבלה הבאה.
+בכל שורה, הטענה בעמודה השמאלית שקולה לשלילה של הטענה בעמודה הימנית.
+<div class="tt-wrap"><table class="tt"><thead><tr><th>\(\text{השלילה שלה}\)</th><th>\(\text{הטענה}\)</th></tr></thead><tbody><tr><td>\(\lnot P\lor\lnot Q\)</td><td>\(P\land Q\)</td></tr><tr><td>\(\lnot P\land\lnot Q\)</td><td>\(P\lor Q\)</td></tr><tr><td>\(P\land\lnot Q\)</td><td>\(P\Rightarrow Q\)</td></tr><tr><td>\(P\)</td><td>\(\lnot P\)</td></tr><tr><td>\(\exists x\;\lnot P(x)\)</td><td>\(\forall x\;P(x)\)</td></tr><tr><td>\(\forall x\;\lnot P(x)\)</td><td>\(\exists x\;P(x)\)</td></tr></tbody></table></div></div>
+<div class="p">כמה הערות על הטבלה:
+<ul><li> השלילה של גרירה <strong>איננה גרירה</strong>.
+        טעות נפוצה היא לחשוב ש-\(\lnot(P\Rightarrow Q)\) שקולה ל-\(\lnot P\Rightarrow\lnot Q\).
+        בדקו בטבלת אמת שהטענות האלה אינן שקולות.
+  </li><li> הכמתים מתחלפים: "לכל" הופך ל"קיים" ולהפך, והשלילה ממשיכה פנימה.
+        תחום הכמת לא משתנה: אם \(x\) רץ על \(\mathbb{N}\) לפני השלילה, הוא רץ על \(\mathbb{N}\) גם אחריה.
+  </li><li> שלילה של יחסים בין מספרים:
+        השלילה של \(x&lt;y\) היא \(x\ge y\) (ולא \(x&gt;y\)!), והשלילה של \(x=y\) היא \(x\neq y\).
+</li></ul></div>
+<h4>שלילה של טענה ארוכה: שכבה אחר שכבה</h4>
+<div class="p">בטענה ארוכה לא מסתפקים בצעד אחד. בכל שלב מזהים את המילה הראשית של מה שנמצא "בתוך" השלילה,
+מכניסים את השלילה שכבה אחת פנימה, וממשיכים עד שהשלילה מגיעה לטענות האטומיות.</div>
+<div class="p"><strong>דוגמה.</strong>
+נשלול את הטענה:
+<div class="center">
+"לכל מספר שלם \(n\), אם \(n\) זוגי, אז קיים מספר שלם \(m\) כך ש-\(m\) גדול מ-\(n\) ו-\(m\) אי-זוגי."
+</div>
+בכתיב מתמטי, כאשר \(\mathrm{Even}\) ו-\(\mathrm{Odd}\) מסמנים "זוגי" ו"אי-זוגי" והמשתנים רצים על \(\mathbb{Z}\), הטענה היא
+\(\forall n\;\big(\mathrm{Even}(n)\Rightarrow\exists m\;(m&gt;n\land\mathrm{Odd}(m))\big)\).</div>
+<div class="p">בכל שלב נזהה את המילה הראשית של מה שנמצא בתוך השלילה, ונכניס את השלילה שכבה אחת פנימה:</div>
+<div class="p"><div class="center">
+<span class="gap"></span>
+<span class="gap"></span>
+<div class="tbl-wrap"><table class="steps"><tr><th><strong>בעברית</strong></th><th><strong>בכתיב מתמטי</strong></th></tr><tr><td>השלילה של הטענה: "לא נכון שלכל \(n\), אם \(n\) זוגי אז קיים \(m\) כך ש-\(m&gt;n\) ו-\(m\) אי-זוגי."</td><td>\(\lnot\,\forall n\;\big(\mathrm{Even}(n)\Rightarrow\exists m\;(m&gt;n\land\mathrm{Odd}(m))\big)\)</td></tr><tr><td><strong>המילה הראשית: "לכל".</strong> היא הופכת ל"קיים": "קיים \(n\) כך שלא נכון ש(אם \(n\) זוגי, אז קיים \(m\) ...)."</td><td>\(\exists n\;\lnot\big(\mathrm{Even}(n)\Rightarrow\exists m\;(m&gt;n\land\mathrm{Odd}(m))\big)\)</td></tr><tr><td><strong>המילה הראשית: "אם...אז".</strong> ההנחה מתקיימת והמסקנה לא: "קיים \(n\) כך ש-\(n\) זוגי, ולא נכון שקיים \(m\) כך ש-\(m&gt;n\) ו-\(m\) אי-זוגי."</td><td>\(\exists n\;\big(\mathrm{Even}(n)\land\lnot\exists m\;(m&gt;n\land\mathrm{Odd}(m))\big)\)</td></tr><tr><td><strong>המילה הראשית: "קיים".</strong> היא הופכת ל"לכל": "קיים \(n\) זוגי, כך שלכל \(m\) לא נכון ש(\(m&gt;n\) ו-\(m\) אי-זוגי)."</td><td>\(\exists n\;\big(\mathrm{Even}(n)\land\forall m\;\lnot(m&gt;n\land\mathrm{Odd}(m))\big)\)</td></tr><tr><td><strong>המילה הראשית: "וגם".</strong> לפי דה מורגן: "קיים \(n\) זוגי, כך שלכל \(m\): \(m\le n\) או \(m\) זוגי."</td><td>\(\exists n\;\big(\mathrm{Even}(n)\land\forall m\;(m\le n\lor\mathrm{Even}(m))\big)\)</td></tr><tr><td><strong>ניסוח קריא.</strong> "קיים מספר שלם זוגי \(n\), כך שכל מספר שלם שגדול ממנו הוא זוגי."</td><td>\(\exists n\;\big(\mathrm{Even}(n)\land\forall m\;(m&gt;n\Rightarrow\mathrm{Even}(m))\big)\)</td></tr></table></div>
+</div></div>
+<div class="p">הטענה המקורית אמיתית (לכל \(n\) אפשר לבחור \(m=n+1\)), ולכן השלילה שקרית.</div>
+<div class="p notes"><strong>הערות.</strong>
+<ul><li> שימו לב שבשלב של "אם...אז" ההנחה "\(n\) זוגי" נשארת כמו שהיא. השלילה ממשיכה רק אל תוך המסקנה.
+  </li><li> בשורה האחרונה החלפנו את "\(m\le n\) או \(m\) זוגי" ב"אם \(m&gt;n\) אז \(m\) זוגי".
+        זו השקילות \(\lnot P\lor Q\equiv P\Rightarrow Q\).
+</li></ul></div>
+<h4>כשאין מילה לוגית: פותחים את ההגדרה</h4>
+<div class="p">לפעמים השלילה מגיעה לטענה שאין בה מילה לוגית, אבל יש לה הגדרה.
+למשל, "\(n\) מתחלק ב-3" היא טענה אטומית, אבל לפי ההגדרה היא אומרת
+<div class="dm">\[\exists q\in\mathbb{Z}\;\;(n=3q).\]</div>
+לכן "\(n\) לא מתחלק ב-3" שקולה ל-\(\lnot\exists q\;(n=3q)\), כלומר ל-\(\forall q\in\mathbb{Z}\;\;(n\neq 3q)\):
+"לכל מספר שלם \(q\), \(n\) שונה מ-\(3q\)".</div>
+<h3 id="t2-s4"><span class="sec-num">4</span>תרגול: שלילה של טענות מורכבות</h3>
+<div class="p">בכל התרגילים: שללו את הטענה, והביאו את השלילה לצורה שבה הסימן \(\lnot\) מופיע רק לפני טענות אטומיות
+(או לא מופיע בכלל). אחר כך נסחו את השלילה במילים.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 2 (בין כל שני מספרים יש מספר).</strong>
+נתבונן בטענה
+<div class="dm">\[\forall x\;\forall y\;\big(x&lt;y \Rightarrow \exists z\;(x&lt;z\land z&lt;y)\big).\]</div>
+<ol><li> שללו את הטענה ונסחו את השלילה במילים.
+  </li><li> כאשר המשתנים רצים על \(\mathbb{Z}\): האם הטענה המקורית אמיתית? היעזרו בשלילה.
+  </li><li> כאשר המשתנים רצים על \(\mathbb{Q}\): האם הטענה המקורית אמיתית?
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol2">הצגת הפתרון</button><div class="sol-body" id="t2-sol2" hidden><div class="p"><ol><li>
+  <div class="dm">\begin{align*}
+    &amp;\lnot\,\forall x\;\forall y\;\big(x&lt;y \Rightarrow \exists z\;(x&lt;z\land z&lt;y)\big) \\
+    \equiv\;\; &amp;\exists x\;\exists y\;\lnot\big(x&lt;y \Rightarrow \exists z\;(x&lt;z\land z&lt;y)\big) \\
+    \equiv\;\; &amp;\exists x\;\exists y\;\big(x&lt;y \land \lnot\exists z\;(x&lt;z\land z&lt;y)\big) \\
+    \equiv\;\; &amp;\exists x\;\exists y\;\big(x&lt;y \land \forall z\;\lnot(x&lt;z\land z&lt;y)\big) \\
+    \equiv\;\; &amp;\exists x\;\exists y\;\big(x&lt;y \land \forall z\;(z\le x\lor z\ge y)\big).
+  \end{align*}</div>
+  במילים: "יש שני מספרים \(x&lt;y\) כך שכל מספר \(z\) נמצא מחוץ לקטע ביניהם", כלומר אין אף מספר בין \(x\) ל-\(y\).
+  </li><li> ב-\(\mathbb{Z}\) השלילה אמיתית: נבחר \(x=0\) ו-\(y=1\). אכן \(0&lt;1\), ולכל שלם \(z\) מתקיים \(z\le 0\) או \(z\ge 1\).
+        לכן הטענה המקורית שקרית ב-\(\mathbb{Z}\).
+  </li><li> ב-\(\mathbb{Q}\) הטענה המקורית אמיתית: לכל \(x&lt;y\) נבחר \(z=\frac{x+y}{2}\).
+        זהו מספר רציונלי, ומתקיים \(x&lt;z&lt;y\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> שימו לב לשורה השלישית: השלילה של גרירה היא "וגם", ולכן ה-\(x&lt;y\) נשאר כמו שהוא.
+  </li><li> כדי להראות שטענת "לכל" שקרית, הראינו שהשלילה שלה — טענת "קיים" — אמיתית, ולשם כך מספיקה דוגמה אחת.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 3 (הגדרת הרציפות).</strong>
+המשתנים רצים על המספרים הממשיים. נתבונן בטענה:
+<div class="center">
+"לכל \(x\) ולכל \(\varepsilon\), אם \(\varepsilon&gt;0\) אז קיים \(\delta\) כך ש-\(\delta&gt;0\),
+וגם לכל \(y\), אם \(|y-x|&lt;\delta\) אז \(|y^2-x^2|&lt;\varepsilon\)."
+</div>
+<ol><li> כתבו את הטענה בעזרת כמתים וקשרים.
+  </li><li> שללו את הטענה, ונסחו את השלילה במילים.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol3">הצגת הפתרון</button><div class="sol-body" id="t2-sol3" hidden><div class="p"><ol><li>
+  <div class="dm">\[\forall x\;\forall\varepsilon\;\Big(\varepsilon&gt;0 \Rightarrow \exists\delta\;\big(\delta&gt;0 \land \forall y\;(|y-x|&lt;\delta \Rightarrow |y^2-x^2|&lt;\varepsilon)\big)\Big).\]</div>
+  </li><li> נכניס את השלילה שכבה אחר שכבה:
+  <div class="dm">\begin{align*}
+    &amp;\lnot\,\forall x\;\forall\varepsilon\;\Big(\varepsilon&gt;0 \Rightarrow \exists\delta\;\big(\delta&gt;0 \land \forall y\;(|y-x|&lt;\delta \Rightarrow |y^2-x^2|&lt;\varepsilon)\big)\Big) \\
+    \equiv\;\; &amp;\exists x\;\exists\varepsilon\;\Big(\varepsilon&gt;0 \land \lnot\exists\delta\;\big(\delta&gt;0 \land \forall y\;(|y-x|&lt;\delta \Rightarrow |y^2-x^2|&lt;\varepsilon)\big)\Big) \\
+    \equiv\;\; &amp;\exists x\;\exists\varepsilon\;\Big(\varepsilon&gt;0 \land \forall\delta\;\lnot\big(\delta&gt;0 \land \forall y\;(|y-x|&lt;\delta \Rightarrow |y^2-x^2|&lt;\varepsilon)\big)\Big) \\
+    \equiv\;\; &amp;\exists x\;\exists\varepsilon\;\Big(\varepsilon&gt;0 \land \forall\delta\;\big(\delta\le 0 \lor \lnot\forall y\;(|y-x|&lt;\delta \Rightarrow |y^2-x^2|&lt;\varepsilon)\big)\Big) \\
+    \equiv\;\; &amp;\exists x\;\exists\varepsilon\;\Big(\varepsilon&gt;0 \land \forall\delta\;\big(\delta\le 0 \lor \exists y\;(|y-x|&lt;\delta \land |y^2-x^2|\ge\varepsilon)\big)\Big).
+  \end{align*}</div>
+  בעזרת השקילות \(\lnot P\lor Q\equiv P\Rightarrow Q\) אפשר לכתוב את השלילה בצורה קריאה יותר:
+  <div class="dm">\[\exists x\;\exists\varepsilon\;\Big(\varepsilon&gt;0 \land \forall\delta\;\big(\delta&gt;0 \Rightarrow \exists y\;(|y-x|&lt;\delta \land |y^2-x^2|\ge\varepsilon)\big)\Big).\]</div>
+  במילים: "יש נקודה \(x\) ויש \(\varepsilon&gt;0\), כך שלכל \(\delta&gt;0\) יש \(y\) שהמרחק שלו מ-\(x\) קטן מ-\(\delta\),
+  ובכל זאת \(|y^2-x^2|\ge\varepsilon\)".
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> הטענה המקורית היא הגדרת ה-\(\varepsilon\)-\(\delta\) של רציפות, עבור הפונקציה \(f(x)=x^2\):
+        היא אומרת ש-\(f\) רציפה בכל נקודה. תראו אותה שוב בחדו"א.
+  </li><li> מקובל לקצר: \(\forall\varepsilon&gt;0\;P\) פירושו \(\forall\varepsilon\;(\varepsilon&gt;0\Rightarrow P)\),
+        ו-\(\exists\delta&gt;0\;P\) פירושו \(\exists\delta\;(\delta&gt;0\land P)\).
+        מהחישוב שעשינו רואים שהשלילה מתנהגת יפה גם בכתיב המקוצר:
+        \(\lnot\,\forall\varepsilon&gt;0\;P\equiv\exists\varepsilon&gt;0\;\lnot P\), ו-\(\lnot\,\exists\delta&gt;0\;P\equiv\forall\delta&gt;0\;\lnot P\).
+        כלומר, התנאי \(\varepsilon&gt;0\) או \(\delta&gt;0\) נשאר במקומו, ורק הכמת מתחלף.
+  </li><li> שימו לב שהשלילה של \(|y^2-x^2|&lt;\varepsilon\) היא \(|y^2-x^2|\ge\varepsilon\), ולא \(&gt;\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (יש אינסוף ראשוניים).</strong>
+נסמן ב-\(\mathrm{Prime}(m)\) את הטענה "\(m\) הוא מספר ראשוני".
+נתבונן בטענה:
+<div class="center">
+"לכל מספר טבעי \(n\) קיים מספר טבעי \(m\) כך ש-\(m\) גדול מ-\(n\) וגם \(m\) ראשוני."
+</div>
+<ol><li> כתבו את הטענה בעזרת כמתים וקשרים.
+  </li><li> שללו את הטענה.
+  </li><li> נסחו את השלילה במילים. מה היא אומרת?
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol4">הצגת הפתרון</button><div class="sol-body" id="t2-sol4" hidden><div class="p"><ol><li>
+  <div class="dm">\[\forall n\in\mathbb{N}\;\;\exists m\in\mathbb{N}\;\;\big(m&gt;n\land\mathrm{Prime}(m)\big).\]</div>
+  </li><li>
+  המילה הראשית היא "לכל", ולכן השלילה מתחילה ב"קיים".
+  לאחר מכן המילה הראשית היא "קיים", ושלילתה היא "לכל".
+  לבסוף, המילה הראשית היא "וגם", ונשתמש בדה מורגן:
+  <div class="dm">\begin{align*}
+    &amp;\lnot\,\forall n\;\exists m\;\big(m&gt;n\land\mathrm{Prime}(m)\big) \\
+    \equiv\;\; &amp;\exists n\;\lnot\,\exists m\;\big(m&gt;n\land\mathrm{Prime}(m)\big) \\
+    \equiv\;\; &amp;\exists n\;\forall m\;\lnot\big(m&gt;n\land\mathrm{Prime}(m)\big) \\
+    \equiv\;\; &amp;\exists n\;\forall m\;\big(m\le n\lor\lnot\mathrm{Prime}(m)\big) \\
+    \equiv\;\; &amp;\exists n\;\forall m\;\big(\mathrm{Prime}(m)\Rightarrow m\le n\big).
+  \end{align*}</div>
+  בשלב האחרון השתמשנו בשקילות \(\lnot P\lor Q\equiv P\Rightarrow Q\).
+  </li><li>
+  השלילה אומרת: "קיים מספר טבעי \(n\) כך שכל מספר ראשוני קטן או שווה ל-\(n\)",
+  כלומר <strong>יש מספר ראשוני גדול ביותר</strong> (או שאין ראשוניים כלל).
+  הטענה המקורית אומרת שיש אינסוף ראשוניים — והיא הנכונה (משפט אוקלידס).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> השלילה של \(m&gt;n\) היא \(m\le n\), ולא \(m&lt;n\)!
+  </li><li> הכמתים מתחלפים <em>בסדר שבו הם מופיעים</em>: \(\forall\exists\) הופך ל-\(\exists\forall\).
+        אין לשנות את סדר הכמתים.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (פותחים הגדרה לפני ששוללים).</strong>
+המשתנים רצים על \(\mathbb{Z}\). כתבו את השלילה של כל אחת מהטענות, כך שהסימן \(\lnot\) לא יופיע בה כלל.
+היעזרו בהגדרות: \(n\) <strong>זוגי</strong> אם קיים שלם \(k\) כך ש-\(n=2k\), ו-\(a\) <strong>מחלק את</strong> \(b\) (מסמנים \(a\mid b\)) אם קיים שלם \(q\) כך ש-\(b=qa\).
+<ol><li> \(n\) זוגי.
+  </li><li> \(3\mid n\).
+  </li><li> \(\forall n\;\big(6\mid n \Rightarrow 3\mid n\big)\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol5">הצגת הפתרון</button><div class="sol-body" id="t2-sol5" hidden><div class="p"><ol><li> לפי ההגדרה, "\(n\) זוגי" היא \(\exists k\;(n=2k)\). השלילה:
+        \(\lnot\exists k\;(n=2k)\equiv\forall k\;(n\neq 2k)\).
+  </li><li> באותו אופן, \(3\mid n\) היא \(\exists q\;(n=3q)\), והשלילה היא \(\forall q\;(n\neq 3q)\).
+  </li><li>
+  <div class="dm">\begin{align*}
+    \lnot\,\forall n\;\big(6\mid n \Rightarrow 3\mid n\big)
+    \;\equiv\;&amp; \exists n\;\big(6\mid n \land \lnot(3\mid n)\big) \\
+    \equiv\;&amp; \exists n\;\big(\exists q\;(n=6q) \land \forall r\;(n\neq 3r)\big).
+  \end{align*}</div>
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בסעיף 3 החלפנו את שם המשתנה של הכמת השני ל-\(r\), כדי שלא יתבלבל עם ה-\(q\) של הכמת הראשון.
+  </li><li> הטענה בסעיף 3 אמיתית (כל מספר שמתחלק ב-6 מתחלק גם ב-3), ולכן השלילה שלה שקרית.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (לעבודה עצמית).</strong>
+נסמן ב-\(\mathrm{Even}(k)\) את הטענה "\(k\) זוגי".
+נתבונן בטענה:
+<div class="center">
+"לכל שני מספרים שלמים \(a, b\): אם \(a\cdot b\) זוגי, אז \(a\) זוגי או \(b\) זוגי."
+</div>
+<ol><li> כתבו את הטענה בעזרת כמתים וקשרים.
+  </li><li> שללו את הטענה, והביאו את השלילה לצורה שבה הסימן \(\lnot\) מופיע רק ישירות לפני \(\mathrm{Even}\).
+  </li><li> נסחו את השלילה במילים.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol6">הצגת הפתרון</button><div class="sol-body" id="t2-sol6" hidden><div class="p"><ol><li>
+  <div class="dm">\[\forall a\in\mathbb{Z}\;\;\forall b\in\mathbb{Z}\;\;
+    \Big(\mathrm{Even}(a\cdot b)\Rightarrow\big(\mathrm{Even}(a)\lor\mathrm{Even}(b)\big)\Big).\]</div>
+  </li><li>
+  המילים הראשיות הן שני כמתי "לכל", ואחריהן גרירה. בתוך שלילת הגרירה נשתמש בדה מורגן:
+  <div class="dm">\begin{align*}
+    &amp;\lnot\,\forall a\;\forall b\;\Big(\mathrm{Even}(ab)\Rightarrow\big(\mathrm{Even}(a)\lor\mathrm{Even}(b)\big)\Big) \\
+    \equiv\;\; &amp;\exists a\;\exists b\;\lnot\Big(\mathrm{Even}(ab)\Rightarrow\big(\mathrm{Even}(a)\lor\mathrm{Even}(b)\big)\Big) \\
+    \equiv\;\; &amp;\exists a\;\exists b\;\Big(\mathrm{Even}(ab)\land\lnot\big(\mathrm{Even}(a)\lor\mathrm{Even}(b)\big)\Big) \\
+    \equiv\;\; &amp;\exists a\;\exists b\;\big(\mathrm{Even}(ab)\land\lnot\mathrm{Even}(a)\land\lnot\mathrm{Even}(b)\big).
+  \end{align*}</div>
+  </li><li>
+  "קיימים שני מספרים שלמים אי-זוגיים שמכפלתם זוגית."
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> איזו מהשתיים נכונה, הטענה או השלילה שלה? נוכיח זאת בחלק הבא, אחרי שנלמד לכתוב הוכחות.
+</li></ul></div></div></div></article>
+<h3 id="t2-s5"><span class="sec-num">5</span>שקילויות שימושיות להוכחות</h3>
+<div class="p">כמה שקילויות מסבירות איך מוכיחים טענות מסוגים מסוימים.
+נבדוק אותן בטבלת אמת:
+<div class="tt-wrap"><table class="tt"><thead><tr><th>\(P\)</th><th>\(Q\)</th><th class="hl-yellow">\(P\lor Q\)</th><th class="hl-yellow">\(\lnot P\Rightarrow Q\)</th><th class="hl-yellow">\(\lnot Q\Rightarrow P\)</th><th class="hl-green">\(P\Leftrightarrow Q\)</th><th class="hl-green">\((P\Rightarrow Q)\land(Q\Rightarrow P)\)</th></tr></thead><tbody><tr><td class="v-T">T</td><td class="v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-green v-T">T</td><td class="hl-green v-T">T</td></tr><tr><td class="v-T">T</td><td class="v-F">F</td><td class="hl-yellow v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-green v-F">F</td><td class="hl-green v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-yellow v-T">T</td><td class="hl-green v-F">F</td><td class="hl-green v-F">F</td></tr><tr><td class="v-F">F</td><td class="v-F">F</td><td class="hl-yellow v-F">F</td><td class="hl-yellow v-F">F</td><td class="hl-yellow v-F">F</td><td class="hl-green v-T">T</td><td class="hl-green v-T">T</td></tr></tbody></table></div></div>
+<div class="p"><strong>"אם ורק אם" היא שתי גרירות.</strong>
+העמודות הירוקות זהות:
+<div class="dm">\[P\Leftrightarrow Q \quad\equiv\quad (P\Rightarrow Q)\land(Q\Rightarrow P).\]</div>
+לכן כדי להוכיח טענת "אם ורק אם", מוכיחים בנפרד את שני הכיוונים: \(P\Rightarrow Q\) ו-\(Q\Rightarrow P\).</div>
+<div class="p"><strong>"או" אפשר לכתוב כגרירה.</strong>
+העמודות הצהובות זהות:
+<div class="dm">\[P\lor Q \quad\equiv\quad \lnot P\Rightarrow Q \quad\equiv\quad \lnot Q\Rightarrow P.\]</div>
+לכן כדי להוכיח טענת "או", אפשר להניח שאחת מהטענות לא מתקיימת, ולהוכיח שהשנייה כן מתקיימת.
+ולהפך: אם ידוע לנו ש-\(P\lor Q\) מתקיימת, וגם ש-\(P\) לא מתקיימת, אפשר להסיק ש-\(Q\) מתקיימת.</div>
+<div class="p"><strong>קונטרפוזיציה.</strong>
+ראינו כבר ש-\(P\Rightarrow Q\equiv\lnot Q\Rightarrow\lnot P\).
+לכן כדי להוכיח "אם \(P\) אז \(Q\)", אפשר להניח ש-\(Q\) לא מתקיימת ולהוכיח ש-\(P\) לא מתקיימת.</div>
+<h3 id="t2-s6"><span class="sec-num">6</span>כתיבת הוכחות</h3>
+<div class="p">הוכחה היא טקסט שמטרתו לשכנע שטענה מסוימת אמיתית.
+כתיבת הוכחה נראית בהתחלה כמו אמנות, אבל יש לה שיטה: ההוכחה מתקדמת בצעדים קטנים,
+ובכל צעד שואלים אותן שאלות.</div>
+<h4>נתון ויעד</h4>
+<div class="p">בכל רגע בהוכחה, כל טענה שמופיעה בה היא אחד משני סוגים:
+<ul><li> <strong>יעד</strong> — טענה שעוד <em>צריך להוכיח</em>. אסור להשתמש בה, צריך להגיע אליה.
+  </li><li> <strong>נתון</strong> — טענה שכבר <em>מותר להשתמש בה</em>: הנחה שהנחנו, הגדרה, משפט שכבר הוכח, או מסקנה שכבר הסקנו.
+</li></ul>
+את המעמד של טענה מזהים לפי ה<strong>מילים שלפניה</strong>, ולא לפי הטענה עצמה:
+<ul><li> לפני יעד כותבים: "צ״ל" (צריך להוכיח), "נוכיח ש...", "נרצה להראות ש...".
+  </li><li> לפני נתון כותבים: "נניח ש...", "יהי...", "ידוע ש...", "לפי ההגדרה...", "לכן...", "מכאן ש...".
+</li></ul></div>
+<h4>שלושה צעדים בכל שלב</h4>
+<div class="p">בכל שלב בהוכחה:
+<ol><li> בוחרים טענה אחת להתמקד בה — <strong>טענת המיקוד</strong>.
+  </li><li> מזהים את <strong>המילה הראשית</strong> שלה, ואם היא <strong>נתון</strong> או <strong>יעד</strong>.
+  </li><li> לפי שתי התשובות, בוחרים <strong>כלל</strong> מהטבלה שלמטה, וכותבים את מה שהוא אומר.
+</li></ol></div>
+<h4>טבלת הכללים</h4>
+<div class="p"><div class="center">
+<span class="gap"></span>
+<span class="gap"></span>
+<div class="tbl-wrap"><table class="steps"><tr><th><strong>המילה הראשית</strong></th><th><strong>כשהטענה היא יעד (צריך להוכיח)</strong></th><th><strong>כשהטענה היא נתון (מותר להשתמש)</strong></th></tr><tr><td>\(\forall x\;P(x)\)</td><td>כותבים "יהי \(x\)" (איבר <em>כללי</em>), ומוכיחים \(P(x)\).</td><td>מציבים במקום \(x\) כל ערך שנוח לנו, ומקבלים \(P\) עבורו.</td></tr><tr><td>\(\exists x\;P(x)\)</td><td>מוצאים (בונים) \(x\) מסוים, ומוכיחים \(P(x)\) עבורו.</td><td>נותנים שם לאיבר שקיים: "יהי \(x\) כך ש-\(P(x)\)".</td></tr><tr><td>\(P\Rightarrow Q\)</td><td>מניחים \(P\) ומוכיחים \(Q\). או בקונטרפוזיציה: מניחים \(\neg Q\) ומוכיחים \(\neg P\).</td><td>אם יודעים גם ש-\(P\) מתקיימת, מסיקים ש-\(Q\) מתקיימת.</td></tr><tr><td>\(P\Leftrightarrow Q\)</td><td>מוכיחים שני כיוונים: \(P\Rightarrow Q\) וגם \(Q\Rightarrow P\).</td><td>משתמשים בכל אחד מהכיוונים לפי הצורך.</td></tr><tr><td>\(P\land Q\)</td><td>מוכיחים כל אחת מהטענות בנפרד.</td><td>משתמשים בכל אחת מהטענות בנפרד.</td></tr><tr><td>\(P\lor Q\)</td><td>מניחים ש-\(P\) לא מתקיימת, ומוכיחים \(Q\).</td><td>מחלקים למקרים: מקרה שבו \(P\), ומקרה שבו \(Q\).</td></tr><tr><td>מושג עם הגדרה ("זוגי", "מחלק")</td><td>פותחים את ההגדרה, ומוכיחים את מה שהיא אומרת.</td><td>פותחים את ההגדרה, ומשתמשים במה שהיא אומרת.</td></tr></table></div>
+</div></div>
+<div class="p"><strong>הגדרות שנשתמש בהן.</strong>
+מספר שלם \(n\) הוא <strong>זוגי</strong> אם קיים שלם \(k\) כך ש-\(n=2k\), והוא <strong>אי-זוגי</strong> אם קיים שלם \(k\) כך ש-\(n=2k+1\).
+נשתמש גם בעובדה שכל מספר שלם הוא זוגי או אי-זוגי, ולא שניהם.</div>
+<h4>דוגמה: \(n\) זוגי אם ורק אם \(n^2\) זוגי</h4>
+<div class="p">נוכיח את הטענה
+<div class="dm">\[\forall n\in\mathbb{Z}\;\;\big(\Even(n)\Leftrightarrow\Even(n^2)\big).\]</div>
+נעקוב אחרי הצעדים בכיוון הראשון. בכל שורה: טענת המיקוד, המילה הראשית והמעמד שלה, ומה כותבים בהוכחה.</div>
+<div class="p"><div class="center">
+<span class="gap"></span>
+<span class="gap"></span>
+<div class="tbl-wrap"><table class="steps"><tr><th><strong>טענת המיקוד</strong></th><th><strong>מילה ראשית ומעמד</strong></th><th><strong>מה כותבים בהוכחה</strong></th></tr><tr><td>\(\forall n\;\big(\Even(n)\Leftrightarrow\Even(n^2)\big)\)</td><td>"לכל", יעד</td><td>"יהי \(n\) מספר שלם. צ״ל: \(n\) זוגי אם ורק אם \(n^2\) זוגי."</td></tr><tr><td>\(\Even(n)\Leftrightarrow\Even(n^2)\)</td><td>"אם ורק אם", יעד</td><td>"נוכיח את שני הכיוונים."</td></tr><tr><td>\(\Even(n)\Rightarrow\Even(n^2)\)</td><td>"אם...אז", יעד</td><td>"נניח ש-\(n\) זוגי. צ״ל: \(n^2\) זוגי."</td></tr><tr><td>\(\Even(n)\)</td><td>הגדרה, נתון</td><td>"לפי ההגדרה, קיים \(k\) שלם כך ש-\(n=2k\)."</td></tr><tr><td>\(\exists k\;(n=2k)\)</td><td>"קיים", נתון</td><td>"יהי \(k\) כזה." (נותנים שם לאיבר שקיים.)</td></tr><tr><td>\(\Even(n^2)\)</td><td>הגדרה, יעד</td><td>"צ״ל: קיים \(m\) שלם כך ש-\(n^2=2m\)."</td></tr><tr><td>\(\exists m\;(n^2=2m)\)</td><td>"קיים", יעד</td><td>"נבחר \(m=2k^2\). זה מספר שלם, ו-\(n^2=(2k)^2=4k^2=2\cdot 2k^2\)."</td></tr></table></div>
+</div></div>
+<div class="p">שימו לב שרוב הצעדים לא דורשים שום רעיון: הם נקבעים לגמרי לפי המילה הראשית והמעמד.
+הרעיון היחיד בכיוון הזה הוא בשורה האחרונה — לבחור \(m=2k^2\).</div>
+<div class="p">הנה ההוכחה המלאה, כפי שכותבים אותה בפועל:</div>
+<div class="p"><div class="proof"><strong>הוכחה.</strong> 
+יהי \(n\) מספר שלם. נוכיח את שני הכיוונים.
+<span class="gap"></span>
+<strong>(\(\Rightarrow\))</strong> נניח ש-\(n\) זוגי, וצ״ל ש-\(n^2\) זוגי.
+לפי ההגדרה קיים \(k\) שלם כך ש-\(n=2k\). לכן \(n^2=4k^2=2\cdot 2k^2\), ו-\(2k^2\) הוא מספר שלם. כלומר \(n^2\) זוגי.
+<span class="gap"></span>
+<strong>(\(\Leftarrow\))</strong> נוכיח בקונטרפוזיציה: נניח ש-\(n\) אינו זוגי, וצ״ל ש-\(n^2\) אינו זוגי.
+מכיוון ש-\(n\) אינו זוגי, הוא אי-זוגי, ולכן קיים \(k\) שלם כך ש-\(n=2k+1\). לכן
+<div class="dm">\[n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1,\]</div>
+ו-\(2k^2+2k\) הוא מספר שלם. כלומר \(n^2\) אי-זוגי, ולכן אינו זוגי.
+<span class="qed">□</span></div></div>
+<div class="p notes"><strong>הערות.</strong>
+<ul><li> בכיוון (\(\Leftarrow\)) היעד הוא "אם \(n^2\) זוגי אז \(n\) זוגי". ניסיון ישיר נתקע:
+        מ-\(n^2=2m\) קשה להגיע ישירות לכך ש-\(n\) זוגי. הקונטרפוזיציה הופכת את הנתון והיעד, וזה עובד בקלות.
+  </li><li> (\(\Rightarrow\)) הוא הכיוון "\(n\) זוגי \(\Rightarrow\) \(n^2\) זוגי", כלומר מהצד השמאלי של ה"אם ורק אם" לצד הימני.
+</li></ul></div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (סכום אי-זוגי).</strong>
+הוכיחו שלכל \(n,m\) שלמים: \(n+m\) אי-זוגי אם ורק אם בדיוק אחד מ-\(n,m\) אי-זוגי.
+לפני שכותבים: מהי המילה הראשית? אילו שני יעדים מתקבלים ממנה?</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol7">הצגת הפתרון</button><div class="sol-body" id="t2-sol7" hidden><div class="p">המילה הראשית היא "לכל", ואחריה "אם ורק אם", ולכן מוכיחים שני כיוונים.
+"בדיוק אחד מ-\(n,m\) אי-זוגי" פירושו: (\(n\) אי-זוגי וגם \(m\) זוגי) או (\(n\) זוגי וגם \(m\) אי-זוגי).</div><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+יהיו \(n,m\) שלמים.
+<span class="gap"></span>
+<strong>(\(\Rightarrow\))</strong> נוכיח בקונטרפוזיציה: נניח שלא בדיוק אחד מהם אי-זוגי, וצ״ל ש-\(n+m\) אינו אי-זוגי.
+מכיוון שכל מספר הוא זוגי או אי-זוגי, יש שני מקרים:
+<ul><li> שניהם זוגיים: \(n=2a\) ו-\(m=2b\) עבור שלמים \(a,b\), ולכן \(n+m=2(a+b)\) זוגי.
+  </li><li> שניהם אי-זוגיים: \(n=2a+1\) ו-\(m=2b+1\), ולכן \(n+m=2(a+b+1)\) זוגי.
+</li></ul>
+בשני המקרים \(n+m\) זוגי, ולכן אינו אי-זוגי.
+<span class="gap"></span>
+<strong>(\(\Leftarrow\))</strong> נניח שבדיוק אחד מהם אי-זוגי, וצ״ל ש-\(n+m\) אי-זוגי.
+זה נתון מסוג "או", ולכן נחלק למקרים.
+אם \(n\) אי-זוגי ו-\(m\) זוגי, אז \(n=2a+1\) ו-\(m=2b\), ולכן \(n+m=2(a+b)+1\) אי-זוגי.
+המקרה ש-\(n\) זוגי ו-\(m\) אי-זוגי זהה, עם התפקידים של \(n\) ו-\(m\) הפוכים.
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בכיוון (\(\Rightarrow\)) השתמשנו בקונטרפוזיציה, ובנתון החדש ("לא בדיוק אחד") השתמשנו בחלוקה למקרים.
+  </li><li> בכיוון (\(\Leftarrow\)) הנתון הוא "או", ולכן חילקנו למקרים — בדיוק כמו בטבלת הכללים.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (מחלק של מחלק).</strong>
+נאמר שמספר שלם \(a\) <strong>מחלק את</strong> מספר שלם \(b\) אם קיים שלם \(q\) כך ש-\(b=qa\).
+הוכיחו: לכל \(a,b,c\) שלמים, אם \(a\) מחלק את \(b\) ו-\(b\) מחלק את \(c\), אז \(a\) מחלק את \(c\).</div><div class="p">לפני שכותבים: מהי המילה הראשית של הטענה? מה יהיו הנתונים ומה יהיה היעד אחרי שנטפל בה?</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol8">הצגת הפתרון</button><div class="sol-body" id="t2-sol8" hidden><div class="p">נעבור על הצעדים לפי המילים הראשיות:
+<ul><li> המילה הראשית היא "לכל", והטענה היא יעד: כותבים "יהיו \(a,b,c\) שלמים".
+  </li><li> עכשיו היעד הוא גרירה: מניחים את ההנחה (\(a\) מחלק את \(b\) וגם \(b\) מחלק את \(c\)), והיעד החדש הוא "\(a\) מחלק את \(c\)".
+  </li><li> הנתון הוא "וגם": משתמשים בכל חלק בנפרד. בכל חלק פותחים את ההגדרה ומקבלים נתון מסוג "קיים",
+        ולכן נותנים שם לאיבר שקיים: \(q_1\) עבור החלק הראשון, ו-\(q_2\) עבור השני.
+  </li><li> היעד "\(a\) מחלק את \(c\)" הוא, לפי ההגדרה, יעד מסוג "קיים": צריך <em>למצוא</em> שלם \(q\) כך ש-\(c=qa\).
+</li></ul></div><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+יהיו \(a,b,c\) שלמים, ונניח ש-\(a\) מחלק את \(b\) וגם \(b\) מחלק את \(c\). צ״ל: \(a\) מחלק את \(c\).
+מכיוון ש-\(a\) מחלק את \(b\), קיים שלם \(q_1\) כך ש-\(b=q_1a\).
+מכיוון ש-\(b\) מחלק את \(c\), קיים שלם \(q_2\) כך ש-\(c=q_2b\).
+נציב את הראשון בשני ונקבל
+<div class="dm">\[c=q_2b=q_2(q_1a)=(q_2q_1)\,a.\]</div>
+נבחר \(q=q_2q_1\). זהו מספר שלם, כי מכפלה של שלמים היא שלם, ומתקיים \(c=qa\).
+לכן \(a\) מחלק את \(c\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> שימו לב להבדל בין שני סוגי "קיים" בהוכחה:
+        כשהוא <strong>נתון</strong> ("קיים \(q_1\)..."), רק נותנים שם לאיבר שקיים;
+        כשהוא <strong>יעד</strong> ("קיים \(q\)..."), צריך למצוא את האיבר בעצמנו — וכאן בחרנו \(q=q_2q_1\).
+  </li><li> טעות נפוצה היא להשתמש באותה אות לשני האיברים: לכתוב \(b=qa\) וגם \(c=qb\).
+        אין סיבה שזה יהיה אותו מספר, ולכן חייבים שני שמות שונים.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 9 (לעבודה עצמית: מכפלה זוגית).</strong>
+בתרגיל 6 שללנו את הטענה
+<div class="center">
+"לכל שני מספרים שלמים \(a,b\): אם \(a\cdot b\) זוגי, אז \(a\) זוגי או \(b\) זוגי."
+</div>
+הוכיחו שהטענה המקורית היא האמיתית.</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t2-sol9">הצגת הפתרון</button><div class="sol-body" id="t2-sol9" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+יהיו \(a,b\) שלמים. היעד הוא גרירה, ונוכיח אותה בקונטרפוזיציה:
+נניח שלא נכון ש-(\(a\) זוגי או \(b\) זוגי), וצ״ל ש-\(ab\) אינו זוגי.
+לפי דה מורגן, ההנחה אומרת ש-\(a\) אינו זוגי וגם \(b\) אינו זוגי, כלומר שניהם אי-זוגיים.
+לכן קיימים שלמים \(k,l\) כך ש-\(a=2k+1\) ו-\(b=2l+1\), ומכאן
+<div class="dm">\[ab=(2k+1)(2l+1)=4kl+2k+2l+1=2(2kl+k+l)+1,\]</div>
+כלומר \(ab\) אי-זוגי, ולכן אינו זוגי.
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> שימו לב איך השלילה (דה מורגן) והקונטרפוזיציה, שלמדנו בתחילת התרגול, עובדות כאן יחד.
 </li></ul></div></div></div></article></section>
     </main>
   </div>
