@@ -115,6 +115,8 @@ h5 { font-size: 1rem; color: var(--muted); margin: 1.5rem 0 .4rem; }
 .p ul, .p ol { margin: .4rem 0; padding-inline-start: 1.5rem; }
 .p li { margin: .2rem 0; }
 .p li::marker { color: var(--muted); }
+.p li.lbl-item { list-style: none; margin-inline-start: -1.2rem; }
+.p li.lbl-item .lbl { display: inline-block; min-width: 2.2em; font-weight: 600; }
 .center { text-align: center; margin: .6rem 0; }
 .gap { display: block; height: .6rem; }
 code { font-family: var(--mono); font-size: .9em; }
@@ -1069,6 +1071,47 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 (ג) \(A=\{1\},\ B=\{\{1\}\}\). \;
 (ד) \(A=\{1\},\ B=\{2\}\).
 המסקנה: שייכות והכלה לא תלויות זו בזו — כל צירוף אפשרי.</div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (שאלת ההכנה, שאלה 1 — נפתור חלק מהסעיפים יחד).</strong>
+בשאלה זו המשתנה \(A\) מציין קבוצות. נסמן:
+<div class="dm">\[M=\bigl\{\ \{7\},\ \{\{7\}\},\ \{\{7\},\{\{7\}\}\},\ \{x\mid x=7\}\ \bigr\}.\]</div>
+בכל סעיף נתונה טענה.
+<ul><li> קבעו האם המשתנה \(A\) חופשי או קשור בטענה.
+  </li><li> אם \(A\) חופשי בטענה, תארו בצורה פשוטה ככל האפשר את <strong>כל</strong> ההשמות ל-\(A\) שעושות את הטענה אמיתית.
+  </li><li> אם \(A\) קשור בטענה, קבעו האם הטענה אמיתית או שקרית.
+</li></ul>
+<ul><li class="lbl-item"><span class="lbl">(א)</span>  \(A\in M\).
+  </li><li class="lbl-item"><span class="lbl">(ב)</span>  \(A\subseteq M\).
+  </li><li class="lbl-item"><span class="lbl">(ג)</span>  קיים \(A\) (\(A\in M\)).
+  </li><li class="lbl-item"><span class="lbl">(ד)</span>  לכל \(A\) (\(A\in M\)).
+  </li><li class="lbl-item"><span class="lbl">(ה)</span>  \(A\in M\) וגם \(A\subseteq M\).
+  </li><li class="lbl-item"><span class="lbl">(ז)</span>  אם \(A\subseteq M\) אז \(A\in M\).
+  </li><li class="lbl-item"><span class="lbl">(ח)</span>  \(A\subseteq M\) אם ורק אם \(A\in M\).
+</li></ul></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol5">הצגת הפתרון</button><div class="sol-body" id="t3-sol5" hidden><div class="p">(לסעיפים (ה) ו-(ח) בלבד.)
+קודם נשים לב ש-\(\{x\mid x=7\}=\{7\}\), ולכן ל-\(M\) יש בדיוק שלושה איברים:
+<div class="dm">\[\{7\},\qquad \{\{7\}\},\qquad \{\{7\},\{\{7\}\}\}.\]</div>
+<ul><li class="lbl-item"><span class="lbl">(ה)</span>  \(A\) חופשי. כדי ש-\(A\in M\), הקבוצה \(A\) צריכה להיות אחד משלושת האיברים של \(M\).
+        נבדוק עבור כל אחד מהם אם גם \(A\subseteq M\), כלומר אם כל האיברים שלו שייכים ל-\(M\):
+        <ul><li> \(A=\{7\}\): האיבר היחיד שלו הוא \(7\), ו-\(7\notin M\). לכן \(A\not\subseteq M\).
+          </li><li> \(A=\{\{7\}\}\): האיבר היחיד שלו הוא \(\{7\}\), ו-\(\{7\}\in M\). לכן \(A\subseteq M\).
+          </li><li> \(A=\{\{7\},\{\{7\}\}\}\): שני האיברים שלו, \(\{7\}\) ו-\(\{\{7\}\}\), שייכים ל-\(M\). לכן \(A\subseteq M\).
+        </li></ul>
+        לכן ההשמות שעושות את הטענה אמיתית הן בדיוק \(A=\{\{7\}\}\) ו-\(A=\{\{7\},\{\{7\}\}\}\).
+  </li><li class="lbl-item"><span class="lbl">(ח)</span>  \(A\) חופשי. טענת "אם ורק אם" אמיתית כאשר לשני הצדדים יש <strong>אותו</strong> ערך אמת.
+        ההשמות מסעיף (ה), שבהן שני הצדדים אמיתיים, עושות אותה אמיתית — <strong>אבל לא רק הן</strong>:
+        היא אמיתית גם כאשר שני הצדדים <strong>שקריים</strong>.
+        למשל, עבור \(A=\{1\}\): \(\{1\}\notin M\), וגם \(\{1\}\not\subseteq M\) (כי \(1\notin M\)). שני הצדדים שקריים, ולכן הטענה אמיתית.
+<span class="gap"></span>
+        לעומת זאת, הטענה שקרית כאשר לשני הצדדים יש ערכי אמת שונים:
+        <ul><li> <strong>הכלה בלי שייכות:</strong> \(A=\emptyset\). תמיד \(\emptyset\subseteq M\), אבל \(\emptyset\notin M\).
+                (דוגמה נוספת: \(A=\{\{\{7\}\},\ \{\{7\},\{\{7\}\}\}\}\) — מוכלת ב-\(M\), אבל אינה אחד משלושת האיברים שלה.)
+          </li><li> <strong>שייכות בלי הכלה:</strong> \(A=\{7\}\). אכן \(\{7\}\in M\), אבל \(\{7\}\not\subseteq M\) כי \(7\notin M\).
+        </li></ul>
+        לכן ההשמות שעושות את (ח) אמיתית הן: ההשמות של סעיף (ה), <em>וגם</em> כל קבוצה \(A\) שאינה שייכת ל-\(M\) ואינה מוכלת בה.
+</li></ul></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> טעות נפוצה היא לענות בסעיף (ח) את אותה תשובה כמו בסעיף (ה). זכרו את טבלת האמת של "אם ורק אם":
+        היא אמיתית גם בשורה שבה שני הצדדים שקריים.
+  </li><li> הדוגמאות \(\emptyset\) ו-\(\{7\}\) מראות שוב ששייכות והכלה לא תלויות זו בזו.
+</li></ul></div></div></div></article>
 <h3 id="t3-s4"><span class="sec-num">4</span>פעולות על קבוצות</h3>
 <div class="p">כל פעולה על קבוצות מוגדרת בעזרת מילה לוגית:
 <div class="dm">\[\begin{aligned}
@@ -1079,26 +1122,26 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 \end{aligned}\]</div>
 לכן, כשמנתחים טענה כמו \(x\in A\cap B\) בהוכחה, "פותחים את ההגדרה" ומקבלים טענה עם מילה לוגית:
 \(x\in A\cap B\) היא בעצם "\(x\in A\) וגם \(x\in B\)", ואיתה עובדים לפי טבלת הכללים.</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (חימום: חישוב).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (חימום: חישוב).</strong>
 יהיו \(A=\{1,2,3\}\), \(B=\{3,4\}\) ו-\(C=\{\emptyset,1\}\). חשבו:
-\(A\cup B\), \; \(A\cap B\), \; \(A\setminus B\), \; \(A\triangle B\), \; \(A\cap C\), \; \(C\setminus A\), \; \(A\cap\emptyset\), \; \(C\cap\{\emptyset\}\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol5">הצגת הפתרון</button><div class="sol-body" id="t3-sol5" hidden><div class="p">\(\{1,2,3,4\}\), \; \(\{3\}\), \; \(\{1,2\}\), \; \(\{1,2,4\}\), \; \(\{1\}\), \; \(\{\emptyset\}\), \; \(\emptyset\), \; \(\{\emptyset\}\).</div><div class="p notes"><strong>הערות.</strong>
+\(A\cup B\), \; \(A\cap B\), \; \(A\setminus B\), \; \(A\triangle B\), \; \(A\cap C\), \; \(C\setminus A\), \; \(A\cap\emptyset\), \; \(C\cap\{\emptyset\}\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol6">הצגת הפתרון</button><div class="sol-body" id="t3-sol6" hidden><div class="p">\(\{1,2,3,4\}\), \; \(\{3\}\), \; \(\{1,2\}\), \; \(\{1,2,4\}\), \; \(\{1\}\), \; \(\{\emptyset\}\), \; \(\emptyset\), \; \(\{\emptyset\}\).</div><div class="p notes"><strong>הערות.</strong>
 <ul><li> שימו לב להבדל בין \(C\setminus A=\{\emptyset\}\) (קבוצה עם איבר אחד) לבין \(A\cap\emptyset=\emptyset\) (קבוצה ריקה).
 </li></ul></div></div></div></article>
 <h3 id="t3-s5"><span class="sec-num">5</span>הוכח או הפרך</h3>
 <div class="p"><strong>טיפ:</strong> לפני שמנסים להוכיח, כדאי לבדוק כמה דוגמאות קטנות — ותמיד לנסות גם את הקבוצה הריקה.</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (הכלה של הכלה).</strong>
-הוכיחו: לכל שלוש קבוצות \(A,B,C\), אם \(A\subseteq B\) וגם \(B\subseteq C\), אז \(A\subseteq C\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol6">הצגת הפתרון</button><div class="sol-body" id="t3-sol6" hidden><div class="p">יהיו \(A,B,C\) קבוצות, ונניח \(A\subseteq B\) וגם \(B\subseteq C\). צ״ל: \(A\subseteq C\), כלומר לכל \(x\), אם \(x\in A\) אז \(x\in C\).
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (הכלה של הכלה).</strong>
+הוכיחו: לכל שלוש קבוצות \(A,B,C\), אם \(A\subseteq B\) וגם \(B\subseteq C\), אז \(A\subseteq C\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol7">הצגת הפתרון</button><div class="sol-body" id="t3-sol7" hidden><div class="p">יהיו \(A,B,C\) קבוצות, ונניח \(A\subseteq B\) וגם \(B\subseteq C\). צ״ל: \(A\subseteq C\), כלומר לכל \(x\), אם \(x\in A\) אז \(x\in C\).
 יהי \(x\in A\). מכיוון ש-\(A\subseteq B\), נקבל \(x\in B\). מכיוון ש-\(B\subseteq C\), נקבל \(x\in C\).</div><div class="p notes"><strong>הערות.</strong>
 <ul><li> הנתון \(A\subseteq B\) הוא נתון מסוג "לכל": מציבים בו את ה-\(x\) שלנו ומקבלים "אם \(x\in A\) אז \(x\in B\)".
   </li><li> השוו ל"מחלק של מחלק" מתרגול 2: אותו מבנה בדיוק, עם מושג אחר.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (הכלה באיחוד, בחיתוך ובהפרש).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (הכלה באיחוד, בחיתוך ובהפרש).</strong>
 לכל טענה, הוכיחו או הפריכו.
 <ol><li> \(A\subseteq B\cap C\) אם ורק אם \(A\subseteq B\) וגם \(A\subseteq C\).
   </li><li> \(A\subseteq B\cup C\) אם ורק אם \(A\subseteq B\) או \(A\subseteq C\).
   </li><li> אם \(A\subseteq B\setminus C\), אז \(A\subseteq B\) וגם \(A\not\subseteq C\).
   </li><li> אם \(A\neq\emptyset\) ו-\(A\subseteq B\setminus C\), אז \(A\subseteq B\) וגם \(A\not\subseteq C\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol7">הצגת הפתרון</button><div class="sol-body" id="t3-sol7" hidden><div class="p"><ol><li> נכון. (\(\Rightarrow\)) יהי \(x\in A\); אז \(x\in B\cap C\), ולכן \(x\in B\) — וזו הוכחה של \(A\subseteq B\). באופן דומה, <em>בהוכחה נפרדת</em>, \(A\subseteq C\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol8">הצגת הפתרון</button><div class="sol-body" id="t3-sol8" hidden><div class="p"><ol><li> נכון. (\(\Rightarrow\)) יהי \(x\in A\); אז \(x\in B\cap C\), ולכן \(x\in B\) — וזו הוכחה של \(A\subseteq B\). באופן דומה, <em>בהוכחה נפרדת</em>, \(A\subseteq C\).
         (\(\Leftarrow\)) יהי \(x\in A\); מההנחות \(x\in B\) ו-\(x\in C\), ולכן \(x\in B\cap C\).
   </li><li> לא נכון: \(A=\{1,2\}\), \(B=\{1\}\), \(C=\{2\}\). (הכיוון \(\Leftarrow\) כן נכון.)
   </li><li> לא נכון: \(A=\emptyset\). אז \(\emptyset\subseteq B\setminus C\), אבל \(\emptyset\subseteq C\).
@@ -1118,14 +1161,14 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 כל אחד מהם מוכיחים כמו כל שוויון של קבוצות — בשתי הכלות, תוך פתיחת ההגדרות.
 למשל, \(A\cap\emptyset=\emptyset\): ההכלה \(\emptyset\subseteq A\cap\emptyset\) נכונה תמיד,
 ואם \(x\in A\cap\emptyset\) אז בפרט \(x\in\emptyset\) — וזה בלתי אפשרי, ולכן גם \(A\cap\emptyset\subseteq\emptyset\).</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (מה גורר שהקבוצה ריקה?).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 9 (מה גורר שהקבוצה ריקה?).</strong>
 תהי \(A\) קבוצה. אילו מהטענות הבאות גוררות \(A=\emptyset\)? הוכיחו או הביאו דוגמה נגדית.
 <ol><li> \(\emptyset\subseteq A\).
   </li><li> \(A\subseteq\emptyset\).
   </li><li> לכל קבוצה \(B\): \(A\cap B=A\).
   </li><li> קיימת קבוצה \(B\) כך ש-\(A\cap B=A\).
   </li><li> לכל קבוצה \(B\): \(B\setminus A=B\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol8">הצגת הפתרון</button><div class="sol-body" id="t3-sol8" hidden><div class="p"><ol><li> לא: \(A=\{1\}\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol9">הצגת הפתרון</button><div class="sol-body" id="t3-sol9" hidden><div class="p"><ol><li> לא: \(A=\{1\}\).
   </li><li> כן: אם היה איבר \(x\in A\), אז \(x\in\emptyset\) — סתירה.
   </li><li> כן: מציבים \(B=\emptyset\) ומקבלים \(A=A\cap\emptyset=\emptyset\).
   </li><li> לא: \(B=A\) מתאימה לכל \(A\), למשל \(A=B=\{1\}\).
@@ -1136,12 +1179,12 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <h3 id="t3-s6"><span class="sec-num">6</span>תרגול בכתיבת הוכחות</h3>
 <div class="p">כדי להוכיח שוויון של קבוצות \(X=Y\) מוכיחים שתי הכלות. בכל הכלה \(X\subseteq Y\):
 כותבים "יהי \(x\in X\)", פותחים את ההגדרה של \(x\in X\) כדי לקבל נתונים, ופותחים את ההגדרה של \(x\in Y\) כדי לדעת מה היעד.</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 9.</strong>
-הוכיחו: \(A\setminus(B\cup C)=(A\setminus B)\setminus C\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol9">הצגת הפתרון</button><div class="sol-body" id="t3-sol9" hidden><div class="p">(\(\subseteq\)) יהי \(x\in A\setminus(B\cup C)\): אז \(x\in A\) ו-\(x\notin B\cup C\), כלומר \(x\notin B\) וגם \(x\notin C\) (דה מורגן).
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 10.</strong>
+הוכיחו: \(A\setminus(B\cup C)=(A\setminus B)\setminus C\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol10">הצגת הפתרון</button><div class="sol-body" id="t3-sol10" hidden><div class="p">(\(\subseteq\)) יהי \(x\in A\setminus(B\cup C)\): אז \(x\in A\) ו-\(x\notin B\cup C\), כלומר \(x\notin B\) וגם \(x\notin C\) (דה מורגן).
 לכן \(x\in A\setminus B\), ומכיוון ש-\(x\notin C\), גם \(x\in(A\setminus B)\setminus C\).
 (\(\supseteq\)) באותו אופן, בכיוון ההפוך.</div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 10.</strong>
-הוכיחו: \(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol10">הצגת הפתרון</button><div class="sol-body" id="t3-sol10" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 11.</strong>
+הוכיחו: \(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol11">הצגת הפתרון</button><div class="sol-body" id="t3-sol11" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
 יהיו \(A,B,C\) קבוצות. נוכיח שוויון של קבוצות בעזרת שתי הכלות.
 <span class="gap"></span>
 <strong>(\(\subseteq\))</strong> צ״ל: \(A\cap(B\cup C)\subseteq(A\cap B)\cup(A\cap C)\).
@@ -1164,10 +1207,10 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <ul><li> בכל כיוון יש נתון מסוג "או" (שייכות לאיחוד), ולכן בשני הכיוונים מחלקים למקרים.
   </li><li> כדאי לשים לב שבכל שלב "פותחים" רק את ההגדרה שצריך: את החיתוך כשהוא נתון, ואת האיחוד כשהוא יעד.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 11.</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 12.</strong>
 <ol><li> הוכיחו או הפריכו: לכל שתי קבוצות \(A,B\) מתקיים \((A\cup B)\setminus B=A\).
   </li><li> הוכיחו: \((A\cup B)\setminus B=A\) אם ורק אם \(A\cap B=\emptyset\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol11">הצגת הפתרון</button><div class="sol-body" id="t3-sol11" hidden><div class="p"><ol><li> הטענה לא נכונה. דוגמה נגדית: \(A=B=\{1\}\). אז \((A\cup B)\setminus B=\{1\}\setminus\{1\}=\emptyset\neq A\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol12">הצגת הפתרון</button><div class="sol-body" id="t3-sol12" hidden><div class="p"><ol><li> הטענה לא נכונה. דוגמה נגדית: \(A=B=\{1\}\). אז \((A\cup B)\setminus B=\{1\}\setminus\{1\}=\emptyset\neq A\).
         (ההכלה \((A\cup B)\setminus B\subseteq A\) דווקא נכונה תמיד; מה שעלול להיכשל הוא ההכלה בכיוון השני.)
   </li><li>
 <div class="proof"><strong>הוכחה.</strong> 
@@ -1192,17 +1235,17 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> בהכלה \(\subseteq\) השתמשנו בנתון "או" שאחת מאפשרויותיו נשללה: \(x\in A\) או \(x\in B\), ו-\(x\notin B\), ולכן \(x\in A\).
   </li><li> כדי להוכיח שקבוצה ריקה (כאן \(A\cap B=\emptyset\)), נוח להניח בשלילה שיש בה איבר ולהגיע לסתירה.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 12.</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 13.</strong>
 הוכיחו: אם \(A\cup B=A\cup C\) וגם \(A\cap B=A\cap C\), אז \(B=C\).
-האם מספיק רק אחד משני התנאים?</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol12">הצגת הפתרון</button><div class="sol-body" id="t3-sol12" hidden><div class="p">נוכיח \(B\subseteq C\) (ההכלה השנייה סימטרית). יהי \(x\in B\). נחלק למקרים:
+האם מספיק רק אחד משני התנאים?</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol13">הצגת הפתרון</button><div class="sol-body" id="t3-sol13" hidden><div class="p">נוכיח \(B\subseteq C\) (ההכלה השנייה סימטרית). יהי \(x\in B\). נחלק למקרים:
 אם \(x\in A\), אז \(x\in A\cap B=A\cap C\), ולכן \(x\in C\).
 אם \(x\notin A\), אז \(x\in A\cup B=A\cup C\), ומכיוון ש-\(x\notin A\), נקבל \(x\in C\).
 תנאי אחד לא מספיק: \(A=B=\{1\}\), \(C=\emptyset\) מקיימות את התנאי על האיחוד;
 \(A=\emptyset\), \(B=\{1\}\), \(C=\{2\}\) מקיימות את התנאי על החיתוך.</div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 13 (לעבודה עצמית).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 14 (לעבודה עצמית).</strong>
 <ol><li> הוכיחו: \(A\setminus B\subseteq C\) אם ורק אם \(A\subseteq B\cup C\).
   </li><li> הוכיחו: \(A\triangle B\subseteq(A\triangle C)\cup(C\triangle B)\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol13">הצגת הפתרון</button><div class="sol-body" id="t3-sol13" hidden><div class="p"><ol><li> (\(\Rightarrow\)) יהי \(x\in A\). אם \(x\in B\) סיימנו; אחרת \(x\in A\setminus B\subseteq C\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol14">הצגת הפתרון</button><div class="sol-body" id="t3-sol14" hidden><div class="p"><ol><li> (\(\Rightarrow\)) יהי \(x\in A\). אם \(x\in B\) סיימנו; אחרת \(x\in A\setminus B\subseteq C\).
         (\(\Leftarrow\)) יהי \(x\in A\setminus B\): אז \(x\in A\subseteq B\cup C\) ו-\(x\notin B\), ולכן \(x\in C\).
   </li><li> יהי \(x\in A\triangle B\). נניח \(x\in A\setminus B\) (המקרה \(x\in B\setminus A\) סימטרי).
         אם \(x\in C\), אז \(x\in C\setminus B\subseteq C\triangle B\); ואם \(x\notin C\), אז \(x\in A\setminus C\subseteq A\triangle C\).
