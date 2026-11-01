@@ -1136,7 +1136,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> השוו ל"מחלק של מחלק" מתרגול 2: אותו מבנה בדיוק, עם מושג אחר.
 </li></ul></div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (הכלה באיחוד, בחיתוך ובהפרש).</strong>
-לכל טענה, הוכיחו או הפריכו.
+יהיו \(A,B,C\) קבוצות. לכל טענה, הוכיחו או הפריכו.
 <ol><li> \(A\subseteq B\cap C\) אם ורק אם \(A\subseteq B\) וגם \(A\subseteq C\).
   </li><li> \(A\subseteq B\cup C\) אם ורק אם \(A\subseteq B\) או \(A\subseteq C\).
   </li><li> אם \(A\subseteq B\setminus C\), אז \(A\subseteq B\) וגם \(A\not\subseteq C\).
@@ -1184,7 +1184,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 לכן \(x\in A\setminus B\), ומכיוון ש-\(x\notin C\), גם \(x\in(A\setminus B)\setminus C\).
 (\(\supseteq\)) באותו אופן, בכיוון ההפוך.</div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 11.</strong>
-הוכיחו: \(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol11">הצגת הפתרון</button><div class="sol-body" id="t3-sol11" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+הוכיחו: לכל שלוש קבוצות \(A,B,C\) מתקיים \(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol11">הצגת הפתרון</button><div class="sol-body" id="t3-sol11" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
 יהיו \(A,B,C\) קבוצות. נוכיח שוויון של קבוצות בעזרת שתי הכלות.
 <span class="gap"></span>
 <strong>(\(\subseteq\))</strong> צ״ל: \(A\cap(B\cup C)\subseteq(A\cap B)\cup(A\cap C)\).
@@ -1209,7 +1209,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 </li></ul></div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 12.</strong>
 <ol><li> הוכיחו או הפריכו: לכל שתי קבוצות \(A,B\) מתקיים \((A\cup B)\setminus B=A\).
-  </li><li> הוכיחו: \((A\cup B)\setminus B=A\) אם ורק אם \(A\cap B=\emptyset\).
+  </li><li> הוכיחו: לכל שתי קבוצות \(A,B\), מתקיים \((A\cup B)\setminus B=A\) אם ורק אם \(A\cap B=\emptyset\).
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol12">הצגת הפתרון</button><div class="sol-body" id="t3-sol12" hidden><div class="p"><ol><li> הטענה לא נכונה. דוגמה נגדית: \(A=B=\{1\}\). אז \((A\cup B)\setminus B=\{1\}\setminus\{1\}=\emptyset\neq A\).
         (ההכלה \((A\cup B)\setminus B\subseteq A\) דווקא נכונה תמיד; מה שעלול להיכשל הוא ההכלה בכיוון השני.)
   </li><li>
@@ -1236,15 +1236,15 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> כדי להוכיח שקבוצה ריקה (כאן \(A\cap B=\emptyset\)), נוח להניח בשלילה שיש בה איבר ולהגיע לסתירה.
 </li></ul></div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 13.</strong>
-הוכיחו: אם \(A\cup B=A\cup C\) וגם \(A\cap B=A\cap C\), אז \(B=C\).
+הוכיחו: לכל שלוש קבוצות \(A,B,C\), אם \(A\cup B=A\cup C\) וגם \(A\cap B=A\cap C\), אז \(B=C\).
 האם מספיק רק אחד משני התנאים?</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol13">הצגת הפתרון</button><div class="sol-body" id="t3-sol13" hidden><div class="p">נוכיח \(B\subseteq C\) (ההכלה השנייה סימטרית). יהי \(x\in B\). נחלק למקרים:
 אם \(x\in A\), אז \(x\in A\cap B=A\cap C\), ולכן \(x\in C\).
 אם \(x\notin A\), אז \(x\in A\cup B=A\cup C\), ומכיוון ש-\(x\notin A\), נקבל \(x\in C\).
 תנאי אחד לא מספיק: \(A=B=\{1\}\), \(C=\emptyset\) מקיימות את התנאי על האיחוד;
 \(A=\emptyset\), \(B=\{1\}\), \(C=\{2\}\) מקיימות את התנאי על החיתוך.</div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 14 (לעבודה עצמית).</strong>
-<ol><li> הוכיחו: \(A\setminus B\subseteq C\) אם ורק אם \(A\subseteq B\cup C\).
-  </li><li> הוכיחו: \(A\triangle B\subseteq(A\triangle C)\cup(C\triangle B)\).
+<ol><li> הוכיחו: לכל שלוש קבוצות \(A,B,C\), מתקיים \(A\setminus B\subseteq C\) אם ורק אם \(A\subseteq B\cup C\).
+  </li><li> הוכיחו: לכל שלוש קבוצות \(A,B,C\) מתקיים \(A\triangle B\subseteq(A\triangle C)\cup(C\triangle B)\).
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol14">הצגת הפתרון</button><div class="sol-body" id="t3-sol14" hidden><div class="p"><ol><li> (\(\Rightarrow\)) יהי \(x\in A\). אם \(x\in B\) סיימנו; אחרת \(x\in A\setminus B\subseteq C\).
         (\(\Leftarrow\)) יהי \(x\in A\setminus B\): אז \(x\in A\subseteq B\cup C\) ו-\(x\notin B\), ולכן \(x\in C\).
   </li><li> יהי \(x\in A\triangle B\). נניח \(x\in A\setminus B\) (המקרה \(x\in B\setminus A\) סימטרי).
