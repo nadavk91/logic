@@ -1117,15 +1117,19 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 \(x\in A\cap B\) היא בעצם "\(x\in A\) וגם \(x\in B\)", ואיתה עובדים לפי טבלת הכללים.</div>
 <h3 id="t3-s5"><span class="sec-num">5</span>הוכח או הפרך</h3>
 <div class="p"><strong>טיפ:</strong> לפני שמנסים להוכיח, כדאי לבדוק כמה דוגמאות קטנות — ותמיד לנסות גם את הקבוצה הריקה.</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (הכלה בחיתוך ובאיחוד).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (איחוד, הפרש וחיתוך).</strong>
 יהיו \(A,B,C\) קבוצות. לכל טענה, הוכיחו או הפריכו.
-<ol><li> \(A\subseteq B\cap C\) אם ורק אם \(A\subseteq B\) וגם \(A\subseteq C\).
+<ol><li> \((A\cup B)\setminus B=A\).
   </li><li> \(A\subseteq B\cup C\) אם ורק אם \(A\subseteq B\) או \(A\subseteq C\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol6">הצגת הפתרון</button><div class="sol-body" id="t3-sol6" hidden><div class="p"><ol><li> נכון. (\(\Rightarrow\)) יהי \(x\in A\); אז \(x\in B\cap C\), ולכן \(x\in B\) — וזו הוכחה של \(A\subseteq B\). באופן דומה, <em>בהוכחה נפרדת</em>, \(A\subseteq C\).
-        (\(\Leftarrow\)) יהי \(x\in A\); מההנחות \(x\in B\) ו-\(x\in C\), ולכן \(x\in B\cap C\).
+  </li><li> \(A\subseteq B\cap C\) אם ורק אם \(A\subseteq B\) וגם \(A\subseteq C\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol6">הצגת הפתרון</button><div class="sol-body" id="t3-sol6" hidden><div class="p"><ol><li> לא נכון: \(A=B=\{1\}\). אז \((A\cup B)\setminus B=\{1\}\setminus\{1\}=\emptyset\neq A\).
+        (ההכלה \((A\cup B)\setminus B\subseteq A\) דווקא נכונה תמיד; מה שעלול להיכשל הוא ההכלה בכיוון השני.)
   </li><li> לא נכון: \(A=\{1,2\}\), \(B=\{1\}\), \(C=\{2\}\). (הכיוון \(\Leftarrow\) כן נכון.)
+  </li><li> נכון. (\(\Rightarrow\)) יהי \(x\in A\); אז \(x\in B\cap C\), ולכן \(x\in B\) — וזו הוכחה של \(A\subseteq B\). באופן דומה, <em>בהוכחה נפרדת</em>, \(A\subseteq C\).
+        (\(\Leftarrow\)) יהי \(x\in A\); מההנחות \(x\in B\) ו-\(x\in C\), ולכן \(x\in B\cap C\).
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> בסעיף 1, בכיוון \(\Rightarrow\) יש <em>שני</em> יעדים (\(A\subseteq B\) ו-\(A\subseteq C\)), ולכן שתי הוכחות נפרדות — גם אם הן מתחילות באותה הנחה.
+<ul><li> שתי הטענות הראשונות נראות סבירות, אבל דוגמה נגדית אחת מספיקה כדי להפריך כל אחת מהן.
+  </li><li> בסעיף 3, בכיוון \(\Rightarrow\) יש <em>שני</em> יעדים (\(A\subseteq B\) ו-\(A\subseteq C\)), ולכן שתי הוכחות נפרדות — גם אם הן מתחילות באותה הנחה.
 </li></ul></div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 7.</strong>
 הוכיחו: לכל שלוש קבוצות \(A,B,C\) מתקיים \(A\setminus(B\cup C)=(A\setminus B)\setminus C\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol7">הצגת הפתרון</button><div class="sol-body" id="t3-sol7" hidden><div class="p">(\(\subseteq\)) יהי \(x\in A\setminus(B\cup C)\): אז \(x\in A\) ו-\(x\notin B\cup C\), כלומר \(x\notin B\) וגם \(x\notin C\) (דה מורגן).
