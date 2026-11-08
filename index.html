@@ -923,18 +923,19 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="p"><div class="proof"><strong>הוכחה.</strong> 
 יהי \(n\) מספר שלם. נוכיח את שני הכיוונים.
 <span class="gap"></span>
-<strong>(\(\Rightarrow\))</strong> נניח ש-\(n\) זוגי, וצ״ל ש-\(n^2\) זוגי.
+<strong>(\(\Leftarrow\))</strong> נניח ש-\(n\) זוגי, וצ״ל ש-\(n^2\) זוגי.
 לפי ההגדרה קיים \(k\) שלם כך ש-\(n=2k\). לכן \(n^2=4k^2=2\cdot 2k^2\), ו-\(2k^2\) הוא מספר שלם. כלומר \(n^2\) זוגי.
 <span class="gap"></span>
-<strong>(\(\Leftarrow\))</strong> נוכיח בקונטרפוזיציה: נניח ש-\(n\) אינו זוגי, וצ״ל ש-\(n^2\) אינו זוגי.
+<strong>(\(\Rightarrow\))</strong> נוכיח בקונטרפוזיציה: נניח ש-\(n\) אינו זוגי, וצ״ל ש-\(n^2\) אינו זוגי.
 מכיוון ש-\(n\) אינו זוגי, הוא אי-זוגי, ולכן קיים \(k\) שלם כך ש-\(n=2k+1\). לכן
 <div class="dm">\[n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1,\]</div>
 ו-\(2k^2+2k\) הוא מספר שלם. כלומר \(n^2\) אי-זוגי, ולכן אינו זוגי.
 <span class="qed">□</span></div></div>
 <div class="p notes"><strong>הערות.</strong>
-<ul><li> בכיוון (\(\Leftarrow\)) היעד הוא "אם \(n^2\) זוגי אז \(n\) זוגי". ניסיון ישיר נתקע:
+<ul><li> בכיוון (\(\Rightarrow\)) היעד הוא "אם \(n^2\) זוגי אז \(n\) זוגי". ניסיון ישיר נתקע:
         מ-\(n^2=2m\) קשה להגיע ישירות לכך ש-\(n\) זוגי. הקונטרפוזיציה הופכת את הנתון והיעד, וזה עובד בקלות.
-  </li><li> (\(\Rightarrow\)) הוא הכיוון "\(n\) זוגי \(\Rightarrow\) \(n^2\) זוגי", כלומר מהצד השמאלי של ה"אם ורק אם" לצד הימני.
+  </li><li> (\(\Leftarrow\)) הוא הכיוון "אם \(n\) זוגי אז \(n^2\) זוגי": מהטענה שמימין ל"אם ורק אם" (הראשונה בקריאה)
+        אל הטענה שמשמאל לו. לכן החץ מצביע שמאלה, כמו בכתיבה בעברית.
 </li></ul></div>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (סכום אי-זוגי).</strong>
 הוכיחו שלכל \(n,m\) שלמים: \(n+m\) אי-זוגי אם ורק אם בדיוק אחד מ-\(n,m\) אי-זוגי.
@@ -942,20 +943,20 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 "בדיוק אחד מ-\(n,m\) אי-זוגי" פירושו: (\(n\) אי-זוגי וגם \(m\) זוגי) או (\(n\) זוגי וגם \(m\) אי-זוגי).</div><div class="p"><div class="proof"><strong>הוכחה.</strong> 
 יהיו \(n,m\) שלמים.
 <span class="gap"></span>
-<strong>(\(\Rightarrow\))</strong> נוכיח בקונטרפוזיציה: נניח שלא בדיוק אחד מהם אי-זוגי, וצ״ל ש-\(n+m\) אינו אי-זוגי.
+<strong>(\(\Leftarrow\))</strong> נוכיח בקונטרפוזיציה: נניח שלא בדיוק אחד מהם אי-זוגי, וצ״ל ש-\(n+m\) אינו אי-זוגי.
 מכיוון שכל מספר הוא זוגי או אי-זוגי, יש שני מקרים:
 <ul><li> שניהם זוגיים: \(n=2a\) ו-\(m=2b\) עבור שלמים \(a,b\), ולכן \(n+m=2(a+b)\) זוגי.
   </li><li> שניהם אי-זוגיים: \(n=2a+1\) ו-\(m=2b+1\), ולכן \(n+m=2(a+b+1)\) זוגי.
 </li></ul>
 בשני המקרים \(n+m\) זוגי, ולכן אינו אי-זוגי.
 <span class="gap"></span>
-<strong>(\(\Leftarrow\))</strong> נניח שבדיוק אחד מהם אי-זוגי, וצ״ל ש-\(n+m\) אי-זוגי.
+<strong>(\(\Rightarrow\))</strong> נניח שבדיוק אחד מהם אי-זוגי, וצ״ל ש-\(n+m\) אי-זוגי.
 זה נתון מסוג "או", ולכן נחלק למקרים.
 אם \(n\) אי-זוגי ו-\(m\) זוגי, אז \(n=2a+1\) ו-\(m=2b\), ולכן \(n+m=2(a+b)+1\) אי-זוגי.
 המקרה ש-\(n\) זוגי ו-\(m\) אי-זוגי זהה, עם התפקידים של \(n\) ו-\(m\) הפוכים.
 <span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> בכיוון (\(\Rightarrow\)) השתמשנו בקונטרפוזיציה, ובנתון החדש ("לא בדיוק אחד") השתמשנו בחלוקה למקרים.
-  </li><li> בכיוון (\(\Leftarrow\)) הנתון הוא "או", ולכן חילקנו למקרים — בדיוק כמו בטבלת הכללים.
+<ul><li> בכיוון (\(\Leftarrow\)) השתמשנו בקונטרפוזיציה, ובנתון החדש ("לא בדיוק אחד") השתמשנו בחלוקה למקרים.
+  </li><li> בכיוון (\(\Rightarrow\)) הנתון הוא "או", ולכן חילקנו למקרים — בדיוק כמו בטבלת הכללים.
 </li></ul></div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (מחלק של מחלק).</strong>
 נאמר שמספר שלם \(a\) <strong>מחלק את</strong> מספר שלם \(b\) אם קיים שלם \(q\) כך ש-\(b=qa\).
@@ -1142,8 +1143,8 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-sol6">הצגת הפתרון</button><div class="sol-body" id="t3-sol6" hidden><div class="p"><ol><li> לא נכון: \(A=B=\{1\}\). אז \((A\cup B)\setminus B=\{1\}\setminus\{1\}=\emptyset\neq A\).
         (ההכלה \((A\cup B)\setminus B\subseteq A\) דווקא נכונה תמיד; מה שעלול להיכשל הוא ההכלה בכיוון השני.)
   </li><li> לא נכון: \(A=\{1,2\}\), \(B=\{1\}\), \(C=\{2\}\). (הכיוון \(\Leftarrow\) כן נכון.)
-  </li><li> נכון. (\(\Rightarrow\)) יהי \(x\in A\); אז \(x\in B\cap C\), ולכן \(x\in B\) — וזו הוכחה של \(A\subseteq B\). באופן דומה, <em>בהוכחה נפרדת</em>, \(A\subseteq C\).
-        (\(\Leftarrow\)) יהי \(x\in A\); מההנחות \(x\in B\) ו-\(x\in C\), ולכן \(x\in B\cap C\).
+  </li><li> נכון. (\(\Leftarrow\)) יהי \(x\in A\); אז \(x\in B\cap C\), ולכן \(x\in B\) — וזו הוכחה של \(A\subseteq B\). באופן דומה, <em>בהוכחה נפרדת</em>, \(A\subseteq C\).
+        (\(\Rightarrow\)) יהי \(x\in A\); מההנחות \(x\in B\) ו-\(x\in C\), ולכן \(x\in B\cap C\).
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
 <ul><li> שתי הטענות הראשונות נראות סבירות, אבל דוגמה נגדית אחת מספיקה כדי להפריך כל אחת מהן.
   </li><li> בסעיף 3, בכיוון \(\Rightarrow\) יש <em>שני</em> יעדים (\(A\subseteq B\) ו-\(A\subseteq C\)), ולכן שתי הוכחות נפרדות — גם אם הן מתחילות באותה הנחה.
@@ -1246,7 +1247,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="proof"><strong>הוכחה.</strong> 
 יהיו \(A,B\) קבוצות. נוכיח את שני הכיוונים.
 <span class="gap"></span>
-<strong>(\(\Leftarrow\))</strong> נניח ש-\(A\cap B=\emptyset\). צ״ל: \((A\cup B)\setminus B=A\). נוכיח שתי הכלות.
+<strong>(\(\Rightarrow\))</strong> נניח ש-\(A\cap B=\emptyset\). צ״ל: \((A\cup B)\setminus B=A\). נוכיח שתי הכלות.
 <ul><li> <strong>(\(\subseteq\))</strong> יהי \(x\in(A\cup B)\setminus B\). לפי הגדרת ההפרש, \(x\in A\cup B\) וגם \(x\notin B\).
         לפי הגדרת האיחוד, \(x\in A\) או \(x\in B\). מכיוון ש-\(x\notin B\), נקבל \(x\in A\).
   </li><li> <strong>(\(\supseteq\))</strong> יהי \(x\in A\). אז \(x\in A\cup B\).
@@ -1254,7 +1255,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
         בסתירה להנחה ש-\(A\cap B=\emptyset\). לכן \(x\notin B\), ומכאן \(x\in(A\cup B)\setminus B\).
 </li></ul>
 <span class="gap"></span>
-<strong>(\(\Rightarrow\))</strong> נניח ש-\((A\cup B)\setminus B=A\). צ״ל: \(A\cap B=\emptyset\).
+<strong>(\(\Leftarrow\))</strong> נניח ש-\((A\cup B)\setminus B=A\). צ״ל: \(A\cap B=\emptyset\).
 נניח בשלילה ש-\(A\cap B\neq\emptyset\), כלומר קיים \(x\in A\cap B\). אז \(x\in A\) וגם \(x\in B\).
 מכיוון ש-\(x\in A\) ולפי ההנחה \(A=(A\cup B)\setminus B\), נקבל \(x\in(A\cup B)\setminus B\), ובפרט \(x\notin B\).
 אבל \(x\in B\) — סתירה. לכן \(A\cap B=\emptyset\).
@@ -1275,8 +1276,8 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <article class="exercise"><div class="p ex-statement"><strong>שאלה 6 (הפרש והפרש סימטרי).</strong>
 <ol><li> הוכיחו: לכל שלוש קבוצות \(A,B,C\), מתקיים \(A\setminus B\subseteq C\) אם ורק אם \(A\subseteq B\cup C\).
   </li><li> הוכיחו: לכל שלוש קבוצות \(A,B,C\) מתקיים \(A\triangle B\subseteq(A\triangle C)\cup(C\triangle B)\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t3-x-sol6" hidden><div class="p"><ol><li> (\(\Rightarrow\)) יהי \(x\in A\). אם \(x\in B\) סיימנו; אחרת \(x\in A\setminus B\subseteq C\).
-        (\(\Leftarrow\)) יהי \(x\in A\setminus B\): אז \(x\in A\subseteq B\cup C\) ו-\(x\notin B\), ולכן \(x\in C\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t3-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t3-x-sol6" hidden><div class="p"><ol><li> (\(\Leftarrow\)) יהי \(x\in A\). אם \(x\in B\) סיימנו; אחרת \(x\in A\setminus B\subseteq C\).
+        (\(\Rightarrow\)) יהי \(x\in A\setminus B\): אז \(x\in A\subseteq B\cup C\) ו-\(x\notin B\), ולכן \(x\in C\).
   </li><li> יהי \(x\in A\triangle B\). נניח \(x\in A\setminus B\) (המקרה \(x\in B\setminus A\) סימטרי).
         אם \(x\in C\), אז \(x\in C\setminus B\subseteq C\triangle B\); ואם \(x\notin C\), אז \(x\in A\setminus C\subseteq A\triangle C\).
 </li></ol></div></div></div></article></section>
@@ -1326,17 +1327,22 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 הוכיחו: לכל שתי קבוצות \(A,B\), מתקיים \(A\subseteq B\) אם ורק אם \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol3">הצגת הפתרון</button><div class="sol-body" id="t4-sol3" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
 יהיו \(A,B\) קבוצות. נוכיח את שני הכיוונים.
 <span class="gap"></span>
-<strong>(\(\Rightarrow\))</strong> נניח \(A\subseteq B\). צ״ל: \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\).
+<strong>(\(\Leftarrow\))</strong> נניח \(A\subseteq B\). צ״ל: \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\).
 יהי \(X\in\mathcal{P}(A)\). לפי כלל השייכות, \(X\subseteq A\). מכיוון ש-\(X\subseteq A\) ו-\(A\subseteq B\), נקבל \(X\subseteq B\) (הכלה של הכלה).
 לכן, שוב לפי כלל השייכות, \(X\in\mathcal{P}(B)\).
 <span class="gap"></span>
-<strong>(\(\Leftarrow\))</strong> נניח \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\). צ״ל: \(A\subseteq B\).
+<strong>(\(\Rightarrow\))</strong> נניח \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\). צ״ל: \(A\subseteq B\).
 מכיוון ש-\(A\subseteq A\), מתקיים \(A\in\mathcal{P}(A)\). מההנחה נקבל \(A\in\mathcal{P}(B)\), כלומר \(A\subseteq B\).
 <span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> בכיוון (\(\Leftarrow\)) לא לקחנו "\(x\) כללי": השתמשנו בנתון "לכל \(X\), אם \(X\in\mathcal{P}(A)\) אז \(X\in\mathcal{P}(B)\)" עם הבחירה \(X=A\).
+<ul><li> בכיוון (\(\Rightarrow\)) לא לקחנו "\(x\) כללי": השתמשנו בנתון "לכל \(X\), אם \(X\in\mathcal{P}(A)\) אז \(X\in\mathcal{P}(B)\)" עם הבחירה \(X=A\).
         בנתון מסוג "לכל" מותר להציב כל ערך שנוח לנו.
   </li><li> בכל צעד "תרגמנו" שייכות לקבוצת חזקה להכלה, ולהפך — זה כל הסוד של תרגילים על \(\mathcal{P}\).
 </li></ul></div></div></div></article>
+<div class="p"><strong>תזכורת מהתרגול הקודם.</strong> שתי טענות שהוכחנו, ושנשתמש בהן עכשיו. לכל שלוש קבוצות \(A,B,C\):
+<ul><li> \(A\subseteq B\cap C\) אם ורק אם \(A\subseteq B\) וגם \(A\subseteq C\).
+  </li><li> אם \(A\neq\emptyset\) ו-\(A\subseteq B\setminus C\), אז \(A\subseteq B\) וגם \(A\not\subseteq C\).
+        (בלי ההנחה \(A\neq\emptyset\) הטענה לא נכונה: עבור \(A=\emptyset\) מתקיים \(\emptyset\subseteq C\).)
+</li></ul></div>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (הוכח או הפרך).</strong>
 יהיו \(A,B\) קבוצות. לכל טענה, הוכיחו או הפריכו.
 <ol><li> \(\mathcal{P}(A\setminus B)\subseteq\mathcal{P}(A)\setminus\mathcal{P}(B)\).
@@ -1345,11 +1351,11 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> \(\mathcal{P}(A\cap B)=\mathcal{P}(A)\cap\mathcal{P}(B)\).
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol4">הצגת הפתרון</button><div class="sol-body" id="t4-sol4" hidden><div class="p"><ol><li> לא נכון — ולמעשה שקרי <em>לכל</em> \(A,B\): תמיד \(\emptyset\in\mathcal{P}(A\setminus B)\), אבל גם \(\emptyset\in\mathcal{P}(B)\), ולכן \(\emptyset\notin\mathcal{P}(A)\setminus\mathcal{P}(B)\).
   </li><li> נכון. יהי \(X\in\mathcal{P}(A\setminus B)\), כלומר \(X\subseteq A\setminus B\). אם \(X=\emptyset\) סיימנו.
-        אחרת יש \(x\in X\); אז \(x\in A\) ו-\(x\notin B\), ולכן \(X\not\subseteq B\). כמו כן \(X\subseteq A\).
+        אחרת \(X\neq\emptyset\), ולפי הטענה השנייה בתזכורת \(X\subseteq A\) וגם \(X\not\subseteq B\).
         לכן \(X\in\mathcal{P}(A)\setminus\mathcal{P}(B)\).
   </li><li> לא נכון: \(A=\{1\}\), \(B=\{2\}\). אז \(\{1,2\}\in\mathcal{P}(A\cup B)\), אבל \(\{1,2\}\notin\mathcal{P}(A)\) ו-\(\{1,2\}\notin\mathcal{P}(B)\).
         (ההכלה \(\mathcal{P}(A)\cup\mathcal{P}(B)\subseteq\mathcal{P}(A\cup B)\) דווקא נכונה תמיד.)
-  </li><li> נכון. לכל \(X\): \(X\in\mathcal{P}(A\cap B)\) אמ״מ \(X\subseteq A\cap B\), אמ״מ \(X\subseteq A\) וגם \(X\subseteq B\) (תרגיל מתרגול 3),
+  </li><li> נכון. לכל \(X\): \(X\in\mathcal{P}(A\cap B)\) אמ״מ \(X\subseteq A\cap B\), אמ״מ \(X\subseteq A\) וגם \(X\subseteq B\) (הטענה הראשונה בתזכורת),
         אמ״מ \(X\in\mathcal{P}(A)\) וגם \(X\in\mathcal{P}(B)\), אמ״מ \(X\in\mathcal{P}(A)\cap\mathcal{P}(B)\).
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
 <ul><li> בסעיף 1 הקבוצה הריקה שוב "שוברת" טענה, ובסעיף 2 מתקנים אותה בכך שמוסיפים את \(\emptyset\).
@@ -1360,13 +1366,13 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <ol><li> הוכיחו או הפריכו: אם \(\mathcal{P}(A\cup B)=\mathcal{P}(A)\cup\mathcal{P}(B)\), אז \(A=B\).
   </li><li> הוכיחו: \(\mathcal{P}(A\cup B)=\mathcal{P}(A)\cup\mathcal{P}(B)\) אם ורק אם \(A\subseteq B\) או \(B\subseteq A\).
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol5">הצגת הפתרון</button><div class="sol-body" id="t4-sol5" hidden><div class="p"><ol><li> לא נכון: \(A=\{1\}\), \(B=\{1,2\}\). אז \(A\cup B=B\) ו-\(\mathcal{P}(A)\subseteq\mathcal{P}(B)\), ולכן שני האגפים שווים ל-\(\mathcal{P}(B)\), אבל \(A\neq B\).
-  </li><li> (\(\Leftarrow\)) אם \(A\subseteq B\) אז \(A\cup B=B\), ולפי תרגיל 3 \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\), ולכן שני האגפים שווים ל-\(\mathcal{P}(B)\). המקרה \(B\subseteq A\) סימטרי.
+  </li><li> (\(\Rightarrow\)) אם \(A\subseteq B\) אז \(A\cup B=B\), ולפי תרגיל 3 \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\), ולכן שני האגפים שווים ל-\(\mathcal{P}(B)\). המקרה \(B\subseteq A\) סימטרי.
 <span class="gap"></span>
-        (\(\Rightarrow\)) \(A\cup B\in\mathcal{P}(A\cup B)\), ולכן \(A\cup B\in\mathcal{P}(A)\) או \(A\cup B\in\mathcal{P}(B)\).
+        (\(\Leftarrow\)) \(A\cup B\in\mathcal{P}(A\cup B)\), ולכן \(A\cup B\in\mathcal{P}(A)\) או \(A\cup B\in\mathcal{P}(B)\).
         במקרה הראשון \(A\cup B\subseteq A\), ולכן \(B\subseteq A\). במקרה השני, באותו אופן, \(A\subseteq B\).
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
 <ul><li> הדוגמה הנגדית בסעיף 1 נמצאה בעזרת סעיף 2: מספיק ש-\(A\subseteq B\) ו-\(A\neq B\).
-  </li><li> בכיוון (\(\Rightarrow\)) בסעיף 2 הצבנו בנתון מסוג "לכל" (שוויון קבוצות) את האיבר \(A\cup B\) — כמו בתרגיל 3.
+  </li><li> בכיוון (\(\Leftarrow\)) בסעיף 2 הצבנו בנתון מסוג "לכל" (שוויון קבוצות) את האיבר \(A\cup B\) — כמו בתרגיל 3.
 </li></ul></div></div></div></article>
 <h3 id="t4-s2"><span class="sec-num">2</span>איחוד וחיתוך אונריים</h3>
 <div class="p">עד עכשיו איחדנו וחיתכנו <em>שתי</em> קבוצות. לפעמים רוצים לאחד או לחתוך הרבה קבוצות בבת אחת —
@@ -1512,10 +1518,10 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <ol><li> אם \(A\in F\), אז \(A\subseteq\bigcup F\).
   </li><li> \(\bigcup F\subseteq A\) אם ורק אם \(F\subseteq\mathcal{P}(A)\).
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol5">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol5" hidden><div class="p"><ol><li> יהי \(x\in A\). אז קיימת \(X\in F\) (למשל \(X=A\)) כך ש-\(x\in X\), ולכן \(x\in\bigcup F\).
-  </li><li> (\(\Rightarrow\)) יהי \(X\in F\); צ״ל \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\). לפי סעיף 1, \(X\subseteq\bigcup F\subseteq A\).
-        (\(\Leftarrow\)) יהי \(x\in\bigcup F\). אז קיימת \(X\in F\) כך ש-\(x\in X\). מההנחה \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\), ולכן \(x\in A\).
+  </li><li> (\(\Leftarrow\)) יהי \(X\in F\); צ״ל \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\). לפי סעיף 1, \(X\subseteq\bigcup F\subseteq A\).
+        (\(\Rightarrow\)) יהי \(x\in\bigcup F\). אז קיימת \(X\in F\) כך ש-\(x\in X\). מההנחה \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\), ולכן \(x\in A\).
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> בכיוון (\(\Leftarrow\)) של סעיף 2, הנתון \(x\in\bigcup F\) הוא מסוג "קיים": נותנים שם (\(X\)) לקבוצה שקיימת, וממשיכים איתה.
+<ul><li> בכיוון (\(\Rightarrow\)) של סעיף 2, הנתון \(x\in\bigcup F\) הוא מסוג "קיים": נותנים שם (\(X\)) לקבוצה שקיימת, וממשיכים איתה.
 </li></ul></div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>שאלה 7 (איחוד וחיתוך של קבוצת חזקה).</strong>
 תהי \(A\) קבוצה. הוכיחו: \(\bigcup\mathcal{P}(A)=A\) ו-\(\bigcap\mathcal{P}(A)=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol6" hidden><div class="p">\(\bigcup\mathcal{P}(A)\subseteq A\): לפי שאלה 6, כי \(\mathcal{P}(A)\subseteq\mathcal{P}(A)\). \(A\subseteq\bigcup\mathcal{P}(A)\): כי \(A\in\mathcal{P}(A)\) (שאלה 6, סעיף 1).
