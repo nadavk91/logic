@@ -1281,7 +1281,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> יהי \(x\in A\triangle B\). נניח \(x\in A\setminus B\) (המקרה \(x\in B\setminus A\) סימטרי).
         אם \(x\in C\), אז \(x\in C\setminus B\subseteq C\triangle B\); ואם \(x\notin C\), אז \(x\in A\setminus C\subseteq A\triangle C\).
 </li></ol></div></div></div></article></section>
-<section class="tirgul" id="t4" data-toc="&lt;li&gt;&lt;a href=&quot;#t4-s1&quot;&gt;קבוצת החזקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s2&quot;&gt;איחוד וחיתוך אונריים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s3&quot;&gt;כלל דה מורגן לקבוצות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s4&quot;&gt;חלוקות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 4</p><h2>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</h2><div class="t-actions"><a class="to-extra" href="#t4-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul4.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul4-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t4">הצגת כל הפתרונות</button></div><p class="sol-note">הפתרונות אינם רשמיים, ונכתבו לצורך התרגול בלבד.</p></header><h3 id="t4-s1"><span class="sec-num">1</span>קבוצת החזקה</h3>
+<section class="tirgul" id="t4" data-toc="&lt;li&gt;&lt;a href=&quot;#t4-s1&quot;&gt;קבוצת החזקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s2&quot;&gt;איחוד וחיתוך אונריים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s3&quot;&gt;כלל דה מורגן לקבוצות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s4&quot;&gt;חלוקות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s5&quot;&gt;תרגילים לסיום (אם נשאר זמן)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 4</p><h2>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</h2><div class="t-actions"><a class="to-extra" href="#t4-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul4.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul4-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t4">הצגת כל הפתרונות</button></div><p class="sol-note">הפתרונות אינם רשמיים, ונכתבו לצורך התרגול בלבד.</p></header><h3 id="t4-s1"><span class="sec-num">1</span>קבוצת החזקה</h3>
 <div class="p"><div class="thm"><strong>הגדרה (קבוצת החזקה).</strong> 
 תהי \(A\) קבוצה. <strong>קבוצת החזקה</strong> של \(A\) היא קבוצת כל תת-הקבוצות של \(A\):
 <div class="dm">\[\mathcal{P}(A)=\{B\mid B\subseteq A\}.\]</div>
@@ -1386,6 +1386,11 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="p">במילים: \(x\in\bigcup F\) אם \(x\) שייך ל<em>לפחות אחת</em> מהקבוצות ב-\(F\),
 ו-\(x\in\bigcap F\) אם \(x\) שייך ל<em>כל</em> הקבוצות ב-\(F\).
 המילה הראשית של \(x\in\bigcup F\) היא "קיים", ושל \(x\in\bigcap F\) היא "לכל" — ומזה נקבע איך משתמשים בהן בהוכחות.</div>
+<div class="p"><strong>מה זה אומר <em>לא</em> להיות שייך?</strong> נשלול את ההגדרות, לפי טבלת השלילה מתרגול 2:
+\(x\notin\bigcup F\) אם \(x\) לא שייך ל<em>אף אחת</em> מהקבוצות ב-\(F\),
+ו-\(x\notin\bigcap F\) אם יש ב-\(F\) <em>לפחות קבוצה אחת</em> ש-\(x\) לא שייך אליה.
+בשלילה "קיים" ו"לכל" מתחלפים: כדי להראות ש-\(x\notin\bigcap F\) מספיק למצוא קבוצה אחת ב-\(F\) שלא מכילה את \(x\),
+וכדי להראות ש-\(x\notin\bigcup F\) צריך לבדוק את <em>כל</em> הקבוצות ב-\(F\).</div>
 <div class="p"><strong>דוגמאות.</strong>
 <div class="dm">\[\bigcup\bigl\{\{1,2\},\{2,3\},\{5\}\bigr\}=\{1,2,3,5\},\quad
   \bigcap\bigl\{\{1,2\},\{2,3\}\bigr\}=\{2\},\quad
@@ -1481,7 +1486,26 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> בלי הדרישה \(X\cap B\neq\emptyset\), חלק של \(Q\) שזר ל-\(B\) היה מכניס את \(\emptyset\) ל-\(R\) (למשל בדוגמה עם \(B=\{1,2\}\): \(\{3,4\}\cap B=\emptyset\)).
   </li><li> אם \(B=\emptyset\) אז \(R=\emptyset\) — וזו אכן חלוקה של \(\emptyset\): כל התנאים מתקיימים באופן ריק.
 </li></ul></div></div></div></article>
-<h3 id="t4-extra"><span class="sec-num">5</span>שאלות נוספות</h3>
+<h3 id="t4-s5"><span class="sec-num">5</span>תרגילים לסיום (אם נשאר זמן)</h3>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 10 (מתי \(\bigcup F\) מוכל ב-\(A\)?).</strong>
+תהי \(F\) קבוצה של קבוצות ו-\(A\) קבוצה. הוכיחו: \(\bigcup F\subseteq A\) אם ורק אם \(F\subseteq\mathcal{P}(A)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol10">הצגת הפתרון</button><div class="sol-body" id="t4-sol10" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+<strong>(\(\Leftarrow\))</strong> נניח \(\bigcup F\subseteq A\). יהי \(X\in F\); צ״ל \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\).
+יהי \(x\in X\). אז קיימת קבוצה ב-\(F\) שמכילה את \(x\) (זו \(X\) עצמה), ולכן \(x\in\bigcup F\). מההנחה, \(x\in A\).
+<span class="gap"></span>
+<strong>(\(\Rightarrow\))</strong> נניח \(F\subseteq\mathcal{P}(A)\). יהי \(x\in\bigcup F\). אז קיימת \(X\in F\) כך ש-\(x\in X\).
+מההנחה \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\), ולכן \(x\in A\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בכיוון (\(\Leftarrow\)) היעד \(x\in\bigcup F\) הוא מסוג "קיים": מספיק להציג קבוצה אחת ב-\(F\) שמכילה את \(x\).
+  </li><li> בכיוון (\(\Rightarrow\)) הנתון \(x\in\bigcup F\) הוא מסוג "קיים": נותנים שם (\(X\)) לקבוצה שקיימת, וממשיכים איתה.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 11 (איחוד וחיתוך של קבוצת חזקה).</strong>
+תהי \(A\) קבוצה. הוכיחו: \(\bigcup\mathcal{P}(A)=A\) ו-\(\bigcap\mathcal{P}(A)=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol11">הצגת הפתרון</button><div class="sol-body" id="t4-sol11" hidden><div class="p"><ul><li> \(\bigcup\mathcal{P}(A)\subseteq A\): לפי תרגיל 10 עם \(F=\mathcal{P}(A)\), כי \(\mathcal{P}(A)\subseteq\mathcal{P}(A)\).
+  </li><li> \(A\subseteq\bigcup\mathcal{P}(A)\): יהי \(x\in A\). מכיוון ש-\(A\in\mathcal{P}(A)\), יש ב-\(\mathcal{P}(A)\) קבוצה שמכילה את \(x\), ולכן \(x\in\bigcup\mathcal{P}(A)\).
+  </li><li> \(\bigcap\mathcal{P}(A)=\emptyset\): אם \(x\in\bigcap\mathcal{P}(A)\), אז \(x\) שייך לכל איבר של \(\mathcal{P}(A)\), ובפרט ל-\(\emptyset\) — סתירה.
+</li></ul></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בחלק האחרון השתמשנו בשלילה: כדי ש-\(x\notin\bigcap\mathcal{P}(A)\) מספיק איבר אחד של \(\mathcal{P}(A)\) שלא מכיל את \(x\), והקבוצה הריקה מתאימה לכל \(x\).
+</li></ul></div></div></div></article>
+<h3 id="t4-extra"><span class="sec-num">6</span>שאלות נוספות</h3>
 <article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (מתי מתקיים שוויון?).</strong>
 יהיו \(A,B\) קבוצות. בתרגיל 4 (סעיף 2) ראינו ש-\(\mathcal{P}(A\setminus B)\subseteq\bigl(\mathcal{P}(A)\setminus\mathcal{P}(B)\bigr)\cup\{\emptyset\}\).
 הוכיחו: מתקיים שוויון אם ורק אם \(A\subseteq B\) או \(A\cap B=\emptyset\).</div></article>
