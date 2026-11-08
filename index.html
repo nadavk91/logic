@@ -102,6 +102,20 @@ main { min-width: 0; }
 .pdf-link { font-size: .9rem; color: var(--accent); border: 1px solid var(--rule); border-radius: 999px; padding: .25rem .9rem; text-decoration: none; }
 .pdf-link:hover { background: var(--accent-soft); }
 .pdf-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.pdf-link { font: inherit; font-size: .9rem; background: transparent; cursor: pointer; }
+/* in-page PDF viewer (private page) */
+.pdfv { position: fixed; inset: 0; z-index: 50; background: var(--bg); display: flex; flex-direction: column;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.pdfv[hidden] { display: none; }
+.pdfv-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .6rem max(16px, env(safe-area-inset-right, 0px)) .6rem max(16px, env(safe-area-inset-left, 0px)); border-bottom: 1px solid var(--rule); background: var(--surface); }
+.pdfv-title { margin: 0; font-weight: 700; }
+.pdfv-close { font: inherit; font-size: .9rem; color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 999px; padding: .25rem .9rem; cursor: pointer; }
+.pdfv-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pdfv-status { margin: 1rem 16px; color: var(--muted); }
+.pdfv-pages { flex: 1; overflow: auto; display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1rem 16px 2rem; }
+.pdfv-pages canvas { width: 100%; max-width: 900px; height: auto; background: #FFFFFF; box-shadow: 0 1px 4px rgba(0,0,0,.18); }
+html.pdfv-open, html.pdfv-open body { overflow: hidden; }
+.ta-badge { display: inline-block; margin: 1.5rem 0 .4rem; font-size: .78rem; font-weight: 700; color: var(--false); border: 1px dashed currentColor; border-radius: 999px; padding: .1rem .7rem; }
 .sol-note { width: 100%; margin: 0; font-size: .82rem; color: var(--muted); }
 .disclaimer { font-size: .88rem; margin-top: .35rem; }
 .tut-nav a.sub { font-size: .88rem; color: var(--muted); padding-inline-start: 2.4rem; }
@@ -1426,18 +1440,40 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> \(\{\emptyset,\{1\},\{2,3\}\}\) אינה חלוקה: יש בה חלק ריק (תנאי 1).
 </li></ul>
 ודוגמה אינסופית: \(\{\{n\in\mathbb{Z}\mid \Even(n)\},\ \{n\in\mathbb{Z}\mid \Odd(n)\}\}\) היא חלוקה של \(\mathbb{Z}\) — כל מספר שלם הוא זוגי או אי-זוגי, ולא שניהם.</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (חלוקה שמוכלת בחלוקה).</strong>
-תהי \(A\) קבוצה, ויהיו \(P,Q\) חלוקות של \(A\). הוכיחו: אם \(P\subseteq Q\), אז \(P=Q\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol8">הצגת הפתרון</button><div class="sol-body" id="t4-sol8" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
-נניח \(P\subseteq Q\). נשאר להוכיח \(Q\subseteq P\). תהי \(Y\in Q\); צ״ל \(Y\in P\).
-<ul><li> מכיוון ש-\(Q\) חלוקה, \(Y\neq\emptyset\) (תנאי 1). יהי \(y\in Y\).
-  </li><li> \(Y\subseteq A\) (כי \(Q\subseteq\mathcal{P}(A)\)), ולכן \(y\in A\). מכיוון ש-\(P\) חלוקה, \(A=\bigcup P\) (תנאי 2), ולכן קיימת \(X\in P\) כך ש-\(y\in X\).
-  </li><li> מכיוון ש-\(P\subseteq Q\), גם \(X\in Q\). כעת \(X,Y\in Q\) ו-\(y\in X\cap Y\), כלומר \(X\cap Y\neq\emptyset\).
-        לפי תנאי 3 עבור \(Q\) (בשלילה ההפוכה), \(X=Y\).
-</li></ul>
-לכן \(Y=X\in P\).
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (כל איבר בחלק אחד בדיוק).</strong>
+תהי \(A\) קבוצה, ותהי \(Q\) חלוקה של \(A\). הוכיחו: לכל \(a\in A\) קיימת קבוצה <em>יחידה</em> \(X\in Q\) כך ש-\(a\in X\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol8">הצגת הפתרון</button><div class="sol-body" id="t4-sol8" hidden><div class="p">"קיימת יחידה" הן שתי טענות: <strong>קיום</strong> — יש \(X\in Q\) כך ש-\(a\in X\); ו<strong>יחידות</strong> — אם \(X,Y\in Q\) ושתיהן מכילות את \(a\), אז \(X=Y\).
+<div class="proof"><strong>הוכחה.</strong> 
+יהי \(a\in A\).
+<span class="gap"></span>
+<strong>קיום.</strong> לפי תנאי 2, \(A=\bigcup Q\), ולכן \(a\in\bigcup Q\): קיימת \(X\in Q\) כך ש-\(a\in X\).
+<span class="gap"></span>
+<strong>יחידות.</strong> יהיו \(X,Y\in Q\) כך ש-\(a\in X\) ו-\(a\in Y\). אז \(a\in X\cap Y\), כלומר \(X\cap Y\neq\emptyset\).
+לפי תנאי 3 (בשלילה ההפוכה: אם \(X\cap Y\neq\emptyset\) אז \(X=Y\)), נקבל \(X=Y\).
 <span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> השתמשנו בכל שלושת התנאים: תנאי 1 של \(Q\) כדי לבחור \(y\), תנאי 2 של \(P\) כדי למצוא את \(X\), ותנאי 3 של \(Q\) כדי להסיק \(X=Y\).
-  </li><li> הנתון \(y\in\bigcup P\) הוא מסוג "קיים" — נתנו שם (\(X\)) לקבוצה שקיימת, בדיוק כמו בתרגיל דה מורגן.
+<ul><li> כך מוכיחים יחידות: לוקחים שני "מועמדים" כלליים ומראים שהם שווים. לא מניחים בשלילה שיש שניים שונים — אין צורך.
+  </li><li> זו בדיוק האינטואיציה שהתחלנו ממנה: בחלוקה, כל איבר נמצא בחלק אחד בדיוק.
+  </li><li> לא השתמשנו בתנאי 1. הוא דואג לכך שאין חלקים "מיותרים" שלא מכילים אף איבר.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 9 (צמצום חלוקה לתת-קבוצה).</strong>
+תהי \(A\) קבוצה, תהי \(Q\) חלוקה של \(A\), ותהי \(B\subseteq A\). הוכיחו שהקבוצה
+<div class="dm">\[R=\{X\cap B\mid X\in Q,\ X\cap B\neq\emptyset\}\]</div>
+היא חלוקה של \(B\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol9">הצגת הפתרון</button><div class="sol-body" id="t4-sol9" hidden><div class="p">למשל, עבור \(A=\{1,2,3,4\}\), \(Q=\{\{1,2\},\{3,4\}\}\) ו-\(B=\{1,2,3\}\) מתקבל \(R=\{\{1,2\},\{3\}\}\). נבדוק את התנאים אחד אחד.
+<div class="proof"><strong>הוכחה.</strong> 
+<ul><li> \(R\subseteq\mathcal{P}(B)\): כל איבר של \(R\) הוא מהצורה \(X\cap B\), ו-\(X\cap B\subseteq B\).
+  </li><li> <strong>תנאי 1.</strong> \(\emptyset\notin R\): לקחנו ל-\(R\) רק חיתוכים לא ריקים.
+  </li><li> <strong>תנאי 2.</strong> \(\bigcup R=B\).
+        (\(\subseteq\)) יהי \(y\in\bigcup R\). אז קיים \(M\in R\) כך ש-\(y\in M\), ו-\(M\subseteq B\), ולכן \(y\in B\).
+        (\(\supseteq\)) יהי \(y\in B\). אז \(y\in A=\bigcup Q\), ולכן קיימת \(X\in Q\) כך ש-\(y\in X\).
+        מכאן \(y\in X\cap B\), ובפרט \(X\cap B\neq\emptyset\), כלומר \(X\cap B\in R\). לכן \(y\in\bigcup R\).
+  </li><li> <strong>תנאי 3.</strong> יהיו \(M,N\in R\) כך ש-\(M\neq N\). אז יש \(X,Y\in Q\) כך ש-\(M=X\cap B\) ו-\(N=Y\cap B\).
+        אם היה \(X=Y\), היה גם \(M=N\); לכן \(X\neq Y\), ולפי תנאי 3 עבור \(Q\), \(X\cap Y=\emptyset\).
+        מכאן \(M\cap N=(X\cap Y)\cap B=\emptyset\).
+</li></ul>
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בתנאי 2 הנתון \(y\in\bigcup Q\) הוא מסוג "קיים": נתנו שם (\(X\)) לקבוצה שקיימת, כמו בתרגיל דה מורגן.
+  </li><li> בתנאי 3 השתמשנו בשלילה ההפוכה של "אם \(X=Y\) אז \(M=N\)".
+  </li><li> בלי הדרישה \(X\cap B\neq\emptyset\), חלק של \(Q\) שזר ל-\(B\) היה מכניס את \(\emptyset\) ל-\(R\) (למשל בדוגמה עם \(B=\{1,2\}\): \(\{3,4\}\cap B=\emptyset\)).
+  </li><li> אם \(B=\emptyset\) אז \(R=\emptyset\) — וזו אכן חלוקה של \(\emptyset\): כל התנאים מתקיימים באופן ריק.
 </li></ul></div></div></div></article>
 <h3 id="t4-extra"><span class="sec-num">5</span>שאלות נוספות</h3>
 <article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (מתי מתקיים שוויון?).</strong>
@@ -1494,6 +1530,19 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 מכיוון ש-\(X_0\in F\) ו-\(y\notin X_0\), לא ייתכן ש-\(y\) שייך לכל איברי \(F\), ולכן \(y\notin\bigcap F\). מכאן \(y\in A\setminus\bigcap F\).
 <span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
 <ul><li> השלילה של "לכל \(X\in F\), \(y\in X\)" היא "קיימת \(X\in F\) כך ש-\(y\notin X\)" — בדיוק טבלת השלילה מתרגול 2.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 9 (חלוקה שמוכלת בחלוקה).</strong>
+תהי \(A\) קבוצה, ויהיו \(P,Q\) חלוקות של \(A\). הוכיחו: אם \(P\subseteq Q\), אז \(P=Q\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol8">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol8" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+נניח \(P\subseteq Q\). נשאר להוכיח \(Q\subseteq P\). תהי \(Y\in Q\); צ״ל \(Y\in P\).
+<ul><li> מכיוון ש-\(Q\) חלוקה, \(Y\neq\emptyset\) (תנאי 1 בהגדרת החלוקה). יהי \(y\in Y\).
+  </li><li> \(Y\subseteq A\) (כי \(Q\subseteq\mathcal{P}(A)\)), ולכן \(y\in A\). מכיוון ש-\(P\) חלוקה, \(A=\bigcup P\) (תנאי 2), ולכן קיימת \(X\in P\) כך ש-\(y\in X\).
+  </li><li> מכיוון ש-\(P\subseteq Q\), גם \(X\in Q\). כעת \(X,Y\in Q\) ו-\(y\in X\cap Y\), כלומר \(X\cap Y\neq\emptyset\).
+        לפי תנאי 3 עבור \(Q\) (בשלילה ההפוכה), \(X=Y\).
+</li></ul>
+לכן \(Y=X\in P\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> השתמשנו בכל שלושת התנאים: תנאי 1 של \(Q\) כדי לבחור \(y\), תנאי 2 של \(P\) כדי למצוא את \(X\), ותנאי 3 של \(Q\) כדי להסיק \(X=Y\).
+  </li><li> הנתון \(y\in\bigcup P\) הוא מסוג "קיים" — נתנו שם (\(X\)) לקבוצה שקיימת, בדיוק כמו בתרגיל דה מורגן.
 </li></ul></div></div></div></article></section>
     </main>
   </div>
@@ -1568,6 +1617,71 @@ window.MathJax = {
   if (!window.matchMedia('(min-width: 980px)').matches) toc.open = false;
   window.addEventListener('hashchange', show);
   show();
+})();
+
+// In-page PDF viewer (private claude.ai page). The artifact sandbox blocks opening or downloading a file
+// from a link, so the PDF published next to the page is fetched and drawn with PDF.js inside the page.
+(function () {
+  const buttons = document.querySelectorAll('.pdf-view');
+  if (!buttons.length) return;
+  const CDN = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
+  let libPromise = null;
+  const loadScript = src => new Promise((ok, fail) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = ok; s.onerror = () => fail(new Error('PDF.js לא נטען'));
+    document.head.appendChild(s);
+  });
+  // the worker script is loaded as a plain script: PDF.js then runs it on the main thread
+  const lib = () => libPromise || (libPromise = loadScript(CDN + 'pdf.min.js')
+    .then(() => loadScript(CDN + 'pdf.worker.min.js'))
+    .then(() => { window.pdfjsLib.GlobalWorkerOptions.workerSrc = CDN + 'pdf.worker.min.js'; return window.pdfjsLib; })
+    .catch(e => { libPromise = null; throw e; }));
+
+  const box = document.createElement('div');
+  box.className = 'pdfv'; box.hidden = true;
+  box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-labelledby', 'pdfv-title');
+  box.innerHTML = '<div class="pdfv-bar"><p class="pdfv-title" id="pdfv-title"></p>' +
+    '<button type="button" class="pdfv-close" id="pdfv-close">סגירה</button></div>' +
+    '<p class="pdfv-status" id="pdfv-status"></p><div class="pdfv-pages" id="pdfv-pages"></div>';
+  document.body.appendChild(box);
+  const title = box.querySelector('#pdfv-title'), status = box.querySelector('#pdfv-status');
+  const pages = box.querySelector('#pdfv-pages'), closeBtn = box.querySelector('#pdfv-close');
+  let opener = null, run = 0;
+
+  function close() {
+    run++; box.hidden = true; pages.textContent = ''; document.documentElement.classList.remove('pdfv-open');
+    if (opener) opener.focus();
+  }
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
+
+  async function open(btn) {
+    const my = ++run;
+    opener = btn; title.textContent = btn.dataset.title || 'PDF';
+    pages.textContent = ''; status.textContent = 'טוען…'; status.hidden = false;
+    box.hidden = false; document.documentElement.classList.add('pdfv-open'); closeBtn.focus();
+    try {
+      const pdfjs = await lib();
+      const res = await fetch(btn.dataset.src);
+      if (!res.ok) throw new Error('הקובץ לא נמצא (' + res.status + ')');
+      const doc = await pdfjs.getDocument({ data: await res.arrayBuffer(), isEvalSupported: false }).promise;
+      status.hidden = true;
+      for (let i = 1; i <= doc.numPages && my === run; i++) {
+        const page = await doc.getPage(i);
+        const base = page.getViewport({ scale: 1 });
+        const css = Math.min(pages.clientWidth, 900) / base.width;
+        const vp = page.getViewport({ scale: css * (window.devicePixelRatio || 1) });
+        const c = document.createElement('canvas');
+        c.width = Math.floor(vp.width); c.height = Math.floor(vp.height);
+        c.setAttribute('aria-label', 'עמוד ' + i);
+        pages.appendChild(c);
+        await page.render({ canvasContext: c.getContext('2d'), viewport: vp }).promise;
+      }
+    } catch (e) {
+      if (my === run) { status.hidden = false; status.textContent = 'לא הצלחתי לפתוח את הקובץ: ' + e.message + '. נסו שוב.'; }
+    }
+  }
+  buttons.forEach(b => b.addEventListener('click', () => open(b)));
 })();
 </script>
 
