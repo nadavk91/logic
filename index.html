@@ -1281,7 +1281,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> יהי \(x\in A\triangle B\). נניח \(x\in A\setminus B\) (המקרה \(x\in B\setminus A\) סימטרי).
         אם \(x\in C\), אז \(x\in C\setminus B\subseteq C\triangle B\); ואם \(x\notin C\), אז \(x\in A\setminus C\subseteq A\triangle C\).
 </li></ol></div></div></div></article></section>
-<section class="tirgul" id="t4" data-toc="&lt;li&gt;&lt;a href=&quot;#t4-s1&quot;&gt;קבוצת החזקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s2&quot;&gt;איחוד וחיתוך אונריים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s3&quot;&gt;כלל דה מורגן לקבוצות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s4&quot;&gt;חלוקות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s5&quot;&gt;תרגילים לסיום (אם נשאר זמן)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 4</p><h2>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</h2><div class="t-actions"><a class="to-extra" href="#t4-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul4.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul4-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t4">הצגת כל הפתרונות</button></div><p class="sol-note">הפתרונות אינם רשמיים, ונכתבו לצורך התרגול בלבד.</p></header><h3 id="t4-s1"><span class="sec-num">1</span>קבוצת החזקה</h3>
+<section class="tirgul" id="t4" data-toc="&lt;li&gt;&lt;a href=&quot;#t4-s1&quot;&gt;קבוצת החזקה&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s2&quot;&gt;איחוד וחיתוך אונריים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s3&quot;&gt;כלל דה מורגן לקבוצות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-s4&quot;&gt;חלוקות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t4-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 4</p><h2>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</h2><div class="t-actions"><a class="to-extra" href="#t4-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul4.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul4-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t4">הצגת כל הפתרונות</button></div><p class="sol-note">הפתרונות אינם רשמיים, ונכתבו לצורך התרגול בלבד.</p></header><h3 id="t4-s1"><span class="sec-num">1</span>קבוצת החזקה</h3>
 <div class="p"><div class="thm"><strong>הגדרה (קבוצת החזקה).</strong> 
 תהי \(A\) קבוצה. <strong>קבוצת החזקה</strong> של \(A\) היא קבוצת כל תת-הקבוצות של \(A\):
 <div class="dm">\[\mathcal{P}(A)=\{B\mid B\subseteq A\}.\]</div>
@@ -1291,9 +1291,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 זה "כלל השייכות" של קבוצת החזקה: כדי לבדוק אם משהו <em>שייך</em> ל-\(\mathcal{P}(A)\), בודקים אם הוא <em>מוכל</em> ב-\(A\).</div>
 <div class="p"><strong>דוגמאות.</strong>
 <div class="dm">\[\mathcal{P}(\{1,2\})=\bigl\{\emptyset,\ \{1\},\ \{2\},\ \{1,2\}\bigr\},\qquad
-  \mathcal{P}(\emptyset)=\{\emptyset\}.\]</div>
-שימו לב: לכל קבוצה \(A\) מתקיים \(\emptyset\in\mathcal{P}(A)\) (כי \(\emptyset\subseteq A\)) וגם \(A\in\mathcal{P}(A)\) (כי \(A\subseteq A\)).
-בפרט \(\mathcal{P}(A)\) אף פעם לא ריקה — גם \(\mathcal{P}(\emptyset)\) אינה ריקה.</div>
+  \mathcal{P}(\emptyset)=\{\emptyset\}.\]</div></div>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 1 (חישוב).</strong>
 רשמו במפורש את איברי הקבוצות:
 <ol><li> \(\mathcal{P}(\{1,2,3\})\). כמה איברים יש בה?
@@ -1308,22 +1306,16 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <ul><li> לקבוצה עם \(n\) איברים יש \(2^n\) תת-קבוצות: כל איבר נמצא בתת-הקבוצה או לא.
   </li><li> בסעיף 4, \(\{1\}\) ו-\(\{\{1\}\}\) הן שתי תת-קבוצות <em>שונות</em>: הראשונה מכילה את המספר \(1\), והשנייה את הקבוצה \(\{1\}\).
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 2 (תמיד, לפעמים או אף פעם?).</strong>
-לכל טענה קבעו אם היא אמיתית בכל השמה ל-\(A\), שקרית בכל השמה, או שיש השמות מכל סוג.
-<ol><li> \(A\in\mathcal{P}(A)\).
-  </li><li> \(\emptyset\in\mathcal{P}(A)\).
-  </li><li> \(A\subseteq\mathcal{P}(A)\).
-  </li><li> \(\{A\}\subseteq\mathcal{P}(A)\).
-  </li><li> \(\mathcal{P}(A)=\emptyset\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol2">הצגת הפתרון</button><div class="sol-body" id="t4-sol2" hidden><div class="p"><ol><li> תמיד: \(A\subseteq A\).
-  </li><li> תמיד: \(\emptyset\subseteq A\).
-  </li><li> לפעמים: עבור \(A=\emptyset\) (או \(A=\{\emptyset\}\)) הטענה אמיתית; עבור \(A=\{1\}\) היא שקרית, כי \(1\notin\mathcal{P}(A)\) — המספר \(1\) אינו תת-קבוצה של \(A\).
-  </li><li> תמיד: \(\{A\}\subseteq\mathcal{P}(A)\) פירושו בדיוק \(A\in\mathcal{P}(A)\), וזה סעיף 1.
-  </li><li> אף פעם: \(\emptyset\in\mathcal{P}(A)\).
-</li></ol></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> סעיפים 1 ו-3 הם שוב "שייכות מול הכלה": \(A\) תמיד <em>שייכת</em> ל-\(\mathcal{P}(A)\), אבל לא תמיד <em>מוכלת</em> בה.
-</li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 3 (קבוצת החזקה שומרת על הכלה).</strong>
+<div class="p"><strong>אבחנה.</strong> לכל קבוצה \(A\) מתקיים \(\emptyset\in\mathcal{P}(A)\) (כי \(\emptyset\subseteq A\)) וגם \(A\in\mathcal{P}(A)\) (כי \(A\subseteq A\)).
+בפרט \(\mathcal{P}(A)\) אף פעם לא ריקה — גם \(\mathcal{P}(\emptyset)=\{\emptyset\}\) אינה ריקה.</div>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה (שייכות מול הכלה).</strong>
+ראינו ש-\(A\) תמיד <em>שייכת</em> ל-\(\mathcal{P}(A)\). ומה לגבי הכלה?
+<ol><li> האם תמיד \(A\subseteq\mathcal{P}(A)\)?
+  </li><li> האם תמיד \(\{A\}\subseteq\mathcal{P}(A)\)?
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol2">הצגת הפתרון</button><div class="sol-body" id="t4-sol2" hidden><div class="p"><ol><li> לא תמיד. עבור \(A=\emptyset\) (או \(A=\{\emptyset\}\)) זה נכון, אבל עבור \(A=\{1\}\) לא: \(1\in A\), ו-\(1\notin\mathcal{P}(A)\), כי המספר \(1\) אינו תת-קבוצה של \(A\).
+  </li><li> כן, תמיד: האיבר היחיד של \(\{A\}\) הוא \(A\), ולכן \(\{A\}\subseteq\mathcal{P}(A)\) פירושו בדיוק \(A\in\mathcal{P}(A)\) — וזו האבחנה.
+</li></ol></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 2 (קבוצת החזקה שומרת על הכלה).</strong>
 הוכיחו: לכל שתי קבוצות \(A,B\), מתקיים \(A\subseteq B\) אם ורק אם \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol3">הצגת הפתרון</button><div class="sol-body" id="t4-sol3" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
 יהיו \(A,B\) קבוצות. נוכיח את שני הכיוונים.
 <span class="gap"></span>
@@ -1343,7 +1335,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> אם \(A\neq\emptyset\) ו-\(A\subseteq B\setminus C\), אז \(A\subseteq B\) וגם \(A\not\subseteq C\).
         (בלי ההנחה \(A\neq\emptyset\) הטענה לא נכונה: עבור \(A=\emptyset\) מתקיים \(\emptyset\subseteq C\).)
 </li></ul></div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (הוכח או הפרך).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 3 (הוכח או הפרך).</strong>
 יהיו \(A,B\) קבוצות. לכל טענה, הוכיחו או הפריכו.
 <ol><li> \(\mathcal{P}(A\setminus B)\subseteq\mathcal{P}(A)\setminus\mathcal{P}(B)\).
   </li><li> \(\mathcal{P}(A\setminus B)\subseteq\bigl(\mathcal{P}(A)\setminus\mathcal{P}(B)\bigr)\cup\{\emptyset\}\).
@@ -1361,18 +1353,18 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <ul><li> בסעיף 1 הקבוצה הריקה שוב "שוברת" טענה, ובסעיף 2 מתקנים אותה בכך שמוסיפים את \(\emptyset\).
   </li><li> בסעיף 4 כל שלב הוא "אמ״מ", ולכן קיבלנו את שתי ההכלות בבת אחת.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (מתי האיחוד נשמר?).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (מתי האיחוד נשמר?).</strong>
 יהיו \(A,B\) קבוצות.
 <ol><li> הוכיחו או הפריכו: אם \(\mathcal{P}(A\cup B)=\mathcal{P}(A)\cup\mathcal{P}(B)\), אז \(A=B\).
   </li><li> הוכיחו: \(\mathcal{P}(A\cup B)=\mathcal{P}(A)\cup\mathcal{P}(B)\) אם ורק אם \(A\subseteq B\) או \(B\subseteq A\).
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol5">הצגת הפתרון</button><div class="sol-body" id="t4-sol5" hidden><div class="p"><ol><li> לא נכון: \(A=\{1\}\), \(B=\{1,2\}\). אז \(A\cup B=B\) ו-\(\mathcal{P}(A)\subseteq\mathcal{P}(B)\), ולכן שני האגפים שווים ל-\(\mathcal{P}(B)\), אבל \(A\neq B\).
-  </li><li> (\(\Rightarrow\)) אם \(A\subseteq B\) אז \(A\cup B=B\), ולפי תרגיל 3 \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\), ולכן שני האגפים שווים ל-\(\mathcal{P}(B)\). המקרה \(B\subseteq A\) סימטרי.
+  </li><li> (\(\Rightarrow\)) אם \(A\subseteq B\) אז \(A\cup B=B\), ולפי תרגיל 2 \(\mathcal{P}(A)\subseteq\mathcal{P}(B)\), ולכן שני האגפים שווים ל-\(\mathcal{P}(B)\). המקרה \(B\subseteq A\) סימטרי.
 <span class="gap"></span>
         (\(\Leftarrow\)) \(A\cup B\in\mathcal{P}(A\cup B)\), ולכן \(A\cup B\in\mathcal{P}(A)\) או \(A\cup B\in\mathcal{P}(B)\).
         במקרה הראשון \(A\cup B\subseteq A\), ולכן \(B\subseteq A\). במקרה השני, באותו אופן, \(A\subseteq B\).
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
 <ul><li> הדוגמה הנגדית בסעיף 1 נמצאה בעזרת סעיף 2: מספיק ש-\(A\subseteq B\) ו-\(A\neq B\).
-  </li><li> בכיוון (\(\Leftarrow\)) בסעיף 2 הצבנו בנתון מסוג "לכל" (שוויון קבוצות) את האיבר \(A\cup B\) — כמו בתרגיל 3.
+  </li><li> בכיוון (\(\Leftarrow\)) בסעיף 2 הצבנו בנתון מסוג "לכל" (שוויון קבוצות) את האיבר \(A\cup B\) — כמו בתרגיל 2.
 </li></ul></div></div></div></article>
 <h3 id="t4-s2"><span class="sec-num">2</span>איחוד וחיתוך אונריים</h3>
 <div class="p">עד עכשיו איחדנו וחיתכנו <em>שתי</em> קבוצות. לפעמים רוצים לאחד או לחתוך הרבה קבוצות בבת אחת —
@@ -1398,7 +1390,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <div class="p notes"><strong>שימו לב.</strong> \(\bigcup\emptyset=\emptyset\) (אין קבוצה ב-\(\emptyset\) שאפשר להשתייך אליה),
 אבל \(\bigcap\emptyset\) <strong>אינו מוגדר</strong>: הדרישה "\(x\) שייך לכל הקבוצות ב-\(\emptyset\)" מתקיימת באופן ריק לכל \(x\),
 ו"קבוצת כל ה-\(x\)" אינה קבוצה. לכן בכל מקום שמופיע \(\bigcap F\) מניחים ש-\(F\neq\emptyset\).</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (הוכח או הפרך).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (הוכח או הפרך).</strong>
 יהיו \(F,G\) קבוצות לא ריקות של קבוצות. לכל טענה, הוכיחו או הפריכו.
 <ol><li> אם \(F\subseteq G\), אז \(\bigcup F\subseteq\bigcup G\).
   </li><li> אם \(\bigcup F\subseteq\bigcup G\), אז \(F\subseteq G\).
@@ -1412,7 +1404,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <ul><li> איחוד של <em>יותר</em> קבוצות נותן קבוצה גדולה יותר, אבל חיתוך של יותר קבוצות נותן קבוצה <em>קטנה</em> יותר: סעיפים 3–4.
 </li></ul></div></div></div></article>
 <h3 id="t4-s3"><span class="sec-num">3</span>כלל דה מורגן לקבוצות</h3>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (כלל דה מורגן).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (כלל דה מורגן).</strong>
 תהי \(F\) קבוצה לא ריקה של קבוצות, ותהי \(A\) קבוצה. הוכיחו:
 <div class="dm">\[A\setminus\bigcup F=\bigcap\{A\setminus X\mid X\in F\}.\]</div></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol7">הצגת הפתרון</button><div class="sol-body" id="t4-sol7" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
 שימו לב קודם שאגף ימין מוגדר: \(F\neq\emptyset\), ולכן גם \(\{A\setminus X\mid X\in F\}\neq\emptyset\). נוכיח שתי הכלות.
@@ -1451,7 +1443,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> \(\{\emptyset,\{1\},\{2,3\}\}\) אינה חלוקה: יש בה חלק ריק (תנאי 1).
 </li></ul>
 ודוגמה אינסופית: \(\{\{n\in\mathbb{Z}\mid \Even(n)\},\ \{n\in\mathbb{Z}\mid \Odd(n)\}\}\) היא חלוקה של \(\mathbb{Z}\) — כל מספר שלם הוא זוגי או אי-זוגי, ולא שניהם.</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (כל איבר בחלק אחד בדיוק).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (כל איבר בחלק אחד בדיוק).</strong>
 תהי \(A\) קבוצה, ותהי \(Q\) חלוקה של \(A\). הוכיחו: לכל \(a\in A\) קיימת קבוצה <em>יחידה</em> \(X\in Q\) כך ש-\(a\in X\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol8">הצגת הפתרון</button><div class="sol-body" id="t4-sol8" hidden><div class="p">"קיימת יחידה" הן שתי טענות: <strong>קיום</strong> — יש \(X\in Q\) כך ש-\(a\in X\); ו<strong>יחידות</strong> — אם \(X,Y\in Q\) ושתיהן מכילות את \(a\), אז \(X=Y\).
 <div class="proof"><strong>הוכחה.</strong> 
 יהי \(a\in A\).
@@ -1465,7 +1457,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> זו בדיוק האינטואיציה שהתחלנו ממנה: בחלוקה, כל איבר נמצא בחלק אחד בדיוק.
   </li><li> לא השתמשנו בתנאי 1. הוא דואג לכך שאין חלקים "מיותרים" שלא מכילים אף איבר.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 9 (צמצום חלוקה לתת-קבוצה).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (צמצום חלוקה לתת-קבוצה).</strong>
 תהי \(A\) קבוצה, תהי \(Q\) חלוקה של \(A\), ותהי \(B\subseteq A\). הוכיחו שהקבוצה
 <div class="dm">\[R=\{X\cap B\mid X\in Q,\ X\cap B\neq\emptyset\}\]</div>
 היא חלוקה של \(B\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol9">הצגת הפתרון</button><div class="sol-body" id="t4-sol9" hidden><div class="p">למשל, עבור \(A=\{1,2,3,4\}\), \(Q=\{\{1,2\},\{3,4\}\}\) ו-\(B=\{1,2,3\}\) מתקבל \(R=\{\{1,2\},\{3\}\}\). נבדוק את התנאים אחד אחד.
@@ -1486,50 +1478,47 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> בלי הדרישה \(X\cap B\neq\emptyset\), חלק של \(Q\) שזר ל-\(B\) היה מכניס את \(\emptyset\) ל-\(R\) (למשל בדוגמה עם \(B=\{1,2\}\): \(\{3,4\}\cap B=\emptyset\)).
   </li><li> אם \(B=\emptyset\) אז \(R=\emptyset\) — וזו אכן חלוקה של \(\emptyset\): כל התנאים מתקיימים באופן ריק.
 </li></ul></div></div></div></article>
-<h3 id="t4-s5"><span class="sec-num">5</span>תרגילים לסיום (אם נשאר זמן)</h3>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 10 (מתי \(\bigcup F\) מוכל ב-\(A\)?).</strong>
-תהי \(F\) קבוצה של קבוצות ו-\(A\) קבוצה. הוכיחו: \(\bigcup F\subseteq A\) אם ורק אם \(F\subseteq\mathcal{P}(A)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol10">הצגת הפתרון</button><div class="sol-body" id="t4-sol10" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
-<strong>(\(\Leftarrow\))</strong> נניח \(\bigcup F\subseteq A\). יהי \(X\in F\); צ״ל \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\).
-יהי \(x\in X\). אז קיימת קבוצה ב-\(F\) שמכילה את \(x\) (זו \(X\) עצמה), ולכן \(x\in\bigcup F\). מההנחה, \(x\in A\).
-<span class="gap"></span>
-<strong>(\(\Rightarrow\))</strong> נניח \(F\subseteq\mathcal{P}(A)\). יהי \(x\in\bigcup F\). אז קיימת \(X\in F\) כך ש-\(x\in X\).
-מההנחה \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\), ולכן \(x\in A\).
-<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> בכיוון (\(\Leftarrow\)) היעד \(x\in\bigcup F\) הוא מסוג "קיים": מספיק להציג קבוצה אחת ב-\(F\) שמכילה את \(x\).
-  </li><li> בכיוון (\(\Rightarrow\)) הנתון \(x\in\bigcup F\) הוא מסוג "קיים": נותנים שם (\(X\)) לקבוצה שקיימת, וממשיכים איתה.
-</li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 11 (איחוד וחיתוך של קבוצת חזקה).</strong>
-תהי \(A\) קבוצה. הוכיחו: \(\bigcup\mathcal{P}(A)=A\) ו-\(\bigcap\mathcal{P}(A)=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-sol11">הצגת הפתרון</button><div class="sol-body" id="t4-sol11" hidden><div class="p"><ul><li> \(\bigcup\mathcal{P}(A)\subseteq A\): לפי תרגיל 10 עם \(F=\mathcal{P}(A)\), כי \(\mathcal{P}(A)\subseteq\mathcal{P}(A)\).
+<h3 id="t4-extra"><span class="sec-num">5</span>שאלות נוספות</h3>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (מתי מתקיים שוויון?).</strong>
+יהיו \(A,B\) קבוצות. הוכיחו: \(\mathcal{P}(A\setminus B)=\bigl(\mathcal{P}(A)\setminus\mathcal{P}(B)\bigr)\cup\{\emptyset\}\)
+אם ורק אם \(A\subseteq B\) או \(A\cap B=\emptyset\).
+(הכלה אחת כבר ראינו בתרגול: תרגיל 3, סעיף 2.)</div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 2 (איחוד וחיתוך של קבוצת חזקה).</strong>
+תהי \(A\) קבוצה. הוכיחו: \(\bigcup\mathcal{P}(A)=A\) ו-\(\bigcap\mathcal{P}(A)=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol1">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol1" hidden><div class="p"><ul><li> \(\bigcup\mathcal{P}(A)\subseteq A\): יהי \(x\in\bigcup\mathcal{P}(A)\). אז קיימת \(X\in\mathcal{P}(A)\) כך ש-\(x\in X\). מכיוון ש-\(X\subseteq A\), נקבל \(x\in A\).
   </li><li> \(A\subseteq\bigcup\mathcal{P}(A)\): יהי \(x\in A\). מכיוון ש-\(A\in\mathcal{P}(A)\), יש ב-\(\mathcal{P}(A)\) קבוצה שמכילה את \(x\), ולכן \(x\in\bigcup\mathcal{P}(A)\).
   </li><li> \(\bigcap\mathcal{P}(A)=\emptyset\): אם \(x\in\bigcap\mathcal{P}(A)\), אז \(x\) שייך לכל איבר של \(\mathcal{P}(A)\), ובפרט ל-\(\emptyset\) — סתירה.
-</li></ul></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> בחלק האחרון השתמשנו בשלילה: כדי ש-\(x\notin\bigcap\mathcal{P}(A)\) מספיק איבר אחד של \(\mathcal{P}(A)\) שלא מכיל את \(x\), והקבוצה הריקה מתאימה לכל \(x\).
 </li></ul></div></div></div></article>
-<h3 id="t4-extra"><span class="sec-num">6</span>שאלות נוספות</h3>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (מתי מתקיים שוויון?).</strong>
-יהיו \(A,B\) קבוצות. בתרגיל 4 (סעיף 2) ראינו ש-\(\mathcal{P}(A\setminus B)\subseteq\bigl(\mathcal{P}(A)\setminus\mathcal{P}(B)\bigr)\cup\{\emptyset\}\).
-הוכיחו: מתקיים שוויון אם ורק אם \(A\subseteq B\) או \(A\cap B=\emptyset\).</div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 2 (חיתוך של קבוצות החזקה).</strong>
-יהיו \(A,B\) קבוצות. הוכיחו: אם \(\mathcal{P}(A)\cap\mathcal{P}(B)=\{\emptyset\}\), אז \(A\cap B=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol1">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol1" hidden><div class="p">נוכיח את השלילה ההפוכה: נניח \(A\cap B\neq\emptyset\), ויהי \(x\in A\cap B\). אז \(\{x\}\subseteq A\) ו-\(\{x\}\subseteq B\),
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 3 (מתי \(\bigcup F\) מוכל ב-\(A\)?).</strong>
+תהי \(F\) קבוצה של קבוצות ו-\(A\) קבוצה. הוכיחו:
+<ol><li> אם \(A\in F\), אז \(A\subseteq\bigcup F\).
+  </li><li> \(\bigcup F\subseteq A\) אם ורק אם \(F\subseteq\mathcal{P}(A)\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol2">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol2" hidden><div class="p"><ol><li> יהי \(x\in A\). אז קיימת \(X\in F\) (למשל \(X=A\)) כך ש-\(x\in X\), ולכן \(x\in\bigcup F\).
+  </li><li> (\(\Leftarrow\)) יהי \(X\in F\); צ״ל \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\). לפי סעיף 1, \(X\subseteq\bigcup F\subseteq A\).
+        (\(\Rightarrow\)) יהי \(x\in\bigcup F\). אז קיימת \(X\in F\) כך ש-\(x\in X\). מההנחה \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\), ולכן \(x\in A\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בכיוון (\(\Rightarrow\)) של סעיף 2, הנתון \(x\in\bigcup F\) הוא מסוג "קיים": נותנים שם (\(X\)) לקבוצה שקיימת, וממשיכים איתה.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 4 (חיתוך של קבוצות החזקה).</strong>
+יהיו \(A,B\) קבוצות. הוכיחו: אם \(\mathcal{P}(A)\cap\mathcal{P}(B)=\{\emptyset\}\), אז \(A\cap B=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol3">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol3" hidden><div class="p">נוכיח את השלילה ההפוכה: נניח \(A\cap B\neq\emptyset\), ויהי \(x\in A\cap B\). אז \(\{x\}\subseteq A\) ו-\(\{x\}\subseteq B\),
 ולכן \(\{x\}\in\mathcal{P}(A)\cap\mathcal{P}(B)\). מכיוון ש-\(\{x\}\neq\emptyset\), החיתוך אינו \(\{\emptyset\}\).</div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 3 (קבוצת חזקה עם איבר אחד).</strong>
-תהי \(A\) קבוצה כך שלקבוצה \(\mathcal{P}(A)\) יש איבר אחד בדיוק. הוכיחו ש-\(A=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol2">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol2" hidden><div class="p">תמיד \(\emptyset\in\mathcal{P}(A)\) וגם \(A\in\mathcal{P}(A)\). אם יש איבר אחד בלבד, אז \(A=\emptyset\).</div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 4 (חישוב).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 5 (קבוצת חזקה עם איבר אחד).</strong>
+תהי \(A\) קבוצה כך שלקבוצה \(\mathcal{P}(A)\) יש איבר אחד בדיוק. הוכיחו ש-\(A=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol4">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol4" hidden><div class="p">תמיד \(\emptyset\in\mathcal{P}(A)\) וגם \(A\in\mathcal{P}(A)\). אם יש איבר אחד בלבד, אז \(A=\emptyset\).</div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 6 (חישוב).</strong>
 חשבו, או הסבירו מדוע הביטוי אינו מוגדר:
 <ol><li> \(\bigcup\bigl\{\{1\},\{\{1\}\},\emptyset\bigr\}\).
   </li><li> \(\bigcap\bigl\{\{1,2,3\},\{2,3,4\},\{3,4,5\}\bigr\}\).
   </li><li> \(\bigcap\bigl\{\{1,2\},\emptyset\bigr\}\).
   </li><li> \(\bigcap\{\emptyset\}\) &emsp; ו-&emsp; \(\bigcap\emptyset\).
   </li><li> \(\bigcup\mathcal{P}(\{1,2\})\) &emsp; ו-&emsp; \(\bigcap\mathcal{P}(\{1,2\})\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol3">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol3" hidden><div class="p"><ol><li> \(\{1,\{1\}\}\): האיברים של \(\{1\}\), של \(\{\{1\}\}\) ושל \(\emptyset\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol5">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol5" hidden><div class="p"><ol><li> \(\{1,\{1\}\}\): האיברים של \(\{1\}\), של \(\{\{1\}\}\) ושל \(\emptyset\).
   </li><li> \(\{3\}\).
   </li><li> \(\emptyset\): אף איבר אינו שייך ל-\(\emptyset\).
   </li><li> \(\bigcap\{\emptyset\}=\emptyset\), ואילו \(\bigcap\emptyset\) אינו מוגדר.
   </li><li> \(\bigcup\mathcal{P}(\{1,2\})=\{1,2\}\) ו-\(\bigcap\mathcal{P}(\{1,2\})=\emptyset\) (כי \(\emptyset\in\mathcal{P}(\{1,2\})\)).
 </li></ol></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 5 (אינסוף קבוצות).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 7 (אינסוף קבוצות).</strong>
 לכל \(n\in\mathbb{N}\) נסמן \(A_n=\{k\in\mathbb{N}\mid k\ge n\}\). תארו בצורה פשוטה את הקבוצות הבאות, והוכיחו:
-<div class="dm">\[\bigcup\{A_n\mid n\in\mathbb{N}\},\qquad \bigcap\{A_n\mid n\in\mathbb{N}\}.\]</div></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol4">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol4" hidden><div class="p"><ul><li> \(\bigcup\{A_n\mid n\in\mathbb{N}\}=\mathbb{N}\). הכלה \(\subseteq\): כל \(A_n\) מוכלת ב-\(\mathbb{N}\).
+<div class="dm">\[\bigcup\{A_n\mid n\in\mathbb{N}\},\qquad \bigcap\{A_n\mid n\in\mathbb{N}\}.\]</div></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol6" hidden><div class="p"><ul><li> \(\bigcup\{A_n\mid n\in\mathbb{N}\}=\mathbb{N}\). הכלה \(\subseteq\): כל \(A_n\) מוכלת ב-\(\mathbb{N}\).
         הכלה \(\supseteq\): יהי \(k\in\mathbb{N}\). אז \(k\in A_k\), ולכן \(k\) שייך לאיחוד.
   </li><li> \(\bigcap\{A_n\mid n\in\mathbb{N}\}=\emptyset\). נניח בשלילה ש-\(k\) שייך לחיתוך. אז \(k\) שייך לכל \(A_n\), ובפרט ל-\(A_{k+1}\), כלומר \(k\ge k+1\) — סתירה.
 </li></ul></div><div class="p notes"><strong>הערות.</strong>
@@ -1537,19 +1526,6 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> כדי להראות ש-\(k\) <em>שייך</em> לאיחוד מוצאים קבוצה אחת שמכילה אותו ("קיים");
         כדי להראות ש-\(k\) <em>לא שייך</em> לחיתוך מוצאים קבוצה אחת שלא מכילה אותו.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 6 (מתי \(\bigcup F\) מוכל ב-\(A\)?).</strong>
-תהי \(F\) קבוצה של קבוצות ו-\(A\) קבוצה. הוכיחו:
-<ol><li> אם \(A\in F\), אז \(A\subseteq\bigcup F\).
-  </li><li> \(\bigcup F\subseteq A\) אם ורק אם \(F\subseteq\mathcal{P}(A)\).
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol5">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol5" hidden><div class="p"><ol><li> יהי \(x\in A\). אז קיימת \(X\in F\) (למשל \(X=A\)) כך ש-\(x\in X\), ולכן \(x\in\bigcup F\).
-  </li><li> (\(\Leftarrow\)) יהי \(X\in F\); צ״ל \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\). לפי סעיף 1, \(X\subseteq\bigcup F\subseteq A\).
-        (\(\Rightarrow\)) יהי \(x\in\bigcup F\). אז קיימת \(X\in F\) כך ש-\(x\in X\). מההנחה \(X\in\mathcal{P}(A)\), כלומר \(X\subseteq A\), ולכן \(x\in A\).
-</li></ol></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> בכיוון (\(\Rightarrow\)) של סעיף 2, הנתון \(x\in\bigcup F\) הוא מסוג "קיים": נותנים שם (\(X\)) לקבוצה שקיימת, וממשיכים איתה.
-</li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>שאלה 7 (איחוד וחיתוך של קבוצת חזקה).</strong>
-תהי \(A\) קבוצה. הוכיחו: \(\bigcup\mathcal{P}(A)=A\) ו-\(\bigcap\mathcal{P}(A)=\emptyset\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol6" hidden><div class="p">\(\bigcup\mathcal{P}(A)\subseteq A\): לפי שאלה 6, כי \(\mathcal{P}(A)\subseteq\mathcal{P}(A)\). \(A\subseteq\bigcup\mathcal{P}(A)\): כי \(A\in\mathcal{P}(A)\) (שאלה 6, סעיף 1).
-\(\bigcap\mathcal{P}(A)=\emptyset\): אם \(x\in\bigcap\mathcal{P}(A)\) אז \(x\) שייך לכל איבר של \(\mathcal{P}(A)\), ובפרט ל-\(\emptyset\) — סתירה.</div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>שאלה 8 (החלק השני של דה מורגן).</strong>
 תהי \(F\) קבוצה לא ריקה של קבוצות, ותהי \(A\) קבוצה. הוכיחו:
 <div class="dm">\[A\setminus\bigcap F=\bigcup\{A\setminus X\mid X\in F\}.\]</div></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t4-x-sol7">הצגת הפתרון</button><div class="sol-body" id="t4-x-sol7" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
