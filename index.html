@@ -157,6 +157,8 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 
 .thm { background: var(--accent-soft); border-radius: 8px; padding: .75rem 1rem; margin: 1rem 0; }
 .thm > strong:first-child { color: var(--accent); }
+.thm.remark { background: transparent; border: 1px dashed var(--rule); color: var(--muted); }
+.thm.remark > strong:first-child { color: var(--muted); }
 .proof { margin: .75rem 0 1rem; }
 .qed { float: left; margin-inline-start: 1rem; }
 .proof::after { content: ""; display: block; clear: both; }
@@ -221,7 +223,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
     <aside class="rail">
       <nav class="tut-nav" aria-label="תרגולים">
         <h2>תרגולים</h2>
-        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>קשרים, שלילה וכתיבת הוכחות</a></li><li><a href="#t3" data-tid="t3"><span class="n">3</span>קבוצות: הגדרות, פעולות והוכחות</a><a class="sub" href="#t3-extra" data-parent="t3">שאלות נוספות</a></li><li><a href="#t4" data-tid="t4"><span class="n">4</span>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</a><a class="sub" href="#t4-extra" data-parent="t4">שאלות נוספות</a></li></ul>
+        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>קשרים, שלילה וכתיבת הוכחות</a></li><li><a href="#t3" data-tid="t3"><span class="n">3</span>קבוצות: הגדרות, פעולות והוכחות</a><a class="sub" href="#t3-extra" data-parent="t3">שאלות נוספות</a></li><li><a href="#t4" data-tid="t4"><span class="n">4</span>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</a><a class="sub" href="#t4-extra" data-parent="t4">שאלות נוספות</a></li><li><a href="#t5" data-tid="t5"><span class="n">5</span>זוגות סדורים, מכפלה קרטזית ויחסים</a><a class="sub" href="#t5-extra" data-parent="t5">שאלות נוספות</a></li></ul>
       </nav>
       <details class="toc" id="toc" open>
         <summary>בתרגול זה</summary>
@@ -1550,6 +1552,243 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <ul><li> השתמשנו בכל שלושת התנאים: תנאי 1 של \(Q\) כדי לבחור \(y\), תנאי 2 של \(P\) כדי למצוא את \(X\), ותנאי 3 של \(Q\) כדי להסיק \(X=Y\).
   </li><li> הנתון \(y\in\bigcup P\) הוא מסוג "קיים" — נתנו שם (\(X\)) לקבוצה שקיימת, בדיוק כמו בתרגיל דה מורגן.
 </li></ul></div></div></div></article></section>
+<section class="tirgul" id="t5" data-toc="&lt;li&gt;&lt;a href=&quot;#t5-s1&quot;&gt;זוגות סדורים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t5-s2&quot;&gt;מכפלה קרטזית&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t5-s3&quot;&gt;יחסים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t5-s4&quot;&gt;תכונות של יחסים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t5-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 5</p><h2>זוגות סדורים, מכפלה קרטזית ויחסים</h2><div class="t-actions"><a class="to-extra" href="#t5-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul5.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul5-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t5">הצגת כל הפתרונות</button></div><p class="sol-note">הפתרונות אינם רשמיים, ונכתבו לצורך התרגול בלבד.</p></header><h3 id="t5-s1"><span class="sec-num">1</span>זוגות סדורים</h3>
+<div class="p">בקבוצה אין סדר: \(\{1,2\}=\{2,1\}\). לפעמים הסדר חשוב — למשל נקודה במישור, או "מי הורה של מי".
+לשם כך יש לנו אובייקט חדש: <strong>זוג סדור</strong> \(\langle a,b\rangle\).
+\(a\) נקרא <strong>הרכיב הראשון</strong> (או הקואורדינטה הראשונה) של הזוג, ו-\(b\) נקרא <strong>הרכיב השני</strong>.</div>
+<div class="p"><div class="thm"><strong>הגדרה (שוויון זוגות).</strong> 
+\(\langle a,b\rangle=\langle c,d\rangle\) אם ורק אם \(a=c\) וגם \(b=d\).
+</div></div>
+<div class="p">כלומר זוג נקבע לגמרי על ידי שני הרכיבים שלו, <em>לפי הסדר</em>. בפרט \(\langle 1,2\rangle\neq\langle 2,1\rangle\), ו-\(\langle 1,1\rangle\) הוא זוג סדור לגיטימי.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 1 (שוויון זוגות).</strong>
+קבעו אם השוויון נכון:
+<ol><li> \(\langle\{1,2\},3\rangle=\langle\{2,1\},3\rangle\).
+  </li><li> \(\langle 1,\langle 2,3\rangle\rangle=\langle\langle 1,2\rangle,3\rangle\).
+  </li><li> \(\{\langle 1,2\rangle,\langle 2,1\rangle\}=\{\langle 2,1\rangle,\langle 1,2\rangle\}\).
+</li></ol>
+ומצאו את כל המספרים הממשיים \(x,y\) שעבורם \(\langle x+y,\ 2\rangle=\langle 5,\ x-y\rangle\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol1">הצגת הפתרון</button><div class="sol-body" id="t5-sol1" hidden><div class="p"><ol><li> נכון: הרכיבים הראשונים הם הקבוצות \(\{1,2\}\) ו-\(\{2,1\}\), והן שוות.
+  </li><li> לא נכון: הרכיב הראשון משמאל הוא המספר \(1\), ומימין הוא הזוג \(\langle 1,2\rangle\).
+  </li><li> נכון: זו קבוצה, והסדר שבו רושמים את איבריה לא משנה (גם אם האיברים עצמם זוגות).
+</li></ol>
+לפי הגדרת השוויון: \(x+y=5\) וגם \(2=x-y\). מכאן \(x=3.5\) ו-\(y=1.5\), וזה הפתרון היחיד.</div></div></div></article>
+<h3 id="t5-s2"><span class="sec-num">2</span>מכפלה קרטזית</h3>
+<div class="p"><div class="thm"><strong>הגדרה (מכפלה קרטזית).</strong> 
+יהיו \(A,B\) קבוצות. <strong>המכפלה הקרטזית</strong> שלהן היא קבוצת כל הזוגות שהרכיב הראשון שלהם מ-\(A\) והשני מ-\(B\):
+<div class="dm">\[A\times B=\{\langle a,b\rangle\mid a\in A\land b\in B\}.\]</div>
+</div></div>
+<div class="p">כלל השייכות: \(z\in A\times B\) אם ורק אם קיימים \(a\in A\) ו-\(b\in B\) כך ש-\(z=\langle a,b\rangle\).
+ובפרט, לכל \(x,y\): \(\langle x,y\rangle\in A\times B\) אם ורק אם \(x\in A\) וגם \(y\in B\).</div>
+<div class="p"><strong>דוגמאות.</strong>
+<div class="dm">\[\{1,2\}\times\{3,4\}=\{\langle 1,3\rangle,\langle 1,4\rangle,\langle 2,3\rangle,\langle 2,4\rangle\},\qquad
+  A\times\emptyset=\emptyset\times A=\emptyset.\]</div>
+בדרך כלל \(A\times B\neq B\times A\): למשל \(\langle 1,3\rangle\in\{1,2\}\times\{3,4\}\), אבל \(\langle 1,3\rangle\notin\{3,4\}\times\{1,2\}\).
+את \(A\times A\) מסמנים גם \(A^2\); למשל \(\mathbb{R}^2\) הוא המישור.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 2 (מכפלה והפרש).</strong>
+הוכיחו: לכל שלוש קבוצות \(A,B,C\) מתקיים \(A\times(B\setminus C)=(A\times B)\setminus(A\times C)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol2">הצגת הפתרון</button><div class="sol-body" id="t5-sol2" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+<strong>(\(\subseteq\))</strong> יהי \(z\in A\times(B\setminus C)\). אז קיימים \(x\in A\) ו-\(y\in B\setminus C\) כך ש-\(z=\langle x,y\rangle\).
+מכיוון ש-\(x\in A\) ו-\(y\in B\), נקבל \(z\in A\times B\). מכיוון ש-\(y\notin C\), הרכיב השני של \(z\) אינו ב-\(C\), ולכן \(z\notin A\times C\).
+לכן \(z\in(A\times B)\setminus(A\times C)\).
+<span class="gap"></span>
+<strong>(\(\supseteq\))</strong> יהי \(z\in(A\times B)\setminus(A\times C)\). מכיוון ש-\(z\in A\times B\), קיימים \(x\in A\) ו-\(y\in B\) כך ש-\(z=\langle x,y\rangle\).
+אם היה \(y\in C\), אז (כי \(x\in A\)) היה \(z\in A\times C\) — בסתירה. לכן \(y\notin C\), כלומר \(y\in B\setminus C\), ולכן \(z\in A\times(B\setminus C)\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> איבר של מכפלה קרטזית הוא זוג. לכן הצעד הראשון הוא תמיד "קיימים \(x,y\) כך ש-\(z=\langle x,y\rangle\)" — נתון מסוג "קיים".
+  </li><li> בכיוון (\(\supseteq\)) הנתון \(z\notin A\times C\) הוא שלילה: "לא (\(x\in A\) וגם \(y\in C\))". מכיוון ש-\(x\in A\), נשאר ש-\(y\notin C\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 3 (צמצום במכפלה).</strong>
+יהיו \(A,B,C\) קבוצות. לכל טענה, הוכיחו או הפריכו.
+<ol><li> אם \(A\times B=A\times C\), אז \(B=C\).
+  </li><li> אם \(A\neq\emptyset\) ו-\(A\times B=A\times C\), אז \(B=C\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol3">הצגת הפתרון</button><div class="sol-body" id="t5-sol3" hidden><div class="p"><ol><li> לא נכון: \(A=\emptyset\), \(B=\{1\}\), \(C=\{2\}\). אז \(A\times B=\emptyset=A\times C\), אבל \(B\neq C\).
+  </li><li> נכון. נוכיח \(B\subseteq C\) (ההכלה השנייה זהה). יהי \(y\in B\). מכיוון ש-\(A\neq\emptyset\), יש \(x\in A\).
+        אז \(\langle x,y\rangle\in A\times B=A\times C\), ולכן \(y\in C\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> שוב הקבוצה הריקה "שוברת" טענה שנראית נכונה. בסעיף 2 ראו בדיוק איפה צריך את \(A\neq\emptyset\): כדי שיהיה \(x\) לבנות ממנו זוג.
+</li></ul></div></div></div></article>
+<h3 id="t5-s3"><span class="sec-num">3</span>יחסים</h3>
+<div class="p"><div class="thm"><strong>הגדרה (יחס).</strong> 
+<strong>יחס</strong> הוא קבוצה של זוגות סדורים. אם \(A\) קבוצה ו-\(R\subseteq A\times A\), אומרים ש-\(R\) הוא <strong>יחס מעל \(A\)</strong>.
+</div></div>
+<div class="p">במקום \(\langle a,b\rangle\in R\) כותבים לפעמים \(aRb\). למשל "\(2\le 5\)" פירושו \(\langle 2,5\rangle\in{\le}\).</div>
+<div class="p"><strong>דוגמאות.</strong>
+<ul><li> מעל \(\mathbb{N}\): היחס \(\le\), היחס "\(a\) מחלק את \(b\)", והיחס \(\{\langle n,n+1\rangle\mid n\in\mathbb{N}\}\).
+  </li><li> מעל כל קבוצה \(A\): היחס הריק \(\emptyset\), היחס המלא \(A\times A\), ויחס הזהות \(\mathrm{Id}_A=\{\langle a,a\rangle\mid a\in A\}\).
+</li></ul></div>
+<div class="p"><div class="thm remark"><strong>הערה.</strong> 
+גם בחיי היום-יום יש יחסים, למשל על קבוצת האנשים: "\(x\) הורה של \(y\)", "\(x\) אח או אחות של \(y\)", "\(x\) גבוה מ-\(y\)".
+</div></div>
+<div class="p"><div class="thm"><strong>הגדרה (תחום, תמונה ויחס הופכי).</strong> 
+יהי \(R\) יחס.
+<ul><li> <strong>התחום</strong> של \(R\): \(\operatorname{Dom}(R)=\{x\mid \exists y\;\langle x,y\rangle\in R\}\) — כל הרכיבים הראשונים.
+  </li><li> <strong>התמונה</strong> של \(R\): \(\operatorname{Im}(R)=\{y\mid \exists x\;\langle x,y\rangle\in R\}\) — כל הרכיבים השניים.
+  </li><li> <strong>היחס ההופכי</strong>: \(R^{-1}=\{\langle y,x\rangle\mid \langle x,y\rangle\in R\}\) — הופכים כל זוג.
+</li></ul>
+</div></div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (חישוב).</strong>
+<ol><li> אילו מהבאים הם יחסים? &emsp; \(\{\langle 1,2\rangle,\langle 3,4\rangle\}\), &emsp; \(\{\langle 1,2\rangle,3\}\), &emsp; \(\emptyset\), &emsp; \(\langle 1,2\rangle\).
+  </li><li> יהי \(R=\{\langle 1,2\rangle,\langle 1,3\rangle,\langle 3,4\rangle\}\). חשבו את \(\operatorname{Dom}(R)\), \(\operatorname{Im}(R)\) ו-\(R^{-1}\).
+        האם \(R\) הוא יחס מעל \(\{1,2,3\}\)? מעל \(\{1,2,3,4\}\)?
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol4">הצגת הפתרון</button><div class="sol-body" id="t5-sol4" hidden><div class="p"><ol><li> \(\{\langle 1,2\rangle,\langle 3,4\rangle\}\) ו-\(\emptyset\) הם יחסים (כל איבריהם זוגות — ב-\(\emptyset\) באופן ריק).
+        \(\{\langle 1,2\rangle,3\}\) אינו יחס, כי \(3\) אינו זוג. \(\langle 1,2\rangle\) אינו יחס: הוא זוג, לא קבוצה של זוגות.
+  </li><li> \(\operatorname{Dom}(R)=\{1,3\}\), \(\operatorname{Im}(R)=\{2,3,4\}\), \(R^{-1}=\{\langle 2,1\rangle,\langle 3,1\rangle,\langle 4,3\rangle\}\).
+        מעל \(\{1,2,3\}\) לא, כי \(\langle 3,4\rangle\notin\{1,2,3\}^2\). מעל \(\{1,2,3,4\}\) כן.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> \(R\) הוא יחס מעל \(A\) בדיוק כאשר \(\operatorname{Dom}(R)\subseteq A\) וגם \(\operatorname{Im}(R)\subseteq A\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (הוכח או הפרך).</strong>
+יהיו \(R,S\) יחסים. לכל טענה, הוכיחו או הפריכו.
+<ol><li> \(\operatorname{Dom}(R\cup S)=\operatorname{Dom}(R)\cup\operatorname{Dom}(S)\).
+  </li><li> \(\operatorname{Dom}(R\cap S)=\operatorname{Dom}(R)\cap\operatorname{Dom}(S)\).
+  </li><li> אם \(\operatorname{Dom}(R)=\operatorname{Dom}(S)\) וגם \(\operatorname{Im}(R)=\operatorname{Im}(S)\), אז \(R=S\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol5">הצגת הפתרון</button><div class="sol-body" id="t5-sol5" hidden><div class="p"><ol><li> נכון.
+        (\(\subseteq\)) יהי \(x\in\operatorname{Dom}(R\cup S)\). אז קיים \(y\) כך ש-\(\langle x,y\rangle\in R\cup S\).
+        אם \(\langle x,y\rangle\in R\) אז \(x\in\operatorname{Dom}(R)\); אחרת \(\langle x,y\rangle\in S\) ואז \(x\in\operatorname{Dom}(S)\).
+        (\(\supseteq\)) יהי \(x\in\operatorname{Dom}(R)\cup\operatorname{Dom}(S)\); נניח \(x\in\operatorname{Dom}(R)\) (המקרה השני זהה).
+        אז קיים \(y\) כך ש-\(\langle x,y\rangle\in R\subseteq R\cup S\), ולכן \(x\in\operatorname{Dom}(R\cup S)\).
+  </li><li> לא נכון: \(R=\{\langle 1,2\rangle\}\), \(S=\{\langle 1,3\rangle\}\). אז \(R\cap S=\emptyset\) ו-\(\operatorname{Dom}(R\cap S)=\emptyset\),
+        אבל \(\operatorname{Dom}(R)\cap\operatorname{Dom}(S)=\{1\}\). (ההכלה \(\subseteq\) דווקא נכונה תמיד.)
+  </li><li> לא נכון: \(R=\{\langle 1,2\rangle,\langle 3,4\rangle\}\), \(S=\{\langle 1,4\rangle,\langle 3,2\rangle\}\).
+        לשניהם התחום \(\{1,3\}\) והתמונה \(\{2,4\}\), אבל \(R\neq S\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בסעיף 2 ה"עד" \(y\) של \(x\) ב-\(R\) וה"עד" שלו ב-\(S\) יכולים להיות שונים — ולכן אין זוג משותף. זה אותו רעיון כמו בתרגיל דה מורגן: נתון מסוג "קיים" נותן עד, ושני נתונים כאלה נותנים שני עדים שלא בהכרח שווים.
+  </li><li> היחס לא נקבע על ידי התחום והתמונה: הם "שוכחים" מי מותאם למי.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (הכלה של ההופכי).</strong>
+יהי \(R\) יחס. הוכיחו: אם \(R^{-1}\subseteq R\), אז \(R^{-1}=R\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol6">הצגת הפתרון</button><div class="sol-body" id="t5-sol6" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+נניח \(R^{-1}\subseteq R\). נשאר להוכיח \(R\subseteq R^{-1}\). יהי \(z\in R\); אז \(z=\langle x,y\rangle\) עבור \(x,y\) כלשהם.
+לפי הגדרת ההופכי \(\langle y,x\rangle\in R^{-1}\), ומההנחה \(\langle y,x\rangle\in R\).
+שוב לפי הגדרת ההופכי (הופכים את הזוג \(\langle y,x\rangle\)), \(\langle x,y\rangle\in R^{-1}\), כלומר \(z\in R^{-1}\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> השתמשנו בהנחה \(R^{-1}\subseteq R\) על הזוג ההפוך \(\langle y,x\rangle\), ולא על \(z\) עצמו — זה הרעיון בתרגיל.
+  </li><li> במילים: אם כל זוג הפוך של זוג ב-\(R\) נמצא ב-\(R\), אז \(R\) "סגור להיפוך". בהמשך נראה שזו בדיוק סימטריות.
+</li></ul></div></div></div></article>
+<h3 id="t5-s4"><span class="sec-num">4</span>תכונות של יחסים</h3>
+<div class="p"><div class="thm"><strong>הגדרה (תכונות של יחס).</strong> 
+יהי \(R\) יחס מעל קבוצה \(A\).
+<ul><li> \(R\) <strong>רפלקסיבי מעל \(A\)</strong> אם לכל \(a\in A\) מתקיים \(\langle a,a\rangle\in R\).
+  </li><li> \(R\) <strong>סימטרי</strong> אם לכל \(a,b\): אם \(\langle a,b\rangle\in R\) אז \(\langle b,a\rangle\in R\).
+  </li><li> \(R\) <strong>אנטי-סימטרי</strong> אם לכל \(a,b\): אם \(\langle a,b\rangle\in R\) וגם \(\langle b,a\rangle\in R\), אז \(a=b\).
+  </li><li> \(R\) <strong>טרנזיטיבי</strong> אם לכל \(a,b,c\): אם \(\langle a,b\rangle\in R\) וגם \(\langle b,c\rangle\in R\), אז \(\langle a,c\rangle\in R\).
+</li></ul>
+</div></div>
+<div class="p"><strong>ומתי תכונה <em>לא</em> מתקיימת?</strong> נשלול כל הגדרה, במילים:
+<ul><li> \(R\) אינו רפלקסיבי מעל \(A\) אם יש \(a\in A\) כך ש-\(\langle a,a\rangle\notin R\).
+  </li><li> \(R\) אינו סימטרי אם יש זוג ב-\(R\) שההפוך שלו אינו ב-\(R\).
+  </li><li> \(R\) אינו אנטי-סימטרי אם יש \(a\neq b\) כך ששני הזוגות \(\langle a,b\rangle\) ו-\(\langle b,a\rangle\) ב-\(R\).
+  </li><li> \(R\) אינו טרנזיטיבי אם יש \(a,b,c\) כך ש-\(\langle a,b\rangle,\langle b,c\rangle\in R\) אבל \(\langle a,c\rangle\notin R\).
+</li></ul>
+כלומר: כדי להפריך תכונה מספיקה דוגמה אחת, וכדי להוכיח אותה צריך לבדוק את כל האיברים (או הזוגות).</div>
+<div class="p"><div class="thm remark"><strong>הערה.</strong> 
+דוגמאות מהיום-יום: "אח או אחות של" סימטרי (ולא רפלקסיבי — אדם אינו אח של עצמו).
+"גבוה מ-" טרנזיטיבי, ואנטי-סימטרי באופן ריק: אין שני אנשים שכל אחד גבוה מהשני.
+"הורה של" אינו טרנזיטיבי: סבא הוא הורה של הורה, אבל לא הורה.
+</div></div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (זיהוי תכונות).</strong>
+תהי \(A=\{1,2,3\}\). לכל אחד מהיחסים הבאים מעל \(A\) קבעו אם הוא רפלקסיבי מעל \(A\), סימטרי, אנטי-סימטרי וטרנזיטיבי.
+<ol><li> \(R_1=\{\langle 1,1\rangle,\langle 2,2\rangle,\langle 3,3\rangle,\langle 1,2\rangle\}\).
+  </li><li> \(R_2=\{\langle 1,2\rangle,\langle 2,1\rangle,\langle 2,3\rangle,\langle 3,2\rangle\}\).
+  </li><li> \(R_3=\{\langle 1,2\rangle,\langle 2,3\rangle,\langle 1,3\rangle\}\).
+  </li><li> \(R_4=\emptyset\).
+  </li><li> \(R_5=A\times A\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol7">הצגת הפתרון</button><div class="sol-body" id="t5-sol7" hidden><div class="p"><div class="center">
+<span class="gap"></span>
+<div class="tbl-wrap"><table class="steps simple"><tr><th>יחס</th><th>רפלקסיבי מעל \(A\)</th><th>סימטרי</th><th>אנטי-סימטרי</th><th>טרנזיטיבי</th></tr><tr><td>\(R_1\)</td><td>כן</td><td>לא</td><td>כן</td><td>כן</td></tr><tr><td>\(R_2\)</td><td>לא</td><td>כן</td><td>לא</td><td>לא</td></tr><tr><td>\(R_3\)</td><td>לא</td><td>לא</td><td>כן</td><td>כן</td></tr><tr><td>\(R_4\)</td><td>לא</td><td>כן</td><td>כן</td><td>כן</td></tr><tr><td>\(R_5\)</td><td>כן</td><td>כן</td><td>לא</td><td>כן</td></tr></table></div>
+</div>
+נימוקים לחלק מהמשבצות:
+<ul><li> \(R_1\) אינו סימטרי: \(\langle 1,2\rangle\in R_1\) אבל \(\langle 2,1\rangle\notin R_1\).
+  </li><li> \(R_2\) אינו טרנזיטיבי: \(\langle 1,2\rangle,\langle 2,1\rangle\in R_2\) אבל \(\langle 1,1\rangle\notin R_2\). אינו אנטי-סימטרי: \(\langle 1,2\rangle,\langle 2,1\rangle\in R_2\) ו-\(1\neq 2\).
+  </li><li> \(R_3\) טרנזיטיבי: הצירוף היחיד של שני זוגות "שמתחברים" הוא \(\langle 1,2\rangle,\langle 2,3\rangle\), והזוג \(\langle 1,3\rangle\) קיים.
+  </li><li> \(R_4=\emptyset\) סימטרי, אנטי-סימטרי וטרנזיטיבי באופן ריק — אין בו זוגות שיפרו את התנאים. אבל אינו רפלקסיבי מעל \(A\), כי \(A\neq\emptyset\).
+  </li><li> \(R_5\) אינו אנטי-סימטרי: \(\langle 1,2\rangle,\langle 2,1\rangle\in R_5\).
+</li></ul></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> סימטרי ואנטי-סימטרי אינם הפכים: \(R_4\) הוא גם וגם, ו-\(\{\langle 1,2\rangle,\langle 2,1\rangle,\langle 1,3\rangle\}\) אינו אף אחד מהם.
+  </li><li> רפלקסיביות תלויה ב-\(A\): אותו יחס \(R_1\) אינו רפלקסיבי מעל \(\{1,2,3,4\}\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (בונים דוגמאות).</strong>
+תהי \(A=\{1,2,3\}\). מצאו יחס מעל \(A\) ש:
+<ol><li> רפלקסיבי מעל \(A\) אבל אינו טרנזיטיבי.
+  </li><li> סימטרי ואנטי-סימטרי, ואינו ריק.
+  </li><li> טרנזיטיבי ואנטי-סימטרי, אבל אינו רפלקסיבי מעל \(A\).
+  </li><li> ומצאו שלושה יחסים שונים מעל \(A\) שאינם טרנזיטיביים.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol8">הצגת הפתרון</button><div class="sol-body" id="t5-sol8" hidden><div class="p"><ol><li> \(\mathrm{Id}_A\cup\{\langle 1,2\rangle,\langle 2,3\rangle\}\): יש \(\langle 1,2\rangle,\langle 2,3\rangle\) אבל אין \(\langle 1,3\rangle\).
+  </li><li> \(\{\langle 1,1\rangle\}\), או \(\mathrm{Id}_A\).
+  </li><li> \(\{\langle 1,2\rangle,\langle 2,3\rangle,\langle 1,3\rangle\}\) ("קטן ממש" מעל \(A\)): טרנזיטיבי ואנטי-סימטרי, אבל \(\langle 1,1\rangle\notin R\).
+        גם \(\{\langle 1,2\rangle\}\) או \(\emptyset\) מתאימים.
+  </li><li> למשל:
+        <ul><li> \(\{\langle 1,2\rangle,\langle 2,3\rangle\}\) — חסר \(\langle 1,3\rangle\).
+          </li><li> \(\{\langle 1,2\rangle,\langle 2,1\rangle\}\) — חסר \(\langle 1,1\rangle\).
+          </li><li> \(\{\langle 1,2\rangle,\langle 2,3\rangle,\langle 3,1\rangle\}\) — חסר, למשל, \(\langle 1,3\rangle\).
+        </li></ul>
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> סעיף 3 מראה שטרנזיטיביות ואנטי-סימטריות לא גוררות רפלקסיביות (יחס סדר "ממש" כמו \(&lt;\) הוא הדוגמה הטבעית).
+  </li><li> בסעיף 4, ב-\(\{\langle 1,2\rangle,\langle 2,1\rangle\}\) הטרנזיטיביות נכשלת עם \(a=c=1\), \(b=2\): בהגדרה לא דורשים ש-\(a,b,c\) יהיו שונים.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 9 (הוכח או הפרך).</strong>
+הוכיחו או הפריכו: לכל קבוצה \(A\), כל יחס מעל \(A\) שהוא טרנזיטיבי וסימטרי הוא רפלקסיבי מעל \(A\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol9">הצגת הפתרון</button><div class="sol-body" id="t5-sol9" hidden><div class="p">לא נכון: \(A=\{1,2\}\) ו-\(R=\{\langle 1,1\rangle\}\). היחס סימטרי וטרנזיטיבי, אבל \(\langle 2,2\rangle\notin R\).
+(גם \(A=\{1\}\) ו-\(R=\emptyset\) היא דוגמה נגדית: היחס הריק סימטרי וטרנזיטיבי באופן ריק.)</div><div class="p notes"><strong>הערות.</strong>
+<ul><li> ה"הוכחה" הבאה שגויה: "יהי \(a\in A\). אם \(\langle a,b\rangle\in R\), אז מסימטריות \(\langle b,a\rangle\in R\), ומטרנזיטיביות \(\langle a,a\rangle\in R\)."
+        הבעיה: לא בטוח שיש \(b\) כזה. בדוגמה, ל-\(2\) אין אף זוג ב-\(R\).
+  </li><li> מה כן נכון: אם \(a\in\operatorname{Dom}(R)\), אז \(\langle a,a\rangle\in R\) — בדיוק לפי ה"הוכחה" הנ״ל.
+  </li><li> כדי להפריך "לכל \(A\) ולכל \(R\)" מספיקה דוגמה אחת: קבוצה אחת ויחס אחד.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 10 (סימטרי ואנטי-סימטרי).</strong>
+תהי \(A\) קבוצה ויהי \(R\) יחס מעל \(A\). הוכיחו: \(R\subseteq\mathrm{Id}_A\) אם ורק אם \(R\) סימטרי ואנטי-סימטרי.</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol10">הצגת הפתרון</button><div class="sol-body" id="t5-sol10" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+<strong>(\(\Leftarrow\))</strong> נניח \(R\subseteq\mathrm{Id}_A\). נוכיח שתי טענות נפרדות.
+<ul><li> <em>\(R\) סימטרי.</em> יהיו \(a,b\) כך ש-\(\langle a,b\rangle\in R\). אז \(\langle a,b\rangle\in\mathrm{Id}_A\), ולכן \(a=b\). מכאן \(\langle b,a\rangle=\langle a,b\rangle\in R\).
+  </li><li> <em>\(R\) אנטי-סימטרי.</em> יהיו \(a,b\) כך ש-\(\langle a,b\rangle\in R\) ו-\(\langle b,a\rangle\in R\). אז \(\langle a,b\rangle\in\mathrm{Id}_A\), ולכן \(a=b\).
+</li></ul>
+<span class="gap"></span>
+<strong>(\(\Rightarrow\))</strong> נניח ש-\(R\) סימטרי ואנטי-סימטרי. יהי \(z\in R\). מכיוון ש-\(R\subseteq A\times A\), קיימים \(a,b\in A\) כך ש-\(z=\langle a,b\rangle\).
+מסימטריות \(\langle b,a\rangle\in R\), ומאנטי-סימטריות (עם שני הזוגות) \(a=b\). לכן \(z=\langle a,a\rangle\) עם \(a\in A\), כלומר \(z\in\mathrm{Id}_A\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בכיוון (\(\Leftarrow\)) צריך להוכיח <em>שתי</em> תכונות, ולכן כתבנו שתי הוכחות נפרדות, כל אחת עם "יהיו \(a,b\)" משלה — אפילו ששתיהן מתחילות מאותה הנחה.
+  </li><li> בכיוון (\(\Rightarrow\)) השתמשנו ב-\(R\subseteq A\times A\) כדי לדעת ש-\(a\in A\): בלי זה לא היינו יודעים ש-\(\langle a,a\rangle\in\mathrm{Id}_A\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 11 (טרנזיטיביות, חיתוך ואיחוד).</strong>
+יהיו \(R,S\) יחסים טרנזיטיביים מעל \(A\). הוכיחו או הפריכו:
+<ol><li> \(R\cap S\) טרנזיטיבי.
+  </li><li> \(R\cup S\) טרנזיטיבי.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol11">הצגת הפתרון</button><div class="sol-body" id="t5-sol11" hidden><div class="p"><ol><li> נכון. יהיו \(\langle a,b\rangle,\langle b,c\rangle\in R\cap S\). שני הזוגות ב-\(R\), ו-\(R\) טרנזיטיבי, ולכן \(\langle a,c\rangle\in R\). באותו אופן \(\langle a,c\rangle\in S\). לכן \(\langle a,c\rangle\in R\cap S\).
+  </li><li> לא נכון: \(A=\{1,2,3\}\), \(R=\{\langle 1,2\rangle\}\), \(S=\{\langle 2,3\rangle\}\). שניהם טרנזיטיביים (באופן ריק), אבל ב-\(R\cup S\) יש \(\langle 1,2\rangle,\langle 2,3\rangle\) ואין \(\langle 1,3\rangle\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בסעיף 1 הזוגות \(\langle a,b\rangle,\langle b,c\rangle\) נמצאים <em>באותו</em> יחס, ולכן אפשר להשתמש בטרנזיטיביות שלו. בסעיף 2 הם יכולים להגיע מיחסים שונים.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 12 ("קרובים").</strong>
+נגדיר יחס \(S\) מעל \(\mathbb{R}\): \(\langle x,y\rangle\in S\) אם ורק אם \(|x-y|&lt;1\). אילו מארבע התכונות מתקיימות?</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-sol12">הצגת הפתרון</button><div class="sol-body" id="t5-sol12" hidden><div class="p"><ul><li> רפלקסיבי מעל \(\mathbb{R}\): \(|x-x|=0&lt;1\).
+  </li><li> סימטרי: \(|y-x|=|x-y|\).
+  </li><li> אינו אנטי-סימטרי: \(\langle 0,0.5\rangle,\langle 0.5,0\rangle\in S\) ו-\(0\neq 0.5\).
+  </li><li> אינו טרנזיטיבי: \(\langle 0,0.6\rangle,\langle 0.6,1.2\rangle\in S\), אבל \(|0-1.2|=1.2\), ולכן \(\langle 0,1.2\rangle\notin S\).
+</li></ul></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> "קרוב של קרוב" אינו בהכרח קרוב: זו הסיבה שיחס כזה אינו יחס שקילות (נלמד בהמשך).
+</li></ul></div></div></div></article>
+<h3 id="t5-extra"><span class="sec-num">5</span>שאלות נוספות</h3>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (מכפלה וחיתוך, מכפלה ואיחוד).</strong>
+יהיו \(A,B,C,D\) קבוצות.
+<ol><li> הוכיחו: \(A\times(B\cap C)=(A\times B)\cap(A\times C)\).
+  </li><li> הוכיחו או הפריכו: \((A\cup C)\times(B\cup D)=(A\times B)\cup(C\times D)\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-x-sol1">הצגת הפתרון</button><div class="sol-body" id="t5-x-sol1" hidden><div class="p"><ol><li> לכל \(x,y\): \(\langle x,y\rangle\) שייך לאגף שמאל אמ״מ \(x\in A\) וגם \(y\in B\) וגם \(y\in C\),
+        אמ״מ (\(x\in A\) וגם \(y\in B\)) וגם (\(x\in A\) וגם \(y\in C\)), אמ״מ \(\langle x,y\rangle\) שייך לאגף ימין.
+        ושני האגפים מכילים רק זוגות.
+  </li><li> לא נכון: \(A=B=\{0\}\), \(C=D=\{1\}\). אז \(\langle 0,1\rangle\) באגף שמאל, אבל לא ב-\(\{0\}\times\{0\}\) ולא ב-\(\{1\}\times\{1\}\).
+        (ההכלה \(\supseteq\) נכונה תמיד.)
+</li></ol></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 2 (קבוצת חזקה של מכפלה).</strong>
+הוכיחו או הפריכו: לכל שתי קבוצות \(A,B\) מתקיים \(\mathcal{P}(A\times B)=\mathcal{P}(A)\times\mathcal{P}(B)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-x-sol2">הצגת הפתרון</button><div class="sol-body" id="t5-x-sol2" hidden><div class="p">לא נכון: \(A=\{1\}\), \(B=\{2\}\). אז \(\mathcal{P}(A\times B)=\{\emptyset,\{\langle 1,2\rangle\}\}\) — קבוצה של <em>קבוצות</em>,
+ואילו \(\mathcal{P}(A)\times\mathcal{P}(B)=\{\langle\emptyset,\emptyset\rangle,\langle\emptyset,\{2\}\rangle,\langle\{1\},\emptyset\rangle,\langle\{1\},\{2\}\rangle\}\) — קבוצה של <em>זוגות</em>.</div><div class="p notes"><strong>הערות.</strong>
+<ul><li> למעשה הן שונות לכל \(A,B\): \(\emptyset\in\mathcal{P}(A\times B)\), אבל \(\emptyset\) אינו זוג, ולכן \(\emptyset\notin\mathcal{P}(A)\times\mathcal{P}(B)\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 3 (כמה יחסים יש?).</strong>
+כמה יחסים יש מעל \(A=\{a,b\}\)? ומעל קבוצה עם \(n\) איברים?</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-x-sol3">הצגת הפתרון</button><div class="sol-body" id="t5-x-sol3" hidden><div class="p">יחס מעל \(A\) הוא תת-קבוצה של \(A\times A\), כלומר איבר של \(\mathcal{P}(A\times A)\). ל-\(A\times A\) יש \(4\) איברים, ולכן יש \(2^4=16\) יחסים.
+באופן כללי: ל-\(A\times A\) יש \(n^2\) איברים, ולכן יש \(2^{n^2}\) יחסים.</div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 4 (תחום ותמונה של ההופכי).</strong>
+יהי \(R\) יחס. הוכיחו: \(\operatorname{Dom}(R)=\operatorname{Im}(R^{-1})\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-x-sol4">הצגת הפתרון</button><div class="sol-body" id="t5-x-sol4" hidden><div class="p">לכל \(x\): \(x\in\operatorname{Dom}(R)\) אמ״מ קיים \(y\) כך ש-\(\langle x,y\rangle\in R\), אמ״מ קיים \(y\) כך ש-\(\langle y,x\rangle\in R^{-1}\), אמ״מ \(x\in\operatorname{Im}(R^{-1})\).</div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 5 (סימטריה והיחס ההופכי).</strong>
+יהי \(R\) יחס. הוכיחו: \(R\) סימטרי אם ורק אם \(R=R^{-1}\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-x-sol5">הצגת הפתרון</button><div class="sol-body" id="t5-x-sol5" hidden><div class="p">(\(\Leftarrow\)) נניח ש-\(R\) סימטרי. אם \(\langle x,y\rangle\in R\) אז \(\langle y,x\rangle\in R\), כלומר \(\langle x,y\rangle\in R^{-1}\); ולהפך, אם \(\langle x,y\rangle\in R^{-1}\) אז \(\langle y,x\rangle\in R\), ומסימטריות \(\langle x,y\rangle\in R\).</div><div class="p">(\(\Rightarrow\)) נניח \(R=R^{-1}\). אם \(\langle x,y\rangle\in R\) אז \(\langle y,x\rangle\in R^{-1}=R\).</div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בעזרת תרגיל 6 בתרגול אפשר לקצר את כיוון (\(\Leftarrow\)): מספיק להראות \(R^{-1}\subseteq R\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 6 (סימטריה, תחום ותמונה).</strong>
+הוכיחו או הפריכו: יחס \(R\) הוא סימטרי אם ורק אם \(\operatorname{Dom}(R)=\operatorname{Im}(R)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t5-x-sol6" hidden><div class="p">לא נכון. הכיוון "אם \(R\) סימטרי אז \(\operatorname{Dom}(R)=\operatorname{Im}(R)\)" נכון: אם \(\langle x,y\rangle\in R\) אז גם \(\langle y,x\rangle\in R\), ולכן כל רכיב ראשון הוא גם רכיב שני ולהפך.
+אבל הכיוון השני לא נכון: \(R=\{\langle 1,2\rangle,\langle 2,3\rangle,\langle 3,1\rangle\}\). כאן \(\operatorname{Dom}(R)=\operatorname{Im}(R)=\{1,2,3\}\), אבל \(\langle 2,1\rangle\notin R\).</div></div></div></article></section>
     </main>
   </div>
 </div>
