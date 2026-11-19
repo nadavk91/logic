@@ -168,6 +168,8 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 .fig-accent { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; }
 .fig-label text { fill: var(--fg); font: italic 17px "Times New Roman", serif; text-anchor: middle; }
 .fig-accent-label text { fill: var(--accent); }
+.fig-node circle { fill: var(--surface); stroke: var(--fg); stroke-width: 2; }
+.fig-num text { fill: var(--fg); font: 16px var(--body); text-anchor: middle; dominant-baseline: central; }
 .tbl-wrap { overflow-x: auto; margin: 1rem 0 1.25rem; }
 .steps { border-collapse: collapse; width: 100%; font-size: .95rem; line-height: 1.6; }
 .steps th, .steps td { border: 1px solid var(--rule); padding: .55rem .75rem; vertical-align: top; text-align: right; }
@@ -223,7 +225,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
     <aside class="rail">
       <nav class="tut-nav" aria-label="תרגולים">
         <h2>תרגולים</h2>
-        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>קשרים, שלילה וכתיבת הוכחות</a></li><li><a href="#t3" data-tid="t3"><span class="n">3</span>קבוצות: הגדרות, פעולות והוכחות</a><a class="sub" href="#t3-extra" data-parent="t3">שאלות נוספות</a></li><li><a href="#t4" data-tid="t4"><span class="n">4</span>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</a><a class="sub" href="#t4-extra" data-parent="t4">שאלות נוספות</a></li><li><a href="#t5" data-tid="t5"><span class="n">5</span>זוגות סדורים, מכפלה קרטזית ויחסים</a><a class="sub" href="#t5-extra" data-parent="t5">שאלות נוספות</a></li></ul>
+        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>קשרים, שלילה וכתיבת הוכחות</a></li><li><a href="#t3" data-tid="t3"><span class="n">3</span>קבוצות: הגדרות, פעולות והוכחות</a><a class="sub" href="#t3-extra" data-parent="t3">שאלות נוספות</a></li><li><a href="#t4" data-tid="t4"><span class="n">4</span>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</a><a class="sub" href="#t4-extra" data-parent="t4">שאלות נוספות</a></li><li><a href="#t5" data-tid="t5"><span class="n">5</span>זוגות סדורים, מכפלה קרטזית ויחסים</a><a class="sub" href="#t5-extra" data-parent="t5">שאלות נוספות</a></li><li><a href="#t6" data-tid="t6"><span class="n">6</span>יחסי סדר חלקיים</a><a class="sub" href="#t6-extra" data-parent="t6">שאלות נוספות</a></li></ul>
       </nav>
       <details class="toc" id="toc" open>
         <summary>בתרגול זה</summary>
@@ -1792,6 +1794,255 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <article class="exercise"><div class="p ex-statement"><strong>שאלה 6 (סימטריה, תחום ותמונה).</strong>
 הוכיחו או הפריכו: יחס \(R\) הוא סימטרי אם ורק אם \(\operatorname{Dom}(R)=\operatorname{Im}(R)\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t5-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t5-x-sol6" hidden><div class="p">לא נכון. הכיוון "אם \(R\) סימטרי אז \(\operatorname{Dom}(R)=\operatorname{Im}(R)\)" נכון: אם \(\langle x,y\rangle\in R\) אז גם \(\langle y,x\rangle\in R\), ולכן כל רכיב ראשון הוא גם רכיב שני ולהפך.
 אבל הכיוון השני לא נכון: \(R=\{\langle 1,2\rangle,\langle 2,3\rangle,\langle 3,1\rangle\}\). כאן \(\operatorname{Dom}(R)=\operatorname{Im}(R)=\{1,2,3\}\), אבל \(\langle 2,1\rangle\notin R\).</div></div></div></article></section>
+<section class="tirgul" id="t6" data-toc="&lt;li&gt;&lt;a href=&quot;#t6-s1&quot;&gt;יחס סדר חלקי&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t6-s2&quot;&gt;מינימום, מקסימום וסדר קווי&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t6-s3&quot;&gt;עוקב מיידי&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t6-s4&quot;&gt;עידון של חלוקות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t6-s5&quot;&gt;הכלה בין יחסי סדר&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t6-s6&quot;&gt;שרשראות ואנטי-שרשראות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t6-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 6</p><h2>יחסי סדר חלקיים</h2><div class="t-actions"><a class="to-extra" href="#t6-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul6.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul6-questions.pdf" target="_blank" rel="noopener">PDF ללא פתרונות</a><a class="pdf-link" href="pdf/tirgul6-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t6">הצגת כל הפתרונות</button></div><p class="sol-note">הפתרונות אינם רשמיים, ונכתבו לצורך התרגול בלבד.</p></header><h3 id="t6-s1"><span class="sec-num">1</span>יחס סדר חלקי</h3>
+<div class="p"><div class="thm"><strong>הגדרה (יחס סדר חלקי).</strong> 
+יהי \(R\) יחס מעל קבוצה \(A\). \(R\) נקרא <strong>יחס סדר חלקי</strong> מעל \(A\) אם הוא רפלקסיבי מעל \(A\), אנטי-סימטרי וטרנזיטיבי.<br>
+הזוג \(\langle A,R\rangle\) נקרא אז <strong>קבוצה סדורה חלקית</strong> (קס״ח).
+</div></div>
+<div class="p"><strong>דוגמאות.</strong> \(\le\) מעל \(\mathbb{N}\) (וגם מעל \(\mathbb{Z},\mathbb{Q},\mathbb{R}\)); \(\subseteq\) מעל \(\mathcal{P}(X)\);
+ויחס החלוקה מעל \(\mathbb{N}\): \(a\mid b\) אם קיים \(k\in\mathbb{N}\) כך ש-\(b=ak\).</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 1 (צמצום לתת-קבוצה).</strong>
+תהי \(\langle A,R\rangle\) קס״ח, ותהי \(B\subseteq A\). נסמן \(S=R\cap(B\times B)\) — הזוגות של \(R\) ששני הרכיבים שלהם ב-\(B\).
+הוכיחו ש-\(S\) יחס סדר חלקי מעל \(B\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol1">הצגת הפתרון</button><div class="sol-body" id="t6-sol1" hidden><div class="p">ראשית, \(S\subseteq B\times B\), ולכן \(S\) יחס מעל \(B\). נוכיח את שלוש התכונות בנפרד.
+<div class="proof"><strong>הוכחה.</strong> 
+<strong>רפלקסיביות מעל \(B\).</strong> יהי \(b\in B\). מכיוון ש-\(B\subseteq A\) ו-\(R\) רפלקסיבי מעל \(A\), \(bRb\). כמו כן \(\langle b,b\rangle\in B\times B\). לכן \(\langle b,b\rangle\in S\).
+<span class="gap"></span>
+<strong>אנטי-סימטריות.</strong> יהיו \(a,b\) כך ש-\(aSb\) וגם \(bSa\). מכיוון ש-\(S\subseteq R\), \(aRb\) וגם \(bRa\), ומאנטי-סימטריות \(R\), \(a=b\).
+<span class="gap"></span>
+<strong>טרנזיטיביות.</strong> יהיו \(a,b,c\) כך ש-\(aSb\) וגם \(bSc\). אז \(aRb\) וגם \(bRc\), ומטרנזיטיביות \(R\), \(aRc\).
+בנוסף \(a\in B\) (מ-\(\langle a,b\rangle\in B\times B\)) ו-\(c\in B\) (מ-\(\langle b,c\rangle\in B\times B\)), ולכן \(\langle a,c\rangle\in B\times B\). מכאן \(aSc\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> למשל, הצמצום של \(\le\) מעל \(\mathbb{Z}\) ל-\(\mathbb{N}\) הוא היחס \(\le\) מעל \(\mathbb{N}\). נחזור לצמצומים בתרגיל 5.
+  </li><li> אנטי-סימטריות עוברת לכל תת-קבוצה של \(R\). טרנזיטיביות לא: \(\{\langle 1,2\rangle,\langle 2,3\rangle\}\subseteq{\le}\) אינו טרנזיטיבי.
+        לכן בטרנזיטיביות היה צריך להראות גם ש-\(\langle a,c\rangle\in B\times B\).
+</li></ul></div></div></div></article>
+<h3 id="t6-s2"><span class="sec-num">2</span>מינימום, מקסימום וסדר קווי</h3>
+<div class="p"><div class="thm"><strong>הגדרה (השוואה ואיברים קיצוניים).</strong> 
+תהי \(\langle A,R\rangle\) קס״ח.
+<ul><li> \(a,b\in A\) <strong>ניתנים להשוואה</strong> אם \(aRb\) או \(bRa\).
+  </li><li> \(R\) נקרא <strong>סדר קווי</strong> אם כל שני איברים ב-\(A\) ניתנים להשוואה.
+  </li><li> \(a\in A\) <strong>מינימלי</strong> (מזערי) אם לכל \(x\in A\): אם \(xRa\) אז \(x=a\) — אין איבר מתחתיו.
+  </li><li> \(a\in A\) <strong>מינימום</strong> אם לכל \(x\in A\) מתקיים \(aRx\) — כולם מעליו.
+  </li><li> \(a\in A\) <strong>מקסימלי</strong> (מרבי) אם לכל \(x\in A\): אם \(aRx\) אז \(x=a\) — אין איבר מעליו.
+  </li><li> \(a\in A\) <strong>מקסימום</strong> אם לכל \(x\in A\) מתקיים \(xRa\) — כולם מתחתיו.
+</li></ul>
+</div></div>
+<div class="p"><strong>דוגמאות.</strong>
+<ul><li> \(\le\) מעל \(\mathbb{N}\) ומעל \(\mathbb{R}\) הוא סדר קווי. ב-\(\langle\mathbb{N},\le\rangle\) \(0\) הוא מינימום ואין מקסימום; ב-\(\langle\mathbb{R},\le\rangle\) אין אף אחד מהם.
+  </li><li> \(\subseteq\) מעל \(\mathcal{P}(\{1,2\})\) אינו סדר קווי: \(\{1\}\) ו-\(\{2\}\) אינם ניתנים להשוואה. ובכל זאת \(\emptyset\) מינימום ו-\(\{1,2\}\) מקסימום.
+  </li><li> יחס החלוקה מעל \(\mathbb{N}\) אינו סדר קווי: \(2\) ו-\(3\) אינם ניתנים להשוואה.
+</li></ul></div>
+<div class="p"><strong>דיאגרמת האסה</strong> (דיאגרמת הסדר) של קס״ח סופית: מציירים כל איבר כנקודה, ומותחים קו כלפי מעלה מ-\(a\) ל-\(b\)
+כאשר \(aRb\), \(a\neq b\), ואין איבר שנמצא ביניהם. אז \(aRb\) בדיוק כאשר \(a=b\), או שאפשר להגיע מ-\(a\) ל-\(b\) בהליכה למעלה לאורך הקווים.
+לא מציירים לולאות, ולא קווים שנובעים מטרנזיטיביות. איבר מינימלי הוא איבר שאין קו שיורד ממנו, ואיבר מקסימלי — שאין קו שעולה ממנו.</div>
+<div class="p"><div class="thm remark"><strong>הערה.</strong> 
+דוגמה מהיום-יום: הקורסים בתואר, עם היחס "\(x=y\), או ש-\(x\) דרוש (ישירות או בעקיפין) כדי ללמוד את \(y\)". זה סדר חלקי, ולא קווי:
+יש קורסים שאינם תלויים זה בזה. הקורסים המינימליים הם אלה שאין להם דרישות קדם.
+</div></div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 2 (קריאת דיאגרמה).</strong>
+נתבונן ביחס החלוקה על \(D=\{2,3,4,6,8,12\}\): \(aRb\) אם \(a\) מחלק את \(b\).
+<ol><li> ציירו את דיאגרמת האסה.
+  </li><li> מצאו את האיברים המינימליים והמקסימליים. האם יש מינימום? מקסימום?
+  </li><li> האם \(R\) סדר קווי?
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol2">הצגת הפתרון</button><div class="sol-body" id="t6-sol2" hidden><div class="p"><div class="center">
+<span class="gap"></span>
+<svg class="figure" viewBox="20 0 240 220" role="img" aria-label="דיאגרמת האסה של יחס החלוקה על הקבוצה 2, 3, 4, 6, 8, 12: בשורה התחתונה 2 ו-3, באמצעית 4 ו-6, ובעליונה 8 ו-12">
+  <!-- same layout as the TikZ picture in tirgul6.tex: x_svg = 50x + 20, y_svg = 190 - 50y -->
+  <g class="fig-line">
+    <line x1="110" y1="190" x2="90" y2="110"/>
+    <line x1="110" y1="190" x2="190" y2="110"/>
+    <line x1="210" y1="190" x2="190" y2="110"/>
+    <line x1="90" y1="110" x2="60" y2="30"/>
+    <line x1="90" y1="110" x2="160" y2="30"/>
+    <line x1="190" y1="110" x2="160" y2="30"/>
+  </g>
+  <g class="fig-node">
+    <circle cx="110" cy="190" r="17"/><circle cx="210" cy="190" r="17"/>
+    <circle cx="90" cy="110" r="17"/><circle cx="190" cy="110" r="17"/>
+    <circle cx="60" cy="30" r="17"/><circle cx="160" cy="30" r="17"/>
+  </g>
+  <g class="fig-num">
+    <text x="110" y="190">2</text><text x="210" y="190">3</text>
+    <text x="90" y="110">4</text><text x="190" y="110">6</text>
+    <text x="60" y="30">8</text><text x="160" y="30">12</text>
+  </g>
+</svg>
+
+<span class="gap"></span>
+</div>
+<ol><li> הדיאגרמה למעלה. למשל אין קו מ-\(2\) ל-\(12\), כי \(4\) (וגם \(6\)) נמצא ביניהם; זה נובע מטרנזיטיביות.
+  </li><li> המינימליים: \(2\) ו-\(3\). המקסימליים: \(8\) ו-\(12\). אין מינימום, כי \(2\) אינו מחלק את \(3\) ו-\(3\) אינו מחלק את \(2\). מאותה סיבה (\(8\) ו-\(12\)) אין מקסימום.
+  </li><li> לא: \(2\) ו-\(3\) אינם ניתנים להשוואה.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> יש שני איברים מינימליים ואין מינימום: "מינימלי" ו"מינימום" הם מושגים שונים.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 3 (שאלת ההכנה: יחסי סדר עם תכונות נתונות).</strong>
+תהי \(A=\{1,2,3,4,5\}\). לכל סעיף קבעו אם קיים יחס סדר חלקי \(R\) מעל \(A\) המקיים את הטענה.
+אם כן — תארו יחס כזה במפורש וציירו את דיאגרמת האסה שלו; אם לא — הסבירו למה.
+<ol><li class="lbl-item"><span class="lbl">(א)</span>  \(1\) ו-\(2\) ניתנים להשוואה, \(2\) ו-\(3\) ניתנים להשוואה, אבל \(1\) ו-\(3\) אינם ניתנים להשוואה.
+  </li><li class="lbl-item"><span class="lbl">(ב)</span>  \(5\) הוא מינימום, \(2\) הוא מקסימלי ו-\(4\) הוא מינימלי.
+  </li><li class="lbl-item"><span class="lbl">(ג)</span>  יש בדיוק שלושה איברים מינימליים ובדיוק ארבעה איברים מקסימליים.
+  </li><li class="lbl-item"><span class="lbl">(ד)</span>  קיים \(x\in A\) שהוא גם מינימום וגם מקסימום.
+  </li><li class="lbl-item"><span class="lbl">(ה)</span>  \(R\) סדר קווי, ו-\(2\) ו-\(5\) מינימליים.
+  </li><li class="lbl-item"><span class="lbl">(ח)</span>  אין \(x\in A\) שהוא מינימלי.
+</li></ol></div></article>
+<div class="p"><strong>תזכורת מההרצאה.</strong> תהי \(\langle A,R\rangle\) קס״ח.
+<ul><li> אם יש מינימום, אז הוא האיבר המינימלי היחיד. בפרט, יש לכל היותר מינימום אחד.
+  </li><li> הכיוון ההפוך לא נכון: איבר מינימלי יחיד אינו בהכרח מינימום.
+        למשל \(A=\mathbb{Z}\cup\{a\}\), עם הסדר הרגיל על \(\mathbb{Z}\), ו-\(a\) ניתן להשוואה רק עם עצמו:
+        לשלמים אין איבר מינימלי, ולכן \(a\) הוא המינימלי היחיד — אבל \(a\) אינו מינימום, כי \(a\) ו-\(0\) אינם ניתנים להשוואה.
+        (בקס״ח <em>סופית</em> הכיוון ההפוך דווקא נכון, ולכן דוגמה נגדית חייבת להיות אינסופית.)
+  </li><li> אם \(R\) סדר קווי, אז כל איבר מינימלי הוא מינימום — ובפרט הוא המינימלי היחיד.
+</li></ul>
+ובאופן סימטרי לגבי מקסימלי ומקסימום.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (יחס החלוקה על \(\mathbb{N}\)).</strong>
+נתבונן ביחס החלוקה מעל \(\mathbb{N}\).
+<ol><li> האם יש מינימום? מקסימום?
+  </li><li> נתבונן באותו יחס על הקבוצה \(\{2,3,4,\ldots\}\) (כלומר בצמצום שלו לקבוצה הזו). מהם האיברים המינימליים? האם יש מינימום? האם יש איברים מקסימליים?
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol3">הצגת הפתרון</button><div class="sol-body" id="t6-sol3" hidden><div class="p"><ol><li> \(1\) הוא מינימום, כי \(n=1\cdot n\) לכל \(n\). ו-\(0\) הוא מקסימום, כי \(0=n\cdot 0\), כלומר \(n\mid 0\) לכל \(n\).
+  </li><li> המינימליים הם הראשוניים: מחלק של ראשוני \(p\) מתוך \(\{2,3,\ldots\}\) הוא רק \(p\) עצמו, ולמספר פריק יש מחלק קטן ממנו בקבוצה.
+        אין מינימום: יש יותר מאיבר מינימלי אחד (למשל \(2\) ו-\(3\)), ומינימום הוא המינימלי היחיד.
+        אין איברים מקסימליים: \(n\mid 2n\) ו-\(2n\neq n\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> הסדר נקבע לפי היחס, לא לפי גודל המספרים: לפי יחס החלוקה דווקא \(0\) הוא האיבר ה"גדול" ביותר.
+  </li><li> בסעיף 2 השתמשנו בתזכורת: כדי להראות שאין מינימום, הספיק למצוא שני איברים מינימליים.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (מה קורה בצמצום?).</strong>
+בכל אחד מהמקרים הבאים מצאו את האיברים המינימליים והמקסימליים, ומינימום ומקסימום אם יש, לפי \(R\) ולפי הצמצום \(S=R\cap(B\times B)\) מתרגיל 1.
+<ol><li> \(A=\mathbb{Z}\), \(R={\le}\), \(B=\mathbb{N}\).
+  </li><li> \(A=\mathcal{P}(\{1,2,3\})\), \(R={\subseteq}\), \(B=\mathcal{P}(\{1,2,3\})\setminus\{\emptyset,\{1,2,3\}\}\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol4">הצגת הפתרון</button><div class="sol-body" id="t6-sol4" hidden><div class="p"><ol><li> לפי \(\le\) על \(\mathbb{Z}\) אין מינימליים ואין מקסימליים, ולכן גם אין מינימום ואין מקסימום.
+        לפי הצמצום ל-\(\mathbb{N}\), \(0\) הוא מינימום (ולכן המינימלי היחיד); עדיין אין מקסימליים ואין מקסימום.
+  </li><li> לפי \(\subseteq\) על \(\mathcal{P}(\{1,2,3\})\), \(\emptyset\) מינימום ו-\(\{1,2,3\}\) מקסימום.
+        לפי הצמצום, המינימליים הם שלושת היחידונים, והמקסימליים הם שלוש הקבוצות בנות שני איברים; אין מינימום ואין מקסימום.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בצמצום לתת-קבוצה מינימום ומקסימום יכולים להופיע (סעיף 1) או להיעלם (סעיף 2).
+</li></ul></div></div></div></article>
+<h3 id="t6-s3"><span class="sec-num">3</span>עוקב מיידי</h3>
+<div class="p"><div class="thm"><strong>הגדרה (עוקב מיידי).</strong> 
+תהי \(\langle A,R\rangle\) קס״ח ויהיו \(a,b\in A\). \(b\) <strong>עוקב מיידי</strong> של \(a\) אם מתקיימים שלושת התנאים:
+<ol><li> \(aRb\).
+  </li><li> \(a\neq b\).
+  </li><li> לכל \(c\in A\): אם \(aRc\) וגם \(cRb\), אז \(c=a\) או \(c=b\) — אין איבר ביניהם.
+</li></ol>
+</div></div>
+<div class="p">הקווים בדיאגרמת האסה הם בדיוק הזוגות \(\langle a,b\rangle\) שבהם \(b\) עוקב מיידי של \(a\).</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (מציאת עוקבים מיידיים).</strong>
+<ol><li> בקס״ח מתרגיל 2: מהם העוקבים המיידיים של \(2\)? של \(4\)? של \(8\)?
+  </li><li> ביחס החלוקה מעל \(\mathbb{N}\) (תרגיל 4): מהם העוקבים המיידיים של \(1\)? האם ל-\(0\) יש קודם מיידי?
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol5">הצגת הפתרון</button><div class="sol-body" id="t6-sol5" hidden><div class="p"><ol><li> של \(2\): \(4\) ו-\(6\) (\(8\) ו-\(12\) אינם, כי \(4\) ביניהם). של \(4\): \(8\) ו-\(12\). ל-\(8\) אין עוקב מיידי: הוא מקסימלי.
+  </li><li> המספרים הראשוניים. אם \(p\) ראשוני אז \(1\mid p\), \(p\neq 1\), והמחלקים היחידים של \(p\) הם \(1\) ו-\(p\).
+        אם \(n\ge 2\) אינו ראשוני, אז \(n=ab\) עם \(1&lt;a&lt;n\), ו-\(a\) נמצא בין \(1\) ל-\(n\). וגם \(0\) אינו עוקב מיידי של \(1\): \(2\) נמצא ביניהם.
+        ל-\(0\) אין קודם מיידי: לכל \(n\ge 1\) מתקיים \(n\mid 2n\mid 0\), ו-\(2n\) שונה מ-\(n\) ומ-\(0\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> ל-\(2\) יש שני עוקבים מיידיים, ול-\(1\) ביחס החלוקה — אינסוף. זה אפשרי כי הסדרים האלה אינם קוויים: ראו תרגיל 8.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (שאלת ההכנה, סעיפים ו–ז).</strong>
+אותה \(A=\{1,2,3,4,5\}\) ואותן הוראות כמו בתרגיל 3: קבעו אם קיים יחס סדר חלקי \(R\) מעל \(A\) המקיים את הטענה.
+<ol><li class="lbl-item"><span class="lbl">(ו)</span>  ל-\(5\) יש בדיוק שלושה עוקבים מיידיים, ואף אחד מהם אינו מקסימלי.
+  </li><li class="lbl-item"><span class="lbl">(ז)</span>  \(2\) ו-\(1\) עוקבים מיידיים של \(5\), ו-\(R\) סדר קווי.
+</li></ol></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (לכל היותר עוקב מיידי אחד).</strong>
+תהי \(\langle A,R\rangle\) קס״ח כך ש-\(R\) סדר קווי, ויהי \(a\in A\). הוכיחו של-\(a\) יש לכל היותר עוקב מיידי אחד.</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol6">הצגת הפתרון</button><div class="sol-body" id="t6-sol6" hidden><div class="p">"לכל היותר אחד" היא טענת יחידות: לוקחים שני עוקבים מיידיים ומראים שהם שווים.
+<div class="proof"><strong>הוכחה.</strong> 
+יהיו \(b,c\) עוקבים מיידיים של \(a\); צ״ל \(b=c\). מכיוון ש-\(R\) קווי, \(bRc\) או \(cRb\).
+<ul><li> אם \(bRc\): מתקיים \(aRb\) וגם \(bRc\). מכיוון ש-\(c\) עוקב מיידי של \(a\), נקבל \(b=a\) או \(b=c\).
+        אבל \(b\neq a\), כי \(b\) עוקב מיידי של \(a\). לכן \(b=c\).
+  </li><li> אם \(cRb\): באותו אופן, בהחלפת התפקידים של \(b\) ו-\(c\), נקבל \(c=b\).
+</li></ul>
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> הטענה לא אומרת שיש עוקב מיידי: ב-\(\langle\mathbb{R},\le\rangle\) לאף איבר אין עוקב מיידי.
+  </li><li> בלי קוויות הטענה לא נכונה: בתרגיל 6 ל-\(2\) יש שני עוקבים מיידיים.
+  </li><li> אותה הוכחה בדיוק מראה שבסדר קווי יש לכל היותר קודם מיידי אחד.
+</li></ul></div></div></div></article>
+<h3 id="t6-s4"><span class="sec-num">4</span>עידון של חלוקות</h3>
+<div class="p"><div class="thm"><strong>הגדרה (עידון).</strong> 
+תהי \(A\) קבוצה, ונסמן ב-\(\mathrm{Part}(A)\) את קבוצת כל החלוקות של \(A\). לכל \(P,Q\in\mathrm{Part}(A)\):
+\(P\) <strong>מעדנת</strong> את \(Q\), ונסמן \(P\preceq Q\), אם לכל \(X\in P\) קיים \(Y\in Q\) כך ש-\(X\subseteq Y\).
+</div></div>
+<div class="p">כלומר כל חלק של \(P\) מוכל בחלק של \(Q\): את \(P\) מקבלים מ-\(Q\) על ידי "שבירה" של חלקים לחלקים קטנים יותר.</div>
+<div class="p"><strong>דוגמה.</strong> ל-\(A=\{1,2,3\}\) יש חמש חלוקות.
+החלוקה \(\{\{1\},\{2\},\{3\}\}\) מעדנת את כולן, וכולן מעדנות את \(\{\{1,2,3\}\}\).
+שלוש החלוקות האחרות, \(\{\{1,2\},\{3\}\}\), \(\{\{1,3\},\{2\}\}\) ו-\(\{\{2,3\},\{1\}\}\), אינן ניתנות להשוואה זו לזו.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 9 (העידון טרנזיטיבי).</strong>
+תהי \(A\) קבוצה, ויהיו \(P,Q,T\in\mathrm{Part}(A)\). הוכיחו: אם \(P\preceq Q\) וגם \(Q\preceq T\), אז \(P\preceq T\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol7">הצגת הפתרון</button><div class="sol-body" id="t6-sol7" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+נניח \(P\preceq Q\) ו-\(Q\preceq T\). יהי \(X\in P\); צ״ל שקיים \(Z\in T\) כך ש-\(X\subseteq Z\).
+מכיוון ש-\(P\preceq Q\), קיים \(Y\in Q\) כך ש-\(X\subseteq Y\). מכיוון ש-\(Q\preceq T\) ו-\(Y\in Q\), קיים \(Z\in T\) כך ש-\(Y\subseteq Z\).
+לכן \(X\subseteq Y\subseteq Z\), ומטרנזיטיביות ההכלה \(X\subseteq Z\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> שני הנתונים הם מסוג "לכל ... קיים": בכל אחד מהם מציבים איבר (\(X\), ואחר כך \(Y\)) ומקבלים עד (\(Y\), ואחר כך \(Z\)).
+  </li><li> בהוכחה לא השתמשנו בכך ש-\(P,Q,T\) הן חלוקות. בהוכחת האנטי-סימטריות דווקא צריך את זה (החלקים זרים ולא ריקים).
+  </li><li> יחד עם רפלקסיביות ואנטי-סימטריות, \(\preceq\) הוא יחס סדר חלקי מעל \(\mathrm{Part}(A)\). ההוכחה המלאה בשאלות הנוספות.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 10 (החלוקות הקיצוניות).</strong>
+תהי \(A\neq\emptyset\). הוכיחו שבקס״ח \(\langle\mathrm{Part}(A),\preceq\rangle\) החלוקה \(\{\{x\}\mid x\in A\}\) היא מינימום, והחלוקה \(\{A\}\) היא מקסימום.</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol8">הצגת הפתרון</button><div class="sol-body" id="t6-sol8" hidden><div class="p"><ul><li> מינימום: תהי \(Q\in\mathrm{Part}(A)\), ויהי \(\{x\}\) חלק של \(\{\{x\}\mid x\in A\}\). מכיוון ש-\(x\in A=\bigcup Q\), קיים \(Y\in Q\) כך ש-\(x\in Y\), כלומר \(\{x\}\subseteq Y\).
+  </li><li> מקסימום: תהי \(P\in\mathrm{Part}(A)\), ויהי \(X\in P\). אז \(X\subseteq A\), ו-\(A\in\{A\}\).
+</li></ul></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> צריך \(A\neq\emptyset\) כדי ש-\(\{A\}\) תהיה חלוקה: בחלוקה אין חלק ריק.
+</li></ul></div></div></div></article>
+<h3 id="t6-s5"><span class="sec-num">5</span>הכלה בין יחסי סדר</h3>
+<div class="p">יחס סדר הוא קבוצה של זוגות, ולכן אפשר לשאול מתי יחס סדר אחד מוכל ביחס סדר אחר.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 11 (סדר קווי שמוכל בסדר חלקי).</strong>
+תהי \(A\) קבוצה, \(R\) יחס סדר קווי מעל \(A\) ו-\(S\) יחס סדר חלקי מעל \(A\). הוכיחו: אם \(R\subseteq S\), אז \(R=S\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol9">הצגת הפתרון</button><div class="sol-body" id="t6-sol9" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+נשאר להוכיח \(S\subseteq R\). יהיו \(a,b\) כך ש-\(aSb\); צ״ל \(aRb\). מכיוון ש-\(R\) קווי, \(aRb\) או \(bRa\).
+אם \(aRb\) סיימנו. אחרת \(bRa\), ומכיוון ש-\(R\subseteq S\) גם \(bSa\). יחד עם \(aSb\) ומאנטי-סימטריות \(S\), \(a=b\), ואז \(aRb\) מרפלקסיביות \(R\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> במילים: אי אפשר להוסיף זוגות לסדר קווי ולקבל סדר חלקי — סדר קווי הוא איבר מקסימלי ביחס ההכלה בין יחסי הסדר החלקיים מעל \(A\) (הרצאה).
+</li></ul></div></div></div></article>
+<h3 id="t6-s6"><span class="sec-num">6</span>שרשראות ואנטי-שרשראות</h3>
+<div class="p"><div class="thm"><strong>הגדרה (שרשרת ואנטי-שרשרת).</strong> 
+תהי \(\langle A,R\rangle\) קס״ח. \(C\subseteq A\) היא <strong>שרשרת</strong> אם כל שני איברים ב-\(C\) ניתנים להשוואה,
+ו-\(D\subseteq A\) היא <strong>אנטי-שרשרת</strong> אם כל שני איברים <em>שונים</em> ב-\(D\) אינם ניתנים להשוואה.
+שרשרת (אנטי-שרשרת) היא <strong>מקסימלית</strong> אם היא אינה מוכלת ממש בשרשרת (אנטי-שרשרת) אחרת.
+</div></div>
+<div class="p">במילים: שרשרת היא תת-קבוצה שעליה הסדר קווי (הצמצום \(R\cap(C\times C)\) הוא סדר קווי), ובאנטי-שרשרת אין שני איברים שונים שניתנים להשוואה.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 12 (שרשראות ואנטי-שרשראות).</strong>
+<ol><li> בקס״ח מתרגיל 2: מצאו שרשרת מקסימלית שמכילה את \(2\), ואנטי-שרשרת מקסימלית.
+  </li><li> בקס״ח \(\langle\mathrm{Part}(\{1,2,3\}),\preceq\rangle\): מצאו שרשרת מקסימלית, ואנטי-שרשרת עם שלושה איברים.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol10">הצגת הפתרון</button><div class="sol-body" id="t6-sol10" hidden><div class="p"><ol><li> השרשרת \(\{2,4,8\}\) מקסימלית: \(3\) אינו ניתן להשוואה עם \(2\), \(6\) אינו ניתן להשוואה עם \(4\), ו-\(12\) אינו ניתן להשוואה עם \(8\).
+        האנטי-שרשרת \(\{8,12\}\) מקסימלית: כל אחד מהאיברים האחרים מחלק את \(8\) או את \(12\).
+  </li><li> שלוש החלוקות
+        <div class="dm">\[\{\{1\},\{2\},\{3\}\}\preceq\{\{1,2\},\{3\}\}\preceq\{\{1,2,3\}\}\]</div>
+        הן שרשרת מקסימלית: שתי החלוקות הנותרות אינן ניתנות להשוואה עם \(\{\{1,2\},\{3\}\}\).
+        האנטי-שרשרת: שלוש החלוקות \(\{\{1,2\},\{3\}\}\), \(\{\{1,3\},\{2\}\}\), \(\{\{2,3\},\{1\}\}\) — אף אחת מהן אינה מעדנת אחרת.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> "מקסימלית" פירושה שאי אפשר להרחיב אותה, ולא שהיא הגדולה ביותר — אותו הבדל כמו בין "מקסימלי" ל"מקסימום".
+        למשל ב-\(\mathrm{Part}(\{1,2,3\})\), האנטי-שרשרת שהאיבר היחיד שלה הוא \(\{\{1,2,3\}\}\) מקסימלית (החלוקה הזו ניתנת להשוואה עם כל חלוקה),
+        אף שיש אנטי-שרשרת עם שלושה איברים.
+</li></ul></div></div></div></article>
+<h3 id="t6-extra"><span class="sec-num">7</span>שאלות נוספות</h3>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (סדר על קבוצת החזקה של \(\mathbb{N}\)).</strong>
+(שאלה 2 מדף ההכנה לתרגול 6.)
+נסמן \(R=\{\langle X,Y\rangle\mid X,Y\in\mathcal{P}(\mathbb{N})\land X\subseteq Y\land Y\setminus X\subseteq 2\mathbb{N}\}\),
+כאשר \(2\mathbb{N}\) היא קבוצת הטבעיים הזוגיים.
+<ol><li class="lbl-item"><span class="lbl">(א)</span>  הוכיחו ש-\(R\) יחס סדר חלקי מעל \(\mathcal{P}(\mathbb{N})\).
+  </li><li class="lbl-item"><span class="lbl">(ב)</span>  מצאו את כל האיברים המקסימליים לפי \(R\).
+  </li><li class="lbl-item"><span class="lbl">(ג)</span>  מצאו את כל האיברים ב-\(\mathcal{P}(\mathbb{N})\) שיש להם עוקב מיידי לפי \(R\).
+</li></ol></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 2 (העידון הוא יחס סדר חלקי).</strong>
+תהי \(A\) קבוצה. הוכיחו שיחס העידון \(\preceq\) הוא יחס סדר חלקי מעל \(\mathrm{Part}(A)\).
+(את הטרנזיטיביות הוכחנו בתרגיל 9 בתרגול.)</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-x-sol1">הצגת הפתרון</button><div class="sol-body" id="t6-x-sol1" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+<strong>רפלקסיביות.</strong> תהי \(P\in\mathrm{Part}(A)\) ויהי \(X\in P\). אז \(X\in P\) ו-\(X\subseteq X\), ולכן \(P\preceq P\).
+<span class="gap"></span>
+<strong>אנטי-סימטריות.</strong> יהיו \(P,Q\in\mathrm{Part}(A)\) כך ש-\(P\preceq Q\) וגם \(Q\preceq P\). נוכיח \(P\subseteq Q\) (ההכלה השנייה זהה).
+יהי \(X\in P\). מכיוון ש-\(P\preceq Q\), קיים \(Y\in Q\) כך ש-\(X\subseteq Y\). מכיוון ש-\(Q\preceq P\), קיים \(Z\in P\) כך ש-\(Y\subseteq Z\).
+אז \(X\subseteq Z\), ו-\(X\neq\emptyset\) (חלק של חלוקה), ולכן \(X\cap Z=X\neq\emptyset\). החלקים של \(P\) זרים, ולכן \(X=Z\).
+מכאן \(X\subseteq Y\subseteq X\), כלומר \(X=Y\in Q\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בטרנזיטיביות לא היה צורך בתכונות של חלוקה, אבל באנטי-סימטריות השתמשנו בשתיים מהן: אין חלק ריק, והחלקים זרים.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 3 (שרשראות ואנטי-שרשראות בקבוצת חזקה).</strong>
+נתבונן ב-\(\langle\mathcal{P}(X),\subseteq\rangle\) עבור \(X=\{1,2,3,4\}\).
+<ol><li> השלימו את \(\{\{1\},\{1,2\},\{1,2,4\}\}\) לשרשרת מקסימלית.
+  </li><li> הוכיחו שקבוצת כל תת-הקבוצות של \(X\) בנות שני איברים היא אנטי-שרשרת מקסימלית.
+  </li><li> הוכיחו ש-\(\{\emptyset\}\) היא אנטי-שרשרת מקסימלית, אף שיש אנטי-שרשראות עם יותר איברים.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-x-sol2">הצגת הפתרון</button><div class="sol-body" id="t6-x-sol2" hidden><div class="p"><ol><li> \(\{\emptyset,\{1\},\{1,2\},\{1,2,4\},X\}\). בשרשרת יש קבוצה מכל גודל מ-\(0\) עד \(4\). קבוצה \(Y\) שנרצה להוסיף צריכה להיות ניתנת להשוואה עם הקבוצה בשרשרת שגודלה כגודל \(Y\),
+        אבל שתי קבוצות באותו גודל ניתנות להשוואה רק אם הן שוות. לכן \(Y\) כבר בשרשרת.
+  </li><li> שתי קבוצות שונות בנות שני איברים אינן מוכלות זו בזו. מקסימליות: כל קבוצה בגודל \(0\) או \(1\) מוכלת בקבוצה בגודל \(2\), וכל קבוצה בגודל \(3\) או \(4\) מכילה כזו — כך שאי אפשר להוסיף אותה.
+  </li><li> \(\emptyset\) מוכלת בכל קבוצה, ולכן ניתנת להשוואה עם כל קבוצה ואי אפשר להוסיף לה דבר. ובסעיף 2 יש אנטי-שרשרת עם \(6\) איברים.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> "מקסימלית" פירושה שאי אפשר להרחיב אותה, ולא שהיא הגדולה ביותר. אותו הבדל כמו בין "מקסימלי" ל"מקסימום".
+</li></ul></div></div></div></article></section>
     </main>
   </div>
 </div>
