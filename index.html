@@ -1801,28 +1801,13 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 </div></div>
 <div class="p"><strong>דוגמאות.</strong> \(\le\) מעל \(\mathbb{N}\) (וגם מעל \(\mathbb{Z},\mathbb{Q},\mathbb{R}\)); \(\subseteq\) מעל \(\mathcal{P}(X)\);
 ויחס החלוקה מעל \(\mathbb{N}\): \(a\mid b\) אם קיים \(k\in\mathbb{N}\) כך ש-\(b=ak\).</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 1 (צמצום לתת-קבוצה).</strong>
-תהי \(\langle A,R\rangle\) קס״ח, ותהי \(B\subseteq A\). נסמן \(S=R\cap(B\times B)\) — הזוגות של \(R\) ששני הרכיבים שלהם ב-\(B\).
-הוכיחו ש-\(S\) יחס סדר חלקי מעל \(B\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol1">הצגת הפתרון</button><div class="sol-body" id="t6-sol1" hidden><div class="p">ראשית, \(S\subseteq B\times B\), ולכן \(S\) יחס מעל \(B\). נוכיח את שלוש התכונות בנפרד.
-<div class="proof"><strong>הוכחה.</strong> 
-<strong>רפלקסיביות מעל \(B\).</strong> יהי \(b\in B\). מכיוון ש-\(B\subseteq A\) ו-\(R\) רפלקסיבי מעל \(A\), \(bRb\). כמו כן \(\langle b,b\rangle\in B\times B\). לכן \(\langle b,b\rangle\in S\).
-<span class="gap"></span>
-<strong>אנטי-סימטריות.</strong> יהיו \(a,b\) כך ש-\(aSb\) וגם \(bSa\). מכיוון ש-\(S\subseteq R\), \(aRb\) וגם \(bRa\), ומאנטי-סימטריות \(R\), \(a=b\).
-<span class="gap"></span>
-<strong>טרנזיטיביות.</strong> יהיו \(a,b,c\) כך ש-\(aSb\) וגם \(bSc\). אז \(aRb\) וגם \(bRc\), ומטרנזיטיביות \(R\), \(aRc\).
-בנוסף \(a\in B\) (מ-\(\langle a,b\rangle\in B\times B\)) ו-\(c\in B\) (מ-\(\langle b,c\rangle\in B\times B\)), ולכן \(\langle a,c\rangle\in B\times B\). מכאן \(aSc\).
-<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
-<ul><li> למשל, הצמצום של \(\le\) מעל \(\mathbb{Z}\) ל-\(\mathbb{N}\) הוא היחס \(\le\) מעל \(\mathbb{N}\). נחזור לצמצומים בתרגיל 5.
-  </li><li> אנטי-סימטריות עוברת לכל תת-קבוצה של \(R\). טרנזיטיביות לא: \(\{\langle 1,2\rangle,\langle 2,3\rangle\}\subseteq{\le}\) אינו טרנזיטיבי.
-        לכן בטרנזיטיביות היה צריך להראות גם ש-\(\langle a,c\rangle\in B\times B\).
-</li></ul></div></div></div></article>
 <h3 id="t6-s2"><span class="sec-num">2</span>דיאגרמת האסה</h3>
 <div class="p"><strong>דיאגרמת האסה</strong> (דיאגרמת הסדר) של קס״ח סופית: מציירים כל איבר כנקודה, ומותחים קו כלפי מעלה מ-\(a\) ל-\(b\)
 כאשר \(aRb\), \(a\neq b\), ואין איבר שנמצא ביניהם. אז \(aRb\) בדיוק כאשר \(a=b\), או שאפשר להגיע מ-\(a\) ל-\(b\) בהליכה למעלה לאורך הקווים.
 לא מציירים לולאות, ולא קווים שנובעים מטרנזיטיביות.</div>
 <div class="p"><strong>דוגמאות</strong> (נצייר על הלוח): \(\le\) על \(\{1,2,3,4\}\); יחס החלוקה על \(\{1,2,3,4,5,6\}\); \(\subseteq\) על \(\mathcal{P}(\{1,2,3\})\).</div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 2 (ציור דיאגרמה).</strong>
-נתבונן ביחס החלוקה על \(D=\{2,3,4,6,8,12\}\): \(aRb\) אם \(a\) מחלק את \(b\). ציירו את דיאגרמת האסה.</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol2">הצגת הפתרון</button><div class="sol-body" id="t6-sol2" hidden><div class="p"><div class="center">
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 1 (ציור דיאגרמה).</strong>
+נתבונן ביחס החלוקה על \(D=\{2,3,4,6,8,12\}\): \(aRb\) אם \(a\) מחלק את \(b\). ציירו את דיאגרמת האסה.</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol1">הצגת הפתרון</button><div class="sol-body" id="t6-sol1" hidden><div class="p"><div class="center">
 <span class="gap"></span>
 <svg class="figure" viewBox="20 0 240 220" role="img" aria-label="דיאגרמת האסה של יחס החלוקה על הקבוצה 2, 3, 4, 6, 8, 12: בשורה התחתונה 2 ו-3, באמצעית 4 ו-6, ובעליונה 8 ו-12">
   <!-- same layout as the TikZ picture in tirgul6.tex: x_svg = 50x + 20, y_svg = 190 - 50y -->
@@ -1870,16 +1855,16 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 דוגמה מהיום-יום: הקורסים בתואר, עם היחס "\(x=y\), או ש-\(x\) דרוש (ישירות או בעקיפין) כדי ללמוד את \(y\)". זה סדר חלקי, ולא קווי:
 יש קורסים שאינם תלויים זה בזה. הקורסים המינימליים הם אלה שאין להם דרישות קדם.
 </div></div>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 3 (המשך תרגיל 2).</strong>
-בקס״ח מתרגיל 2:
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 2 (המשך תרגיל 1).</strong>
+בקס״ח מתרגיל 1:
 <ol><li> מצאו את האיברים המינימליים והמקסימליים. האם יש מינימום? מקסימום?
   </li><li> האם \(R\) סדר קווי?
-</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol3">הצגת הפתרון</button><div class="sol-body" id="t6-sol3" hidden><div class="p"><ol><li> המינימליים: \(2\) ו-\(3\). המקסימליים: \(8\) ו-\(12\). אין מינימום, כי \(2\) אינו מחלק את \(3\) ו-\(3\) אינו מחלק את \(2\). מאותה סיבה (\(8\) ו-\(12\)) אין מקסימום.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol2">הצגת הפתרון</button><div class="sol-body" id="t6-sol2" hidden><div class="p"><ol><li> המינימליים: \(2\) ו-\(3\). המקסימליים: \(8\) ו-\(12\). אין מינימום, כי \(2\) אינו מחלק את \(3\) ו-\(3\) אינו מחלק את \(2\). מאותה סיבה (\(8\) ו-\(12\)) אין מקסימום.
   </li><li> לא: \(2\) ו-\(3\) אינם ניתנים להשוואה.
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
 <ul><li> יש שני איברים מינימליים ואין מינימום: "מינימלי" ו"מינימום" הם מושגים שונים.
 </li></ul></div></div></div></article>
-<article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (שאלת ההכנה: יחסי סדר עם תכונות נתונות).</strong>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 3 (שאלת ההכנה: יחסי סדר עם תכונות נתונות).</strong>
 תהי \(A=\{1,2,3,4,5\}\). לכל סעיף קבעו אם קיים יחס סדר חלקי \(R\) מעל \(A\) המקיים את הטענה.
 אם כן — תארו יחס כזה במפורש וציירו את דיאגרמת האסה שלו; אם לא — הסבירו למה.
 <ol><li class="lbl-item"><span class="lbl">(א)</span>  \(1\) ו-\(2\) ניתנים להשוואה, \(2\) ו-\(3\) ניתנים להשוואה, אבל \(1\) ו-\(3\) אינם ניתנים להשוואה.
@@ -1898,8 +1883,23 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> אם \(R\) סדר קווי, אז כל איבר מינימלי הוא מינימום — ובפרט הוא המינימלי היחיד.
 </li></ul>
 ובאופן סימטרי לגבי מקסימלי ומקסימום.</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (צמצום לתת-קבוצה).</strong>
+תהי \(\langle A,R\rangle\) קס״ח, ותהי \(B\subseteq A\). נסמן \(S=R\cap(B\times B)\) — הזוגות של \(R\) ששני הרכיבים שלהם ב-\(B\).
+הוכיחו ש-\(S\) יחס סדר חלקי מעל \(B\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol3">הצגת הפתרון</button><div class="sol-body" id="t6-sol3" hidden><div class="p">ראשית, \(S\subseteq B\times B\), ולכן \(S\) יחס מעל \(B\). נוכיח את שלוש התכונות בנפרד.
+<div class="proof"><strong>הוכחה.</strong> 
+<strong>רפלקסיביות מעל \(B\).</strong> יהי \(b\in B\). מכיוון ש-\(B\subseteq A\) ו-\(R\) רפלקסיבי מעל \(A\), \(bRb\). כמו כן \(\langle b,b\rangle\in B\times B\). לכן \(\langle b,b\rangle\in S\).
+<span class="gap"></span>
+<strong>אנטי-סימטריות.</strong> יהיו \(a,b\) כך ש-\(aSb\) וגם \(bSa\). מכיוון ש-\(S\subseteq R\), \(aRb\) וגם \(bRa\), ומאנטי-סימטריות \(R\), \(a=b\).
+<span class="gap"></span>
+<strong>טרנזיטיביות.</strong> יהיו \(a,b,c\) כך ש-\(aSb\) וגם \(bSc\). אז \(aRb\) וגם \(bRc\), ומטרנזיטיביות \(R\), \(aRc\).
+בנוסף \(a\in B\) (מ-\(\langle a,b\rangle\in B\times B\)) ו-\(c\in B\) (מ-\(\langle b,c\rangle\in B\times B\)), ולכן \(\langle a,c\rangle\in B\times B\). מכאן \(aSc\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> למשל, הצמצום של \(\le\) מעל \(\mathbb{Z}\) ל-\(\mathbb{N}\) הוא היחס \(\le\) מעל \(\mathbb{N}\). בתרגיל הבא נראה מה קורה בצמצום למינימום ולמקסימום.
+  </li><li> אנטי-סימטריות עוברת לכל תת-קבוצה של \(R\). טרנזיטיביות לא: \(\{\langle 1,2\rangle,\langle 2,3\rangle\}\subseteq{\le}\) אינו טרנזיטיבי.
+        לכן בטרנזיטיביות היה צריך להראות גם ש-\(\langle a,c\rangle\in B\times B\).
+</li></ul></div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (מה קורה בצמצום?).</strong>
-בכל אחד מהמקרים הבאים מצאו את האיברים המינימליים והמקסימליים, ומינימום ומקסימום אם יש — גם לפי \(R\) וגם לפי הצמצום \(S=R\cap(B\times B)\) מתרגיל 1.
+בכל אחד מהמקרים הבאים מצאו את האיברים המינימליים והמקסימליים, ומינימום ומקסימום אם יש — גם לפי \(R\) וגם לפי הצמצום \(S=R\cap(B\times B)\) מתרגיל 4.
 <ol><li> \(A=\mathbb{Z}\), \(R={\le}\), \(B=\mathbb{N}\).
   </li><li> \(A=\mathcal{P}(\{1,2,3\})\), \(R={\subseteq}\), \(B=\mathcal{P}(\{1,2,3\})\setminus\{\emptyset,\{1,2,3\}\}\).
   </li><li> \(A=\mathbb{N}\), \(R\) יחס החלוקה, \(B=\{2,3,4,\ldots\}\).
@@ -1926,7 +1926,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 </div></div>
 <div class="p">הקווים בדיאגרמת האסה הם בדיוק הזוגות \(\langle a,b\rangle\) שבהם \(b\) עוקב מיידי של \(a\).</div>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (מציאת עוקבים מיידיים).</strong>
-<ol><li> בקס״ח מתרגיל 2: מהם העוקבים המיידיים של \(2\)? של \(4\)? של \(8\)?
+<ol><li> בקס״ח מתרגיל 1: מהם העוקבים המיידיים של \(2\)? של \(4\)? של \(8\)?
   </li><li> ביחס החלוקה מעל \(\mathbb{N}\) (תרגיל 5, סעיף 3): מהם העוקבים המיידיים של \(1\)? האם ל-\(0\) יש קודם מיידי?
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol5">הצגת הפתרון</button><div class="sol-body" id="t6-sol5" hidden><div class="p"><ol><li> של \(2\): \(4\) ו-\(6\) (\(8\) ו-\(12\) אינם, כי \(4\) ביניהם). של \(4\): \(8\) ו-\(12\). ל-\(8\) אין עוקב מיידי: הוא מקסימלי.
   </li><li> המספרים הראשוניים. אם \(p\) ראשוני אז \(1\mid p\), \(p\neq 1\), והמחלקים היחידים של \(p\) הם \(1\) ו-\(p\).
@@ -1936,7 +1936,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 <ul><li> ל-\(2\) יש שני עוקבים מיידיים, ול-\(1\) ביחס החלוקה — אינסוף. זה אפשרי כי הסדרים האלה אינם קוויים: ראו תרגיל 8.
 </li></ul></div></div></div></article>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (שאלת ההכנה, סעיפים ו–ז).</strong>
-אותה \(A=\{1,2,3,4,5\}\) ואותן הוראות כמו בתרגיל 4: קבעו אם קיים יחס סדר חלקי \(R\) מעל \(A\) המקיים את הטענה.
+אותה \(A=\{1,2,3,4,5\}\) ואותן הוראות כמו בתרגיל 3: קבעו אם קיים יחס סדר חלקי \(R\) מעל \(A\) המקיים את הטענה.
 <ol><li class="lbl-item"><span class="lbl">(ו)</span>  ל-\(5\) יש בדיוק שלושה עוקבים מיידיים, ואף אחד מהם אינו מקסימלי.
   </li><li class="lbl-item"><span class="lbl">(ז)</span>  \(2\) ו-\(1\) עוקבים מיידיים של \(5\), ו-\(R\) סדר קווי.
 </li></ol></div></article>
@@ -1995,7 +1995,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 </div></div>
 <div class="p">במילים: שרשרת היא תת-קבוצה שעליה הסדר קווי (הצמצום \(R\cap(C\times C)\) הוא סדר קווי), ובאנטי-שרשרת אין שני איברים שונים שניתנים להשוואה.</div>
 <article class="exercise"><div class="p ex-statement"><strong>תרגיל 12 (שרשראות ואנטי-שרשראות).</strong>
-<ol><li> בקס״ח מתרגיל 2: מצאו שרשרת מקסימלית שמכילה את \(2\), ואנטי-שרשרת מקסימלית.
+<ol><li> בקס״ח מתרגיל 1: מצאו שרשרת מקסימלית שמכילה את \(2\), ואנטי-שרשרת מקסימלית.
   </li><li> בקס״ח \(\langle\mathrm{Part}(\{1,2,3\}),\preceq\rangle\): מצאו שרשרת מקסימלית, ואנטי-שרשרת עם שלושה איברים.
 </li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t6-sol10">הצגת הפתרון</button><div class="sol-body" id="t6-sol10" hidden><div class="p"><ol><li> השרשרת \(\{2,4,8\}\) מקסימלית: \(3\) אינו ניתן להשוואה עם \(2\), \(6\) אינו ניתן להשוואה עם \(4\), ו-\(12\) אינו ניתן להשוואה עם \(8\).
         האנטי-שרשרת \(\{8,12\}\) מקסימלית: כל אחד מהאיברים האחרים מחלק את \(8\) או את \(12\).
