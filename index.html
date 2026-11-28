@@ -225,7 +225,7 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
     <aside class="rail">
       <nav class="tut-nav" aria-label="תרגולים">
         <h2>תרגולים</h2>
-        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>קשרים, שלילה וכתיבת הוכחות</a></li><li><a href="#t3" data-tid="t3"><span class="n">3</span>קבוצות: הגדרות, פעולות והוכחות</a><a class="sub" href="#t3-extra" data-parent="t3">שאלות נוספות</a></li><li><a href="#t4" data-tid="t4"><span class="n">4</span>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</a><a class="sub" href="#t4-extra" data-parent="t4">שאלות נוספות</a></li><li><a href="#t5" data-tid="t5"><span class="n">5</span>זוגות סדורים, מכפלה קרטזית ויחסים</a><a class="sub" href="#t5-extra" data-parent="t5">שאלות נוספות</a></li><li><a href="#t6" data-tid="t6"><span class="n">6</span>יחסי סדר חלקיים</a><a class="sub" href="#t6-extra" data-parent="t6">שאלות נוספות</a></li></ul>
+        <ul><li><a href="#t1" data-tid="t1"><span class="n">1</span>כניסה לעולם המתמטי</a><a class="sub" href="#t1-extra" data-parent="t1">שאלות נוספות</a></li><li><a href="#t2" data-tid="t2"><span class="n">2</span>קשרים, שלילה וכתיבת הוכחות</a></li><li><a href="#t3" data-tid="t3"><span class="n">3</span>קבוצות: הגדרות, פעולות והוכחות</a><a class="sub" href="#t3-extra" data-parent="t3">שאלות נוספות</a></li><li><a href="#t4" data-tid="t4"><span class="n">4</span>קבוצת החזקה, איחוד וחיתוך אונריים, חלוקות</a><a class="sub" href="#t4-extra" data-parent="t4">שאלות נוספות</a></li><li><a href="#t5" data-tid="t5"><span class="n">5</span>זוגות סדורים, מכפלה קרטזית ויחסים</a><a class="sub" href="#t5-extra" data-parent="t5">שאלות נוספות</a></li><li><a href="#t6" data-tid="t6"><span class="n">6</span>יחסי סדר חלקיים</a><a class="sub" href="#t6-extra" data-parent="t6">שאלות נוספות</a></li><li><a href="#t7" data-tid="t7"><span class="n">7</span>יחסי סדר חלקיים (המשך) ויחסי שקילות</a><a class="sub" href="#t7-extra" data-parent="t7">שאלות נוספות</a></li></ul>
       </nav>
       <details class="toc" id="toc" open>
         <summary>בתרגול זה</summary>
@@ -2040,6 +2040,300 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
   </li><li> \(\emptyset\) מוכלת בכל קבוצה, ולכן ניתנת להשוואה עם כל קבוצה ואי אפשר להוסיף לה דבר. ובסעיף 2 יש אנטי-שרשרת עם \(6\) איברים.
 </li></ol></div><div class="p notes"><strong>הערות.</strong>
 <ul><li> "מקסימלית" פירושה שאי אפשר להרחיב אותה, ולא שהיא הגדולה ביותר. אותו הבדל כמו בין "מקסימלי" ל"מקסימום".
+</li></ul></div></div></div></article></section>
+<section class="tirgul" id="t7" data-toc="&lt;li&gt;&lt;a href=&quot;#t7-s1&quot;&gt;שרשראות ואנטי-שרשראות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t7-s2&quot;&gt;עוד על יחסי סדר חלקיים&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t7-s3&quot;&gt;יחסי שקילות&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#t7-extra&quot;&gt;שאלות נוספות&lt;/a&gt;&lt;/li&gt;"><header class="t-head"><p class="t-num">תרגול 7</p><h2>יחסי סדר חלקיים (המשך) ויחסי שקילות</h2><div class="t-actions"><a class="to-extra" href="#t7-extra">לשאלות הנוספות</a><a class="pdf-link" href="pdf/tirgul7.pdf" target="_blank" rel="noopener">PDF</a><a class="pdf-link" href="pdf/tirgul7-questions.pdf" target="_blank" rel="noopener">PDF ללא פתרונות</a><a class="pdf-link" href="pdf/tirgul7-extra.pdf" target="_blank" rel="noopener">PDF שאלות נוספות</a><button type="button" class="toggle-sol" id="toggle-t7">הצגת כל הפתרונות</button></div><p class="sol-note">הפתרונות אינם רשמיים, ונכתבו לצורך התרגול בלבד.</p></header><h3 id="t7-s1"><span class="sec-num">1</span>שרשראות ואנטי-שרשראות</h3>
+<div class="p"><div class="thm"><strong>הגדרה (שרשרת ואנטי-שרשרת).</strong> 
+תהי \(\langle A,R\rangle\) קס״ח. \(C\subseteq A\) היא <strong>שרשרת</strong> אם כל שני איברים ב-\(C\) ניתנים להשוואה,
+ו-\(D\subseteq A\) היא <strong>אנטי-שרשרת</strong> אם כל שני איברים <em>שונים</em> ב-\(D\) אינם ניתנים להשוואה.
+שרשרת (אנטי-שרשרת) היא <strong>מקסימלית</strong> אם היא אינה מוכלת ממש בשרשרת (אנטי-שרשרת) אחרת.
+</div></div>
+<div class="p">במילים: שרשרת היא תת-קבוצה שעליה הסדר קווי (הצמצום \(R\cap(C\times C)\) הוא סדר קווי), ובאנטי-שרשרת אין שני איברים שונים שניתנים להשוואה.</div>
+<div class="p notes"><strong>שימו לב:</strong> שרשרת מקסימלית אינה בהכרח שרשרת <em>באורך מקסימלי</em> (עם הכי הרבה איברים).
+למשל ביחס החלוקה על \(\{2,3,4,12\}\), השרשרת \(\{3,12\}\) מקסימלית — אי אפשר להוסיף לה את \(2\) או את \(4\), כי הם אינם ניתנים להשוואה עם \(3\) —
+אבל יש שרשרת ארוכה יותר: \(\{2,4,12\}\).</div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 1 (מוצאים שרשראות).</strong>
+<ol><li> ביחס החלוקה על \(D=\{2,3,4,6,8,12\}\) (מתרגול 6): מצאו שרשרת מקסימלית שמכילה את \(2\), ואנטי-שרשרת מקסימלית.
+  </li><li> ב-\(\langle\mathcal{P}(\{1,2,3\}),\subseteq\rangle\): מצאו שרשרת מקסימלית, אנטי-שרשרת עם שלושה איברים, ואנטי-שרשרת מקסימלית עם שני איברים.
+  </li><li> בקס״ח \(\langle\mathrm{Part}(\{1,2,3\}),\preceq\rangle\) (העידון מתרגול 6): מצאו שרשרת מקסימלית, ואנטי-שרשרת עם שלושה איברים.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-sol1">הצגת הפתרון</button><div class="sol-body" id="t7-sol1" hidden><div class="p"><ol><li> השרשרת \(\{2,4,8\}\) מקסימלית: \(3\) אינו ניתן להשוואה עם \(2\), \(6\) אינו ניתן להשוואה עם \(4\), ו-\(12\) אינו ניתן להשוואה עם \(8\).
+        האנטי-שרשרת \(\{8,12\}\) מקסימלית: כל אחד מהאיברים האחרים מחלק את \(8\) או את \(12\).
+  </li><li> השרשרת \(\emptyset\subseteq\{1\}\subseteq\{1,2\}\subseteq\{1,2,3\}\) מקסימלית: יש בה קבוצה מכל גודל מ-\(0\) עד \(3\),
+        וקבוצה שנרצה להוסיף צריכה להיות ניתנת להשוואה עם הקבוצה בשרשרת שגודלה כגודלה — אבל שתי קבוצות שונות באותו גודל אינן ניתנות להשוואה.
+        אנטי-שרשרת עם שלושה איברים: \(\{\{1\},\{2\},\{3\}\}\) (וגם שלוש הקבוצות בנות שני איברים).
+        האנטי-שרשרת \(\{\{1\},\{2,3\}\}\) מקסימלית: כל קבוצה אחרת מוכלת באחת מהן או מכילה אחת מהן.
+  </li><li> שלוש החלוקות
+        <div class="dm">\[\{\{1\},\{2\},\{3\}\}\preceq\{\{1,2\},\{3\}\}\preceq\{\{1,2,3\}\}\]</div>
+        הן שרשרת מקסימלית: שתי החלוקות הנותרות אינן ניתנות להשוואה עם \(\{\{1,2\},\{3\}\}\).
+        האנטי-שרשרת: שלוש החלוקות \(\{\{1,2\},\{3\}\}\), \(\{\{1,3\},\{2\}\}\), \(\{\{2,3\},\{1\}\}\) — אף אחת מהן אינה מעדנת אחרת.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> גם באנטי-שרשראות "מקסימלית" אינה "הגדולה ביותר": בסעיף 2, \(\{\{1\},\{2,3\}\}\) מקסימלית עם שני איברים, אף שיש אנטי-שרשרת עם שלושה.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 2 (שאלת ההכנה: שרשראות).</strong>
+תהי \(A=\{1,2,3,4,5\}\). לכל סעיף קבעו אם קיים יחס סדר חלקי \(R\) מעל \(A\) המקיים את הטענה.
+אם כן — תארו יחס כזה במפורש וציירו את דיאגרמת האסה שלו; אם לא — הסבירו למה.
+<ol><li class="lbl-item"><span class="lbl">(ט)</span>  הקבוצות \(\{1,2,3,4\}\) ו-\(\{2,3,4,5\}\) הן שרשראות לפי \(R\), אבל \(R\) אינו סדר קווי של \(A\).
+  </li><li class="lbl-item"><span class="lbl">(י)</span>  הקבוצה \(\{1,2,5\}\) היא שרשרת לפי \(R\), והקבוצה \(\{2,3,5\}\) היא אנטי-שרשרת לפי \(R\).
+  </li><li class="lbl-item"><span class="lbl">(יא)</span>  קיימת שרשרת לפי \(R\) שיש בה שלושה איברים, וקיימת אנטי-שרשרת לפי \(R\) שיש בה שלושה איברים.
+  </li><li class="lbl-item"><span class="lbl">(יב)</span>  קיימת שרשרת מקסימלית לפי \(R\) שיש בה שלושה איברים, וקיימת שרשרת מקסימלית לפי \(R\) שיש בה שני איברים.
+</li></ol></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 3 (שרשראות באינסוף).</strong>
+מצאו יחס סדר חלקי מעל \(\mathbb{N}\) ש:
+<ol><li> יש בו אנטי-שרשרת אינסופית.
+  </li><li> יש בו שרשראות מכל אורך סופי, אבל אין בו שרשרת אינסופית.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-sol2">הצגת הפתרון</button><div class="sol-body" id="t7-sol2" hidden><div class="p"><ol><li> יחס החלוקה: קבוצת הראשוניים היא אנטי-שרשרת אינסופית, כי ראשוני אינו מחלק ראשוני אחר. (גם \(\mathrm{Id}_{\mathbb{N}}\) מתאים: בו \(\mathbb{N}\) כולה אנטי-שרשרת.)
+  </li><li> נחלק את \(\mathbb{N}\) ל"בלוקים" עוקבים באורכים \(1,2,3,\ldots\):
+        <div class="dm">\[B_1=\{0\},\quad B_2=\{1,2\},\quad B_3=\{3,4,5\},\quad B_4=\{6,7,8,9\},\ \ldots\]</div>
+        ונגדיר \(aRb\) אם \(a,b\) באותו בלוק ו-\(a\le b\). זה יחס סדר חלקי (כל התכונות נבדקות בתוך בלוק אחד, שם זה \(\le\)).
+        הבלוק \(B_k\) הוא שרשרת עם \(k\) איברים. מצד שני, איברים מבלוקים שונים אינם ניתנים להשוואה,
+        ולכן כל שרשרת מוכלת בבלוק אחד, ובפרט היא סופית.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בסעיף 2 "שרשראות מכל אורך" לא מחייב שרשרת אינסופית: לכל \(k\) יש שרשרת באורך \(k\), אבל כל שרשרת לחוד סופית.
+  </li><li> בסעיף 2 כל בלוק \(B_k\) הוא שרשרת מקסימלית, ולבלוקים אורכים שונים — ואין בכלל שרשרת באורך מקסימלי.
+</li></ul></div></div></div></article>
+<h3 id="t7-s2"><span class="sec-num">2</span>עוד על יחסי סדר חלקיים</h3>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 4 (מינימום נשאר מינימלי).</strong>
+תהי \(\langle A,R\rangle\) קס״ח, ויהי \(a\) מינימום שלה. הוכיחו: לכל יחס סדר חלקי \(S\) מעל \(A\), אם \(R\subseteq S\) אז \(a\) מינימלי ב-\(\langle A,S\rangle\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-sol3">הצגת הפתרון</button><div class="sol-body" id="t7-sol3" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+יהי \(S\) יחס סדר חלקי מעל \(A\), ונניח \(R\subseteq S\). צ״ל: \(a\) מינימלי ב-\(\langle A,S\rangle\).
+יהי \(x\in A\) כך ש-\(xSa\); צ״ל \(x=a\).
+מכיוון ש-\(a\) מינימום לפי \(R\), \(aRx\), ומכיוון ש-\(R\subseteq S\), גם \(aSx\). יחד עם \(xSa\) ומאנטי-סימטריות \(S\), \(x=a\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> ההנחה ש-\(a\) <em>מינימום</em> הכרחית: איבר מינימלי בלבד יכול להפסיק להיות מינימלי ביחס גדול יותר.
+        למשל \(A=\{1,2\}\), \(R=\mathrm{Id}_A\) ו-\(S=\mathrm{Id}_A\cup\{\langle 2,1\rangle\}\): \(1\) מינימלי לפי \(R\) אבל לא לפי \(S\).
+  </li><li> גם הכיוון ההפוך נכון: אם \(a\) מינימלי בכל יחס סדר חלקי \(S\supseteq R\), אז \(a\) מינימום. ההוכחה מאתגרת יותר — ראו שאלה 4 בשאלות הנוספות.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 5 (שאלת הכנה 2 מתרגול 6).</strong>
+נסמן \(R=\{\langle X,Y\rangle\mid X,Y\in\mathcal{P}(\mathbb{N})\land X\subseteq Y\land Y\setminus X\subseteq 2\mathbb{N}\}\),
+כאשר \(2\mathbb{N}\) היא קבוצת הטבעיים הזוגיים.
+<ol><li class="lbl-item"><span class="lbl">(א)</span>  הוכיחו ש-\(R\) יחס סדר חלקי מעל \(\mathcal{P}(\mathbb{N})\).
+  </li><li class="lbl-item"><span class="lbl">(ב)</span>  מצאו את כל האיברים המקסימליים לפי \(R\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-sol4">הצגת הפתרון</button><div class="sol-body" id="t7-sol4" hidden><div class="p"><ol><li class="lbl-item"><span class="lbl">(א)</span>  רפלקסיביות ואנטי-סימטריות נובעות ישירות מאלה של \(\subseteq\). נוכיח טרנזיטיביות.
+        יהיו \(X,Y,Z\) כך ש-\(XRY\) ו-\(YRZ\). אז \(X\subseteq Y\subseteq Z\), ולכן \(X\subseteq Z\).
+        יהי \(n\in Z\setminus X\). אם \(n\in Y\), אז \(n\in Y\setminus X\subseteq 2\mathbb{N}\); ואם \(n\notin Y\), אז \(n\in Z\setminus Y\subseteq 2\mathbb{N}\).
+        לכן \(Z\setminus X\subseteq 2\mathbb{N}\), כלומר \(XRZ\).
+  </li><li class="lbl-item"><span class="lbl">(ב)</span>  \(X\) מקסימלי אם ורק אם \(2\mathbb{N}\subseteq X\).
+        אם \(2\mathbb{N}\subseteq X\) ו-\(XRY\), אז \(Y\setminus X\subseteq 2\mathbb{N}\subseteq X\), ולכן \(Y\setminus X=\emptyset\), כלומר \(Y\subseteq X\); יחד עם \(X\subseteq Y\) נקבל \(Y=X\).
+        ולהפך: אם יש מספר זוגי \(n\notin X\), אז \(X\,R\,(X\cup\{n\})\) ו-\(X\cup\{n\}\neq X\), ולכן \(X\) אינו מקסימלי.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> יש אינסוף איברים מקסימליים, למשל \(2\mathbb{N}\) ו-\(2\mathbb{N}\cup\{1\}\), והם אינם ניתנים להשוואה זה עם זה (\(1\) אינו זוגי). לכן אין מקסימום.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 6 (מתוך מבחן).</strong>
+תהי \(\langle A,R\rangle\) קס״ח שאין בה איבר מקסימלי, ושלכל תת-קבוצה לא ריקה \(X\subseteq A\) יש מינימום
+(כלומר מינימום לפי הצמצום \(R\cap(X\times X)\)). הוכיחו:
+<ol><li> \(R\) סדר קווי.
+  </li><li> לכל \(a\in A\) יש עוקב מיידי.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-sol5">הצגת הפתרון</button><div class="sol-body" id="t7-sol5" hidden><div class="p"><ol><li> יהיו \(a,b\in A\). לקבוצה הלא ריקה \(\{a,b\}\) יש מינימום \(m\). אם \(m=a\) אז \(aRb\), ואם \(m=b\) אז \(bRa\). בשני המקרים \(a,b\) ניתנים להשוואה.
+  </li><li> יהי \(a\in A\). מכיוון ש-\(a\) אינו מקסימלי, הקבוצה \(X=\{x\in A\mid aRx\land x\neq a\}\) אינה ריקה. יהי \(b\) המינימום של \(X\).
+        נראה ש-\(b\) עוקב מיידי של \(a\):
+        <ul><li> \(aRb\) ו-\(b\neq a\), כי \(b\in X\).
+          </li><li> יהי \(c\in A\) כך ש-\(aRc\) וגם \(cRb\). אם \(c=a\) סיימנו. אחרת \(c\in X\), ולכן \(bRc\) (\(b\) המינימום של \(X\)).
+                יחד עם \(cRb\) ומאנטי-סימטריות, \(c=b\).
+        </li></ul>
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> הדוגמה הטבעית לקס״ח כזו היא \(\langle\mathbb{N},\le\rangle\). ב-\(\langle\mathbb{Z},\le\rangle\) ל-\(\mathbb{Z}\) עצמה אין מינימום, וב-\(\langle\mathbb{Q},\le\rangle\) אין עוקבים מיידיים.
+</li></ul></div></div></div></article>
+<h3 id="t7-s3"><span class="sec-num">3</span>יחסי שקילות</h3>
+<div class="p"><div class="thm"><strong>הגדרה (יחס שקילות, מחלקת שקילות וקבוצת מנה).</strong> 
+יהי \(E\) יחס מעל קבוצה \(A\). \(E\) נקרא <strong>יחס שקילות</strong> מעל \(A\) אם הוא רפלקסיבי מעל \(A\), סימטרי וטרנזיטיבי.
+<ul><li> <strong>מחלקת השקילות</strong> של \(a\in A\): \([a]_E=\{x\in A\mid aEx\}\) — כל האיברים ששקולים ל-\(a\).
+  </li><li> <strong>קבוצת המנה</strong>: \(A/E=\{[a]_E\mid a\in A\}\) — קבוצת כל מחלקות השקילות.
+</li></ul>
+</div></div>
+<div class="p"><strong>דוגמאות.</strong>
+<ul><li> \(\mathrm{Id}_A\): כל מחלקה היא יחידון, \([a]=\{a\}\). &emsp; \(A\times A\) (כש-\(A\neq\emptyset\)): מחלקה אחת, \(A\) כולה.
+  </li><li> מעל \(\mathbb{Z}\): \(aEb\) אם \(3\mid a-b\). יש שלוש מחלקות: \([0]\), \([1]\), \([2]\) — המספרים שנותנים שארית \(0\), \(1\), \(2\) בחלוקה ב-\(3\).
+</li></ul></div>
+<div class="p"><strong>תזכורת מההרצאה.</strong> לכל יחס שקילות \(E\) מעל \(A\), קבוצת המנה \(A/E\) היא חלוקה של \(A\).
+ולהפך: לכל חלוקה \(P\) של \(A\), היחס "\(x\) ו-\(y\) באותו חלק של \(P\)" הוא יחס שקילות, וקבוצת המנה שלו היא \(P\).
+כלומר יחסי שקילות מעל \(A\) וחלוקות של \(A\) הם "אותו דבר".</div>
+<div class="p"><div class="thm remark"><strong>הערה.</strong> 
+דוגמה מהיום-יום: על קבוצת הסטודנטים בכיתה, היחס "נולדו באותו חודש". מחלקות השקילות הן קבוצות ימי ההולדת לפי חודש,
+וקבוצת המנה מחלקת את הכיתה ל(לכל היותר) שתים-עשרה קבוצות.
+</div></div>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 7 (הפרש סימטרי).</strong>
+נגדיר יחס \(E\) מעל \(\mathcal{P}(\mathbb{N})\): \(XEY\) אם \(1\notin X\triangle Y\).
+<ol><li> הוכיחו ש-\(E\) יחס שקילות.
+  </li><li> כמה מחלקות שקילות יש ל-\(E\)? מהן?
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-sol6">הצגת הפתרון</button><div class="sol-body" id="t7-sol6" hidden><div class="p">\(1\in X\triangle Y\) בדיוק כאשר \(1\) שייך לאחת מהקבוצות ולא לשנייה. לכן \(XEY\) אם ורק אם (\(1\in X\) אם ורק אם \(1\in Y\)).
+<ol><li> <em>רפלקסיביות:</em> \(X\triangle X=\emptyset\). <em>סימטריות:</em> \(X\triangle Y=Y\triangle X\).
+        <em>טרנזיטיביות:</em> יהיו \(X,Y,Z\) כך ש-\(XEY\) ו-\(YEZ\), כלומר \(1\notin X\triangle Y\) ו-\(1\notin Y\triangle Z\). צ״ל: \(1\notin X\triangle Z\). נראה שתי דרכים.
+<span class="gap"></span>
+        <em>דרך א: חלוקה למקרים לפי השאלה אם \(1\in Y\).</em>
+        <ul><li> אם \(1\in Y\): מכיוון ש-\(1\notin X\triangle Y\), גם \(1\in X\) (אחרת \(1\) שייך ל-\(Y\) ולא ל-\(X\), כלומר \(1\in X\triangle Y\)).
+                באותו אופן, מכיוון ש-\(1\notin Y\triangle Z\), גם \(1\in Z\). לכן \(1\) שייך גם ל-\(X\) וגם ל-\(Z\), ו-\(1\notin X\triangle Z\).
+          </li><li> אם \(1\notin Y\): באותו אופן \(1\notin X\) ו-\(1\notin Z\), ולכן \(1\notin X\triangle Z\).
+        </li></ul>
+<span class="gap"></span>
+        <em>דרך ב: אסוציאטיביות של ההפרש הסימטרי.</em> מכיוון שההפרש הסימטרי אסוציאטיבי, \(Y\triangle Y=\emptyset\) ו-\(W\triangle\emptyset=W\) לכל \(W\),
+        <div class="dm">\[X\triangle Z=X\triangle(Y\triangle Y)\triangle Z=(X\triangle Y)\triangle(Y\triangle Z).\]</div>
+        \(1\) אינו שייך לאף אחת מהקבוצות \(X\triangle Y\) ו-\(Y\triangle Z\), ולכן הוא אינו שייך להפרש הסימטרי שלהן. כלומר \(1\notin X\triangle Z\).
+  </li><li> שתי מחלקות: הקבוצות שאינן מכילות את \(1\), והקבוצות שמכילות אותו:
+        <div class="dm">\[[\emptyset]_E=\{X\subseteq\mathbb{N}\mid 1\notin X\},\qquad [\{1\}]_E=\{X\subseteq\mathbb{N}\mid 1\in X\}.\]</div>
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> שתי קבוצות שקולות אם יש להן אותה "תשובה" לשאלה "האם \(1\) שייך?". יחס מהסוג "יש להם אותה תכונה" הוא תמיד יחס שקילות,
+        ויש לו מחלקה אחת לכל תשובה אפשרית.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 8 (בונים את השלמים מהטבעיים).</strong>
+נגדיר יחס \(\sim\) מעל \(\mathbb{N}\times\mathbb{N}\): \(\langle a,b\rangle\sim\langle c,d\rangle\) אם \(a+d=b+c\).
+<ol><li> הוכיחו ש-\(\sim\) יחס שקילות.
+  </li><li> הוכיחו שבכל מחלקת שקילות יש איבר מהצורה \(\langle n,0\rangle\) או \(\langle 0,n\rangle\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-sol7">הצגת הפתרון</button><div class="sol-body" id="t7-sol7" hidden><div class="p"><ol><li> <em>רפלקסיביות:</em> \(a+b=b+a\). <em>סימטריות:</em> אם \(a+d=b+c\) אז \(c+b=d+a\).
+        <em>טרנזיטיביות:</em> אם \(a+d=b+c\) ו-\(c+f=d+e\), אז בחיבור שני השוויונות \(a+d+c+f=b+c+d+e\), ואחרי צמצום \(c+d\) נקבל \(a+f=b+e\).
+  </li><li> יהי \(\langle a,b\rangle\). אם \(a\ge b\), אז \(\langle a,b\rangle\sim\langle a-b,0\rangle\), כי \(a+0=b+(a-b)\).
+        אחרת \(b&gt;a\), ו-\(\langle a,b\rangle\sim\langle 0,b-a\rangle\), כי \(a+(b-a)=b+0\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> \(\langle a,b\rangle\sim\langle c,d\rangle\) פירושו "\(a-b=c-d\)" — אבל אסור לכתוב חיסור שיוצא שלילי כשעובדים רק עם טבעיים.
+        כל מחלקה "מייצגת" מספר שלם אחד: המחלקה של \(\langle n,0\rangle\) היא \(n\), והמחלקה של \(\langle 0,n\rangle\) היא \(-n\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>תרגיל 9 (שאלת ההכנה: מה אפשר לדעת על המחלקות?).</strong>
+נסמן \((0,1)=\{x\mid x\in\mathbb{R}\land 0&lt;x&lt;1\}\). יהי \(E\) יחס שקילות מעל \(\mathbb{R}\). ידוע ש-\([0]_E=\mathbb{Z}\),
+ושהקבוצה \((0,1)\) היא מחלקת שקילות של \(E\).
+<ol><li class="lbl-item"><span class="lbl">(א)</span>  חשבו את ערכם של שמות העצם הבאים. אם הנתונים אינם מספיקים כדי לחשב את ערכו של שם עצם מסוים, הסבירו מדוע.
+        <ol><li class="lbl-item"><span class="lbl">(1)</span>  \([17]_E\)
+          </li><li class="lbl-item"><span class="lbl">(2)</span>  \([0.5]_E\)
+          </li><li class="lbl-item"><span class="lbl">(3)</span>  \([0.5]_E\cap[0.3]_E\)
+          </li><li class="lbl-item"><span class="lbl">(4)</span>  \([0.5]_E\cap[381]_E\)
+          </li><li class="lbl-item"><span class="lbl">(5)</span>  \([1.5]_E\)
+          </li><li class="lbl-item"><span class="lbl">(6)</span>  \([1.5]_E\cap[0.5]_E\)
+          </li><li class="lbl-item"><span class="lbl">(7)</span>  \([1.5]_E\cap[\pi]_E\)
+        </li></ol>
+  </li><li class="lbl-item"><span class="lbl">(ב)</span>  קבעו אילו מהטענות הבאות אמיתיות. אם הנתונים אינם מספיקים כדי לקבוע אם טענה מסוימת אמיתית, הסבירו מדוע.
+        <ol><li class="lbl-item"><span class="lbl">(8)</span>  \(\langle 3,17\rangle\in E\)
+          </li><li class="lbl-item"><span class="lbl">(9)</span>  \(\langle 0.5,17\rangle\in E\)
+          </li><li class="lbl-item"><span class="lbl">(10)</span>  \(\langle 0.5,0.3\rangle\notin E\)
+          </li><li class="lbl-item"><span class="lbl">(11)</span>  \(\langle 0.5,1.5\rangle\in E\)
+          </li><li class="lbl-item"><span class="lbl">(12)</span>  \(\langle 1.5,\pi\rangle\in E\)
+          </li><li class="lbl-item"><span class="lbl">(13)</span>  יש ל-\(E\) מחלקות שקילות נוספות פרט ל-\(\mathbb{Z}\) ול-\((0,1)\).
+          </li><li class="lbl-item"><span class="lbl">(14)</span>  מרחב המנה של \(E\) הוא קבוצה אינסופית.
+          </li><li class="lbl-item"><span class="lbl">(15)</span>  כל מחלקת שקילות של \(E\) היא קבוצה אינסופית.
+        </li></ol>
+</li></ol></div></article>
+<h3 id="t7-extra"><span class="sec-num">4</span>שאלות נוספות</h3>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 1 (שרשראות — הוכח או הפרך).</strong>
+תהי \(\langle A,R\rangle\) קס״ח. לכל טענה, הוכיחו או הפריכו.
+<ol><li> כל תת-קבוצה של שרשרת היא שרשרת.
+  </li><li> האיחוד של שתי שרשראות הוא שרשרת.
+  </li><li> בחיתוך של שרשרת ואנטי-שרשרת יש לכל היותר איבר אחד.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol1">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol1" hidden><div class="p"><ol><li> נכון. תהי \(C\) שרשרת ותהי \(C'\subseteq C\). כל שני איברים ב-\(C'\) הם גם ב-\(C\), ולכן ניתנים להשוואה.
+  </li><li> לא נכון: ביחס החלוקה על \(D=\{2,3,4,6,8,12\}\), \(\{2,4\}\) ו-\(\{3,6\}\) שרשראות, אבל באיחוד שלהן \(2\) ו-\(3\) אינם ניתנים להשוואה.
+        (האיחוד הוא שרשרת בדיוק כאשר כל איבר של האחת ניתן להשוואה עם כל איבר של השנייה.)
+  </li><li> נכון. תהי \(C\) שרשרת ו-\(D\) אנטי-שרשרת, ונניח בשלילה שיש \(x\neq y\) ב-\(C\cap D\).
+        מכיוון ש-\(x,y\in C\), הם ניתנים להשוואה; מכיוון ש-\(x,y\in D\) והם שונים, הם אינם ניתנים להשוואה — סתירה.
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> באותו אופן כל תת-קבוצה של אנטי-שרשרת היא אנטי-שרשרת.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 2 (מתי שרשרת מקסימלית?).</strong>
+תהי \(\langle A,R\rangle\) קס״ח ותהי \(C\subseteq A\) שרשרת. הוכיחו: \(C\) שרשרת מקסימלית אם ורק אם לכל \(x\in A\setminus C\)
+קיים \(c\in C\) שאינו ניתן להשוואה עם \(x\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol2">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol2" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+<strong>(\(\Leftarrow\))</strong> נניח ש-\(C\) מקסימלית, ויהי \(x\in A\setminus C\). נניח בשלילה שכל \(c\in C\) ניתן להשוואה עם \(x\).
+אז \(C\cup\{x\}\) שרשרת: שני איברים מ-\(C\) ניתנים להשוואה כי \(C\) שרשרת, \(x\) ניתן להשוואה עם כל איבר של \(C\) לפי ההנחה, ו-\(x\) עם עצמו מרפלקסיביות.
+אבל \(C\subsetneq C\cup\{x\}\) (כי \(x\notin C\)) — בסתירה למקסימליות של \(C\).
+<span class="gap"></span>
+<strong>(\(\Rightarrow\))</strong> נניח את התנאי. תהי \(C'\) שרשרת כך ש-\(C\subseteq C'\); צ״ל \(C'=C\), כלומר \(C'\subseteq C\).
+יהי \(x\in C'\), ונניח בשלילה ש-\(x\notin C\). לפי התנאי קיים \(c\in C\) שאינו ניתן להשוואה עם \(x\).
+אבל \(c\in C\subseteq C'\) ו-\(x\in C'\), ו-\(C'\) שרשרת — סתירה.
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> באותו אופן: אנטי-שרשרת \(D\) מקסימלית אם ורק אם כל \(x\in A\setminus D\) ניתן להשוואה עם איבר כלשהו של \(D\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 3 (שרשראות קצרות).</strong>
+תהי \(\langle A,R\rangle\) קס״ח. הוכיחו: כל שרשרת ב-\(A\) היא בת לכל היותר שני איברים אם ורק אם כל איבר של \(A\) הוא מינימלי או מקסימלי.</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol3">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol3" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+<strong>(\(\Leftarrow\))</strong> נניח שכל שרשרת בת לכל היותר שני איברים, ונניח בשלילה שיש \(a\in A\) שאינו מינימלי ואינו מקסימלי.
+מכיוון ש-\(a\) אינו מינימלי, יש \(x\neq a\) כך ש-\(xRa\); ומכיוון ש-\(a\) אינו מקסימלי, יש \(y\neq a\) כך ש-\(aRy\).
+מטרנזיטיביות \(xRy\), ו-\(x\neq y\) (אחרת \(xRa\) ו-\(aRx\), ומאנטי-סימטריות \(x=a\)).
+לכן \(\{x,a,y\}\) שרשרת עם שלושה איברים שונים — סתירה.
+<span class="gap"></span>
+<strong>(\(\Rightarrow\))</strong> נניח שכל איבר מינימלי או מקסימלי, ונניח בשלילה שיש שרשרת עם שלושה איברים שונים \(p,q,r\).
+נמצא ביניהם איבר "אמצעי". נניח \(pRq\) (אחרת \(qRp\), ומחליפים את השמות). נשווה את \(r\):
+<ul><li> אם \(rRp\), אז \(rRpRq\), ו-\(p\) אמצעי.
+  </li><li> אם \(qRr\), אז \(pRqRr\), ו-\(q\) אמצעי.
+  </li><li> אחרת \(pRr\) ו-\(rRq\) (\(r\) ניתן להשוואה עם שניהם), ו-\(r\) אמצעי.
+</li></ul>
+לאיבר האמצעי \(m\) יש איבר שונה ממנו מתחתיו ואיבר שונה ממנו מעליו, ולכן הוא אינו מינימלי ואינו מקסימלי — סתירה.
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> למשל ביחס החלוקה על \(\{2,3,5,6,10,15\}\) כל שרשרת היא בת לכל היותר שני איברים: הראשוניים מינימליים, והמכפלות מקסימליות.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 4 (הכיוון ההפוך: מינימלי בכל הרחבה הוא מינימום).</strong>
+תהי \(\langle A,R\rangle\) קס״ח ויהי \(a\in A\), כך שלכל יחס סדר חלקי \(S\) מעל \(A\) עם \(R\subseteq S\), \(a\) מינימלי ב-\(\langle A,S\rangle\).
+הוכיחו ש-\(a\) מינימום ב-\(\langle A,R\rangle\). (זה הכיוון ההפוך לתרגיל 4 בתרגול.)</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol4">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol4" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+נוכיח בשלילה ההפוכה: נניח ש-\(a\) אינו מינימום, ונמצא יחס סדר חלקי \(S\supseteq R\) שבו \(a\) אינו מינימלי.
+מכיוון ש-\(a\) אינו מינימום, יש \(b\in A\) כך ש-\(\langle a,b\rangle\notin R\). נגדיר
+<div class="dm">\[S=R\cup\{\langle x,y\rangle\mid xRb\land aRy\}\]</div>
+— כלומר "מורידים" את \(b\) (וכל מה שמתחתיו) אל מתחת ל-\(a\) (וכל מה שמעליו).
+אז \(bSa\) (כי \(bRb\) ו-\(aRa\)), ו-\(b\neq a\) (כי \(aRa\) אבל לא \(aRb\)). לכן \(a\) אינו מינימלי ב-\(\langle A,S\rangle\).
+נשאר לבדוק ש-\(S\) יחס סדר חלקי. נשתמש פעמים רבות בעובדה: <em>לא ייתכן ש-\(aRy\) וגם \(yRb\)</em> (אחרת מטרנזיטיביות \(aRb\)).
+<ul><li> <em>רפלקסיביות:</em> \(R\subseteq S\) ו-\(R\) רפלקסיבי.
+  </li><li> <em>אנטי-סימטריות:</em> יהיו \(x,y\) כך ש-\(xSy\) ו-\(ySx\). אם שני הזוגות ב-\(R\), אז \(x=y\).
+        אחרת אחד מהם חדש, נניח \(\langle x,y\rangle\): \(xRb\) ו-\(aRy\). אם \(\langle y,x\rangle\in R\), אז \(yRx\) ו-\(xRb\), ולכן \(yRb\);
+        ואם \(\langle y,x\rangle\) חדש, אז \(yRb\) ישירות. בשני המקרים \(aRy\) וגם \(yRb\) — סתירה.
+  </li><li> <em>טרנזיטיביות:</em> יהיו \(x,y,z\) כך ש-\(xSy\) ו-\(ySz\). אם שני הזוגות ב-\(R\), אז \(xRz\).
+        אם \(\langle x,y\rangle\in R\) ו-\(\langle y,z\rangle\) חדש (\(yRb\), \(aRz\)): אז \(xRb\), ולכן \(\langle x,z\rangle\) חדש ב-\(S\).
+        אם \(\langle x,y\rangle\) חדש (\(xRb\), \(aRy\)) ו-\(\langle y,z\rangle\in R\): אז \(aRz\), ולכן \(\langle x,z\rangle\) חדש ב-\(S\).
+        ואם שניהם חדשים, אז \(aRy\) וגם \(yRb\) — מקרה בלתי אפשרי.
+</li></ul>
+<span class="qed">□</span></div></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 5 (אינדוקציה בקס״ח).</strong>
+תהי \(\langle A,R\rangle\) קס״ח שלכל תת-קבוצה לא ריקה שלה יש מינימום (כמו בתרגיל 6 בתרגול), ותהי \(X\subseteq A\)
+כך שלכל \(a\in A\): אם כל האיברים שמתחת ל-\(a\) ושונים ממנו נמצאים ב-\(X\), אז \(a\in X\). בכתיב:
+<div class="dm">\[\forall a\in A\;\bigl(\{b\in A\mid bRa\land b\neq a\}\subseteq X\ \Rightarrow\ a\in X\bigr).\]</div>
+הוכיחו ש-\(X=A\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol5">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol5" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+נניח בשלילה ש-\(X\neq A\), כלומר \(A\setminus X\neq\emptyset\). יהי \(m\) המינימום של \(A\setminus X\).
+נראה ש-\(\{b\in A\mid bRm\land b\neq m\}\subseteq X\): יהי \(b\) כך ש-\(bRm\) ו-\(b\neq m\). אם היה \(b\in A\setminus X\),
+אז (\(m\) המינימום של \(A\setminus X\)) \(mRb\), ויחד עם \(bRm\) ומאנטי-סימטריות \(b=m\) — סתירה. לכן \(b\in X\).
+מההנחה על \(X\) נקבל \(m\in X\) — בסתירה לכך ש-\(m\in A\setminus X\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> עבור \(\langle\mathbb{N},\le\rangle\) זו בדיוק "אינדוקציה שלמה": אם מכך שכל המספרים הקטנים מ-\(n\) ב-\(X\) נובע ש-\(n\in X\), אז \(X=\mathbb{N}\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 6 (רישות וסיפות).</strong>
+תהי \(\langle A,R\rangle\) קס״ח. נאמר ש-\(X\subseteq A\) היא <strong>רישא</strong> אם לכל \(a,b\in A\): אם \(a\in X\) וגם \(bRa\), אז \(b\in X\)
+("כל מה שמתחת לאיבר של \(X\) גם ב-\(X\)"), ושהיא <strong>סיפא</strong> אם לכל \(a,b\in A\): אם \(a\in X\) וגם \(aRb\), אז \(b\in X\).
+למשל ב-\(\langle\mathbb{N},\le\rangle\), \(\{0,1,2\}\) רישא ו-\(\{5,6,7,\ldots\}\) סיפא.
+<ol><li> הוכיחו: אם \(X\subseteq A\) רישא, אז \(A\setminus X\) סיפא.
+  </li><li> תהי \(F\) קבוצה לא ריקה של רישות. הוכיחו ש-\(\bigcap F\) רישא.
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol6">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol6" hidden><div class="p"><ol><li> תהי \(X\) רישא. יהיו \(a,b\in A\) כך ש-\(a\in A\setminus X\) וגם \(aRb\); צ״ל \(b\in A\setminus X\).
+        נניח בשלילה ש-\(b\in X\). מכיוון ש-\(X\) רישא, \(b\in X\) ו-\(aRb\), נקבל \(a\in X\) — בסתירה לכך ש-\(a\notin X\).
+  </li><li> יהיו \(a,b\in A\) כך ש-\(a\in\bigcap F\) וגם \(bRa\); צ״ל \(b\in\bigcap F\), כלומר \(b\in X\) לכל \(X\in F\).
+        תהי \(X\in F\). אז \(a\in X\) (כי \(a\in\bigcap F\)), ו-\(X\) רישא, ולכן \(b\in X\).
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בסעיף 2 ההנחה \(F\neq\emptyset\) נדרשת רק כדי ש-\(\bigcap F\) יהיה מוגדר.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 7 (מחלקות שקילות).</strong>
+נגדיר יחס \(E\) מעל \(\mathbb{N}\): \(nEm\) אם \(n=m\), או ש-\(n\) ו-\(m\) שניהם אי-זוגיים.
+<ol><li> הוכיחו ש-\(E\) יחס שקילות.
+  </li><li> מצאו את \([0]_E\), \([1]_E\), \([2]_E\), ותארו את \(\mathbb{N}/E\).
+</li></ol></div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol7">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol7" hidden><div class="p"><ol><li> <em>רפלקסיביות:</em> \(n=n\). <em>סימטריות:</em> שני התנאים סימטריים ב-\(n\) ו-\(m\).
+        <em>טרנזיטיביות:</em> יהיו \(n,m,k\) כך ש-\(nEm\) ו-\(mEk\). אם \(n=m\), אז \(nEk\) הוא בדיוק \(mEk\); אם \(m=k\), אז \(nEk\) הוא בדיוק \(nEm\).
+        אחרת \(n,m\) אי-זוגיים ו-\(m,k\) אי-זוגיים, ולכן \(n,k\) אי-זוגיים, כלומר \(nEk\).
+  </li><li> \([0]_E=\{0\}\), \([2]_E=\{2\}\), ו-\([1]_E\) היא קבוצת כל האי-זוגיים. לכן, כאשר \(2\mathbb{N}\) קבוצת הטבעיים הזוגיים,
+        <div class="dm">\[\mathbb{N}/E=\bigl\{\{1,3,5,\ldots\}\bigr\}\cup\bigl\{\{n\}\mid n\in 2\mathbb{N}\bigr\}.\]</div>
+</li></ol></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בטרנזיטיביות היה צריך לחלק למקרים, כי ההגדרה של \(E\) היא "או".
+  </li><li> אפשר לבדוק שקיבלנו חלוקה של \(\mathbb{N}\): כל מספר נמצא בדיוק במחלקה אחת.
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 8 (כמה יחסי שקילות?).</strong>
+כמה יחסי שקילות יש מעל \(A=\{1,2,3,4,5\}\)?</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol8">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol8" hidden><div class="p">יחסי שקילות מעל \(A\) מתאימים בדיוק לחלוקות של \(A\) (התזכורת בתרגול), ולכן צריך לספור את החלוקות של \(A\). נמיין אותן לפי גדלי החלקים:
+<div class="center">
+<span class="gap"></span>
+<div class="tbl-wrap"><table class="steps simple"><tr><th>גדלי החלקים</th><th>מספר החלוקות</th></tr><tr><td>\(5\)</td><td>\(1\)</td></tr><tr><td>\(4+1\)</td><td>\(5\)</td></tr><tr><td>\(3+2\)</td><td>\(\binom{5}{3}=10\)</td></tr><tr><td>\(3+1+1\)</td><td>\(\binom{5}{3}=10\)</td></tr><tr><td>\(2+2+1\)</td><td>\(5\cdot 3=15\)</td></tr><tr><td>\(2+1+1+1\)</td><td>\(\binom{5}{2}=10\)</td></tr><tr><td>\(1+1+1+1+1\)</td><td>\(1\)</td></tr></table></div>
+</div>
+בסך הכול \(1+5+10+10+15+10+1=52\) יחסי שקילות.</div><div class="p notes"><strong>הערות.</strong>
+<ul><li> בשורה \(2+2+1\): בוחרים את היחידון (\(5\) אפשרויות), ואת ארבעת הנותרים מחלקים לשני זוגות (\(3\) אפשרויות: עם מי מוזג המספר הקטן ביותר).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 9 (הפרש רציונלי).</strong>
+נגדיר יחס \(E\) מעל \(\mathbb{R}\): \(xEy\) אם \(x-y\in\mathbb{Q}\). הוכיחו ש-\(E\) יחס שקילות, ותארו את \([0]_E\) ואת \([\sqrt2]_E\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol9">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol9" hidden><div class="p"><em>רפלקסיביות:</em> \(x-x=0\in\mathbb{Q}\). <em>סימטריות:</em> אם \(x-y\in\mathbb{Q}\) אז \(y-x=-(x-y)\in\mathbb{Q}\).
+<em>טרנזיטיביות:</em> אם \(x-y,\ y-z\in\mathbb{Q}\) אז \(x-z=(x-y)+(y-z)\in\mathbb{Q}\), כי סכום של רציונליים הוא רציונלי.
+\([0]_E=\mathbb{Q}\), ו-\([\sqrt2]_E=\{\sqrt2+q\mid q\in\mathbb{Q}\}\).</div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 10 (חיתוך של יחסי שקילות).</strong>
+יהיו \(R,S\) יחסי שקילות מעל \(A\). הוכיחו ש-\(R\cap S\) יחס שקילות מעל \(A\), ושלכל \(a\in A\) מתקיים \([a]_{R\cap S}=[a]_R\cap[a]_S\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol10">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol10" hidden><div class="p">כל אחת משלוש התכונות עוברת לחיתוך. למשל טרנזיטיביות: אם \(\langle a,b\rangle,\langle b,c\rangle\in R\cap S\), אז שני הזוגות ב-\(R\), ולכן \(\langle a,c\rangle\in R\); ובאותו אופן \(\langle a,c\rangle\in S\).
+המחלקה: \(x\in[a]_{R\cap S}\) אמ״מ \(aRx\) וגם \(aSx\), אמ״מ \(x\in[a]_R\cap[a]_S\).</div><div class="p notes"><strong>הערות.</strong>
+<ul><li> איחוד של שני יחסי שקילות אינו בהכרח יחס שקילות: מעל \(\{1,2,3\}\), \(\mathrm{Id}\cup\{\langle 1,2\rangle,\langle 2,1\rangle\}\) ו-\(\mathrm{Id}\cup\{\langle 2,3\rangle,\langle 3,2\rangle\}\) — באיחוד יש \(\langle 1,2\rangle,\langle 2,3\rangle\) ואין \(\langle 1,3\rangle\).
+</li></ul></div></div></div></article>
+<article class="exercise"><div class="p ex-statement"><strong>שאלה 11 (תת-קבוצה שכולה שקולה).</strong>
+תהי \(A\) קבוצה לא ריקה, \(E\) יחס שקילות מעל \(A\) ו-\(B\subseteq A\). הוכיחו: \(B\times B\subseteq E\) אם ורק אם קיימת \(X\in A/E\) כך ש-\(B\subseteq X\).</div><div class="solution"><button type="button" class="sol-toggle" aria-expanded="false" aria-controls="t7-x-sol11">הצגת הפתרון</button><div class="sol-body" id="t7-x-sol11" hidden><div class="p"><div class="proof"><strong>הוכחה.</strong> 
+<strong>(\(\Leftarrow\))</strong> נניח \(B\times B\subseteq E\). אם \(B=\emptyset\), כל מחלקה מתאימה (ויש כזו, כי \(A\neq\emptyset\)).
+אחרת יהי \(b\in B\), ונראה ש-\(X=[b]_E\) מתאימה: לכל \(x\in B\), \(\langle b,x\rangle\in B\times B\subseteq E\), ולכן \(x\in[b]_E\).
+<span class="gap"></span>
+<strong>(\(\Rightarrow\))</strong> נניח \(B\subseteq X=[c]_E\). יהיו \(x,y\in B\). אז \(cEx\) ו-\(cEy\); מסימטריות \(xEc\), ומטרנזיטיביות \(xEy\).
+<span class="qed">□</span></div></div><div class="p notes"><strong>הערות.</strong>
+<ul><li> ההנחה \(A\neq\emptyset\) נחוצה: אם \(A=B=\emptyset\), אז \(B\times B=\emptyset\subseteq E\), אבל \(A/E=\emptyset\) ואין מחלקה \(X\).
 </li></ul></div></div></div></article></section>
     </main>
   </div>
